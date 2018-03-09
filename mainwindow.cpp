@@ -1,10 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
+#include <QKeyEvent>
+#include <QIcon>
+#include "menu.h"
 
 #define HOME_TAB 0
 #define ORDER_TAB 1
-#define LOGO_NAME "logo.ico"
+#define LOGO_NAME "logo.png"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -25,10 +28,21 @@ MainWindow::MainWindow(QWidget *parent) :
         }
     }
 
+    QPixmap test(IMG_DIR + "space.jpg");
+    if (!test)
+    {
+        qDebug() << "Unable to open image " << IMG_DIR << "space.jpg";
+    }
+    ui -> spaceLabel -> setPixmap(test);
+    ui -> spaceLabel -> show();
+
     logo = QPixmap(IMG_DIR + LOGO_NAME).scaled(QSize(ui -> logoLabel -> geometry().width(), ui -> logoLabel -> geometry().height()), Qt::KeepAspectRatio);
     ui -> logoLabel -> setPixmap(logo);
 
     ui -> orderNumLabel -> setText("Order #" + QString::number(qrand() % 500));
+
+    ui -> passBox -> setFont(QFont("Times", 18));
+    ui -> passBox -> setAlignment(Qt::AlignCenter);
 
 }
 
@@ -86,4 +100,23 @@ void MainWindow::goHome()
 {
     hideAll();
 
+}
+
+void MainWindow::on_loginButton_clicked()
+{
+    QTextEdit *passBox = ui -> passBox;
+    qDebug() << passBox -> toPlainText();
+    passBox -> setText("");
+    passBox -> setAlignment(Qt::AlignCenter);
+
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    QString input = event -> text().toLower();
+    qDebug() << input;
+    if (ui -> tabWidget -> currentIndex() == 0 && input == "\r\n")
+    {
+        ui -> loginButton -> click();
+    }
 }

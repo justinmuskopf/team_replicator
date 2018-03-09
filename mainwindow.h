@@ -34,6 +34,10 @@ private slots:
 
     void on_helpButton_clicked();
 
+    void on_loginButton_clicked();
+
+    void keyPressEvent(QKeyEvent *event);
+
 private:
     Ui::MainWindow *ui;
     const QString IMG_DIR = QDir::currentPath() +"/icon/";
