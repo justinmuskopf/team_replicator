@@ -4,26 +4,36 @@
 #include <QString>
 #include <QPixmap>
 #include <QMap>
+#include <QVector>
 
-typedef QMap<QString, QPixmap> itemMap;
+struct MenuItem
+{
+    QString name;
+    QString description;
+    QPixmap image;
+    float price;
+};
 
-class Menu {
+typedef QVector<MenuItem> MenuVector;
+
+class Menu
+{
 
 public:
     Menu();
     ~Menu();
-    itemMap getDrinks();
-    itemMap getAppetizers();
-    itemMap getEntrees();
-    itemMap getDesserts();
-    itemMap getSides();
+    MenuVector getDrinks();
+    MenuVector getAppetizers();
+    MenuVector getEntrees();
+    MenuVector getDesserts();
+    MenuVector getSides();
 
 private:
-    itemMap drinks;
-    itemMap appetizers;
-    itemMap entrees;
-    itemMap desserts;
-    itemMap sides;
+    MenuVector drinks;
+    MenuVector appetizers;
+    MenuVector entrees;
+    MenuVector desserts;
+    MenuVector sides;
 };
 
 #endif //ITEMS_H

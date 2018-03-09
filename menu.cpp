@@ -1,32 +1,38 @@
 #include "menu.h"
 #include <QFile>
 
+#define APP_FILE ""
+#define DRINK_FILE ""
+#define DES_FILE ""
+#define SIDE_FILE ""
+#define ENT_FILE ""
+
 Menu::Menu()
 {
 
 }
 
-itemMap Menu::getDrinks()
+MenuVector Menu::getDrinks()
 {
     return drinks;
 }
 
-itemMap Menu::getAppetizers()
+MenuVector Menu::getAppetizers()
 {
     return appetizers;
 }
 
-itemMap Menu::getEntrees()
+MenuVector Menu::getEntrees()
 {
     return entrees;
 }
 
-itemMap Menu::getSides()
+MenuVector Menu::getSides()
 {
     return sides;
 }
 
-itemMap Menu::getDesserts()
+MenuVector Menu::getDesserts()
 {
     return desserts;
 }
