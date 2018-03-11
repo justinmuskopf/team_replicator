@@ -1,162 +1,157 @@
 {
-  "appetizers": [
-    {
-      "name": "Caesar Salad",
-      "filename": "/dummy/dir",
-      "description": "Leafy Greens with special sauce (Totally not mayonnaise)",
-      "price": 6.79
-    },
-    {
-      "name": "Nachos",
-      "filename": "/dummy/dir",
-      "description": "Succulent Meat Rod on Bread",
-      "price": 4.99
-    },
-    {
-      "name": "Chips & Salsa",
-      "filename": "/dummy/dir",
-      "description": "Succulent Fried Tortilla Triangles with Spicy Ketchup",
-      "price": 3.49
-    },
-    {
-      "name": "Gourmet Cheese Platter",
-      "filename": "/dummy/dir",
-      "description": "Succulent Aged Yellow Mold With Crackers",
-      "price": 14.99
-    },
-    {
-      "name": "Super Sampler",
-      "filename": "/dummy/dir",
-      "description": "Succulent Combo of Succulents",
-      "price": 11.99
-    }
-  ],
-  "entrees": [
-    {
-      "name": "Hamburger",
-      "filename": "/dummy/dir",
-      "description": "Succulent Meat Disk on Bread",
-      "price": 7.99
-    },
-    {
-      "name": "Hotdog",
-      "filename": "/dummy/dir",
-      "description": "Succulent Meat Rod on Bread",
-      "price": 4.99
-    },
-    {
-      "name": "Club Sandwich",
-      "filename": "/dummy/dir",
-      "description": "Succulent Meat and Veg on Bread",
-      "price": 8.99
-    },
-    {
-      "name": "Grilled Cheese",
-      "filename": "/dummy/dir",
-      "description": "Mold That Wasn't Eaten From the Gourmet Platter Melted on Bread",
-      "price": 5.99
-    },
-    {
-      "name": "Pizza",
-      "filename": "/dummy/dir",
-      "description": "Mold Scraped From Uneaten Grilled Cheese Put With Spicy Ketchup And Meat Disk",
-      "price": 7.99
-    }
-  ],
-  "sides": [
-    {
-      "name": "Mashed Taters",
-      "filename": "/dummy/dir",
-      "description": "Taters That Got Mashed",
-      "price": 2.99
-    },
-    {
-      "name": "Francais Fried Taters",
-      "filename": "/dummy/dir",
-      "description": "Taters Chopped and Fried, Served With Catsup",
-      "price": 2.99
-    },
-    {
-      "name": "Sweetened Taters",
-      "filename": "/dummy/dir",
-      "description": "Mashed Taters With Sugar",
-      "price": 3.49
-    },
-    {
-      "name": "Tater Chips",
-      "filename": "/dummy/dir",
-      "description": "Francais Fried Taters Smashed and Left in Sun",
-      "price": 1.99
-    },
-    {
-      "name": "Loaded Tater",
-      "filename": "/dummy/dir",
-      "description": "Hot Tater With Mold and Sour Mold",
-      "price": 7.99
-    }
-  ],
-  "drinks": [
-    {
-      "name": "Slurm",
-      "filename": "/dummy/dir",
-      "description": "Don't Ask...",
-      "price": 2.99
-    },
-    {
-      "name": "Coca-Cola",
-      "filename": "/dummy/dir",
-      "description": "The Coca Stands for Cocaine",
-      "price": 2.99
-    },
-    {
-      "name": "Dr. Pepper",
-      "filename": "/dummy/dir",
-      "description": "Undebatably the Best",
-      "price": 2.99
-    },
-    {
-      "name": "Coffee",
-      "filename": "/dummy/dir",
-      "description": "Brown, Hot Bean Juice",
-      "price": 1.99
-    },
-    {
-      "name": "Water",
-      "filename": "/dummy/dir",
-      "description": "Good Ole' H2O",
-      "price": 19.99
-    }
-  ],
-  "desserts": [
-    {
-      "name": "Chocolate Cake",
-      "filename": "/dummy/dir",
-      "description": "Sweet N' Succulent Like Momma Made",
-      "price": 4.99
-    },
-    {
-      "name": "Apple Pie",
-      "filename": "/dummy/dir",
-      "description": "3.14 With Apples in It",
-      "price": 4.99
-    },
-    {
-      "name": "Peach Cobbler",
-      "filename": "/dummy/dir",
-      "description": "It's Cobblin' Time!",
-      "price": 4.99
-    },
-    {
-      "name": "Wedding Cake",
-      "filename": "/dummy/dir",
-      "description": "Someone Didn't Need This and We Found it on I-35",
-      "price": 7.99
-    },
-    {
-      "name": "Tiramisu",
-      "filename": "/dummy/dir",
-      "description": "Cool Sounding French Cake",
-      "price": 7.99
-    }
-  ]
+	"appetizers": [{
+			"name": "Caesar Salad",
+			"filename": "menu/appetizers/caesar.jpg",
+			"description": "Leafy Greens with special sauce (Totally not mayonnaise)",
+			"price": 6.79
+		},
+		{
+			"name": "Nachos",
+			"filename": "menu/appetizers/nachos.jpg",
+			"description": "Succulent Meat Rod on Bread",
+			"price": 4.99
+		},
+		{
+			"name": "Chips & Salsa",
+			"filename": "menu/appetizers/chips_salsa.jpg",
+			"description": "Succulent Fried Tortilla Triangles with Spicy Ketchup",
+			"price": 3.49
+		},
+		{
+			"name": "Gourmet Cheese Platter",
+			"filename": "menu/appetizers/cheese_platter.jpg",
+			"description": "Succulent Aged Yellow Mold With Crackers",
+			"price": 14.99
+		},
+		{
+			"name": "Super Sampler",
+			"filename": "menu/appetizers/sampler.jpg",
+			"description": "Succulent Combo of Succulents",
+			"price": 11.99
+		}
+	],
+	"entrees": [{
+			"name": "Hamburger",
+			"filename": "menu/entrees/hamburger.jpg",
+			"description": "Succulent Meat Disk on Bread",
+			"price": 7.99
+		},
+		{
+			"name": "Hotdog",
+			"filename": "menu/entrees/hotdog.jpg",
+			"description": "Succulent Meat Rod on Bread",
+			"price": 4.99
+		},
+		{
+			"name": "Club Sandwich",
+			"filename": "menu/entrees/club_sandwich.jpg",
+			"description": "Succulent Meat and Veg on Bread",
+			"price": 8.99
+		},
+		{
+			"name": "Grilled Cheese",
+			"filename": "menu/entrees/grilled_cheese.jpg",
+			"description": "Mold That Wasn't Eaten From the Gourmet Platter Melted on Bread",
+			"price": 5.99
+		},
+		{
+			"name": "Pizza",
+			"filename": "menu/entrees/pizza.jpg",
+			"description": "Mold Scraped From Uneaten Grilled Cheese Put With Spicy Ketchup And Meat Disk",
+			"price": 7.99
+		}
+	],
+	"sides": [{
+			"name": "Mashed Taters",
+			"filename": "menu/sides/mashed_potato.jpg",
+			"description": "Taters That Got Mashed",
+			"price": 2.99
+		},
+		{
+			"name": "Francais Fried Taters",
+			"filename": "menu/sides/french_fries.jpg",
+			"description": "Taters Chopped and Fried, Served With Catsup",
+			"price": 2.99
+		},
+		{
+			"name": "Sweetened Taters",
+			"filename": "menu/sides/sweet_potato.jpg",
+			"description": "Mashed Taters With Sugar",
+			"price": 3.49
+		},
+		{
+			"name": "Tater Chips",
+			"filename": "menu/sides/potato_chips.jpg",
+			"description": "Francais Fried Taters Smashed and Left in Sun",
+			"price": 1.99
+		},
+		{
+			"name": "Loaded Tater",
+			"filename": "menu/sides/baked_potato.jpg",
+			"description": "Hot Tater With Mold and Sour Mold",
+			"price": 7.99
+		}
+	],
+	"drinks": [{
+			"name": "Slurm",
+			"filename": "menu/drinks/slurm.jpg",
+			"description": "Don't Ask...",
+			"price": 2.99
+		},
+		{
+			"name": "Coca-Cola",
+			"filename": "menu/drinks/coca_cola.jpg",
+			"description": "The Coca Stands for Cocaine",
+			"price": 2.99
+		},
+		{
+			"name": "Dr. Pepper",
+			"filename": "menu/drinks/dr_pepper.jpg",
+			"description": "Undebatably the Best",
+			"price": 2.99
+		},
+		{
+			"name": "Coffee",
+			"filename": "menu/drinks/coffee.jpg",
+			"description": "Brown, Hot Bean Juice",
+			"price": 1.99
+		},
+		{
+			"name": "Water",
+			"filename": "menu/drinks/water.jpg",
+			"description": "Good Ole' H2O",
+			"price": 19.99
+		}
+	],
+	"desserts": [{
+			"name": "Chocolate Cake",
+			"filename": "menu/desserts/choco_cake.jpg",
+			"description": "Sweet N' Succulent Like Momma Made",
+			"price": 4.99
+		},
+		{
+			"name": "Apple Pie",
+			"filename": "menu/desserts/apple_pie.jpg",
+			"description": "3.14 With Apples in It",
+			"price": 4.99
+		},
+		{
+			"name": "Peach Cobbler",
+			"filename": "menu/desserts/peach_cobbler.jpg",
+			"description": "It's Cobblin' Time!",
+			"price": 4.99
+		},
+		{
+			"name": "Wedding Cake",
+			"filename": "menu/desserts/wedding_cake",
+			"description": "Someone Didn't Need This and We Found it on I-35",
+			"price": 7.99
+		},
+		{
+			"name": "Tiramisu",
+			"filename": "menu/desserts/tiramisu.jpg",
+			"description": "Cool Sounding French Cake",
+			"price": 7.99
+		}
+	]
 }

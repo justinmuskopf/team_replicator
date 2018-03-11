@@ -5,6 +5,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include "icons.h"
 
 Menu::Menu()
 {
@@ -31,8 +32,15 @@ Menu::Menu()
             item.description = catObj["description"].toString();
             item.image = QPixmap(catObj["filename"].toString());
             if (!item.image)
+            {
                 qDebug() << "Can't find image for " << item.name;
+                item.image = QPixmap(NOT_AVAILABLE_ICON);
+            }
+
+            //item.image.scaled(100, 100, Qt::IgnoreAspectRatio);
             item.price = catObj["price"].toDouble();
+
+
 
             menu[i].push_back(item);
         }
@@ -40,34 +48,19 @@ Menu::Menu()
 
 }
 
-MenuVector Menu::getDrinks()
+MenuVector Menu::getMenu(int type)
 {
-    return menu[DRINKS];
+    return menu[type];
 }
 
-MenuVector Menu::getAppetizers()
+Category Menu::getCategory()
 {
-    return menu[APPETIZERS];
+    return currentCategory;
 }
 
-MenuVector Menu::getEntrees()
+void Menu::setCategory(Category type)
 {
-    return menu[ENTREES];
-}
-
-MenuVector Menu::getSides()
-{
-    return menu[SIDES];
-}
-
-MenuVector Menu::getDesserts()
-{
-    return menu[DESSERTS];
-}
-
-Menu::~Menu()
-{
-
+    currentCategory = type;
 }
 
 void MenuItem::print()
@@ -75,4 +68,9 @@ void MenuItem::print()
     qDebug() << "\nName: " << name;
     qDebug() << "Description: " << description;
     qDebug() << "Price: " << price;
+}
+
+Menu::~Menu()
+{
+
 }

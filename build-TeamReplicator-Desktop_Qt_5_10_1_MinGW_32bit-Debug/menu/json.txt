@@ -1,0 +1,63 @@
+"drinks": [
+    {
+      "name": "Slurm",
+      "filename": "/menu/drinks/slurm.jpg",
+      "description": "Don't Ask...",
+      "price": 2.99
+    },
+    {
+      "name": "Coca-Cola",
+      "filename": "/menu/drinks/coca_cola.jpg",
+      "description": "The Coca Stands for Cocaine",
+      "price": 2.99
+    },
+    {
+      "name": "Dr. Pepper",
+      "filename": "/menu/drinks/dr_pepper.jpg",
+      "description": "Undebatably the Best",
+      "price": 2.99
+    },
+    {
+      "name": "Coffee",
+      "filename": "/menu/drinks/coffee.jpg",
+      "description": "Brown, Hot Bean Juice",
+      "price": 1.99
+    },
+    {
+      "name": "Water",
+      "filename": "/menu/drinks/water.jpg",
+      "description": "Good Ole' H2O",
+      "price": 19.99
+    }
+  ],
+  "desserts": [
+    {
+      "name": "Chocolate Cake",
+      "filename": "/menu/desserts/choco_cake.jpg",
+      "description": "Sweet N' Succulent Like Momma Made",
+      "price": 4.99
+    },
+    {
+      "name": "Apple Pie",
+      "filename": "/menu/desserts/apple_pie.jpg",
+      "description": "3.14 With Apples in It",
+      "price": 4.99
+    },
+    {
+      "name": "Peach Cobbler",
+      "filename": "/menu/desserts/peach_cobbler.jpg",
+      "description": "It's Cobblin' Time!",
+      "price": 4.99
+    },
+    {
+      "name": "Wedding Cake",
+      "filename": "/menu/desserts/wedding_cake",
+      "description": "Someone Didn't Need This and We Found it on I-35",
+      "price": 7.99
+    },
+    {
+      "name": "Tiramisu",
+      "filename": "/menu/desserts/tiramisu.jpg",
+      "description": "Cool Sounding French Cake",
+      "price": 7.99
+    }

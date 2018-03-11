@@ -13,7 +13,7 @@
 
 const QString MENU_FILE = QDir::currentPath() + "/menu.json";
 const QStringList CATEGORIES = {"appetizers", "entrees", "desserts", "sides", "drinks"};
-enum {APPETIZERS, ENTREES, DESSERTS, SIDES, DRINKS};
+typedef enum {APPETIZERS, ENTREES, DESSERTS, SIDES, DRINKS} Category;
 
 struct MenuItem
 {
@@ -32,14 +32,13 @@ class Menu
 public:
     Menu();
     ~Menu();
-    MenuVector getDrinks();
-    MenuVector getAppetizers();
-    MenuVector getEntrees();
-    MenuVector getDesserts();
-    MenuVector getSides();
+    MenuVector getMenu(int type);
+    Category getCategory();
+    void setCategory(Category type);
 
 private:
     MenuVector menu[NUM_CATEGORIES];
+    Category currentCategory;
     /*)
     MenuVector drinks;
     MenuVector appetizers;
