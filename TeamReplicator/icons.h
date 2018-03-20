@@ -1,3 +1,7 @@
+/*
+ *  This header files defines the filenames of all icon image names
+*/
+
 #ifndef ICONS_H
 #define ICONS_H
 
@@ -6,14 +10,15 @@
 #include <QDir>
 #include "menu.h"
 
-const QString IMG_DIR = "icon/";
-const QString BACKGROUND = IMG_DIR + "space.jpg";
-const QString SETTINGS_ICON = IMG_DIR + "settings.ico";
-const QString LOGO = IMG_DIR + "logo.png";
-const QString DESSERT_ICON = IMG_DIR + CATEGORIES[DESSERTS] + ".ico";
-const QString ENTREE_ICON = IMG_DIR + CATEGORIES[ENTREES] + ".ico";
-const QString DRINK_ICON = IMG_DIR + CATEGORIES[DRINKS] + ".ico";
-const QString SIDE_ICON = IMG_DIR + CATEGORIES[SIDES] + ".ico";
-const QString APPETIZER_ICON = IMG_DIR + CATEGORIES[APPETIZERS] + ".ico";
-const QString NOT_AVAILABLE_ICON = IMG_DIR + "not_available.jpg";
+const QString IMG_DIR = "icon/";                                            //Image directory
+const QString BACKGROUND = IMG_DIR + "space.jpg";                           //Main page background
+const QString SETTINGS_ICON = IMG_DIR + "settings.ico";                     //Settings Icon
+const QString LOGO = IMG_DIR + "logo.png";                                  //Star-trek logo
+const QString DESSERT_ICON = IMG_DIR + CATEGORIES[DESSERTS] + ".ico";       //Dessert Icon
+const QString ENTREE_ICON = IMG_DIR + CATEGORIES[ENTREES] + ".ico";         //Entree Icon
+const QString DRINK_ICON = IMG_DIR + CATEGORIES[DRINKS] + ".ico";           //Drink Icon
+const QString SIDE_ICON = IMG_DIR + CATEGORIES[SIDES] + ".ico";             //Sides Icon
+const QString APPETIZER_ICON = IMG_DIR + CATEGORIES[APPETIZERS] + ".ico";   //Appetizer Icon
+const QString NOT_AVAILABLE_ICON = IMG_DIR + "not_available.jpg";           //"Image Not Available" icon
+
 #endif // ICONS_H
