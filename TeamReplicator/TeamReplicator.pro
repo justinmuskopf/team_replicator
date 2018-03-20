@@ -26,12 +26,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    menu.cpp
+    menu.cpp \
+    order.cpp \
+    table.cpp \
+    customer.cpp \
+    restaurant.cpp \
+    employee.cpp
 
 HEADERS += \
         mainwindow.h \
     menu.h \
-    icons.h
+    icons.h \
+    order.h \
+    table.h \
+    customer.h \
+    restaurant.h \
+    employee.h
 
 FORMS += \
     mainwindow.ui

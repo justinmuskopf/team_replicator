@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1968</width>
-    <height>759</height>
+    <height>791</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -43,15 +43,15 @@
         <item>
          <widget class="QLabel" name="spaceLabel">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="minimumSize">
+          <property name="maximumSize">
            <size>
-            <width>1900</width>
-            <height>0</height>
+            <width>16777215</width>
+            <height>500</height>
            </size>
           </property>
           <property name="text">
@@ -59,7 +59,30 @@
           </property>
          </widget>
         </item>
-        <item alignment="Qt::AlignRight">
+        <item>
+         <widget class="QPushButton" name="startOrderButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 32pt &quot;Counter-Strike&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Place Order</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignRight|Qt::AlignBottom">
          <widget class="QPushButton" name="loginButton">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -412,6 +435,12 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
          <widget class="QLabel" name="drink1_pic">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
           <property name="maximumSize">
            <size>
             <width>150</width>
@@ -425,6 +454,12 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
         </item>
         <item>
          <widget class="QLabel" name="drink2_pic">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
           <property name="maximumSize">
            <size>
             <width>150</width>
@@ -438,6 +473,12 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
         </item>
         <item>
          <widget class="QLabel" name="drink3_pic">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
           <property name="maximumSize">
            <size>
             <width>150</width>
@@ -451,6 +492,12 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
         </item>
         <item>
          <widget class="QLabel" name="drink4_pic">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
           <property name="maximumSize">
            <size>
             <width>150</width>
@@ -469,6 +516,12 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
           </property>
           <property name="maximumSize">
            <size>
@@ -1409,12 +1462,39 @@ font: 57 16pt &quot;Counter-Strike&quot;;</string>
            <property name="palette">
             <palette>
              <active>
+              <colorrole role="WindowText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>198</red>
+                 <green>198</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
               <colorrole role="Button">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>197</red>
-                 <green>197</green>
-                 <blue>197</blue>
+                 <red>46</red>
+                 <green>47</green>
+                 <blue>48</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Text">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>198</red>
+                 <green>198</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="ButtonText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>198</red>
+                 <green>198</green>
+                 <blue>198</blue>
                 </color>
                </brush>
               </colorrole>
@@ -1430,20 +1510,47 @@ font: 57 16pt &quot;Counter-Strike&quot;;</string>
               <colorrole role="Window">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>193</red>
-                 <green>193</green>
-                 <blue>193</blue>
+                 <red>46</red>
+                 <green>47</green>
+                 <blue>48</blue>
                 </color>
                </brush>
               </colorrole>
              </active>
              <inactive>
+              <colorrole role="WindowText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>198</red>
+                 <green>198</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
               <colorrole role="Button">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>197</red>
-                 <green>197</green>
-                 <blue>197</blue>
+                 <red>46</red>
+                 <green>47</green>
+                 <blue>48</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Text">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>198</red>
+                 <green>198</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="ButtonText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>198</red>
+                 <green>198</green>
+                 <blue>198</blue>
                 </color>
                </brush>
               </colorrole>
@@ -1459,38 +1566,65 @@ font: 57 16pt &quot;Counter-Strike&quot;;</string>
               <colorrole role="Window">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>193</red>
-                 <green>193</green>
-                 <blue>193</blue>
+                 <red>46</red>
+                 <green>47</green>
+                 <blue>48</blue>
                 </color>
                </brush>
               </colorrole>
              </inactive>
              <disabled>
+              <colorrole role="WindowText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>198</red>
+                 <green>198</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
               <colorrole role="Button">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>197</red>
-                 <green>197</green>
-                 <blue>197</blue>
+                 <red>46</red>
+                 <green>47</green>
+                 <blue>48</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Text">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>198</red>
+                 <green>198</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="ButtonText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>198</red>
+                 <green>198</green>
+                 <blue>198</blue>
                 </color>
                </brush>
               </colorrole>
               <colorrole role="Base">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>193</red>
-                 <green>193</green>
-                 <blue>193</blue>
+                 <red>46</red>
+                 <green>47</green>
+                 <blue>48</blue>
                 </color>
                </brush>
               </colorrole>
               <colorrole role="Window">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>193</red>
-                 <green>193</green>
-                 <blue>193</blue>
+                 <red>46</red>
+                 <green>47</green>
+                 <blue>48</blue>
                 </color>
                </brush>
               </colorrole>
@@ -1498,7 +1632,8 @@ font: 57 16pt &quot;Counter-Strike&quot;;</string>
             </palette>
            </property>
            <property name="styleSheet">
-            <string notr="true"/>
+            <string notr="true">font: 57 32pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
            </property>
            <property name="frameShape">
             <enum>QFrame::Box</enum>
@@ -1533,6 +1668,130 @@ font: 57 16pt &quot;Counter-Strike&quot;;</string>
       <widget class="QWidget" name="managerTab">
        <attribute name="title">
         <string>Manager</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="Table">
+       <attribute name="title">
+        <string>Table</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QGroupBox" name="groupBox_8">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QFrame" name="frame_7">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="nameInput">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 28pt &quot;Counter-Strike&quot;;
+color: rgb(238, 238, 236);</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Allergies&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="allergyInput">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 28pt &quot;Counter-Strike&quot;;
+color: rgb(238, 238, 236);</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="addToTableButton">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>Add to Table</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="tableList">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 57 28pt &quot;Counter-Strike&quot;;
+color: rgb(238, 238, 236);</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="begin">
+       <attribute name="title">
+        <string>Begin</string>
        </attribute>
       </widget>
      </widget>
