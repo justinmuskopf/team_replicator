@@ -12,12 +12,12 @@ class Table
 public:
     Table();
     Table(int num);
-    void addCustomerToTable(Customer customer);
+    void addCustomerToTable(Customer *customer);
     void setWaitstaff(Employee *ws);
     void printCustomers();
 private:
     unsigned int tableNum;
-    QVector<Customer> customers;
+    QVector<Customer*> customers;
     Employee *waitstaff;
 };
 

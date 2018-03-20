@@ -33,7 +33,7 @@
        <string notr="true">background-color: rgb(46, 47, 48);</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="homeTab">
        <attribute name="title">
@@ -43,7 +43,7 @@
         <item>
          <widget class="QLabel" name="spaceLabel">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>

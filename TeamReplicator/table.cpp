@@ -11,16 +11,16 @@ Table::Table(int num)
     tableNum = num;
 }
 
-void Table::addCustomerToTable(Customer customer)
+void Table::addCustomerToTable(Customer *customer)
 {
     customers.push_back(customer);
 }
 
 void Table::printCustomers()
 {
-    foreach (Customer customer, customers)
+    foreach (Customer *customer, customers)
     {
-        qDebug() << customer.getName();
-        qDebug() << customer.getAllergies();
+        qDebug() << customer -> getName();
+        qDebug() << customer -> getAllergies();
     }
 }

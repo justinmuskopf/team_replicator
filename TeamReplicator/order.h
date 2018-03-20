@@ -7,11 +7,11 @@ class Order
 {
 public:
     Order();
-    MenuVector getOrder();
+    MenuVector *getOrder();
     void addToOrder(MenuItem item);
     void removeFromOrder(MenuItem item);
 private:
-    MenuVector order;
+    MenuVector *order;
 
 };
 

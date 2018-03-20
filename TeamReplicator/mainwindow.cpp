@@ -30,9 +30,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //Load background into application
     QPixmap bg(BACKGROUND);
+    QSize bgSize = QSize(width(), ui -> spaceLabel -> height());
     if (!bg)
         qDebug() << "Unable to open image " << BACKGROUND;
-    ui -> spaceLabel -> setPixmap(bg.scaled(ui ->spaceLabel->size(), Qt::KeepAspectRatio));
+    ui -> spaceLabel -> setPixmap(bg);//.scaled(bgSize, Qt::IgnoreAspectRatio));
 
     //Random order # (for now)
     ui -> orderNumLabel -> setText("Order #" + QString::number(qrand() % 500));
@@ -82,7 +83,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui -> tabWidget -> setCurrentIndex(HOME_TAB);
     ui -> tabWidget -> findChild<QTabBar *>() -> hide();
 
-    //disableButtons();
+    ui -> allergyInput -> setText("N/A");
+
+    disableButtons();
 }
 
 //Destructor
@@ -162,16 +165,16 @@ void MainWindow::on_loginButton_clicked()
 
 /* Employee Pin-pad widget buttons                            */
 /**************************************************************/
-void MainWindow::on_zeroButton_clicked() {addToLoginBox(0);}
-void MainWindow::on_oneButton_clicked() {addToLoginBox(1);}
-void MainWindow::on_twoButton_clicked() {addToLoginBox(2);}
+void MainWindow::on_zeroButton_clicked()  {addToLoginBox(0);}
+void MainWindow::on_oneButton_clicked()   {addToLoginBox(1);}
+void MainWindow::on_twoButton_clicked()   {addToLoginBox(2);}
 void MainWindow::on_threeButton_clicked() {addToLoginBox(3);}
-void MainWindow::on_fourButton_clicked() {addToLoginBox(4);}
-void MainWindow::on_fiveButton_clicked() {addToLoginBox(5);}
-void MainWindow::on_sixButton_clicked() {addToLoginBox(6);}
+void MainWindow::on_fourButton_clicked()  {addToLoginBox(4);}
+void MainWindow::on_fiveButton_clicked()  {addToLoginBox(5);}
+void MainWindow::on_sixButton_clicked()   {addToLoginBox(6);}
 void MainWindow::on_sevenButton_clicked() {addToLoginBox(7);}
 void MainWindow::on_eightButton_clicked() {addToLoginBox(8);}
-void MainWindow::on_nineButton_clicked() {addToLoginBox(9);}
+void MainWindow::on_nineButton_clicked()  {addToLoginBox(9);}
 /**************************************************************/
 
 //Add the pressed number to the text of the login box
@@ -284,25 +287,29 @@ void MainWindow::addToOrderList(int num)
 {
     MenuItem item = restaurant.getMenu(restaurant.getMenuCategory())[num];
     ui -> menuList -> addItem(item.name);
+
 }
 /****************************************************************************/
 
 void MainWindow::on_startOrderButton_clicked()
 {
     ui -> tabWidget -> setCurrentIndex(TABLE_TAB);
+    ui -> startOrderButton -> hide();
+    enableButtons();
 }
 
 void MainWindow::on_addToTableButton_clicked()
 {
     QString name = ui -> nameInput -> toPlainText().trimmed();
     QString allergies = ui -> allergyInput -> toPlainText().trimmed();
-    Customer customer(name, allergies);
-
+    Customer *customer = new Customer(name, allergies);
     Table *currentTable = restaurant.getCurrentTable();
-    currentTable -> addCustomerToTable(customer);
 
-    currentTable -> printCustomers();
+    currentTable -> addCustomerToTable(customer);
 
     ui -> tableList -> addItem("Name: " + name);
     ui -> tableList -> addItem("..... " + allergies + "\n");
+
+    ui -> allergyInput -> setText("N/A");
+    ui -> nameInput -> setText("");
 }

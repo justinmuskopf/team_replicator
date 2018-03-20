@@ -25,3 +25,8 @@ QString Customer::getAllergies()
 {
     return allergies;
 }
+
+void Customer::addToOrder(MenuItem item)
+{
+    order.addToOrder(item);
+}

@@ -11,6 +11,7 @@ public:
     QString getName();
     QString getAllergies();
     Order getOrder();
+    void addToOrder(MenuItem item);
 private:
     Order order;
     QString name;
