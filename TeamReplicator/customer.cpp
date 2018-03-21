@@ -1,17 +1,19 @@
-#include "customer.h"
+﻿#include "customer.h"
+#include <QDebug>
 
 Customer::Customer()
 {
-
+    order = new Order;
+    orderPlaced = false;
 }
 
-Customer::Customer(QString _name, QString _allergies)
+Customer::Customer(QString _name, QString _allergies) : Customer()
 {
     name = _name;
     allergies = _allergies;
 }
 
-Order Customer::getOrder()
+Order *Customer::getOrder()
 {
     return order;
 }
@@ -28,5 +30,22 @@ QString Customer::getAllergies()
 
 void Customer::addToOrder(MenuItem item)
 {
-    order.addToOrder(item);
+    order -> addToOrder(item);
+}
+
+void Customer::placeOrder()
+{
+    orderPlaced = true;
+}
+
+void Customer::printInfo()
+{
+    qDebug() << "Name: " << name;
+    qDebug() << "Allergies: " << allergies;
+    order -> printOrder();
+}
+
+bool Customer::isOrderPlaced()
+{
+    return orderPlaced;
 }

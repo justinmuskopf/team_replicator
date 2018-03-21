@@ -10,10 +10,14 @@ public:
     Customer(QString _name, QString _allergies);
     QString getName();
     QString getAllergies();
-    Order getOrder();
+    Order *getOrder();
+    void placeOrder();
+    void printInfo();
     void addToOrder(MenuItem item);
+    bool isOrderPlaced();
 private:
-    Order order;
+    bool orderPlaced;
+    Order *order;
     QString name;
     QString allergies;
 };

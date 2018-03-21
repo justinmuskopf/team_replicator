@@ -17,7 +17,7 @@ public:
 private:
     static bool availableTables[];
     Table *currentTable;
-    QVector<Table*> tables;
+    QVector<Table *> tables;
     QVector<Employee> employees;
     Menu menu;
 };

@@ -77,9 +77,9 @@ void Menu::setCategory(Category type)
 //Print a menu item to debug console
 void MenuItem::print()
 {
-    qDebug() << "\nName: " << name;
-    qDebug() << "Description: " << description;
-    qDebug() << "Price: " << price;
+    qDebug() << "..." << name;
+    qDebug() << "..." << description;
+    qDebug() << "..." << price;
 }
 
 //Default destructor

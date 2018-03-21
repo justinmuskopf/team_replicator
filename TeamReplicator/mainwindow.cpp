@@ -54,9 +54,11 @@ MainWindow::MainWindow(QWidget *parent) :
     buttonArr[1] = ui -> drinkButton;
     buttonArr[2] = ui -> ticketButton;
     buttonArr[3] = ui -> gameButton;
+    //buttonArr[4] = ui -> myTableButton;
     //buttonArr[4] = ui -> helpButton;
     //buttonArr[5] = ui -> assistButton;
 
+    thisTable = restaurant.getCurrentTable();
 
     //Set all menu category icons
     QSize iconSize = ui -> appIcon -> size();
@@ -144,13 +146,27 @@ void MainWindow::on_assistButton_clicked()
     msgBox->setWindowTitle("Help");
     msgBox->setText( tr("Your Server has been notified, and will be with you shortly.") );
     msgBox->open( this, SLOT(msgBoxClosed(QAbstractButton*)) );
-
 }
 
 //Help button clicked
 void MainWindow::on_helpButton_clicked()
 {
+    //Table *table = restaurant.getCurrentTable();
+    Customer *customer;
+    if (!thisTable -> hasCustomers())
+    {
+        qDebug() << "No Customers...";
+        return;
+    }
 
+    qDebug() << thisTable -> getCustomers().size();
+
+    while ((customer = thisTable -> getNextCustomer()) != NULL)
+    {
+        qDebug() << "Loop";
+        customer -> printInfo();
+        customer -> placeOrder();
+    }
 }
 
 void MainWindow::goHome()
@@ -175,14 +191,13 @@ void MainWindow::on_sixButton_clicked()   {addToLoginBox(6);}
 void MainWindow::on_sevenButton_clicked() {addToLoginBox(7);}
 void MainWindow::on_eightButton_clicked() {addToLoginBox(8);}
 void MainWindow::on_nineButton_clicked()  {addToLoginBox(9);}
-/**************************************************************/
-
 //Add the pressed number to the text of the login box
 void MainWindow::addToLoginBox(int num)
 {
     ui -> passwordBox -> setText(ui -> passwordBox -> toPlainText() + QString::number(num));
     ui -> passwordBox -> setAlignment(Qt::AlignCenter);
 }
+/**************************************************************/
 
 //Clear the password box
 void MainWindow::on_clearButton_clicked() {ui -> passwordBox -> setText("");}
@@ -219,7 +234,7 @@ void MainWindow::on_tabWidget_currentChanged(int index)
     //If back was pressed, reset it
     if (backPressed)
         backPressed = false;
-    //Add left page to stack
+    //Add last page to stack
     else
         backStack.push(lastPage);
 
@@ -265,6 +280,9 @@ void MainWindow::loadMenu(int type)
 //"Go back to menu" button clicked
 void MainWindow::on_menuBackButton_clicked()
 {
+    foreach(QListWidgetItem *item, ui -> menuList -> selectedItems())
+        item -> setSelected(false);
+
     //Go back to the order page using stack
     ui -> backButton -> click();
 }
@@ -273,7 +291,20 @@ void MainWindow::on_menuBackButton_clicked()
 void MainWindow::on_menuRemoveButton_clicked()
 {
     //Delete all selected entries from list
+    Order *currentOrder= thisTable -> getCurrentCustomer() -> getOrder();
+    QList<QListWidgetItem *> selected = ui -> menuList -> selectedItems();
+    if (selected.isEmpty() || selected[0] -> text()[0] != " ")
+        return;
+    QStringList labels;
+    foreach (QListWidgetItem *item, selected)
+        labels.push_back(item -> text().trimmed());
+    foreach (QString str, labels)
+        currentOrder -> removeFromOrder(str);
+
     qDeleteAll(ui -> menuList -> selectedItems());
+    updateOrderList();
+
+    currentOrder -> printOrder();
 }
 
 /* Add buttons                                                              */
@@ -285,9 +316,16 @@ void MainWindow::on_addButton4_clicked() {addToOrderList(3);}
 void MainWindow::on_addButton5_clicked() {addToOrderList(4);}
 void MainWindow::addToOrderList(int num)
 {
+    Customer *currentCustomer = thisTable -> getCurrentCustomer();
+    Order *currentOrder = currentCustomer -> getOrder();
     MenuItem item = restaurant.getMenu(restaurant.getMenuCategory())[num];
-    ui -> menuList -> addItem(item.name);
 
+    ui -> menuList -> addItem("   " + item.name);
+    currentOrder -> addToOrder(item);
+
+
+
+    updateOrderList();
 }
 /****************************************************************************/
 
@@ -295,7 +333,6 @@ void MainWindow::on_startOrderButton_clicked()
 {
     ui -> tabWidget -> setCurrentIndex(TABLE_TAB);
     ui -> startOrderButton -> hide();
-    enableButtons();
 }
 
 void MainWindow::on_addToTableButton_clicked()
@@ -303,13 +340,61 @@ void MainWindow::on_addToTableButton_clicked()
     QString name = ui -> nameInput -> toPlainText().trimmed();
     QString allergies = ui -> allergyInput -> toPlainText().trimmed();
     Customer *customer = new Customer(name, allergies);
-    Table *currentTable = restaurant.getCurrentTable();
+    //Table *currentTable = restaurant.getCurrentTable();
 
-    currentTable -> addCustomerToTable(customer);
+    thisTable -> addCustomerToTable(customer);
 
-    ui -> tableList -> addItem("Name: " + name);
-    ui -> tableList -> addItem("..... " + allergies + "\n");
+    int count = thisTable -> getCustomers().size();
+
+    ui -> tableList -> addItem(QString::number(count) + ". Name: " + name + "..... " + allergies + "\n");
+    //ui -> tableList -> addItem(
 
     ui -> allergyInput -> setText("N/A");
     ui -> nameInput -> setText("");
+}
+
+void MainWindow::on_beginOrderButton_clicked()
+{
+    qDebug() << "Button";
+    QString firstCustomer = thisTable -> getCurrentCustomer() -> getName();
+    qDebug() << "After";
+    ui -> orderList -> addItem(firstCustomer);
+    ui -> menuList -> addItem(firstCustomer);
+    ui -> tabWidget -> setCurrentIndex(ORDER_TAB);
+    enableButtons();
+}
+
+void MainWindow::on_placeOrderButton_clicked()
+{
+    thisTable -> getCurrentCustomer() -> placeOrder();
+    Customer *nextCustomer = thisTable -> getNextCustomer();
+    if (nextCustomer != NULL)
+    {
+        ui -> orderList -> addItem(nextCustomer -> getName());
+        ui -> menuList -> addItem (nextCustomer -> getName());
+    }
+}
+
+void MainWindow::updateOrderList()
+{
+    ui -> orderList -> clear();
+    for (int i = 0; i < ui -> menuList -> count(); i++)
+    {
+        ui -> orderList -> addItem(ui -> menuList -> item(i) -> text());
+        qDebug() << "Adding " << ui -> menuList -> item(i) -> text();
+    }
+}
+
+void MainWindow::on_menuList_itemClicked(QListWidgetItem *item)
+{
+    if (item -> text()[0] != " ")
+        item -> setSelected(false);
+}
+
+void MainWindow::on_orderRemoveButton_clicked()
+{
+    int idx = ui -> orderList -> selectionModel() -> selectedIndexes()[0].row();
+    qDebug() << "idx: " << idx;
+    ui -> menuList -> item(idx) -> setSelected(true);
+    ui -> menuRemoveButton -> click();
 }
