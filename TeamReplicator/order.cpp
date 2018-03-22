@@ -12,6 +12,7 @@ MenuVector Order::getOrder()
 
 void Order::addToOrder(MenuItem item)
 {
+    addToTotal(item.price);
     order.push_back(item);
 }
 
@@ -21,6 +22,7 @@ void Order::removeFromOrder(QString name)
     {
         if (order[i].name == name)
         {
+            subtractFromTotal(order[i].price);
             order.remove(i);
             break;
         }
@@ -33,6 +35,7 @@ void Order::removeFromOrder(MenuItem item)
     {
         if (order[i].name == item.name)
         {
+            subtractFromTotal(order[i].price);
             order.remove(i);
             break;
         }
@@ -45,8 +48,11 @@ void Order::printOrder()
         return;
     for (int i = 0; i < order.size(); i++)
     {
-        qDebug() << "Order Loop";
         MenuItem item = order[i];
         item.print();
     }
 }
+
+void Order::addToTotal(float add) {total += add;}
+float Order::getTotal() {return total;}
+void Order::subtractFromTotal(float sub) {total -= sub;}

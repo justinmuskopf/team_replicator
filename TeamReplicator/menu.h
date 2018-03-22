@@ -12,14 +12,14 @@
 #include <QStringList>
 
 
-#define NUM_CATEGORIES 5
+#define NUM_CATEGORIES 6
 
 //Menu file filename
 const QString MENU_FILE = QDir::currentPath() + "/menu.json";
 //Categories in menu
-const QStringList CATEGORIES = {"appetizers", "entrees", "desserts", "sides", "drinks"};
+const QStringList CATEGORIES = {"appetizers", "entrees", "desserts", "sides", "drinks", "kids"};
 //ENUM of categories
-typedef enum {APPETIZERS, ENTREES, DESSERTS, SIDES, DRINKS} Category;
+typedef enum {APPETIZERS, ENTREES, DESSERTS, SIDES, DRINKS, KIDS} Category;
 
 //Menu item structure
 struct MenuItem

@@ -12,6 +12,7 @@
 #include <QStack>
 #include "restaurant.h"
 #include <QListWidget>
+#include "restaurantdatabase.h"
 
 #define NUM_BUTTONS 4
 
@@ -91,12 +92,15 @@ private slots:
 
     void on_orderRemoveButton_clicked();
 
+    void on_kidButton_clicked();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons
     QPixmap logo;                               //Logo
     QStack<int> backStack;                      //Stack for back button
     Restaurant restaurant;                      //Restaurant object
+    RestaurantDatabase db;
     Table *thisTable;
     bool backPressed;                           //Back button pressed
     int lastPage;                               //Index of last page
@@ -109,5 +113,7 @@ private:
     void addToOrderList(int num);               //Add items to order list
     void updateOrderList();
 };
+
+QString formatForList(MenuItem item);
 
 #endif // MAINWINDOW_H

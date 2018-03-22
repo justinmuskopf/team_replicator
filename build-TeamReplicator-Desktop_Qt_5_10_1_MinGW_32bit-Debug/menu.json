@@ -153,5 +153,36 @@
 			"description": "Cool Sounding French Cake",
 			"price": 7.99
 		}
-	]
+	],
+	"kids": [{
+			"name": "Chicken Tendies",
+			"filename": "menu/kids/tendies.jpg",
+			"description": "NEED A DESCRIPTION AARON",
+			"price": 4.99
+		},
+		{
+			"name": "Kid's Quesadilla",
+			"filename": "menu/kids/quesadilla.jpg",
+			"description": "NEED A DESCRIPTION AARON",
+			"price": 4.99
+		},
+		{
+			"name": "Grilled Cheese",
+			"filename": "menu/entrees/grilled_cheese.jpg",
+			"description": "NEED A DESCRIPTION AARON",
+			"price": 4.99
+		},
+		{
+			"name": "Mac N' Cheese",
+			"filename": "menu/kids/mac_n_cheese.jpg",
+			"description": "NEED A DESCRIPTION AARON",
+			"price": 7.99
+		},
+		{
+			"name": "Corn Dog",
+			"filename": "menu/kids/corndog.jpg",
+			"description": "NEED A DESCRIPTION AARON",
+			"price": 7.99
+		}
+	]	
 }

@@ -19,11 +19,10 @@ public:
     Customer *getNextCustomer();
     void printCustomers();
     bool hasCustomers();
-    void addToTotal(float add);
+    bool isLastCustomer();
     float getTotal();
 private:
     unsigned int tableNum;
-    float total;
     Customer *currentCustomer;
     QVector<Customer*> customers;
     Employee *waitstaff;

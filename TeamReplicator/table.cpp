@@ -74,12 +74,24 @@ Customer *Table::getNextCustomer()
     return currentCustomer;
 }
 
-void Table::addToTotal(float add)
-{
-    total += add;
-}
-
 float Table::getTotal()
 {
+    float total = 0;
+    foreach (Customer *customer, customers)
+    {
+        total += customer -> getOrder() -> getTotal();
+    }
     return total;
+}
+
+bool Table::isLastCustomer()
+{
+    int size = customers.size();
+    for (int i = 0; i < size; i++)
+    {
+        if (customers[i] == currentCustomer)
+            qDebug() << "Found";//&& i == size - 1)
+            //return true;
+    }
+    return false;
 }

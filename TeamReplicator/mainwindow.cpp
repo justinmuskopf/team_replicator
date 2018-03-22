@@ -62,11 +62,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //Set all menu category icons
     QSize iconSize = ui -> appIcon -> size();
-    ui -> appIcon-> setPixmap(QPixmap(APPETIZER_ICON).scaled(iconSize, Qt::KeepAspectRatio));
-    ui -> sidIcon-> setPixmap(QPixmap(SIDE_ICON).scaled(iconSize, Qt::KeepAspectRatio));
-    ui -> desIcon-> setPixmap(QPixmap(DESSERT_ICON).scaled(iconSize, Qt::KeepAspectRatio));
-    ui -> entIcon-> setPixmap(QPixmap(ENTREE_ICON).scaled(iconSize, Qt::KeepAspectRatio));
-    ui -> driIcon-> setPixmap(QPixmap(DRINK_ICON).scaled(iconSize, Qt::KeepAspectRatio));
+    ui -> appIcon -> setPixmap(QPixmap(APPETIZER_ICON).scaled(iconSize, Qt::KeepAspectRatio));
+    ui -> sidIcon -> setPixmap(QPixmap(SIDE_ICON).scaled(iconSize, Qt::KeepAspectRatio));
+    ui -> desIcon -> setPixmap(QPixmap(DESSERT_ICON).scaled(iconSize, Qt::KeepAspectRatio));
+    ui -> entIcon -> setPixmap(QPixmap(ENTREE_ICON).scaled(iconSize, Qt::KeepAspectRatio));
+    ui -> driIcon -> setPixmap(QPixmap(DRINK_ICON).scaled(iconSize, Qt::KeepAspectRatio));
+    ui -> kidIcon -> setPixmap(QPixmap(KIDS_ICON).scaled(iconSize, Qt::KeepAspectRatio));
 
     //Set refills page icons
     QSize imgSize = ui -> drink1_pic -> size();
@@ -151,29 +152,15 @@ void MainWindow::on_assistButton_clicked()
 //Help button clicked
 void MainWindow::on_helpButton_clicked()
 {
-    //Table *table = restaurant.getCurrentTable();
-    Customer *customer;
-    if (!thisTable -> hasCustomers())
-    {
-        qDebug() << "No Customers...";
-        return;
-    }
-
-    qDebug() << thisTable -> getCustomers().size();
-
-    while ((customer = thisTable -> getNextCustomer()) != NULL)
-    {
-        qDebug() << "Loop";
-        customer -> printInfo();
-        customer -> placeOrder();
-    }
 }
 
+//Go to home page
 void MainWindow::goHome()
 {
     ui -> tabWidget -> setCurrentIndex(HOME_TAB);
 }
 
+//Login button clicked
 void MainWindow::on_loginButton_clicked()
 {
     ui -> tabWidget -> setCurrentIndex(LOGIN_TAB);
@@ -249,6 +236,7 @@ void MainWindow::on_entButton_clicked() {loadMenu(ENTREES);}
 void MainWindow::on_driButton_clicked() {loadMenu(DRINKS);}
 void MainWindow::on_desButton_clicked() {loadMenu(DESSERTS);}
 void MainWindow::on_sidButton_clicked() {loadMenu(SIDES);}
+void MainWindow::on_kidButton_clicked() {loadMenu(KIDS);}
 /*****************************************************************/
 
 //Load the requested menu onto the menu page
@@ -280,6 +268,7 @@ void MainWindow::loadMenu(int type)
 //"Go back to menu" button clicked
 void MainWindow::on_menuBackButton_clicked()
 {
+    //When leaving menu page, deselect all selected items
     foreach(QListWidgetItem *item, ui -> menuList -> selectedItems())
         item -> setSelected(false);
 
@@ -290,21 +279,28 @@ void MainWindow::on_menuBackButton_clicked()
 //"Remove from order" button clicked
 void MainWindow::on_menuRemoveButton_clicked()
 {
-    //Delete all selected entries from list
+    //Current order
     Order *currentOrder= thisTable -> getCurrentCustomer() -> getOrder();
+
+    //All selected items, return on empty selection or name of customer
     QList<QListWidgetItem *> selected = ui -> menuList -> selectedItems();
     if (selected.isEmpty() || selected[0] -> text()[0] != " ")
         return;
+
+    //Get names of all selected items, and remove them from the order
     QStringList labels;
     foreach (QListWidgetItem *item, selected)
-        labels.push_back(item -> text().trimmed());
+        labels.push_back(item -> text().trimmed().split(".")[0]);
     foreach (QString str, labels)
+    {
+        qDebug() << "Removing " << str;
         currentOrder -> removeFromOrder(str);
-
+    }
+    //Delete from the list and update order list
     qDeleteAll(ui -> menuList -> selectedItems());
     updateOrderList();
 
-    currentOrder -> printOrder();
+    ui -> totalLabel -> setText("Total: " + QString::number(thisTable -> getTotal()));
 }
 
 /* Add buttons                                                              */
@@ -316,85 +312,124 @@ void MainWindow::on_addButton4_clicked() {addToOrderList(3);}
 void MainWindow::on_addButton5_clicked() {addToOrderList(4);}
 void MainWindow::addToOrderList(int num)
 {
+    //Get current customer, order, and the item selected
     Customer *currentCustomer = thisTable -> getCurrentCustomer();
     Order *currentOrder = currentCustomer -> getOrder();
     MenuItem item = restaurant.getMenu(restaurant.getMenuCategory())[num];
 
-    ui -> menuList -> addItem("   " + item.name);
+    //Add menu item to list and current order
+    ui -> menuList -> addItem(formatForList(item));
     currentOrder -> addToOrder(item);
 
-
-
+    //Update the order list
     updateOrderList();
+
+    ui -> totalLabel -> setText("Total: " + QString::number(thisTable -> getTotal()));
 }
 /****************************************************************************/
 
+//Start Order button clicked
 void MainWindow::on_startOrderButton_clicked()
 {
+    //Change to table tab and hide button
     ui -> tabWidget -> setCurrentIndex(TABLE_TAB);
     ui -> startOrderButton -> hide();
 }
 
+//Add To Table button clicked
 void MainWindow::on_addToTableButton_clicked()
 {
+    //Get name, allergies, and create a new customer with data
     QString name = ui -> nameInput -> toPlainText().trimmed();
     QString allergies = ui -> allergyInput -> toPlainText().trimmed();
     Customer *customer = new Customer(name, allergies);
-    //Table *currentTable = restaurant.getCurrentTable();
 
+    //Add customer to table
     thisTable -> addCustomerToTable(customer);
 
+    //Count of customers at table for list
     int count = thisTable -> getCustomers().size();
 
+    //Add customer to list
     ui -> tableList -> addItem(QString::number(count) + ". Name: " + name + "..... " + allergies + "\n");
-    //ui -> tableList -> addItem(
 
+    //Reset input boxes
     ui -> allergyInput -> setText("N/A");
     ui -> nameInput -> setText("");
 }
 
+//Begin Order button clicked
 void MainWindow::on_beginOrderButton_clicked()
 {
-    qDebug() << "Button";
+    if (thisTable -> getCustomers().size() == 0)
+        return;
+
+    //Get name of first customer and add to lists
     QString firstCustomer = thisTable -> getCurrentCustomer() -> getName();
-    qDebug() << "After";
-    ui -> orderList -> addItem(firstCustomer);
     ui -> menuList -> addItem(firstCustomer);
+    updateOrderList();
+
+    //Change page to order tab and enable buttons
     ui -> tabWidget -> setCurrentIndex(ORDER_TAB);
     enableButtons();
 }
 
+//Place Order/Next Order button clicked
 void MainWindow::on_placeOrderButton_clicked()
 {
+    //Place the order for the current customer
     thisTable -> getCurrentCustomer() -> placeOrder();
+    float total = thisTable -> getCurrentCustomer() -> getOrder() -> getTotal();
+    ui -> menuList -> addItem("   Total: " + QString::number(total));
+
+    //Get next customer and add name to the lists
     Customer *nextCustomer = thisTable -> getNextCustomer();
     if (nextCustomer != NULL)
     {
-        ui -> orderList -> addItem(nextCustomer -> getName());
-        ui -> menuList -> addItem (nextCustomer -> getName());
+        ui -> menuList -> addItem(nextCustomer -> getName());
+        updateOrderList();
     }
+
+    if (thisTable -> isLastCustomer())
+        ui -> placeOrderButton -> setText("Place Order");
 }
 
+//Copy the menu list to the order list
 void MainWindow::updateOrderList()
 {
+    //Clear list and add each element from menu list to order list
     ui -> orderList -> clear();
     for (int i = 0; i < ui -> menuList -> count(); i++)
     {
         ui -> orderList -> addItem(ui -> menuList -> item(i) -> text());
-        qDebug() << "Adding " << ui -> menuList -> item(i) -> text();
     }
 }
 
+//Item in menu list was clicked
 void MainWindow::on_menuList_itemClicked(QListWidgetItem *item)
 {
+    //Don't allow selecting a person's name for removal
     if (item -> text()[0] != " ")
         item -> setSelected(false);
 }
 
+//Order Page Remove button clicked
 void MainWindow::on_orderRemoveButton_clicked()
 {
+    //Get list index of current item
     int idx = ui -> orderList -> selectionModel() -> selectedIndexes()[0].row();
-    qDebug() << "idx: " << idx;
+
+    //Use menuRemove slot to delete from both lists
     ui -> menuList -> item(idx) -> setSelected(true);
     ui -> menuRemoveButton -> click();
+}
+
+QString formatForList(MenuItem item)
+{
+    QString formatted = "   " + item.name;
+    for (int i = formatted.length(); i < 70; i++)
+        formatted += ".";
+    formatted += QString::number(item.price);
+
+    return formatted;
 }

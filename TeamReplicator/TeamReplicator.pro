@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -31,7 +31,8 @@ SOURCES += \
     table.cpp \
     customer.cpp \
     restaurant.cpp \
-    employee.cpp
+    employee.cpp \
+    restaurantdatabase.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -41,7 +42,8 @@ HEADERS += \
     table.h \
     customer.h \
     restaurant.h \
-    employee.h
+    employee.h \
+    restaurantdatabase.h
 
 FORMS += \
     mainwindow.ui
