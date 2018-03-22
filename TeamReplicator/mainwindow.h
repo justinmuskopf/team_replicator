@@ -94,6 +94,12 @@ private slots:
 
     void on_kidButton_clicked();
 
+    void on_addToPaymentButton_clicked();
+
+    void on_removeFromPaymentButton_clicked();
+
+    void on_payForOrderButton_clicked();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons
@@ -112,6 +118,8 @@ private:
     void addToLoginBox(int num);                //Add numbers to login box
     void addToOrderList(int num);               //Add items to order list
     void updateOrderList();
+    void initPaymentScreen();
+    void updatePaymentTotals();
 };
 
 QString formatForList(MenuItem item);

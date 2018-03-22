@@ -2,7 +2,7 @@
 #include <QDebug>
 Order::Order()
 {
-
+    total = 0;
 }
 
 MenuVector Order::getOrder()
@@ -53,6 +53,7 @@ void Order::printOrder()
     }
 }
 
-void Order::addToTotal(float add) {total += add;}
 float Order::getTotal() {return total;}
-void Order::subtractFromTotal(float sub) {total -= sub;}
+void  Order::addToTotal(float add) {total += add;}
+void  Order::subtractFromTotal(float sub) {total -= sub;}
+

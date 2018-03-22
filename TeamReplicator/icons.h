@@ -21,4 +21,5 @@ const QString SIDE_ICON = IMG_DIR + CATEGORIES[SIDES] + ".ico";             //Si
 const QString APPETIZER_ICON = IMG_DIR + CATEGORIES[APPETIZERS] + ".ico";   //Appetizer Icon
 const QString NOT_AVAILABLE_ICON = IMG_DIR + "not_available.jpg";           //"Image Not Available" icon
 const QString KIDS_ICON = IMG_DIR + CATEGORIES[KIDS] + ".ico";
+const QString LOADING_GIF = IMG_DIR + "loading.gif";
 #endif // ICONS_H

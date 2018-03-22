@@ -79,6 +79,8 @@ float Table::getTotal()
     float total = 0;
     foreach (Customer *customer, customers)
     {
+        if (customer -> getOrder() -> getOrder().size() == 0)
+            continue;
         total += customer -> getOrder() -> getTotal();
     }
     return total;
@@ -89,9 +91,11 @@ bool Table::isLastCustomer()
     int size = customers.size();
     for (int i = 0; i < size; i++)
     {
-        if (customers[i] == currentCustomer)
+        if (customers[i] == currentCustomer && i == size - 1)
+        {
             qDebug() << "Found";//&& i == size - 1)
-            //return true;
+            return true;
+        }
     }
     return false;
 }

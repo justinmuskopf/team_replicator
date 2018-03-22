@@ -5,6 +5,8 @@
 #include <QIcon>
 #include <QMessageBox>
 #include "icons.h"
+#include <QMovie>
+#include <QDesktopWidget>
 
 //Tab Index ENUM
 enum {
@@ -17,7 +19,7 @@ enum {
     KITCHEN_TAB,
     MANAGER_TAB,
     TABLE_TAB,
-    BEGIN_TAB
+    PAYMENT_TAB
 };
 
 //MainWindow Constructor
@@ -298,9 +300,10 @@ void MainWindow::on_menuRemoveButton_clicked()
     }
     //Delete from the list and update order list
     qDeleteAll(ui -> menuList -> selectedItems());
-    updateOrderList();
 
-    ui -> totalLabel -> setText("Total: " + QString::number(thisTable -> getTotal()));
+    ui -> menuTotalLabel -> setText("Total: " + QString::number(thisTable -> getTotal()));
+
+    updateOrderList();
 }
 
 /* Add buttons                                                              */
@@ -321,10 +324,11 @@ void MainWindow::addToOrderList(int num)
     ui -> menuList -> addItem(formatForList(item));
     currentOrder -> addToOrder(item);
 
+    ui -> menuTotalLabel -> setText("Total: " + QString::number(thisTable -> getTotal(), 'f', 2));
+
     //Update the order list
     updateOrderList();
 
-    ui -> totalLabel -> setText("Total: " + QString::number(thisTable -> getTotal()));
 }
 /****************************************************************************/
 
@@ -369,6 +373,9 @@ void MainWindow::on_beginOrderButton_clicked()
     ui -> menuList -> addItem(firstCustomer);
     updateOrderList();
 
+    if (thisTable -> isLastCustomer())
+        ui -> placeOrderButton -> setText("Go to Payment");
+
     //Change page to order tab and enable buttons
     ui -> tabWidget -> setCurrentIndex(ORDER_TAB);
     enableButtons();
@@ -388,10 +395,15 @@ void MainWindow::on_placeOrderButton_clicked()
     {
         ui -> menuList -> addItem(nextCustomer -> getName());
         updateOrderList();
-    }
 
-    if (thisTable -> isLastCustomer())
-        ui -> placeOrderButton -> setText("Place Order");
+        if (thisTable -> isLastCustomer())
+            ui -> placeOrderButton -> setText("Go to Payment");
+    }
+    else
+    {
+        initPaymentScreen();
+        ui -> tabWidget -> setCurrentIndex(PAYMENT_TAB);
+    }
 }
 
 //Copy the menu list to the order list
@@ -403,6 +415,7 @@ void MainWindow::updateOrderList()
     {
         ui -> orderList -> addItem(ui -> menuList -> item(i) -> text());
     }
+    ui -> orderTotalLabel -> setText(ui -> menuTotalLabel -> text());
 }
 
 //Item in menu list was clicked
@@ -432,4 +445,96 @@ QString formatForList(MenuItem item)
     formatted += QString::number(item.price);
 
     return formatted;
+}
+
+void MainWindow::initPaymentScreen()
+{
+    foreach (Customer *customer, thisTable -> getCustomers())
+    {
+        QString custStr = customer -> getName() + "....." + QString::number(customer -> getOrder() -> getTotal());
+        ui -> yetToPayList -> addItem(custStr);
+    }
+
+    updatePaymentTotals();
+}
+
+void MainWindow::on_addToPaymentButton_clicked()
+{
+    QList<QListWidgetItem *> selectedCustomers = ui -> yetToPayList -> selectedItems();
+    foreach (QListWidgetItem *customer, selectedCustomers)
+    {
+        ui -> paymentList -> addItem(customer -> text());
+        qDeleteAll(selectedCustomers);
+    }
+
+    updatePaymentTotals();
+}
+
+void MainWindow::on_removeFromPaymentButton_clicked()
+{
+    QList<QListWidgetItem *> selectedCustomers = ui -> paymentList -> selectedItems();
+    foreach (QListWidgetItem *customer, selectedCustomers)
+    {
+        ui -> yetToPayList -> addItem(customer -> text());
+        qDeleteAll(selectedCustomers);
+    }
+
+    updatePaymentTotals();
+}
+
+void MainWindow::updatePaymentTotals()
+{
+    float remainingTotal = 0;
+    float paymentTotal = 0;
+    QListWidget *payList = ui -> paymentList;
+    QListWidget *remainList = ui -> yetToPayList;
+
+    for (int i = 0; i < payList -> count(); i++)
+    {
+        QStringList splitStr = payList -> item(i) -> text().split(".");
+        int len = splitStr.size();
+        paymentTotal += (splitStr[len - 2] + "." + splitStr[len - 1]).toFloat();
+    }
+
+    for (int i = 0; i < remainList -> count(); i++)
+    {
+        QStringList splitStr = remainList -> item(i) -> text().split(".");
+        int len = splitStr.size();
+        remainingTotal += (splitStr[len - 2] + "." + splitStr[len - 1]).toFloat();
+    }
+
+    ui -> totalRemainingLabel -> setText("Total Remaining: " + QString::number(remainingTotal));
+    ui -> totalToPayLabel -> setText("Total: " + QString::number(paymentTotal));
+
+
+}
+
+void MainWindow::on_payForOrderButton_clicked()
+{
+    QDialog *processDlg = new QDialog(this, Qt::FramelessWindowHint | Qt::WindowTitleHint);
+    processDlg -> setAttribute(Qt::WA_DeleteOnClose, true);
+
+
+    QRect screenGeometry = QApplication::desktop()->screenGeometry();
+    int x = (screenGeometry.width() - processDlg->width()) / 2;
+    int y = (screenGeometry.height() - processDlg->height()) / 2;
+    processDlg->move(x, y);
+
+    //processDlg -> setGeometry(this -> geometry().width() / 2, this->geometry().height()/2,300,300);
+    //processDlg -> move(this->rect().center() - processDlg->rect().());
+    QLabel *movieLabel = new QLabel(processDlg);
+    QLabel *textLabel = new QLabel(processDlg);
+    QMovie *movie = new QMovie(LOADING_GIF);
+    QGridLayout *layout = new QGridLayout;
+
+    movieLabel -> setMovie(movie);
+
+    layout -> addWidget(movieLabel, 0, 0, 1, 1, Qt::AlignCenter);
+
+    processDlg -> setLayout(layout);
+
+    processDlg -> show();
+
+    movieLabel -> show();
+    movie -> start();
 }
