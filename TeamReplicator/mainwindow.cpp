@@ -5,6 +5,8 @@
 #include <QIcon>
 #include <QMessageBox>
 #include "icons.h"
+#include <QSqlQuery>
+#include <QSqlRecord>
 
 //Tab Index ENUM
 enum {
@@ -30,13 +32,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //Load background into application
     QPixmap bg(BACKGROUND);
-    QSize bgSize = QSize(width(), ui -> spaceLabel -> height());
+    //QSize bgSize = QSize(width(), ui -> spaceLabel -> height());
     if (!bg)
         qDebug() << "Unable to open image " << BACKGROUND;
     ui -> spaceLabel -> setPixmap(bg);//.scaled(bgSize, Qt::IgnoreAspectRatio));
-
-    //Random order # (for now)
-    ui -> orderNumLabel -> setText("Order #" + QString::number(qrand() % 500));
 
     //Initialize the Employee login box
     ui -> passwordBox -> setFont(QFont("Counter-Strike", 24));
@@ -53,12 +52,7 @@ MainWindow::MainWindow(QWidget *parent) :
     buttonArr[0] = ui -> backButton;
     buttonArr[1] = ui -> drinkButton;
     buttonArr[2] = ui -> ticketButton;
-    buttonArr[3] = ui -> gameButton;
-    //buttonArr[4] = ui -> myTableButton;
-    //buttonArr[4] = ui -> helpButton;
-    //buttonArr[5] = ui -> assistButton;
-
-    thisTable = restaurant.getCurrentTable();
+    //buttonArr[3] = ui -> gameButton;
 
     //Set all menu category icons
     QSize iconSize = ui -> appIcon -> size();
@@ -78,17 +72,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui -> drink4_pic -> setPixmap(typeMenu[3].image.scaled(imgSize, Qt::KeepAspectRatio));
     ui -> drink5_pic -> setPixmap(typeMenu[4].image.scaled(imgSize, Qt::KeepAspectRatio));
 
-    //Initialize the back button stack
-    backPressed = false;
-    lastPage = HOME_TAB;
-
     //Hide tabs at top of window
-    ui -> tabWidget -> setCurrentIndex(HOME_TAB);
     ui -> tabWidget -> findChild<QTabBar *>() -> hide();
 
     ui -> allergyInput -> setText("N/A");
 
-    disableButtons();
+    beginSession();
 }
 
 //Destructor
@@ -99,13 +88,33 @@ MainWindow::~MainWindow()
 
 void MainWindow::beginSession()
 {
+    //Get order number from database
+    ui -> orderNumLabel -> setText("Order #" + QString::number(db.getOrderNumber()));
 
+    ui -> startOrderButton -> show();
+
+    thisTable = restaurant.getCurrentTable();
+
+    disableButtons();
+
+    //Initialize the back button stack
+    backStack.clear();
+    backPressed = false;
+    lastPage = HOME_TAB;
+
+    ui -> tabWidget -> setCurrentIndex(HOME_TAB);
+
+    ui -> gameButton -> hide();
+
+    foreach (QListWidget *list, findChildren<QListWidget *>())
+    {
+        list -> clear();
+    }
 }
 
 //Back button was clicked
 void MainWindow::on_backButton_clicked()
 {
-
     //Back is pressed
     backPressed = true;
 
@@ -194,7 +203,31 @@ void MainWindow::on_enterButton_clicked()
 {
     QString pin = ui -> passwordBox -> toPlainText().trimmed();
     ui -> passwordBox -> setText("");
-    qDebug() << pin;
+
+    Employee *employee = db.getEmployeeByPin(pin);
+    if (employee == nullptr)
+    {
+       qDebug() << "No employee returned...";
+       return;
+    }
+
+    QString level = employee -> getLevel();
+    if (level == "waitstaff")
+    {
+        ui -> waitstaffWelcomeLabel -> setText("Welcome " + employee -> getName());
+        ui -> tabWidget -> setCurrentIndex(WAITSTAFF_TAB);
+    }
+    else if (level == "kitchen")
+    {
+        ui -> kitchenWelcomeLabel -> setText("Welcome " + employee -> getName());
+        ui -> tabWidget -> setCurrentIndex(KITCHEN_TAB);
+    }
+    else if (level == "manager")
+    {
+        ui -> managerWelcomeLabel -> setText("Welcome " + employee -> getName());
+        ui -> tabWidget -> setCurrentIndex(MANAGER_TAB);
+    }
+
 }
 
 //Disable all main buttons
@@ -432,4 +465,28 @@ QString formatForList(MenuItem item)
     formatted += QString::number(item.price);
 
     return formatted;
+}
+
+//Used for debugging, navigate pages with numbers on keyboard
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    QString text = event -> text();
+    if (text == "1")
+        ui -> tabWidget -> setCurrentIndex(HOME_TAB);
+    else if (text == "2")
+        ui -> tabWidget -> setCurrentIndex(ORDER_TAB);
+    else if (text == "3")
+        ui -> tabWidget -> setCurrentIndex(REFILLS_TAB);
+    else if (text == "4")
+        ui -> tabWidget -> setCurrentIndex(MENU_TAB);
+    else if (text == "5")
+        ui -> tabWidget -> setCurrentIndex(LOGIN_TAB);
+    else if (text == "6")
+        ui -> tabWidget -> setCurrentIndex(WAITSTAFF_TAB);
+    else if (text == "7")
+        ui -> tabWidget -> setCurrentIndex(KITCHEN_TAB);
+    else if (text == "8")
+        ui -> tabWidget -> setCurrentIndex(MANAGER_TAB);
+    else if (text == "9")
+        ui -> tabWidget -> setCurrentIndex(TABLE_TAB);
 }

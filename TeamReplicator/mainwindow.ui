@@ -33,7 +33,7 @@
        <string notr="true">background-color: rgb(46, 47, 48);</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>9</number>
       </property>
       <widget class="QWidget" name="homeTab">
        <attribute name="title">
@@ -1712,16 +1712,55 @@ color: rgb(198, 198, 198);</string>
        <attribute name="title">
         <string>Waitstaff</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_11">
+        <item>
+         <widget class="QLabel" name="waitstaffWelcomeLabel">
+          <property name="styleSheet">
+           <string notr="true">font: 57 32pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="kitchenTab">
        <attribute name="title">
         <string>Kitchen</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_12">
+        <item>
+         <widget class="QLabel" name="kitchenWelcomeLabel">
+          <property name="styleSheet">
+           <string notr="true">font: 57 32pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="managerTab">
        <attribute name="title">
         <string>Manager</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <widget class="QLabel" name="managerWelcomeLabel">
+          <property name="styleSheet">
+           <string notr="true">font: 57 32pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="Table">
        <attribute name="title">

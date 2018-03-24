@@ -95,3 +95,14 @@ bool Table::isLastCustomer()
     }
     return false;
 }
+
+void Table::clearTable()
+{
+    currentCustomer = nullptr;
+    foreach (Customer* customer, customers)
+    {
+        delete customer;
+    }
+
+    orderNum = -1;
+}

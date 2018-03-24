@@ -21,8 +21,10 @@ public:
     bool hasCustomers();
     bool isLastCustomer();
     float getTotal();
+    void clearTable();
 private:
     unsigned int tableNum;
+    int orderNum;
     Customer *currentCustomer;
     QVector<Customer*> customers;
     Employee *waitstaff;

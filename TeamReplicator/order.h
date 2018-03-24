@@ -15,6 +15,7 @@ public:
     void addToTotal(float add);
     float getTotal();
     void subtractFromTotal(float sub);
+    void resetOrder();
 private:
     MenuVector order;
     float total;

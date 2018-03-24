@@ -49,3 +49,9 @@ bool Customer::isOrderPlaced()
 {
     return orderPlaced;
 }
+
+Customer::~Customer()
+{
+    if (order != nullptr)
+        delete order;
+}

@@ -130,8 +130,14 @@ public:
     QPushButton *enterButton;
     QTextBrowser *passwordBox;
     QWidget *waitstaffTab;
+    QVBoxLayout *verticalLayout_11;
+    QLabel *waitstaffWelcomeLabel;
     QWidget *kitchenTab;
+    QVBoxLayout *verticalLayout_12;
+    QLabel *kitchenWelcomeLabel;
     QWidget *managerTab;
+    QVBoxLayout *verticalLayout_13;
+    QLabel *managerWelcomeLabel;
     QWidget *Table;
     QHBoxLayout *horizontalLayout_7;
     QGroupBox *groupBox_8;
@@ -931,12 +937,45 @@ public:
         tabWidget->addTab(loginTab, QString());
         waitstaffTab = new QWidget();
         waitstaffTab->setObjectName(QStringLiteral("waitstaffTab"));
+        verticalLayout_11 = new QVBoxLayout(waitstaffTab);
+        verticalLayout_11->setSpacing(6);
+        verticalLayout_11->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_11->setObjectName(QStringLiteral("verticalLayout_11"));
+        waitstaffWelcomeLabel = new QLabel(waitstaffTab);
+        waitstaffWelcomeLabel->setObjectName(QStringLiteral("waitstaffWelcomeLabel"));
+        waitstaffWelcomeLabel->setStyleSheet(QLatin1String("font: 57 32pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+
+        verticalLayout_11->addWidget(waitstaffWelcomeLabel);
+
         tabWidget->addTab(waitstaffTab, QString());
         kitchenTab = new QWidget();
         kitchenTab->setObjectName(QStringLiteral("kitchenTab"));
+        verticalLayout_12 = new QVBoxLayout(kitchenTab);
+        verticalLayout_12->setSpacing(6);
+        verticalLayout_12->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_12->setObjectName(QStringLiteral("verticalLayout_12"));
+        kitchenWelcomeLabel = new QLabel(kitchenTab);
+        kitchenWelcomeLabel->setObjectName(QStringLiteral("kitchenWelcomeLabel"));
+        kitchenWelcomeLabel->setStyleSheet(QLatin1String("font: 57 32pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+
+        verticalLayout_12->addWidget(kitchenWelcomeLabel);
+
         tabWidget->addTab(kitchenTab, QString());
         managerTab = new QWidget();
         managerTab->setObjectName(QStringLiteral("managerTab"));
+        verticalLayout_13 = new QVBoxLayout(managerTab);
+        verticalLayout_13->setSpacing(6);
+        verticalLayout_13->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_13->setObjectName(QStringLiteral("verticalLayout_13"));
+        managerWelcomeLabel = new QLabel(managerTab);
+        managerWelcomeLabel->setObjectName(QStringLiteral("managerWelcomeLabel"));
+        managerWelcomeLabel->setStyleSheet(QLatin1String("font: 57 32pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+
+        verticalLayout_13->addWidget(managerWelcomeLabel);
+
         tabWidget->addTab(managerTab, QString());
         Table = new QWidget();
         Table->setObjectName(QStringLiteral("Table"));
@@ -1189,7 +1228,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(9);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1265,8 +1304,11 @@ public:
         clearButton->setText(QApplication::translate("MainWindow", "CLEAR", nullptr));
         enterButton->setText(QApplication::translate("MainWindow", "ENTER", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(loginTab), QApplication::translate("MainWindow", "Login", nullptr));
+        waitstaffWelcomeLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(waitstaffTab), QApplication::translate("MainWindow", "Waitstaff", nullptr));
+        kitchenWelcomeLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(kitchenTab), QApplication::translate("MainWindow", "Kitchen", nullptr));
+        managerWelcomeLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(managerTab), QApplication::translate("MainWindow", "Manager", nullptr));
         groupBox_8->setTitle(QString());
         label->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" color:#eeeeec;\">Name</span></p></body></html>", nullptr));

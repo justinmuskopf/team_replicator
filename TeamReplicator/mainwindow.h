@@ -13,8 +13,9 @@
 #include "restaurant.h"
 #include <QListWidget>
 #include "restaurantdatabase.h"
+#include <QKeyEvent>
 
-#define NUM_BUTTONS 4
+#define NUM_BUTTONS 3
 
 namespace Ui {
 class MainWindow;
@@ -94,6 +95,8 @@ private slots:
 
     void on_kidButton_clicked();
 
+
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons
@@ -112,6 +115,7 @@ private:
     void addToLoginBox(int num);                //Add numbers to login box
     void addToOrderList(int num);               //Add items to order list
     void updateOrderList();
+    void keyPressEvent(QKeyEvent *event);
 };
 
 QString formatForList(MenuItem item);

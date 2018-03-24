@@ -15,6 +15,7 @@ public:
     void printInfo();
     void addToOrder(MenuItem item);
     bool isOrderPlaced();
+    ~Customer();
 private:
     bool orderPlaced;
     Order *order;

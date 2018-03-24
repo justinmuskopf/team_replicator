@@ -56,3 +56,9 @@ void Order::printOrder()
 void Order::addToTotal(float add) {total += add;}
 float Order::getTotal() {return total;}
 void Order::subtractFromTotal(float sub) {total -= sub;}
+
+void Order::resetOrder()
+{
+    total = 0;
+    order.clear();
+}
