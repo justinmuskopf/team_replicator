@@ -490,3 +490,95 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     else if (text == "9")
         ui -> tabWidget -> setCurrentIndex(TABLE_TAB);
 }
+
+void MainWindow::initPaymentScreen()
+{
+    foreach (Customer *customer, thisTable -> getCustomers())
+    {
+        QString custStr = customer -> getName() + "....." + QString::number(customer -> getOrder() -> getTotal());
+        ui -> yetToPayList -> addItem(custStr);
+    }
+
+    updatePaymentTotals();
+}
+
+void MainWindow::on_addToPaymentButton_clicked()
+{
+    QList<QListWidgetItem *> selectedCustomers = ui -> yetToPayList -> selectedItems();
+    foreach (QListWidgetItem *customer, selectedCustomers)
+    {
+        ui -> paymentList -> addItem(customer -> text());
+        qDeleteAll(selectedCustomers);
+    }
+
+    updatePaymentTotals();
+}
+
+void MainWindow::on_removeFromPaymentButton_clicked()
+{
+    QList<QListWidgetItem *> selectedCustomers = ui -> paymentList -> selectedItems();
+    foreach (QListWidgetItem *customer, selectedCustomers)
+    {
+        ui -> yetToPayList -> addItem(customer -> text());
+        qDeleteAll(selectedCustomers);
+    }
+
+    updatePaymentTotals();
+}
+
+void MainWindow::updatePaymentTotals()
+{
+    float remainingTotal = 0;
+    float paymentTotal = 0;
+    QListWidget *payList = ui -> paymentList;
+    QListWidget *remainList = ui -> yetToPayList;
+
+    for (int i = 0; i < payList -> count(); i++)
+    {
+        QStringList splitStr = payList -> item(i) -> text().split(".");
+        int len = splitStr.size();
+        paymentTotal += (splitStr[len - 2] + "." + splitStr[len - 1]).toFloat();
+    }
+
+    for (int i = 0; i < remainList -> count(); i++)
+    {
+        QStringList splitStr = remainList -> item(i) -> text().split(".");
+        int len = splitStr.size();
+        remainingTotal += (splitStr[len - 2] + "." + splitStr[len - 1]).toFloat();
+    }
+
+    ui -> totalRemainingLabel -> setText("Total Remaining: " + QString::number(remainingTotal));
+    ui -> totalToPayLabel -> setText("Total: " + QString::number(paymentTotal));
+
+
+}
+
+void MainWindow::on_payForOrderButton_clicked()
+{
+    QDialog *processDlg = new QDialog(this, Qt::FramelessWindowHint | Qt::WindowTitleHint);
+    processDlg -> setAttribute(Qt::WA_DeleteOnClose, true);
+
+
+    QRect screenGeometry = QApplication::desktop()->screenGeometry();
+    int x = (screenGeometry.width() - processDlg->width()) / 2;
+    int y = (screenGeometry.height() - processDlg->height()) / 2;
+    processDlg->move(x, y);
+
+    //processDlg -> setGeometry(this -> geometry().width() / 2, this->geometry().height()/2,300,300);
+    //processDlg -> move(this->rect().center() - processDlg->rect().());
+    QLabel *movieLabel = new QLabel(processDlg);
+    QLabel *textLabel = new QLabel(processDlg);
+    QMovie *movie = new QMovie(LOADING_GIF);
+    QGridLayout *layout = new QGridLayout;
+
+    movieLabel -> setMovie(movie);
+
+    layout -> addWidget(movieLabel, 0, 0, 1, 1, Qt::AlignCenter);
+
+    processDlg -> setLayout(layout);
+
+    processDlg -> show();
+
+    movieLabel -> show();
+    movie -> start();
+}

@@ -95,6 +95,15 @@ private slots:
 
     void on_kidButton_clicked();
 
+    void on_addToPaymentButton_clicked();
+
+    void on_removeFromPaymentButton_clicked();
+
+    void on_payForOrderButton_clicked();
+
+    void initPaymentScreen();
+
+    void updatePaymentTotals();
 
 
 private:

@@ -329,10 +329,17 @@ font: 57 24pt &quot;Counter-Strike&quot;;</string>
              </property>
             </widget>
            </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="kidIcon">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
            <item row="5" column="1">
             <widget class="QPushButton" name="kidButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -343,13 +350,6 @@ font: 57 24pt &quot;Counter-Strike&quot;;</string>
              </property>
              <property name="text">
               <string>Kids' Menu</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="kidIcon">
-             <property name="text">
-              <string>TextLabel</string>
              </property>
             </widget>
            </item>
@@ -393,7 +393,7 @@ color: rgb(188, 188, 188);</string>
              </property>
             </widget>
            </item>
-           <item row="2" column="0">
+           <item row="3" column="0">
             <widget class="QFrame" name="frame_5">
              <property name="minimumSize">
               <size>
@@ -449,6 +449,17 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
                </widget>
               </item>
              </layout>
+            </widget>
+           </item>
+           <item row="2" column="0" alignment="Qt::AlignRight">
+            <widget class="QLabel" name="orderTotalLabel">
+             <property name="styleSheet">
+              <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+             </property>
+             <property name="text">
+              <string>Total:</string>
+             </property>
             </widget>
            </item>
           </layout>
@@ -1128,7 +1139,7 @@ color: rgb(188, 188, 188);</string>
             </widget>
            </item>
            <item alignment="Qt::AlignRight">
-            <widget class="QLabel" name="totalLabel">
+            <widget class="QLabel" name="menuTotalLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -1200,7 +1211,7 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
           <zorder>menuList</zorder>
           <zorder>orderNumLabel_2</zorder>
           <zorder>frame_6</zorder>
-          <zorder>totalLabel</zorder>
+          <zorder>menuTotalLabel</zorder>
          </widget>
         </item>
        </layout>
@@ -1917,10 +1928,151 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="begin">
+      <widget class="QWidget" name="payment">
        <attribute name="title">
-        <string>Begin</string>
+        <string>Payment</string>
        </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QFrame" name="frame_10">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <widget class="QListWidget" name="yetToPayList">
+             <property name="styleSheet">
+              <string notr="true">font: 57 28pt &quot;Counter-Strike&quot;;
+color: rgb(238, 238, 236);</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignRight">
+            <widget class="QLabel" name="totalRemainingLabel">
+             <property name="styleSheet">
+              <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+             </property>
+             <property name="text">
+              <string>Total Remaining:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_9">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
+            <widget class="QPushButton" name="addToPaymentButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Add to Payment
+--------&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="removeFromPaymentButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Remove From Payment
+&lt;--------</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_8">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item>
+            <widget class="QListWidget" name="paymentList">
+             <property name="styleSheet">
+              <string notr="true">font: 57 28pt &quot;Counter-Strike&quot;;
+color: rgb(238, 238, 236);</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignRight">
+            <widget class="QLabel" name="totalToPayLabel">
+             <property name="styleSheet">
+              <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+             </property>
+             <property name="text">
+              <string>Total:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="payForOrderButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Pay and Place Order</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
