@@ -57,8 +57,8 @@ public:
     QLabel *desIcon;
     QLabel *sidIcon;
     QLabel *entIcon;
-    QPushButton *kidButton;
     QLabel *kidIcon;
+    QPushButton *kidButton;
     QGroupBox *groupBox_6;
     QGridLayout *gridLayout;
     QLabel *orderNumLabel;
@@ -67,6 +67,7 @@ public:
     QHBoxLayout *horizontalLayout_5;
     QPushButton *orderRemoveButton;
     QPushButton *placeOrderButton;
+    QLabel *orderTotalLabel;
     QWidget *refillsTab;
     QHBoxLayout *horizontalLayout;
     QLabel *drink1_pic;
@@ -108,7 +109,7 @@ public:
     QVBoxLayout *verticalLayout_2;
     QLabel *orderNumLabel_2;
     QListWidget *menuList;
-    QLabel *totalLabel;
+    QLabel *menuTotalLabel;
     QFrame *frame_6;
     QHBoxLayout *horizontalLayout_6;
     QPushButton *menuRemoveButton;
@@ -153,7 +154,21 @@ public:
     QVBoxLayout *verticalLayout_10;
     QListWidget *tableList;
     QPushButton *beginOrderButton;
-    QWidget *begin;
+    QWidget *payment;
+    QHBoxLayout *horizontalLayout_8;
+    QFrame *frame_10;
+    QVBoxLayout *verticalLayout_111;
+    QListWidget *yetToPayList;
+    QLabel *totalRemainingLabel;
+    QFrame *frame_9;
+    QVBoxLayout *verticalLayout_121;
+    QPushButton *addToPaymentButton;
+    QPushButton *removeFromPaymentButton;
+    QFrame *frame_8;
+    QVBoxLayout *verticalLayout_131;
+    QListWidget *paymentList;
+    QLabel *totalToPayLabel;
+    QPushButton *payForOrderButton;
     QGroupBox *groupBox;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *backButton;
@@ -340,19 +355,19 @@ public:
 
         gridLayout_8->addWidget(entIcon, 1, 0, 1, 1);
 
-        kidButton = new QPushButton(groupBox_2);
-        kidButton->setObjectName(QStringLiteral("kidButton"));
-        sizePolicy3.setHeightForWidth(kidButton->sizePolicy().hasHeightForWidth());
-        kidButton->setSizePolicy(sizePolicy3);
-        kidButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
-"font: 57 24pt \"Counter-Strike\";"));
-
-        gridLayout_8->addWidget(kidButton, 5, 1, 1, 1);
-
         kidIcon = new QLabel(groupBox_2);
         kidIcon->setObjectName(QStringLiteral("kidIcon"));
 
         gridLayout_8->addWidget(kidIcon, 5, 0, 1, 1);
+
+        kidButton = new QPushButton(groupBox_2);
+        kidButton->setObjectName(QStringLiteral("kidButton"));
+        sizePolicy2.setHeightForWidth(kidButton->sizePolicy().hasHeightForWidth());
+        kidButton->setSizePolicy(sizePolicy2);
+        kidButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 24pt \"Counter-Strike\";"));
+
+        gridLayout_8->addWidget(kidButton, 5, 1, 1, 1);
 
 
         gridLayout_7->addWidget(groupBox_2, 2, 0, 2, 1);
@@ -416,7 +431,14 @@ public:
         horizontalLayout_5->addWidget(placeOrderButton);
 
 
-        gridLayout->addWidget(frame_5, 2, 0, 1, 1);
+        gridLayout->addWidget(frame_5, 3, 0, 1, 1);
+
+        orderTotalLabel = new QLabel(groupBox_6);
+        orderTotalLabel->setObjectName(QStringLiteral("orderTotalLabel"));
+        orderTotalLabel->setStyleSheet(QLatin1String("font: 57 20pt \"Counter-Strike\";\n"
+"color: rgb(188, 188, 188);"));
+
+        gridLayout->addWidget(orderTotalLabel, 2, 0, 1, 1, Qt::AlignRight);
 
 
         gridLayout_7->addWidget(groupBox_6, 1, 5, 3, 1);
@@ -752,14 +774,14 @@ public:
 
         verticalLayout_2->addWidget(menuList);
 
-        totalLabel = new QLabel(groupBox_5);
-        totalLabel->setObjectName(QStringLiteral("totalLabel"));
-        sizePolicy5.setHeightForWidth(totalLabel->sizePolicy().hasHeightForWidth());
-        totalLabel->setSizePolicy(sizePolicy5);
-        totalLabel->setStyleSheet(QLatin1String("font: 57 20pt \"Counter-Strike\";\n"
+        menuTotalLabel = new QLabel(groupBox_5);
+        menuTotalLabel->setObjectName(QStringLiteral("menuTotalLabel"));
+        sizePolicy5.setHeightForWidth(menuTotalLabel->sizePolicy().hasHeightForWidth());
+        menuTotalLabel->setSizePolicy(sizePolicy5);
+        menuTotalLabel->setStyleSheet(QLatin1String("font: 57 20pt \"Counter-Strike\";\n"
 "color: rgb(188, 188, 188);"));
 
-        verticalLayout_2->addWidget(totalLabel, 0, Qt::AlignRight);
+        verticalLayout_2->addWidget(menuTotalLabel, 0, Qt::AlignRight);
 
         frame_6 = new QFrame(groupBox_5);
         frame_6->setObjectName(QStringLiteral("frame_6"));
@@ -794,7 +816,7 @@ public:
         menuList->raise();
         orderNumLabel_2->raise();
         frame_6->raise();
-        totalLabel->raise();
+        menuTotalLabel->raise();
 
         horizontalLayout_3->addWidget(groupBox_5);
 
@@ -1079,9 +1101,104 @@ public:
         horizontalLayout_7->addWidget(groupBox_7);
 
         tabWidget->addTab(Table, QString());
-        begin = new QWidget();
-        begin->setObjectName(QStringLiteral("begin"));
-        tabWidget->addTab(begin, QString());
+        payment = new QWidget();
+        payment->setObjectName(QStringLiteral("payment"));
+        horizontalLayout_8 = new QHBoxLayout(payment);
+        horizontalLayout_8->setSpacing(6);
+        horizontalLayout_8->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
+        frame_10 = new QFrame(payment);
+        frame_10->setObjectName(QStringLiteral("frame_10"));
+        sizePolicy.setHeightForWidth(frame_10->sizePolicy().hasHeightForWidth());
+        frame_10->setSizePolicy(sizePolicy);
+        frame_10->setFrameShape(QFrame::StyledPanel);
+        frame_10->setFrameShadow(QFrame::Raised);
+        verticalLayout_111 = new QVBoxLayout(frame_10);
+        verticalLayout_111->setSpacing(6);
+        verticalLayout_111->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_111->setObjectName(QStringLiteral("verticalLayout_111"));
+        yetToPayList = new QListWidget(frame_10);
+        yetToPayList->setObjectName(QStringLiteral("yetToPayList"));
+        yetToPayList->setStyleSheet(QLatin1String("font: 57 28pt \"Counter-Strike\";\n"
+"color: rgb(238, 238, 236);"));
+
+        verticalLayout_111->addWidget(yetToPayList);
+
+        totalRemainingLabel = new QLabel(frame_10);
+        totalRemainingLabel->setObjectName(QStringLiteral("totalRemainingLabel"));
+        totalRemainingLabel->setStyleSheet(QLatin1String("font: 57 20pt \"Counter-Strike\";\n"
+"color: rgb(188, 188, 188);"));
+
+        verticalLayout_111->addWidget(totalRemainingLabel, 0, Qt::AlignRight);
+
+
+        horizontalLayout_8->addWidget(frame_10);
+
+        frame_9 = new QFrame(payment);
+        frame_9->setObjectName(QStringLiteral("frame_9"));
+        frame_9->setFrameShape(QFrame::StyledPanel);
+        frame_9->setFrameShadow(QFrame::Raised);
+        verticalLayout_121 = new QVBoxLayout(frame_9);
+        verticalLayout_121->setSpacing(6);
+        verticalLayout_121->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_121->setObjectName(QStringLiteral("verticalLayout_121"));
+        addToPaymentButton = new QPushButton(frame_9);
+        addToPaymentButton->setObjectName(QStringLiteral("addToPaymentButton"));
+        sizePolicy.setHeightForWidth(addToPaymentButton->sizePolicy().hasHeightForWidth());
+        addToPaymentButton->setSizePolicy(sizePolicy);
+        addToPaymentButton->setMinimumSize(QSize(200, 0));
+        addToPaymentButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        verticalLayout_121->addWidget(addToPaymentButton);
+
+        removeFromPaymentButton = new QPushButton(frame_9);
+        removeFromPaymentButton->setObjectName(QStringLiteral("removeFromPaymentButton"));
+        sizePolicy.setHeightForWidth(removeFromPaymentButton->sizePolicy().hasHeightForWidth());
+        removeFromPaymentButton->setSizePolicy(sizePolicy);
+        removeFromPaymentButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        verticalLayout_121->addWidget(removeFromPaymentButton);
+
+
+        horizontalLayout_8->addWidget(frame_9);
+
+        frame_8 = new QFrame(payment);
+        frame_8->setObjectName(QStringLiteral("frame_8"));
+        frame_8->setFrameShape(QFrame::StyledPanel);
+        frame_8->setFrameShadow(QFrame::Raised);
+        verticalLayout_131 = new QVBoxLayout(frame_8);
+        verticalLayout_131->setSpacing(6);
+        verticalLayout_131->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_131->setObjectName(QStringLiteral("verticalLayout_131"));
+        paymentList = new QListWidget(frame_8);
+        paymentList->setObjectName(QStringLiteral("paymentList"));
+        paymentList->setStyleSheet(QLatin1String("font: 57 28pt \"Counter-Strike\";\n"
+"color: rgb(238, 238, 236);"));
+
+        verticalLayout_131->addWidget(paymentList);
+
+        totalToPayLabel = new QLabel(frame_8);
+        totalToPayLabel->setObjectName(QStringLiteral("totalToPayLabel"));
+        totalToPayLabel->setStyleSheet(QLatin1String("font: 57 20pt \"Counter-Strike\";\n"
+"color: rgb(188, 188, 188);"));
+
+        verticalLayout_131->addWidget(totalToPayLabel, 0, Qt::AlignRight);
+
+        payForOrderButton = new QPushButton(frame_8);
+        payForOrderButton->setObjectName(QStringLiteral("payForOrderButton"));
+        sizePolicy3.setHeightForWidth(payForOrderButton->sizePolicy().hasHeightForWidth());
+        payForOrderButton->setSizePolicy(sizePolicy3);
+        payForOrderButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        verticalLayout_131->addWidget(payForOrderButton);
+
+
+        horizontalLayout_8->addWidget(frame_8);
+
+        tabWidget->addTab(payment, QString());
 
         verticalLayout_7->addWidget(tabWidget);
 
@@ -1253,12 +1370,13 @@ public:
         desIcon->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         sidIcon->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         entIcon->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        kidButton->setText(QApplication::translate("MainWindow", "Kids' Menu", nullptr));
         kidIcon->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        kidButton->setText(QApplication::translate("MainWindow", "Kids' Menu", nullptr));
         groupBox_6->setTitle(QString());
         orderNumLabel->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#c6c6c6;\">Order #</span></p></body></html>", nullptr));
         orderRemoveButton->setText(QApplication::translate("MainWindow", "Remove", nullptr));
         placeOrderButton->setText(QApplication::translate("MainWindow", "Next Order", nullptr));
+        orderTotalLabel->setText(QApplication::translate("MainWindow", "Total:", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(orderTab_7), QApplication::translate("MainWindow", "Order", nullptr));
         drink1_pic->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         drink2_pic->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
@@ -1286,7 +1404,7 @@ public:
         addButton5->setText(QApplication::translate("MainWindow", "ADD", nullptr));
         groupBox_5->setTitle(QString());
         orderNumLabel_2->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#c6c6c6;\">Order #</span></p></body></html>", nullptr));
-        totalLabel->setText(QApplication::translate("MainWindow", "Total: ", nullptr));
+        menuTotalLabel->setText(QApplication::translate("MainWindow", "Total: ", nullptr));
         menuRemoveButton->setText(QApplication::translate("MainWindow", "Remove From Order", nullptr));
         menuBackButton->setText(QApplication::translate("MainWindow", "Back to Menu", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(menuTab), QApplication::translate("MainWindow", "Menu", nullptr));
@@ -1326,7 +1444,14 @@ public:
 
         beginOrderButton->setText(QApplication::translate("MainWindow", "Begin Order", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Table), QApplication::translate("MainWindow", "Table", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(begin), QApplication::translate("MainWindow", "Begin", nullptr));
+        totalRemainingLabel->setText(QApplication::translate("MainWindow", "Total Remaining:", nullptr));
+        addToPaymentButton->setText(QApplication::translate("MainWindow", "Add to Payment\n"
+"-------->", nullptr));
+        removeFromPaymentButton->setText(QApplication::translate("MainWindow", "Remove From Payment\n"
+"<--------", nullptr));
+        totalToPayLabel->setText(QApplication::translate("MainWindow", "Total:", nullptr));
+        payForOrderButton->setText(QApplication::translate("MainWindow", "Pay and Place Order", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(payment), QApplication::translate("MainWindow", "Payment", nullptr));
         backButton->setText(QApplication::translate("MainWindow", "Back", nullptr));
         drinkButton->setText(QApplication::translate("MainWindow", "Refills", nullptr));
         ticketButton->setText(QApplication::translate("MainWindow", "My Ticket", nullptr));

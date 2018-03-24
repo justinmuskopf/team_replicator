@@ -2,7 +2,6 @@
 #define CUSTOMER_H
 
 #include "order.h"
-#include <QListWidget>
 
 class Customer
 {

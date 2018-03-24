@@ -117,6 +117,8 @@ private:
     bool backPressed;                           //Back button pressed
     int lastPage;                               //Index of last page
     void beginSession();                        //Begin dining session
+    void endSession();
+    void resetSession();
     void goHome();                              //Go to main page
     void disableButtons();                      //Disable main buttons
     void enableButtons();                       //Enable main buttons

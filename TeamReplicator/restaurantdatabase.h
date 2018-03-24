@@ -19,7 +19,7 @@ public:
     Employee *getEmployeeById(QString ID);
     Employee *getEmployeeByPin(QString pin);
     void     addEmployeeToDb(Employee *employee);
-    void     addOrderToDb(Order *order);
+    void     addOrderToDb(Order *order, int orderNum);
     int      getOrderNumber();
 private:
     QSqlDatabase db;

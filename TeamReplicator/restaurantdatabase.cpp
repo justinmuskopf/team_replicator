@@ -4,10 +4,11 @@
 #include <QSqlRecord>
 #include <QDebug>
 #include <QVariant>
+#include <QDate>
 const QString RestaurantDatabase::getEmployeeFmt = "SELECT * FROM `employees` WHERE %1=%2";
 const QString RestaurantDatabase::addEmployeeFmt = "INSERT INTO `employees` (Emp_Id, Name, Lvl, Pin) VALUES (%1, %2, %3, %4)";
-const QString RestaurantDatabase::addOrderFmt = "INSERT INTO ";
-const QString RestaurantDatabase::addItemFmt = "";
+const QString RestaurantDatabase::addOrderFmt = "INSERT INTO `sales` (Emp_Id, Sale_Date, Total) VALUES (%1, %2, %3)";
+const QString RestaurantDatabase::addItemFmt = "INSERT INTO `order_items` (Order_Id, Name, Price) VALUES (%1, %2, %3)";
 
 
 RestaurantDatabase::RestaurantDatabase()
@@ -77,9 +78,23 @@ void RestaurantDatabase::addEmployeeToDb(Employee *employee)
         qDebug() << "addEmployeeToDb: Failed to insert " << name << " to DB!";
 }
 
-void RestaurantDatabase::addOrderToDb(Order *order)
+void RestaurantDatabase::addOrderToDb(Order *order, int orderNum)
 {
+    QDate date = QDate::currentDate();
+    QString dateStr = QString::number(date.year()) + "/" +
+                      QString::number(date.month()) + "/" +
+                      QString::number(date.day());
 
+    QString addOrderStr = addOrderFmt.arg("81117", "'" + dateStr + "'", QString::number(order -> getTotal()));
+    QSqlQuery query(addOrderStr, db);
+    query.exec();
+
+    foreach (MenuItem item, order -> getOrder())
+    {
+        QString addItemStr = addItemFmt.arg(QString::number(orderNum), "'" + item.name + "'", QString::number(item.price));
+        query.prepare(addItemStr);
+        query.exec();
+    }
 }
 
 int RestaurantDatabase::getOrderNumber()

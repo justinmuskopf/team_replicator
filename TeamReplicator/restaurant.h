@@ -2,7 +2,7 @@
 #define RESTAURANT_H
 
 #include "table.h"
-
+#include <QDate>
 
 
 class Restaurant
@@ -22,6 +22,7 @@ private:
     QVector<Table *> tables;
     QVector<Employee> employees;
     Menu menu;
+    QDate currentDate;
 };
 
 #endif // RESTAURANT_H

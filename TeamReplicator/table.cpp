@@ -3,7 +3,7 @@
 
 Table::Table()
 {
-    currentCustomer = NULL;
+    currentCustomer = nullptr;
 }
 
 Table::Table(int num)
@@ -13,6 +13,7 @@ Table::Table(int num)
 
 void Table::addCustomerToTable(Customer *customer)
 {
+    qDebug() << "Adding " << customer -> getName() << " to table...";
     customers.push_back(customer);
     if (customers.size() == 1)
         currentCustomer = customers[0];
@@ -53,7 +54,6 @@ Customer *Table::getCurrentCustomer()
     }
     else
     {
-        qDebug() << "Current customer not null...";
         return currentCustomer;
     }
 
@@ -92,10 +92,7 @@ bool Table::isLastCustomer()
     for (int i = 0; i < size; i++)
     {
         if (customers[i] == currentCustomer && i == size - 1)
-        {
-            qDebug() << "Found";//&& i == size - 1)
             return true;
-        }
     }
     return false;
 }
@@ -107,6 +104,7 @@ void Table::clearTable()
     {
         delete customer;
     }
+    customers.clear();
 
     orderNum = -1;
 }

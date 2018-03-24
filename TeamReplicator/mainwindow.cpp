@@ -7,6 +7,8 @@
 #include "icons.h"
 #include <QSqlQuery>
 #include <QSqlRecord>
+#include <QDesktopWidget>
+#include <QMovie>
 
 //Tab Index ENUM
 enum {
@@ -19,7 +21,7 @@ enum {
     KITCHEN_TAB,
     MANAGER_TAB,
     TABLE_TAB,
-    BEGIN_TAB
+    PAYMENT_TAB
 };
 
 //MainWindow Constructor
@@ -154,7 +156,7 @@ void MainWindow::on_assistButton_clicked()
     msgBox->setStandardButtons(QMessageBox::Ok);
     msgBox -> setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
     msgBox->setWindowTitle("Help");
-    msgBox->setText( tr("Your Server has been notified, and will be with you shortly.") );
+    msgBox->setText("Your Server has been notified, and will be with you shortly.");
     msgBox->open( this, SLOT(msgBoxClosed(QAbstractButton*)) );
 }
 
@@ -331,9 +333,11 @@ void MainWindow::on_menuRemoveButton_clicked()
     }
     //Delete from the list and update order list
     qDeleteAll(ui -> menuList -> selectedItems());
+
+    ui -> menuTotalLabel -> setText("Total: " + QString::number(thisTable -> getTotal()));
+
     updateOrderList();
 
-    ui -> totalLabel -> setText("Total: " + QString::number(thisTable -> getTotal()));
 }
 
 /* Add buttons                                                              */
@@ -354,10 +358,12 @@ void MainWindow::addToOrderList(int num)
     ui -> menuList -> addItem(formatForList(item));
     currentOrder -> addToOrder(item);
 
+    ui -> menuTotalLabel -> setText("Total: " + QString::number(thisTable -> getTotal()));
+
     //Update the order list
     updateOrderList();
 
-    ui -> totalLabel -> setText("Total: " + QString::number(thisTable -> getTotal()));
+
 }
 /****************************************************************************/
 
@@ -402,6 +408,9 @@ void MainWindow::on_beginOrderButton_clicked()
     ui -> menuList -> addItem(firstCustomer);
     updateOrderList();
 
+    if (thisTable -> isLastCustomer())
+            ui -> placeOrderButton -> setText("Go to Payment");
+
     //Change page to order tab and enable buttons
     ui -> tabWidget -> setCurrentIndex(ORDER_TAB);
     enableButtons();
@@ -421,10 +430,15 @@ void MainWindow::on_placeOrderButton_clicked()
     {
         ui -> menuList -> addItem(nextCustomer -> getName());
         updateOrderList();
-    }
 
-    if (thisTable -> isLastCustomer())
-        ui -> placeOrderButton -> setText("Place Order");
+        if (thisTable -> isLastCustomer())
+                ui -> placeOrderButton -> setText("Go to Payment");
+    }
+    else
+    {
+        initPaymentScreen();
+        ui -> tabWidget -> setCurrentIndex(PAYMENT_TAB);
+    }
 }
 
 //Copy the menu list to the order list
@@ -436,6 +450,8 @@ void MainWindow::updateOrderList()
     {
         ui -> orderList -> addItem(ui -> menuList -> item(i) -> text());
     }
+
+    ui -> orderTotalLabel -> setText(ui -> menuTotalLabel -> text());
 }
 
 //Item in menu list was clicked
@@ -489,6 +505,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         ui -> tabWidget -> setCurrentIndex(MANAGER_TAB);
     else if (text == "9")
         ui -> tabWidget -> setCurrentIndex(TABLE_TAB);
+    else if (text == "0")
+        ui -> tabWidget -> setCurrentIndex(PAYMENT_TAB);
 }
 
 void MainWindow::initPaymentScreen()
@@ -555,7 +573,7 @@ void MainWindow::updatePaymentTotals()
 
 void MainWindow::on_payForOrderButton_clicked()
 {
-    QDialog *processDlg = new QDialog(this, Qt::FramelessWindowHint | Qt::WindowTitleHint);
+    QDialog *processDlg = new QDialog(this);//, Qt::FramelessWindowHint | Qt::WindowTitleHint);
     processDlg -> setAttribute(Qt::WA_DeleteOnClose, true);
 
 
@@ -581,4 +599,26 @@ void MainWindow::on_payForOrderButton_clicked()
 
     movieLabel -> show();
     movie -> start();
+
+    foreach (Customer *customer, thisTable -> getCustomers())
+    {
+        db.addOrderToDb(customer -> getOrder(), db.getOrderNumber());
+    }
+
+    resetSession();
+}
+
+void MainWindow::endSession()
+{
+    thisTable -> clearTable();
+    ui -> totalRemainingLabel -> setText("Total Remaining: $0.00");
+    ui -> totalToPayLabel -> setText("Total: $0.00");
+    ui -> orderTotalLabel -> setText("Total: $0.00");
+    ui -> menuTotalLabel -> setText("Total: $0.00");
+}
+
+void MainWindow::resetSession()
+{
+    endSession();
+    beginSession();
 }

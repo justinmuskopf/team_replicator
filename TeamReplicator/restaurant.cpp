@@ -9,6 +9,8 @@ Restaurant::Restaurant()
          availableTables[i] = true;
 
     currentTable = NULL;
+
+    currentDate = QDate::currentDate();
 }
 
 Menu Restaurant::getMenu()
