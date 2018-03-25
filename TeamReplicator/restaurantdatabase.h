@@ -1,3 +1,6 @@
+/*
+ *  This header files declares the RestaurantDatabase class
+*/
 #ifndef RESTAURANTDATABASE_H
 #define RESTAURANTDATABASE_H
 
@@ -5,29 +8,36 @@
 #include "employee.h"
 #include "order.h"
 
-#define DB_USER "root"
-#define DB_PASS ""
-#define DB_HOST "localhost"
-#define DB_NAME "replicator"
-#define DB_TYPE "QMYSQL"
+#define DB_USER "root"          //DB Username
+#define DB_PASS ""              //DB Password
+#define DB_HOST "localhost"     //DB Host
+#define DB_NAME "replicator"    //DB Name
+#define DB_TYPE "QMYSQL"        //DB Driver Type
+
+typedef enum {
+              REFILL_MESSAGE,
+              ASSIST_MESSAGE,
+              MANAGER_MESSAGE,
+              ORDER_PLACED_MESSAGE
+             } Messages;
 
 class RestaurantDatabase
 {
 public:
-    RestaurantDatabase();
-    Employee *getEmployeeByName(QString name);
-    Employee *getEmployeeById(QString ID);
-    Employee *getEmployeeByPin(QString pin);
-    void     addEmployeeToDb(Employee *employee);
-    void     addOrderToDb(Order *order, int orderNum);
-    int      getOrderNumber();
+    RestaurantDatabase();                                   //Default Constructor
+    Employee *getEmployeeByName(QString name);              //Retrieve an Employee from DB by name
+    Employee *getEmployeeById(QString ID);                  //Retrieve an Employee from DB by ID
+    Employee *getEmployeeByPin(QString pin);                //Retrieve an Employee from DB by Pin
+    void     addEmployeeToDb(Employee *employee);           //Add an Employee to the DB
+    void     addOrderToDb(Order *order, int orderNum = -1); //Add an Order to the DB
+    int      getOrderNumber();                              //Returns the current order number
 private:
-    QSqlDatabase db;
-    Employee *getEmployeeFromDb(QString key, QString value);
-    static const QString getEmployeeFmt;
-    static const QString addEmployeeFmt;
-    static const QString addOrderFmt;
-    static const QString addItemFmt;
+    QSqlDatabase db;                                        //Database
+    Employee *getEmployeeFromDb(QString key, QString value);//Internal function to get Employee from DB
+    static const QString getEmployeeFmt;                    //Format of get Employee from DB query
+    static const QString addEmployeeFmt;                    //Format add Employee to DB query
+    static const QString addOrderFmt;                       //Format of add Order to DB query
+    static const QString addItemFmt;                        //Format of Add Item to DB query
 
 };
 

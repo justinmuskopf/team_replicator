@@ -24,11 +24,12 @@ typedef enum {APPETIZERS, ENTREES, DESSERTS, SIDES, DRINKS, KIDS} Category;
 //Menu item structure
 struct MenuItem
 {
-    QString name;
-    QString description;
-    QPixmap image;
-    float price;
-    void print();
+    QString name;       //Name of the item
+    QString description;//Description of the item
+    QPixmap image;      //Image of the item
+    QString category;   //Category of the menu item
+    float price;        //Price of the item
+    void print();       //Print menuItem info
 };
 
 //A MenuVector is a Vector of MenuItems
@@ -42,6 +43,7 @@ public:
     ~Menu();
     MenuVector getMenu(int type);       //Returns the menu of the type requested
     Category getCategory();             //Gets the current category of the user
+    MenuItem getItem(Category category, QString name);
     void setCategory(Category type);    //Set the category the user is viewing
 
 private:

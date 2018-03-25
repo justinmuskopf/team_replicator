@@ -70,18 +70,20 @@ public:
     QLabel *orderTotalLabel;
     QWidget *refillsTab;
     QHBoxLayout *horizontalLayout;
-    QLabel *drink1_pic;
-    QLabel *drink2_pic;
-    QLabel *drink3_pic;
-    QLabel *drink4_pic;
-    QLabel *drink5_pic;
+    QFrame *frame_11;
+    QVBoxLayout *verticalLayout_14;
+    QLabel *label_3;
+    QPushButton *drinkButton1;
+    QPushButton *drinkButton2;
+    QPushButton *drinkButton3;
+    QPushButton *drinkButton4;
     QGroupBox *groupBox_3;
     QVBoxLayout *verticalLayout_9;
-    QListWidget *listWidget_2;
+    QListWidget *refillList;
     QFrame *frame;
     QHBoxLayout *horizontalLayout_4;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *removeFromRefillButton;
+    QPushButton *orderRefillButton;
     QWidget *menuTab;
     QHBoxLayout *horizontalLayout_3;
     QFrame *frame_3;
@@ -450,43 +452,58 @@ public:
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        drink1_pic = new QLabel(refillsTab);
-        drink1_pic->setObjectName(QStringLiteral("drink1_pic"));
-        drink1_pic->setMinimumSize(QSize(100, 100));
-        drink1_pic->setMaximumSize(QSize(150, 150));
+        frame_11 = new QFrame(refillsTab);
+        frame_11->setObjectName(QStringLiteral("frame_11"));
+        frame_11->setFrameShape(QFrame::StyledPanel);
+        frame_11->setFrameShadow(QFrame::Raised);
+        verticalLayout_14 = new QVBoxLayout(frame_11);
+        verticalLayout_14->setSpacing(6);
+        verticalLayout_14->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_14->setObjectName(QStringLiteral("verticalLayout_14"));
+        label_3 = new QLabel(frame_11);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setStyleSheet(QStringLiteral("font: 57 28pt \"Counter-Strike\";"));
 
-        horizontalLayout->addWidget(drink1_pic);
+        verticalLayout_14->addWidget(label_3, 0, Qt::AlignHCenter);
 
-        drink2_pic = new QLabel(refillsTab);
-        drink2_pic->setObjectName(QStringLiteral("drink2_pic"));
-        drink2_pic->setMinimumSize(QSize(100, 100));
-        drink2_pic->setMaximumSize(QSize(150, 150));
+        drinkButton1 = new QPushButton(frame_11);
+        drinkButton1->setObjectName(QStringLiteral("drinkButton1"));
+        sizePolicy3.setHeightForWidth(drinkButton1->sizePolicy().hasHeightForWidth());
+        drinkButton1->setSizePolicy(sizePolicy3);
+        drinkButton1->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 32pt \"Counter-Strike\";"));
 
-        horizontalLayout->addWidget(drink2_pic);
+        verticalLayout_14->addWidget(drinkButton1);
 
-        drink3_pic = new QLabel(refillsTab);
-        drink3_pic->setObjectName(QStringLiteral("drink3_pic"));
-        drink3_pic->setMinimumSize(QSize(100, 100));
-        drink3_pic->setMaximumSize(QSize(150, 150));
+        drinkButton2 = new QPushButton(frame_11);
+        drinkButton2->setObjectName(QStringLiteral("drinkButton2"));
+        sizePolicy3.setHeightForWidth(drinkButton2->sizePolicy().hasHeightForWidth());
+        drinkButton2->setSizePolicy(sizePolicy3);
+        drinkButton2->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 32pt \"Counter-Strike\";"));
 
-        horizontalLayout->addWidget(drink3_pic);
+        verticalLayout_14->addWidget(drinkButton2);
 
-        drink4_pic = new QLabel(refillsTab);
-        drink4_pic->setObjectName(QStringLiteral("drink4_pic"));
-        drink4_pic->setMinimumSize(QSize(100, 100));
-        drink4_pic->setMaximumSize(QSize(150, 150));
+        drinkButton3 = new QPushButton(frame_11);
+        drinkButton3->setObjectName(QStringLiteral("drinkButton3"));
+        sizePolicy3.setHeightForWidth(drinkButton3->sizePolicy().hasHeightForWidth());
+        drinkButton3->setSizePolicy(sizePolicy3);
+        drinkButton3->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 32pt \"Counter-Strike\";"));
 
-        horizontalLayout->addWidget(drink4_pic);
+        verticalLayout_14->addWidget(drinkButton3);
 
-        drink5_pic = new QLabel(refillsTab);
-        drink5_pic->setObjectName(QStringLiteral("drink5_pic"));
-        sizePolicy.setHeightForWidth(drink5_pic->sizePolicy().hasHeightForWidth());
-        drink5_pic->setSizePolicy(sizePolicy);
-        drink5_pic->setMinimumSize(QSize(100, 100));
-        drink5_pic->setMaximumSize(QSize(150, 150));
-        drink5_pic->setFrameShape(QFrame::NoFrame);
+        drinkButton4 = new QPushButton(frame_11);
+        drinkButton4->setObjectName(QStringLiteral("drinkButton4"));
+        sizePolicy3.setHeightForWidth(drinkButton4->sizePolicy().hasHeightForWidth());
+        drinkButton4->setSizePolicy(sizePolicy3);
+        drinkButton4->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 32pt \"Counter-Strike\";"));
 
-        horizontalLayout->addWidget(drink5_pic);
+        verticalLayout_14->addWidget(drinkButton4);
+
+
+        horizontalLayout->addWidget(frame_11);
 
         groupBox_3 = new QGroupBox(refillsTab);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
@@ -497,15 +514,17 @@ public:
         verticalLayout_9->setSpacing(6);
         verticalLayout_9->setContentsMargins(11, 11, 11, 11);
         verticalLayout_9->setObjectName(QStringLiteral("verticalLayout_9"));
-        listWidget_2 = new QListWidget(groupBox_3);
-        listWidget_2->setObjectName(QStringLiteral("listWidget_2"));
+        refillList = new QListWidget(groupBox_3);
+        refillList->setObjectName(QStringLiteral("refillList"));
         QSizePolicy sizePolicy7(QSizePolicy::Expanding, QSizePolicy::Preferred);
         sizePolicy7.setHorizontalStretch(0);
         sizePolicy7.setVerticalStretch(0);
-        sizePolicy7.setHeightForWidth(listWidget_2->sizePolicy().hasHeightForWidth());
-        listWidget_2->setSizePolicy(sizePolicy7);
+        sizePolicy7.setHeightForWidth(refillList->sizePolicy().hasHeightForWidth());
+        refillList->setSizePolicy(sizePolicy7);
+        refillList->setStyleSheet(QLatin1String("font: 57 24pt \"Counter-Strike\";\n"
+"color: rgb(188, 188, 188);"));
 
-        verticalLayout_9->addWidget(listWidget_2);
+        verticalLayout_9->addWidget(refillList);
 
         frame = new QFrame(groupBox_3);
         frame->setObjectName(QStringLiteral("frame"));
@@ -521,23 +540,23 @@ public:
         horizontalLayout_4->setSpacing(6);
         horizontalLayout_4->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
-        pushButton = new QPushButton(frame);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        sizePolicy3.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy3);
-        pushButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+        removeFromRefillButton = new QPushButton(frame);
+        removeFromRefillButton->setObjectName(QStringLiteral("removeFromRefillButton"));
+        sizePolicy3.setHeightForWidth(removeFromRefillButton->sizePolicy().hasHeightForWidth());
+        removeFromRefillButton->setSizePolicy(sizePolicy3);
+        removeFromRefillButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
 
-        horizontalLayout_4->addWidget(pushButton);
+        horizontalLayout_4->addWidget(removeFromRefillButton);
 
-        pushButton_2 = new QPushButton(frame);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        sizePolicy3.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
-        pushButton_2->setSizePolicy(sizePolicy3);
-        pushButton_2->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+        orderRefillButton = new QPushButton(frame);
+        orderRefillButton->setObjectName(QStringLiteral("orderRefillButton"));
+        sizePolicy3.setHeightForWidth(orderRefillButton->sizePolicy().hasHeightForWidth());
+        orderRefillButton->setSizePolicy(sizePolicy3);
+        orderRefillButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
 
-        horizontalLayout_4->addWidget(pushButton_2);
+        horizontalLayout_4->addWidget(orderRefillButton);
 
 
         verticalLayout_9->addWidget(frame);
@@ -1345,7 +1364,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(9);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1355,7 +1374,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         spaceLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        startOrderButton->setText(QApplication::translate("MainWindow", "Place Order", nullptr));
+        startOrderButton->setText(QApplication::translate("MainWindow", "Begin Order", nullptr));
         loginButton->setText(QApplication::translate("MainWindow", "Employee Login", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(homeTab), QApplication::translate("MainWindow", "Home", nullptr));
         label_6->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" color:#c6c6c6;\">Category</span></p></body></html>", nullptr));
@@ -1378,14 +1397,14 @@ public:
         placeOrderButton->setText(QApplication::translate("MainWindow", "Next Order", nullptr));
         orderTotalLabel->setText(QApplication::translate("MainWindow", "Total:", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(orderTab_7), QApplication::translate("MainWindow", "Order", nullptr));
-        drink1_pic->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        drink2_pic->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        drink3_pic->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        drink4_pic->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        drink5_pic->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" color:#d0d0d0;\">Order Refills For:</span></p></body></html>", nullptr));
+        drinkButton1->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        drinkButton2->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        drinkButton3->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        drinkButton4->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         groupBox_3->setTitle(QString());
-        pushButton->setText(QApplication::translate("MainWindow", "Cancel", nullptr));
-        pushButton_2->setText(QApplication::translate("MainWindow", "Submit", nullptr));
+        removeFromRefillButton->setText(QApplication::translate("MainWindow", "Cancel", nullptr));
+        orderRefillButton->setText(QApplication::translate("MainWindow", "Submit", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(refillsTab), QApplication::translate("MainWindow", "Refills", nullptr));
         menu1_pic->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         menu2_pic->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));

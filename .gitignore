@@ -6,3 +6,12 @@
 
 #Ignore makefiles
 *Makefile*
+
+#Qmake stash
+*qmake*stash
+
+#Orig
+*orig
+
+#Object script
+*object_script*

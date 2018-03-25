@@ -1,3 +1,6 @@
+/*
+ *  This header files declares the Order class
+*/
 #ifndef ORDER_H
 #define ORDER_H
 
@@ -6,19 +9,21 @@
 class Order
 {
 public:
-    Order();
-    MenuVector getOrder();
-    void addToOrder(MenuItem item);
-    void removeFromOrder(QString name);
-    void removeFromOrder(MenuItem item);
-    void printOrder();
-    void addToTotal(float add);
-    float getTotal();
-    void subtractFromTotal(float sub);
-    void resetOrder();
+    Order();                            //Default Constructor
+    MenuVector getOrder();              //Return the MenuVector of Items
+    void addToOrder(MenuItem item);     //Add item to order
+    void removeFromOrder(QString name); //Remove from order by name
+    void removeFromOrder(MenuItem item);//Remove from order by item
+    void printOrder();                  //Print order to screen
+    void addToTotal(float add);         //Add item's price to total
+    float getTotal();                   //Return order subtotal
+    void subtractFromTotal(float sub);  //Subtract from order subtotal
+    void resetOrder();                  //Reset the current order
+    MenuItem getDrink();                 //Returns the drink on an order
 private:
-    MenuVector order;
-    float total;
+    MenuVector order;                   //Vector of MenuItems representing an order
+    MenuItem drink;                     //What the Customer is drinking
+    float total;                        //Subtotal of all items
 };
 
 #endif // ORDER_H

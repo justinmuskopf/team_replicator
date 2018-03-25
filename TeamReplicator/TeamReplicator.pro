@@ -32,7 +32,8 @@ SOURCES += \
     customer.cpp \
     restaurant.cpp \
     employee.cpp \
-    restaurantdatabase.cpp
+    restaurantdatabase.cpp \
+    drinkbutton.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -43,7 +44,8 @@ HEADERS += \
     customer.h \
     restaurant.h \
     employee.h \
-    restaurantdatabase.h
+    restaurantdatabase.h \
+    drinkbutton.h
 
 FORMS += \
     mainwindow.ui

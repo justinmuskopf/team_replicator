@@ -43,6 +43,7 @@ Menu::Menu()
             item.description = catObj["description"].toString();
             item.price = catObj["price"].toDouble();
             item.image = QPixmap(catObj["filename"].toString());
+            item.category = CATEGORIES[i];
             if (!item.image)
             {
                 qDebug() << "Can't find image for " << item.name;
@@ -86,4 +87,15 @@ void MenuItem::print()
 Menu::~Menu()
 {
 
+}
+
+MenuItem Menu::getItem(Category category, QString name)
+{
+    for (int i = 0; i < menu[category].size(); i++)
+    {
+        if (menu[category][i].name == name)
+            return menu[category][i];
+    }
+
+    return MenuItem();
 }

@@ -108,3 +108,16 @@ void Table::clearTable()
 
     orderNum = -1;
 }
+
+Customer *Table::getCustomerByName(QString name)
+{
+    //Try to find customer by name
+    foreach (Customer *customer, customers)
+    {
+        if (customer -> getName() == name)
+            return customer;
+    }
+
+    //Customer not found
+    return (Customer *)nullptr;
+}

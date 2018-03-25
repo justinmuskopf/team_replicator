@@ -14,8 +14,10 @@
 #include <QListWidget>
 #include "restaurantdatabase.h"
 #include <QKeyEvent>
+#include "drinkbutton.h"
 
-#define NUM_BUTTONS 3
+#define NUM_BUTTONS 2 //Number of buttons to include when enabling/disabling them
+#define MAX_CUSTOMERS 4
 
 namespace Ui {
 class MainWindow;
@@ -67,6 +69,7 @@ private slots:
     void on_driButton_clicked();
     void on_desButton_clicked();
     void on_sidButton_clicked();
+    void on_kidButton_clicked();
     /****************************/
 
     /*     Menu Add buttons     */
@@ -80,55 +83,60 @@ private slots:
 
     void on_menuBackButton_clicked();           //Back to Menu button clicked
     void on_menuRemoveButton_clicked();         //Menu remove button clicked
+    void on_startOrderButton_clicked();         //Start Order button clicked
+    void on_addToTableButton_clicked();         //Adding Customer to table
+    void on_beginOrderButton_clicked();         //Begin Order button clicked
+    void on_placeOrderButton_clicked();         //Place Order button clicked
+    void on_menuList_itemClicked(QListWidgetItem *item); //Item selected in menu list
+    void on_orderRemoveButton_clicked();        //Remove From Order button clicked
+    void on_addToPaymentButton_clicked();       //Add Customer to current payment
+    void on_removeFromPaymentButton_clicked();  //Removing Customer from current payment
+    void on_payForOrderButton_clicked();        //Pay For Order button clicked
+    void initPaymentScreen();                   //Initialize the payment screen
+    void initRefillScreen();                    //Initialize the refill screen
+    void updatePaymentTotals();                 //Update payment totals
 
-    void on_startOrderButton_clicked();
 
-    void on_addToTableButton_clicked();
+    void on_drinkButton1_clicked();
 
-    void on_beginOrderButton_clicked();
+    void on_drinkButton2_clicked();
 
-    void on_placeOrderButton_clicked();
+    void on_drinkButton3_clicked();
 
-    void on_menuList_itemClicked(QListWidgetItem *item);
+    void on_drinkButton4_clicked();
 
-    void on_orderRemoveButton_clicked();
+    void on_removeFromRefillButton_clicked();
 
-    void on_kidButton_clicked();
-
-    void on_addToPaymentButton_clicked();
-
-    void on_removeFromPaymentButton_clicked();
-
-    void on_payForOrderButton_clicked();
-
-    void initPaymentScreen();
-
-    void updatePaymentTotals();
-
+    void on_orderRefillButton_clicked();
 
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons
+    DrinkButton refillButtons[MAX_CUSTOMERS];  //Array of refill buttons
     QPixmap logo;                               //Logo
     QStack<int> backStack;                      //Stack for back button
     Restaurant restaurant;                      //Restaurant object
-    RestaurantDatabase db;
-    Table *thisTable;
+    RestaurantDatabase db;                      //Database
+    Table *thisTable;                           //Current table
     bool backPressed;                           //Back button pressed
     int lastPage;                               //Index of last page
     void beginSession();                        //Begin dining session
-    void endSession();
-    void resetSession();
+    void endSession();                          //End dining session
+    void resetSession();                        //Reset "Kiosk"
     void goHome();                              //Go to main page
     void disableButtons();                      //Disable main buttons
     void enableButtons();                       //Enable main buttons
+    void enableRefillButtons();                 //Enable refill buttons
+    void disableRefillButtons();                //Disable refill buttons
     void loadMenu(int type);                    //Load menu onto Menu page
     void addToLoginBox(int num);                //Add numbers to login box
     void addToOrderList(int num);               //Add items to order list
-    void updateOrderList();
-    void keyPressEvent(QKeyEvent *event);
+    void updateOrderList();                     //Copy values of menu list to order list
+    void keyPressEvent(QKeyEvent *event);       //Key has been pressed
+    void goToTab(int idx);                      //Set the current tab
+    void addToRefillList(DrinkButton drinkButton);         //Add drink to refill list
 };
 
-QString formatForList(MenuItem item);
+QString formatForList(MenuItem item);           //Format name and price into list standard
 
 #endif // MAINWINDOW_H

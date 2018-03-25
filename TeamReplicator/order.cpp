@@ -2,7 +2,8 @@
 #include <QDebug>
 Order::Order()
 {
-
+    //Menu menu;
+    //drink = menu.getItem(DRINKS, "Water");
 }
 
 MenuVector Order::getOrder()
@@ -12,6 +13,8 @@ MenuVector Order::getOrder()
 
 void Order::addToOrder(MenuItem item)
 {
+    if (item.category == "drinks")
+        drink = item;
     addToTotal(item.price);
     order.push_back(item);
 }
@@ -61,4 +64,9 @@ void Order::resetOrder()
 {
     total = 0;
     order.clear();
+}
+
+MenuItem Order::getDrink()
+{
+    return drink;
 }

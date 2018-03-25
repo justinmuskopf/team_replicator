@@ -10,6 +10,7 @@
 #include <QDesktopWidget>
 #include <QMovie>
 
+
 //Tab Index ENUM
 enum {
     HOME_TAB,
@@ -23,6 +24,11 @@ enum {
     TABLE_TAB,
     PAYMENT_TAB
 };
+
+void MainWindow::goToTab(int idx)
+{
+    ui -> tabWidget -> setCurrentIndex(idx);
+}
 
 //MainWindow Constructor
 MainWindow::MainWindow(QWidget *parent) :
@@ -52,9 +58,19 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //Initialize the main button array
     buttonArr[0] = ui -> backButton;
-    buttonArr[1] = ui -> drinkButton;
-    buttonArr[2] = ui -> ticketButton;
+    //buttonArr[1] = ui -> drinkButton;
+    buttonArr[1] = ui -> ticketButton;
     //buttonArr[3] = ui -> gameButton;
+
+    //Refill buttons
+    //ui -> drinkButton1 = new DrinkButton;
+    //ui -> drinkButton2 = new DrinkButton;
+    //ui -> drinkButton3 = new DrinkButton;
+    //ui -> drinkButton4 = new DrinkButton;
+    refillButtons[0] = DrinkButton(ui -> drinkButton1);
+    refillButtons[1] = DrinkButton(ui -> drinkButton2);
+    refillButtons[2] = DrinkButton(ui -> drinkButton3);
+    refillButtons[3] = DrinkButton(ui -> drinkButton4);
 
     //Set all menu category icons
     QSize iconSize = ui -> appIcon -> size();
@@ -64,15 +80,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui -> entIcon -> setPixmap(QPixmap(ENTREE_ICON).scaled(iconSize, Qt::KeepAspectRatio));
     ui -> driIcon -> setPixmap(QPixmap(DRINK_ICON).scaled(iconSize, Qt::KeepAspectRatio));
     ui -> kidIcon -> setPixmap(QPixmap(KIDS_ICON).scaled(iconSize, Qt::KeepAspectRatio));
-
-    //Set refills page icons
-    QSize imgSize = ui -> drink1_pic -> size();
-    MenuVector typeMenu = restaurant.getMenu(DRINKS);
-    ui -> drink1_pic -> setPixmap(typeMenu[0].image.scaled(imgSize, Qt::KeepAspectRatio));
-    ui -> drink2_pic -> setPixmap(typeMenu[1].image.scaled(imgSize, Qt::KeepAspectRatio));
-    ui -> drink3_pic -> setPixmap(typeMenu[2].image.scaled(imgSize, Qt::KeepAspectRatio));
-    ui -> drink4_pic -> setPixmap(typeMenu[3].image.scaled(imgSize, Qt::KeepAspectRatio));
-    ui -> drink5_pic -> setPixmap(typeMenu[4].image.scaled(imgSize, Qt::KeepAspectRatio));
 
     //Hide tabs at top of window
     ui -> tabWidget -> findChild<QTabBar *>() -> hide();
@@ -93,10 +100,15 @@ void MainWindow::beginSession()
     //Get order number from database
     ui -> orderNumLabel -> setText("Order #" + QString::number(db.getOrderNumber()));
 
+    ui -> startOrderButton -> setText("Begin Order");
+
+    //Show the startOrder button
     ui -> startOrderButton -> show();
 
+    //Get the current table as assigned by Restaurant
     thisTable = restaurant.getCurrentTable();
 
+    //Disable buttons until order is begun
     disableButtons();
 
     //Initialize the back button stack
@@ -104,10 +116,14 @@ void MainWindow::beginSession()
     backPressed = false;
     lastPage = HOME_TAB;
 
-    ui -> tabWidget -> setCurrentIndex(HOME_TAB);
+    //Go to home tab
+    goHome();
 
-    ui -> gameButton -> hide();
+    //Disable the gameButton and drink button until order is placed
+    ui -> gameButton -> setEnabled(false);
+    ui -> drinkButton -> setEnabled(false);
 
+    //Clear all lists in the Application by finding them recursively
     foreach (QListWidget *list, findChildren<QListWidget *>())
     {
         list -> clear();
@@ -122,23 +138,23 @@ void MainWindow::on_backButton_clicked()
 
     //Set index to most recent page, home if stack is empty
     if (!backStack.isEmpty())
-        ui -> tabWidget -> setCurrentIndex(backStack.pop());
+        goToTab(backStack.pop());
     else
-        ui -> tabWidget -> setCurrentIndex(HOME_TAB);
+        goHome();
 }
 
 //Refills button clicked
 void MainWindow::on_drinkButton_clicked()
 {
     //Set current tab to the refills tab
-    ui -> tabWidget -> setCurrentIndex(REFILLS_TAB);
+    goToTab(REFILLS_TAB);
 }
 
 //My Ticket button clicked
 void MainWindow::on_ticketButton_clicked()
 {
     //Set current tab to the order tab
-    ui -> tabWidget -> setCurrentIndex(ORDER_TAB);
+    goToTab(ORDER_TAB);
 }
 
 //Games button clicked
@@ -150,14 +166,12 @@ void MainWindow::on_gameButton_clicked()
 //Assitance button clicked
 void MainWindow::on_assistButton_clicked()
 {
-    //Create and display a message box to the user
-    QMessageBox* msgBox = new QMessageBox(this);
-    msgBox->setAttribute(Qt::WA_DeleteOnClose);
-    msgBox->setStandardButtons(QMessageBox::Ok);
-    msgBox -> setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
-    msgBox->setWindowTitle("Help");
-    msgBox->setText("Your Server has been notified, and will be with you shortly.");
-    msgBox->open( this, SLOT(msgBoxClosed(QAbstractButton*)) );
+    QMessageBox msgBox(QMessageBox::Information,
+                       "Assistance",
+                       "Your Server has been notified, and will be with you shortly.",
+                       QMessageBox::Ok, this);
+    msgBox.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+    msgBox.exec();
 }
 
 //Help button clicked
@@ -168,13 +182,13 @@ void MainWindow::on_helpButton_clicked()
 //Go to home page
 void MainWindow::goHome()
 {
-    ui -> tabWidget -> setCurrentIndex(HOME_TAB);
+    goToTab(HOME_TAB);
 }
 
 //Login button clicked
 void MainWindow::on_loginButton_clicked()
 {
-    ui -> tabWidget -> setCurrentIndex(LOGIN_TAB);
+    goToTab(LOGIN_TAB);
 }
 
 /* Employee Pin-pad widget buttons                            */
@@ -217,17 +231,17 @@ void MainWindow::on_enterButton_clicked()
     if (level == "waitstaff")
     {
         ui -> waitstaffWelcomeLabel -> setText("Welcome " + employee -> getName());
-        ui -> tabWidget -> setCurrentIndex(WAITSTAFF_TAB);
+        goToTab(WAITSTAFF_TAB);
     }
     else if (level == "kitchen")
     {
         ui -> kitchenWelcomeLabel -> setText("Welcome " + employee -> getName());
-        ui -> tabWidget -> setCurrentIndex(KITCHEN_TAB);
+        goToTab(KITCHEN_TAB);
     }
     else if (level == "manager")
     {
         ui -> managerWelcomeLabel -> setText("Welcome " + employee -> getName());
-        ui -> tabWidget -> setCurrentIndex(MANAGER_TAB);
+        goToTab(MANAGER_TAB);
     }
 
 }
@@ -297,7 +311,7 @@ void MainWindow::loadMenu(int type)
     ui -> menu5_text -> setText(textFmt.arg(typeMenu[4].name).arg(typeMenu[4].description).arg(typeMenu[4].price));
 
     //Set current index to loaded menu
-    ui -> tabWidget -> setCurrentIndex(MENU_TAB);
+    goToTab(MENU_TAB);
 }
 
 //"Go back to menu" button clicked
@@ -334,7 +348,7 @@ void MainWindow::on_menuRemoveButton_clicked()
     //Delete from the list and update order list
     qDeleteAll(ui -> menuList -> selectedItems());
 
-    ui -> menuTotalLabel -> setText("Total: " + QString::number(thisTable -> getTotal()));
+    ui -> menuTotalLabel -> setText("Total: $" + QString::number(thisTable -> getTotal()));
 
     updateOrderList();
 
@@ -358,7 +372,7 @@ void MainWindow::addToOrderList(int num)
     ui -> menuList -> addItem(formatForList(item));
     currentOrder -> addToOrder(item);
 
-    ui -> menuTotalLabel -> setText("Total: " + QString::number(thisTable -> getTotal()));
+    ui -> menuTotalLabel -> setText("Total: $" + QString::number(thisTable -> getTotal()));
 
     //Update the order list
     updateOrderList();
@@ -371,8 +385,20 @@ void MainWindow::addToOrderList(int num)
 void MainWindow::on_startOrderButton_clicked()
 {
     //Change to table tab and hide button
-    ui -> tabWidget -> setCurrentIndex(TABLE_TAB);
-    ui -> startOrderButton -> hide();
+    QString buttonText = ui -> startOrderButton -> text();
+    goToTab(TABLE_TAB);
+
+    if (buttonText == "Begin Order")
+    {
+        ui -> startOrderButton -> setText("Pay For Order");
+        ui -> startOrderButton -> setEnabled(false);
+    }
+
+    if (buttonText == "Pay For Order")
+    {
+        initPaymentScreen();
+        goToTab(PAYMENT_TAB);
+    }
 }
 
 //Add To Table button clicked
@@ -409,10 +435,10 @@ void MainWindow::on_beginOrderButton_clicked()
     updateOrderList();
 
     if (thisTable -> isLastCustomer())
-            ui -> placeOrderButton -> setText("Go to Payment");
+            ui -> placeOrderButton -> setText("Place Order");
 
     //Change page to order tab and enable buttons
-    ui -> tabWidget -> setCurrentIndex(ORDER_TAB);
+    goToTab(ORDER_TAB);
     enableButtons();
 }
 
@@ -422,7 +448,7 @@ void MainWindow::on_placeOrderButton_clicked()
     //Place the order for the current customer
     thisTable -> getCurrentCustomer() -> placeOrder();
     float total = thisTable -> getCurrentCustomer() -> getOrder() -> getTotal();
-    ui -> menuList -> addItem("   Total: " + QString::number(total));
+    ui -> menuList -> addItem("   Total: $" + QString::number(total));
 
     //Get next customer and add name to the lists
     Customer *nextCustomer = thisTable -> getNextCustomer();
@@ -432,12 +458,15 @@ void MainWindow::on_placeOrderButton_clicked()
         updateOrderList();
 
         if (thisTable -> isLastCustomer())
-                ui -> placeOrderButton -> setText("Go to Payment");
+                ui -> placeOrderButton -> setText("Place Order");
     }
     else
     {
-        initPaymentScreen();
-        ui -> tabWidget -> setCurrentIndex(PAYMENT_TAB);
+        goToTab(HOME_TAB);
+        ui -> startOrderButton -> setEnabled(true);
+        ui -> gameButton -> setEnabled(true);
+        ui -> drinkButton -> setEnabled(true);
+        initRefillScreen();
     }
 }
 
@@ -488,128 +517,167 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 {
     QString text = event -> text();
     if (text == "1")
-        ui -> tabWidget -> setCurrentIndex(HOME_TAB);
+        goToTab(HOME_TAB);
     else if (text == "2")
-        ui -> tabWidget -> setCurrentIndex(ORDER_TAB);
+        goToTab(ORDER_TAB);
     else if (text == "3")
-        ui -> tabWidget -> setCurrentIndex(REFILLS_TAB);
+        goToTab(REFILLS_TAB);
     else if (text == "4")
-        ui -> tabWidget -> setCurrentIndex(MENU_TAB);
+        goToTab(MENU_TAB);
     else if (text == "5")
-        ui -> tabWidget -> setCurrentIndex(LOGIN_TAB);
+        goToTab(LOGIN_TAB);
     else if (text == "6")
-        ui -> tabWidget -> setCurrentIndex(WAITSTAFF_TAB);
+        goToTab(WAITSTAFF_TAB);
     else if (text == "7")
-        ui -> tabWidget -> setCurrentIndex(KITCHEN_TAB);
+        goToTab(KITCHEN_TAB);
     else if (text == "8")
-        ui -> tabWidget -> setCurrentIndex(MANAGER_TAB);
+        goToTab(MANAGER_TAB);
     else if (text == "9")
-        ui -> tabWidget -> setCurrentIndex(TABLE_TAB);
+        goToTab(TABLE_TAB);
     else if (text == "0")
-        ui -> tabWidget -> setCurrentIndex(PAYMENT_TAB);
+        goToTab(PAYMENT_TAB);
 }
-
+//Initialize the payment tab
 void MainWindow::initPaymentScreen()
 {
+    //Add each Customer and their total to the yetToPayList
     foreach (Customer *customer, thisTable -> getCustomers())
     {
-        QString custStr = customer -> getName() + "....." + QString::number(customer -> getOrder() -> getTotal());
+        QString custStr = customer -> getName() + ".....$" + QString::number(customer -> getOrder() -> getTotal());
         ui -> yetToPayList -> addItem(custStr);
     }
 
+    //Update the payment totals
     updatePaymentTotals();
 }
 
+//Add a Customer to the current payment
 void MainWindow::on_addToPaymentButton_clicked()
 {
+    //Get all selected customers and add each one to the paymentList
     QList<QListWidgetItem *> selectedCustomers = ui -> yetToPayList -> selectedItems();
     foreach (QListWidgetItem *customer, selectedCustomers)
     {
+        //Add each Customer to the payment list, and delete from yetToPayList
         ui -> paymentList -> addItem(customer -> text());
         qDeleteAll(selectedCustomers);
     }
 
+    //Update totals
     updatePaymentTotals();
 }
 
+//Remove Customer from current payment
 void MainWindow::on_removeFromPaymentButton_clicked()
 {
+    //Get all selected Customers and remove each from current payment
     QList<QListWidgetItem *> selectedCustomers = ui -> paymentList -> selectedItems();
     foreach (QListWidgetItem *customer, selectedCustomers)
     {
+        //Add each Customer to the yetToPayList and remove from paymentList
         ui -> yetToPayList -> addItem(customer -> text());
         qDeleteAll(selectedCustomers);
     }
 
+    //Update totals
     updatePaymentTotals();
 }
 
+//Update the totals on the payment screen
 void MainWindow::updatePaymentTotals()
 {
+    //Init both totals to zero
     float remainingTotal = 0;
     float paymentTotal = 0;
+
+    //Reference payment list and remaining payment list
     QListWidget *payList = ui -> paymentList;
     QListWidget *remainList = ui -> yetToPayList;
 
+    //For each item in paymentList
     for (int i = 0; i < payList -> count(); i++)
     {
+        //Get the total from each line in list
         QStringList splitStr = payList -> item(i) -> text().split(".");
         int len = splitStr.size();
         paymentTotal += (splitStr[len - 2] + "." + splitStr[len - 1]).toFloat();
     }
 
+    //For each item in yetToPay list
     for (int i = 0; i < remainList -> count(); i++)
     {
+        //Get the total from each line in list
         QStringList splitStr = remainList -> item(i) -> text().split(".");
         int len = splitStr.size();
         remainingTotal += (splitStr[len - 2] + "." + splitStr[len - 1]).toFloat();
     }
 
-    ui -> totalRemainingLabel -> setText("Total Remaining: " + QString::number(remainingTotal));
-    ui -> totalToPayLabel -> setText("Total: " + QString::number(paymentTotal));
-
-
+    //Set total labels
+    ui -> totalRemainingLabel -> setText("Total Remaining: $" + QString::number(remainingTotal));
+    ui -> totalToPayLabel -> setText("Total: $" + QString::number(paymentTotal));
 }
 
+//Paying for oder
 void MainWindow::on_payForOrderButton_clicked()
 {
+ /*   //Process payment window, set to delete itself and children on close
     QDialog *processDlg = new QDialog(this);//, Qt::FramelessWindowHint | Qt::WindowTitleHint);
     processDlg -> setAttribute(Qt::WA_DeleteOnClose, true);
 
-
+    //Set the location of the processDlg
     QRect screenGeometry = QApplication::desktop()->screenGeometry();
     int x = (screenGeometry.width() - processDlg->width()) / 2;
     int y = (screenGeometry.height() - processDlg->height()) / 2;
     processDlg->move(x, y);
 
-    //processDlg -> setGeometry(this -> geometry().width() / 2, this->geometry().height()/2,300,300);
-    //processDlg -> move(this->rect().center() - processDlg->rect().());
-    QLabel *movieLabel = new QLabel(processDlg);
-    QLabel *textLabel = new QLabel(processDlg);
-    QMovie *movie = new QMovie(LOADING_GIF);
-    QGridLayout *layout = new QGridLayout;
+    //Create children of process window
+    QLabel *movieLabel = new QLabel(processDlg);//GIF holding label
+    QLabel *textLabel = new QLabel(processDlg); //textLabel to display
+    QMovie *movie = new QMovie(LOADING_GIF);    //GIF object
+    QGridLayout *layout = new QGridLayout;      //Layout of processDlg
 
+    //Set the movie label's movie to GIF
     movieLabel -> setMovie(movie);
 
+    //Add the movieLabel to the processDlg
     layout -> addWidget(movieLabel, 0, 0, 1, 1, Qt::AlignCenter);
 
+    //Set processDlg's layout to Grid
     processDlg -> setLayout(layout);
 
+    //Show the processDlg
     processDlg -> show();
 
+    //Show the GIF and start it
     movieLabel -> show();
     movie -> start();
+*/
+    QVector<Customer *> customers;
+    for (int i = 0; i < ui -> paymentList -> count(); i++)
+    {
+        QString name = ui -> paymentList -> item(i) -> text().split(".")[0];
+        Customer *tempCustomer = thisTable -> getCustomerByName(name);
+        if (tempCustomer != nullptr)
+            customers.push_back(tempCustomer);
+    }
 
-    foreach (Customer *customer, thisTable -> getCustomers())
+    ui -> paymentList -> clear();
+
+    //For every customer in current payment, add their order to DB
+    foreach (Customer *customer, customers)
     {
         db.addOrderToDb(customer -> getOrder(), db.getOrderNumber());
     }
 
-    resetSession();
+    updatePaymentTotals();
+
+    //resetSession();
 }
 
+//End the current dining session
 void MainWindow::endSession()
 {
+    //Clear the table and reset total labels
     thisTable -> clearTable();
     ui -> totalRemainingLabel -> setText("Total Remaining: $0.00");
     ui -> totalToPayLabel -> setText("Total: $0.00");
@@ -617,8 +685,85 @@ void MainWindow::endSession()
     ui -> menuTotalLabel -> setText("Total: $0.00");
 }
 
+//Reset the Table's session
 void MainWindow::resetSession()
 {
     endSession();
     beginSession();
+}
+
+//Initialize the refill screen post order
+void MainWindow::initRefillScreen()
+{
+    //Get all customers, and set the RefillButtons to their drinks
+    QVector<Customer *> customers = thisTable -> getCustomers();
+    int idx;
+    for (idx = 0; idx < customers.size(); idx++)
+    {
+        refillButtons[idx].setDrink(customers[idx] -> getOrder() -> getDrink());
+        refillButtons[idx].setText(customers[idx] -> getName());
+    }
+}
+
+//Adding items to the refill list
+void MainWindow::addToRefillList(DrinkButton drinkButton)
+{
+    QString num = QString::number(ui -> refillList -> count() + 1);
+    ui -> refillList -> addItem(num + ". " + drinkButton.getDrink().name);
+    drinkButton.setEnabled(false);
+}
+void MainWindow::on_drinkButton1_clicked() {addToRefillList(refillButtons[0]);}
+void MainWindow::on_drinkButton2_clicked() {addToRefillList(refillButtons[1]);}
+void MainWindow::on_drinkButton3_clicked() {addToRefillList(refillButtons[2]);}
+void MainWindow::on_drinkButton4_clicked() {addToRefillList(refillButtons[3]);}
+
+//Clear the refill list on cancel
+void MainWindow::on_removeFromRefillButton_clicked()
+{
+    //QListWidgetItem *item = [0];
+    ui -> refillList -> clear();
+    for (int i = 0; i < thisTable -> getCustomers().size(); i++)
+    {
+        refillButtons[i].setEnabled(true);
+    }
+}
+
+//User requested refills
+void MainWindow::on_orderRefillButton_clicked()
+{
+    if (ui -> refillList -> count() == 0)
+        return;
+
+    QMessageBox msgBox(QMessageBox::Information,
+                       "Refills",
+                       "Your Refills Are on The Way!",
+                       QMessageBox::Ok, this);
+    msgBox.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+    msgBox.exec();
+
+    goHome();
+
+    enableRefillButtons();
+
+    ui -> refillList -> clear();
+}
+
+//Enable refill buttons
+void MainWindow::enableRefillButtons()
+{
+    //Only enable as many as there are customers
+    for (int i = 0; i < thisTable -> getCustomers().size(); i++)
+    {
+        refillButtons[i].setEnabled(true);
+    }
+}
+
+//Disable refill buttons
+void MainWindow::disableRefillButtons()
+{
+    //Only disable as many as there are customers
+    for (int i = 0; i < thisTable -> getCustomers().size(); i++)
+    {
+        refillButtons[i].setEnabled(false);
+    }
 }

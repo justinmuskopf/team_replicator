@@ -20,6 +20,6 @@ const QString DRINK_ICON = IMG_DIR + CATEGORIES[DRINKS] + ".ico";           //Dr
 const QString SIDE_ICON = IMG_DIR + CATEGORIES[SIDES] + ".ico";             //Sides Icon
 const QString APPETIZER_ICON = IMG_DIR + CATEGORIES[APPETIZERS] + ".ico";   //Appetizer Icon
 const QString NOT_AVAILABLE_ICON = IMG_DIR + "not_available.jpg";           //"Image Not Available" icon
-const QString KIDS_ICON = IMG_DIR + CATEGORIES[KIDS] + ".ico";
-const QString LOADING_GIF = IMG_DIR + "loading.gif";
+const QString KIDS_ICON = IMG_DIR + CATEGORIES[KIDS] + ".ico";              //Kid's menu Icon
+const QString LOADING_GIF = IMG_DIR + "loading.gif";                        //Loading GIF for payments
 #endif // ICONS_H

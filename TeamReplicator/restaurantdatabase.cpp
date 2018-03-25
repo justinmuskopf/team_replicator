@@ -10,15 +10,14 @@ const QString RestaurantDatabase::addEmployeeFmt = "INSERT INTO `employees` (Emp
 const QString RestaurantDatabase::addOrderFmt = "INSERT INTO `sales` (Emp_Id, Sale_Date, Total) VALUES (%1, %2, %3)";
 const QString RestaurantDatabase::addItemFmt = "INSERT INTO `order_items` (Order_Id, Name, Price) VALUES (%1, %2, %3)";
 
-
+//
 RestaurantDatabase::RestaurantDatabase()
 {
-
-    db = QSqlDatabase::addDatabase("QMYSQL");
-    db.setHostName("localhost");
-    db.setDatabaseName("replicator");
-    db.setUserName("root");
-    db.setPassword("");
+    db = QSqlDatabase::addDatabase(DB_TYPE);
+    db.setHostName(DB_HOST);
+    db.setDatabaseName(DB_NAME);
+    db.setUserName(DB_USER);
+    db.setPassword(DB_PASS);
     if (!db.open())
     {
         qDebug() << "Database not open! Quitting Application.";
@@ -87,13 +86,19 @@ void RestaurantDatabase::addOrderToDb(Order *order, int orderNum)
 
     QString addOrderStr = addOrderFmt.arg("81117", "'" + dateStr + "'", QString::number(order -> getTotal()));
     QSqlQuery query(addOrderStr, db);
-    query.exec();
+    query.record();
+
+    if (orderNum == -1)
+        orderNum = getOrderNumber();
 
     foreach (MenuItem item, order -> getOrder())
     {
         QString addItemStr = addItemFmt.arg(QString::number(orderNum), "'" + item.name + "'", QString::number(item.price));
-        query.prepare(addItemStr);
-        query.exec();
+        //qDebug() << addItemStr;
+        QSqlQuery addQuery(addItemStr, db);
+        //query.prepare(addItemStr);
+        //addQuery.exec();
+        addQuery.record();
     }
 }
 
