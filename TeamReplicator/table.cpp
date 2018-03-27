@@ -4,9 +4,16 @@
 Table::Table()
 {
     currentCustomer = nullptr;
+    //server = new QTcpSocket;
+
+    //server -> connectToHost("localhost", 9292);
+
+    waitstaff = new Employee;
+
+    //readFromServer();
 }
 
-Table::Table(int num)
+Table::Table(int num) : Table()
 {
     tableNum = num;
 }
@@ -120,4 +127,16 @@ Customer *Table::getCustomerByName(QString name)
 
     //Customer not found
     return (Customer *)nullptr;
+}
+
+void Table::readFromServer()
+{
+    if (!server -> isOpen())
+        return;
+
+    server -> write("S 1 2");
+    server -> waitForReadyRead(1000);
+    QString read = server -> read(1024);
+
+    qDebug() << "Server: " + read;
 }

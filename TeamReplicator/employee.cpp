@@ -1,5 +1,8 @@
 #include "employee.h"
 #include <QDebug>
+#include <QTimer>
+
+#define POLL_PERIOD 3000
 
 //Default Constructor
 Employee::Employee()
@@ -10,6 +13,10 @@ Employee::Employee()
     level = "";
     pin = "";
     ID = "";
+
+    server = new QTcpSocket;
+    connectToServer();
+    QTimer::singleShot(POLL_PERIOD, this, SLOT(pollServer()));
 }
 
 //Set the name of the Employee
@@ -83,4 +90,37 @@ void Employee::print()
     qDebug() << "ID:       " << ID;
     qDebug() << "Level:    " << level;
     qDebug() << "Pin:      " << pin;
+}
+
+void Employee::readFromServer()
+{
+    server -> write("S 1 2");
+    QString read = server -> readAll();
+    qDebug() << read;
+}
+
+void Employee::pollServer()
+{
+        if (server -> state() != QTcpSocket::ConnectedState)
+            connectToServer();
+        server -> write("S 1 5");
+        server -> waitForReadyRead(1000);
+        QString read = server -> readAll();
+        if (read.length() > 0)
+            qDebug() << read;
+        else
+            qDebug() << "Nothing to read from server...";
+        QTimer::singleShot(POLL_PERIOD, this, SLOT(pollServer()));
+}
+
+Employee::~Employee()
+{
+    delete server;
+}
+
+void Employee::connectToServer()
+{
+    qDebug () << "Connecting to server...";
+    server -> abort();
+    server -> connectToHost("localhost", 9292);
 }

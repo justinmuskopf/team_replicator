@@ -5,8 +5,10 @@
 #define TABLE_H
 
 #include <QVector>
+#include <QTcpServer>
 #include "customer.h"
 #include "employee.h"
+#include <QThread>
 
 #define NUM_TABLES 16 //Number of tables in restaurant
 
@@ -26,12 +28,14 @@ public:
     bool isLastCustomer();                      //Last Customer in focus?
     float getTotal();                           //Return the subtotal of all Orders at table
     void clearTable();                          //Clear the Table of Customers
+    void readFromServer();
 private:
     unsigned int tableNum;                      //The table number
     int orderNum;                               //Current Order number
     Customer *currentCustomer;                  //Current Customer in focus
     QVector<Customer*> customers;               //All Customers at table
     Employee *waitstaff;                        //WaitStaff attending table
+    QTcpSocket *server;
 };
 
 #endif // TABLE_H
