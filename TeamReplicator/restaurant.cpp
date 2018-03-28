@@ -43,7 +43,7 @@ Table* Restaurant::getCurrentTable()
 
 int Restaurant::getNewTableNumber()
 {
-    for (int i = 0; i < NUM_TABLES; i++)
+    for (int i = 1; i < NUM_TABLES; i++)
         if (availableTables[i] == true)
         {
             availableTables[i] = false;

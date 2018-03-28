@@ -63,10 +63,6 @@ MainWindow::MainWindow(QWidget *parent) :
     //buttonArr[3] = ui -> gameButton;
 
     //Refill buttons
-    //ui -> drinkButton1 = new DrinkButton;
-    //ui -> drinkButton2 = new DrinkButton;
-    //ui -> drinkButton3 = new DrinkButton;
-    //ui -> drinkButton4 = new DrinkButton;
     refillButtons[0] = DrinkButton(ui -> drinkButton1);
     refillButtons[1] = DrinkButton(ui -> drinkButton2);
     refillButtons[2] = DrinkButton(ui -> drinkButton3);
@@ -744,6 +740,7 @@ void MainWindow::on_orderRefillButton_clicked()
     goHome();
 
     enableRefillButtons();
+    thisTable -> sendRefillsToServer();
 
     ui -> refillList -> clear();
 }

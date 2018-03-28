@@ -4,7 +4,6 @@
 
 #include <QString>
 #include <QTcpSocket>
-#include <QThread>
 
 class Employee : public QObject
 {
@@ -19,6 +18,8 @@ public:
     void print();               //Print Employee info
     void readFromServer();
     void connectToServer();
+    void addToTableList(int tableNum);
+    QVector<int> getTableList();
     QString getName();          //Return employee's name
     QString getLevel();         //Return employee's level
     QString getPin();           //Return employee's pin
@@ -34,7 +35,7 @@ private:
     QString pin;                //Employee's pin
     QString ID;                 //Employee's ID
     QTcpSocket *server;
-    QThread serverThread;
+    QVector<int> tableNumbers;
 };
 
 #endif // EMPLOYEE_H

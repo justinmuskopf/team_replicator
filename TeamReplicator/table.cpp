@@ -4,13 +4,9 @@
 Table::Table()
 {
     currentCustomer = nullptr;
-    //server = new QTcpSocket;
-
-    //server -> connectToHost("localhost", 9292);
+    server = new QTcpSocket;
 
     waitstaff = new Employee;
-
-    //readFromServer();
 }
 
 Table::Table(int num) : Table()
@@ -136,7 +132,16 @@ void Table::readFromServer()
 
     server -> write("S 1 2");
     server -> waitForReadyRead(1000);
-    QString read = server -> read(1024);
+    QString read = server -> read(1024).trimmed();
 
     qDebug() << "Server: " + read;
+}
+
+void Table::sendRefillsToServer()
+{
+    QByteArray toSend = "C " + QByteArray::number(tableNum) + " 2";
+    server -> abort();
+    server -> connectToHost(SERVER_HOST, SERVER_PORT);
+    server -> waitForConnected(1000);
+    server -> write(toSend);
 }

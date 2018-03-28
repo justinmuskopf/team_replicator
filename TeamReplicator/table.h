@@ -10,7 +10,9 @@
 #include "employee.h"
 #include <QThread>
 
-#define NUM_TABLES 16 //Number of tables in restaurant
+#define NUM_TABLES 17 //Number of tables in restaurant
+#define SERVER_HOST "se1.cse.unt.edu"
+#define SERVER_PORT 9292
 
 class Table
 {
@@ -29,6 +31,7 @@ public:
     float getTotal();                           //Return the subtotal of all Orders at table
     void clearTable();                          //Clear the Table of Customers
     void readFromServer();
+    void sendRefillsToServer();
 private:
     unsigned int tableNum;                      //The table number
     int orderNum;                               //Current Order number

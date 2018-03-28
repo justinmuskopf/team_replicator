@@ -18,6 +18,7 @@ RestaurantDatabase::RestaurantDatabase()
     db.setDatabaseName(DB_NAME);
     db.setUserName(DB_USER);
     db.setPassword(DB_PASS);
+    //db.setPort(DB_PORT);
     if (!db.open())
     {
         qDebug() << "Database not open! Quitting Application.";

@@ -8,11 +8,12 @@
 #include "employee.h"
 #include "order.h"
 
-#define DB_USER "root"          //DB Username
-#define DB_PASS ""              //DB Password
-#define DB_HOST "localhost"     //DB Host
-#define DB_NAME "replicator"    //DB Name
-#define DB_TYPE "QMYSQL"        //DB Driver Type
+#define DB_USER "repuser"           //DB Username
+#define DB_PASS "pass"           //DB Password
+#define DB_HOST "se1.cse.unt.edu"//DB Host
+#define DB_NAME "replicator"     //DB Name
+#define DB_TYPE "QMYSQL"         //DB Driver Type
+#define DB_PORT 1051
 
 typedef enum {
               REFILL_MESSAGE,

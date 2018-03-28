@@ -3,6 +3,8 @@
 #include <QTimer>
 
 #define POLL_PERIOD 3000
+#define SERVER_HOST "se1.cse.unt.edu"
+#define SERVER_PORT 9292
 
 //Default Constructor
 Employee::Employee()
@@ -104,7 +106,7 @@ void Employee::pollServer()
         if (server -> state() != QTcpSocket::ConnectedState)
             connectToServer();
         server -> write("S 1 5");
-        server -> waitForReadyRead(1000);
+        server -> waitForReadyRead(100);
         QString read = server -> readAll();
         if (read.length() > 0)
             qDebug() << read;
@@ -122,5 +124,15 @@ void Employee::connectToServer()
 {
     qDebug () << "Connecting to server...";
     server -> abort();
-    server -> connectToHost("localhost", 9292);
+    server -> connectToHost(SERVER_HOST, SERVER_PORT);
+}
+
+void Employee::addToTableList(int tableNum)
+{
+    tableNumbers.push_back(tableNum);
+}
+
+QVector<int> Employee::getTableList()
+{
+    return tableNumbers;
 }
