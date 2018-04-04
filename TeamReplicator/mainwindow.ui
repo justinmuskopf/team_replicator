@@ -17,8 +17,8 @@
    <string notr="true">background-color: rgb(46, 47, 48);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout_7">
-    <item>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -33,7 +33,7 @@
        <string notr="true">background-color: rgb(46, 47, 48);</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="homeTab">
        <attribute name="title">
@@ -656,6 +656,71 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
          </widget>
         </item>
        </layout>
+      </widget>
+      <widget class="QWidget" name="gamesTab">
+       <attribute name="title">
+        <string>Games</string>
+       </attribute>
+       <widget class="QPushButton" name="gameButton1">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>530</y>
+          <width>961</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 24pt &quot;Counter-Strike&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Drawing</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="gameButton2">
+        <property name="geometry">
+         <rect>
+          <x>980</x>
+          <y>530</y>
+          <width>961</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 24pt &quot;Counter-Strike&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Solitaire</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="gameImage1">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>941</width>
+          <height>511</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>986</x>
+          <y>2</y>
+          <width>961</width>
+          <height>521</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="menuTab">
        <attribute name="title">
@@ -2066,7 +2131,7 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
       </widget>
      </widget>
     </item>
-    <item>
+    <item row="1" column="0">
      <widget class="QGroupBox" name="groupBox">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">

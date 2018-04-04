@@ -16,6 +16,7 @@ enum {
     HOME_TAB,
     ORDER_TAB,
     REFILLS_TAB,
+    GAMES_TAB,
     MENU_TAB,
     LOGIN_TAB,
     WAITSTAFF_TAB,
@@ -156,7 +157,8 @@ void MainWindow::on_ticketButton_clicked()
 //Games button clicked
 void MainWindow::on_gameButton_clicked()
 {
-
+    // Set current tab to the games tab
+    goToTab(GAMES_TAB);
 }
 
 //Assitance button clicked
@@ -377,6 +379,25 @@ void MainWindow::addToOrderList(int num)
 }
 /****************************************************************************/
 
+/* Game buttons                                                             */
+/****************************************************************************/
+void MainWindow::on_gameButton1_clicked() {
+    system("\"C:\\Users\\User\\Documents\\College\\UNT\\6. Spring 18\\CSCE 4444\\TeamReplicator-customer_interface\\build-TeamReplicator-Desktop_Qt_5_10_1_MinGW_32bit-Debug\\games\\Drawing\\Drawing.exe\"");
+    //QProcess *process = new QProcess(this);
+    //QString game1 = "\"C:\\Users\\User\\Documents\\College\\UNT\\6. Spring 18\\CSCE 4444\\TeamReplicator-customer_interface\\build-TeamReplicator-Desktop_Qt_5_10_1_MinGW_32bit-Debug/games/klondike.exe\"";
+    //QDir dir = QCoreApplication::applicationDirPath();
+    //QString game1 = dir.relativeFilePath("/games/klondike.exe");
+    //QFileInfo fi(dir, file);
+    //QString game1 = fi.absoluteFilePath();
+    //qInfo(qPrintable(file));
+    //process->start(game1, QStringList() << "");
+
+} // on_gameButton1_clicked
+void MainWindow::on_gameButton2_clicked() {
+    system("\"C:\\Users\\User\\Documents\\College\\UNT\\6. Spring 18\\CSCE 4444\\TeamReplicator-customer_interface\\build-TeamReplicator-Desktop_Qt_5_10_1_MinGW_32bit-Debug\\games\\klondike.exe\"");
+    /* NEED TO CHANGE TO REFLECT LOCATION ON TEST MACHING*/
+} // on_gameButton2_clicked
+/****************************************************************************/
 //Start Order button clicked
 void MainWindow::on_startOrderButton_clicked()
 {

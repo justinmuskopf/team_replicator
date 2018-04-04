@@ -35,7 +35,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QVBoxLayout *verticalLayout_7;
+    QGridLayout *gridLayout_2;
     QTabWidget *tabWidget;
     QWidget *homeTab;
     QVBoxLayout *verticalLayout_8;
@@ -84,6 +84,11 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QPushButton *removeFromRefillButton;
     QPushButton *orderRefillButton;
+    QWidget *gamesTab;
+    QPushButton *gameButton1;
+    QPushButton *gameButton2;
+    QLabel *gameImage1;
+    QLabel *label_5;
     QWidget *menuTab;
     QHBoxLayout *horizontalLayout_3;
     QFrame *frame_3;
@@ -189,10 +194,10 @@ public:
         MainWindow->setStyleSheet(QStringLiteral("background-color: rgb(46, 47, 48);"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        verticalLayout_7 = new QVBoxLayout(centralWidget);
-        verticalLayout_7->setSpacing(6);
-        verticalLayout_7->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
+        gridLayout_2 = new QGridLayout(centralWidget);
+        gridLayout_2->setSpacing(6);
+        gridLayout_2->setContentsMargins(11, 11, 11, 11);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
@@ -565,6 +570,25 @@ public:
         horizontalLayout->addWidget(groupBox_3);
 
         tabWidget->addTab(refillsTab, QString());
+        gamesTab = new QWidget();
+        gamesTab->setObjectName(QStringLiteral("gamesTab"));
+        gameButton1 = new QPushButton(gamesTab);
+        gameButton1->setObjectName(QStringLiteral("gameButton1"));
+        gameButton1->setGeometry(QRect(0, 530, 961, 41));
+        gameButton1->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 24pt \"Counter-Strike\";"));
+        gameButton2 = new QPushButton(gamesTab);
+        gameButton2->setObjectName(QStringLiteral("gameButton2"));
+        gameButton2->setGeometry(QRect(980, 530, 961, 41));
+        gameButton2->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 24pt \"Counter-Strike\";"));
+        gameImage1 = new QLabel(gamesTab);
+        gameImage1->setObjectName(QStringLiteral("gameImage1"));
+        gameImage1->setGeometry(QRect(10, 10, 941, 511));
+        label_5 = new QLabel(gamesTab);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(986, 2, 961, 521));
+        tabWidget->addTab(gamesTab, QString());
         menuTab = new QWidget();
         menuTab->setObjectName(QStringLiteral("menuTab"));
         horizontalLayout_3 = new QHBoxLayout(menuTab);
@@ -1219,7 +1243,7 @@ public:
 
         tabWidget->addTab(payment, QString());
 
-        verticalLayout_7->addWidget(tabWidget);
+        gridLayout_2->addWidget(tabWidget, 0, 0, 1, 1);
 
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
@@ -1355,7 +1379,7 @@ public:
         horizontalLayout_2->addWidget(helpButton);
 
 
-        verticalLayout_7->addWidget(groupBox);
+        gridLayout_2->addWidget(groupBox, 1, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);
@@ -1364,7 +1388,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1406,6 +1430,11 @@ public:
         removeFromRefillButton->setText(QApplication::translate("MainWindow", "Cancel", nullptr));
         orderRefillButton->setText(QApplication::translate("MainWindow", "Submit", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(refillsTab), QApplication::translate("MainWindow", "Refills", nullptr));
+        gameButton1->setText(QApplication::translate("MainWindow", "Drawing", nullptr));
+        gameButton2->setText(QApplication::translate("MainWindow", "Solitaire", nullptr));
+        gameImage1->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        label_5->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(gamesTab), QApplication::translate("MainWindow", "Games", nullptr));
         menu1_pic->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         menu2_pic->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         menu3_pic->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
