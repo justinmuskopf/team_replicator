@@ -22,6 +22,7 @@
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextBrowser>
@@ -36,11 +37,20 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QGridLayout *gridLayout_2;
+    QGroupBox *groupBox;
+    QHBoxLayout *horizontalLayout_2;
+    QPushButton *backButton;
+    QPushButton *drinkButton;
+    QPushButton *ticketButton;
+    QPushButton *gameButton;
+    QPushButton *assistButton;
+    QPushButton *helpButton;
     QTabWidget *tabWidget;
     QWidget *homeTab;
     QVBoxLayout *verticalLayout_8;
     QLabel *spaceLabel;
     QPushButton *startOrderButton;
+    QPushButton *surveyButton;
     QPushButton *loginButton;
     QWidget *orderTab_7;
     QGridLayout *gridLayout_7;
@@ -176,14 +186,16 @@ public:
     QListWidget *paymentList;
     QLabel *totalToPayLabel;
     QPushButton *payForOrderButton;
-    QGroupBox *groupBox;
-    QHBoxLayout *horizontalLayout_2;
-    QPushButton *backButton;
-    QPushButton *drinkButton;
-    QPushButton *ticketButton;
-    QPushButton *gameButton;
-    QPushButton *assistButton;
-    QPushButton *helpButton;
+    QWidget *Survey;
+    QLabel *label_4;
+    QRadioButton *radioButton;
+    QRadioButton *radioButton_2;
+    QRadioButton *radioButton_3;
+    QRadioButton *radioButton_4;
+    QRadioButton *radioButton_5;
+    QLabel *label_7;
+    QTextEdit *textEdit;
+    QPushButton *surveySubmitButton;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -198,13 +210,155 @@ public:
         gridLayout_2->setSpacing(6);
         gridLayout_2->setContentsMargins(11, 11, 11, 11);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        tabWidget = new QTabWidget(centralWidget);
-        tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        groupBox = new QGroupBox(centralWidget);
+        groupBox->setObjectName(QStringLiteral("groupBox"));
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(tabWidget->sizePolicy().hasHeightForWidth());
-        tabWidget->setSizePolicy(sizePolicy);
+        sizePolicy.setHeightForWidth(groupBox->sizePolicy().hasHeightForWidth());
+        groupBox->setSizePolicy(sizePolicy);
+        groupBox->setMinimumSize(QSize(0, 150));
+        groupBox->setAutoFillBackground(false);
+        groupBox->setStyleSheet(QStringLiteral("background-color: rgb(46, 47, 48);"));
+        horizontalLayout_2 = new QHBoxLayout(groupBox);
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        backButton = new QPushButton(groupBox);
+        backButton->setObjectName(QStringLiteral("backButton"));
+        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(backButton->sizePolicy().hasHeightForWidth());
+        backButton->setSizePolicy(sizePolicy1);
+        QPalette palette;
+        QBrush brush(QColor(188, 188, 188, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        backButton->setPalette(palette);
+        backButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        horizontalLayout_2->addWidget(backButton);
+
+        drinkButton = new QPushButton(groupBox);
+        drinkButton->setObjectName(QStringLiteral("drinkButton"));
+        sizePolicy1.setHeightForWidth(drinkButton->sizePolicy().hasHeightForWidth());
+        drinkButton->setSizePolicy(sizePolicy1);
+        QPalette palette1;
+        palette1.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette1.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette1.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        drinkButton->setPalette(palette1);
+        drinkButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        horizontalLayout_2->addWidget(drinkButton);
+
+        ticketButton = new QPushButton(groupBox);
+        ticketButton->setObjectName(QStringLiteral("ticketButton"));
+        sizePolicy1.setHeightForWidth(ticketButton->sizePolicy().hasHeightForWidth());
+        ticketButton->setSizePolicy(sizePolicy1);
+        QPalette palette2;
+        palette2.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette2.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette2.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        ticketButton->setPalette(palette2);
+        ticketButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        horizontalLayout_2->addWidget(ticketButton);
+
+        gameButton = new QPushButton(groupBox);
+        gameButton->setObjectName(QStringLiteral("gameButton"));
+        sizePolicy1.setHeightForWidth(gameButton->sizePolicy().hasHeightForWidth());
+        gameButton->setSizePolicy(sizePolicy1);
+        QPalette palette3;
+        palette3.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette3.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette3.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        gameButton->setPalette(palette3);
+        gameButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        horizontalLayout_2->addWidget(gameButton);
+
+        assistButton = new QPushButton(groupBox);
+        assistButton->setObjectName(QStringLiteral("assistButton"));
+        sizePolicy1.setHeightForWidth(assistButton->sizePolicy().hasHeightForWidth());
+        assistButton->setSizePolicy(sizePolicy1);
+        QPalette palette4;
+        palette4.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette4.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette4.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        assistButton->setPalette(palette4);
+        assistButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        horizontalLayout_2->addWidget(assistButton);
+
+        helpButton = new QPushButton(groupBox);
+        helpButton->setObjectName(QStringLiteral("helpButton"));
+        sizePolicy1.setHeightForWidth(helpButton->sizePolicy().hasHeightForWidth());
+        helpButton->setSizePolicy(sizePolicy1);
+        QPalette palette5;
+        palette5.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette5.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette5.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        helpButton->setPalette(palette5);
+        helpButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        horizontalLayout_2->addWidget(helpButton);
+
+
+        gridLayout_2->addWidget(groupBox, 1, 0, 1, 1);
+
+        tabWidget = new QTabWidget(centralWidget);
+        tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(tabWidget->sizePolicy().hasHeightForWidth());
+        tabWidget->setSizePolicy(sizePolicy2);
         tabWidget->setAutoFillBackground(false);
         tabWidget->setStyleSheet(QStringLiteral("background-color: rgb(46, 47, 48);"));
         homeTab = new QWidget();
@@ -215,32 +369,42 @@ public:
         verticalLayout_8->setObjectName(QStringLiteral("verticalLayout_8"));
         spaceLabel = new QLabel(homeTab);
         spaceLabel->setObjectName(QStringLiteral("spaceLabel"));
-        QSizePolicy sizePolicy1(QSizePolicy::Ignored, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(spaceLabel->sizePolicy().hasHeightForWidth());
-        spaceLabel->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy3(QSizePolicy::Ignored, QSizePolicy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(spaceLabel->sizePolicy().hasHeightForWidth());
+        spaceLabel->setSizePolicy(sizePolicy3);
         spaceLabel->setMaximumSize(QSize(16777215, 500));
 
         verticalLayout_8->addWidget(spaceLabel);
 
         startOrderButton = new QPushButton(homeTab);
         startOrderButton->setObjectName(QStringLiteral("startOrderButton"));
-        sizePolicy.setHeightForWidth(startOrderButton->sizePolicy().hasHeightForWidth());
-        startOrderButton->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(startOrderButton->sizePolicy().hasHeightForWidth());
+        startOrderButton->setSizePolicy(sizePolicy2);
         startOrderButton->setMinimumSize(QSize(200, 100));
         startOrderButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 32pt \"Counter-Strike\";"));
 
         verticalLayout_8->addWidget(startOrderButton);
 
+        surveyButton = new QPushButton(homeTab);
+        surveyButton->setObjectName(QStringLiteral("surveyButton"));
+        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(surveyButton->sizePolicy().hasHeightForWidth());
+        surveyButton->setSizePolicy(sizePolicy4);
+        surveyButton->setMinimumSize(QSize(200, 50));
+        surveyButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        verticalLayout_8->addWidget(surveyButton, 0, Qt::AlignRight);
+
         loginButton = new QPushButton(homeTab);
         loginButton->setObjectName(QStringLiteral("loginButton"));
-        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(loginButton->sizePolicy().hasHeightForWidth());
-        loginButton->setSizePolicy(sizePolicy2);
+        sizePolicy.setHeightForWidth(loginButton->sizePolicy().hasHeightForWidth());
+        loginButton->setSizePolicy(sizePolicy);
         loginButton->setMinimumSize(QSize(0, 50));
         loginButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
@@ -263,8 +427,8 @@ public:
 
         groupBox_2 = new QGroupBox(orderTab_7);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        sizePolicy.setHeightForWidth(groupBox_2->sizePolicy().hasHeightForWidth());
-        groupBox_2->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(groupBox_2->sizePolicy().hasHeightForWidth());
+        groupBox_2->setSizePolicy(sizePolicy2);
         groupBox_2->setStyleSheet(QStringLiteral("font: 57 16pt \"Counter-Strike\";"));
         gridLayout_8 = new QGridLayout(groupBox_2);
         gridLayout_8->setSpacing(6);
@@ -272,11 +436,8 @@ public:
         gridLayout_8->setObjectName(QStringLiteral("gridLayout_8"));
         appButton = new QPushButton(groupBox_2);
         appButton->setObjectName(QStringLiteral("appButton"));
-        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Preferred);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(appButton->sizePolicy().hasHeightForWidth());
-        appButton->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(appButton->sizePolicy().hasHeightForWidth());
+        appButton->setSizePolicy(sizePolicy1);
         appButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 24pt \"Counter-Strike\";"));
 
@@ -284,8 +445,8 @@ public:
 
         desButton = new QPushButton(groupBox_2);
         desButton->setObjectName(QStringLiteral("desButton"));
-        sizePolicy3.setHeightForWidth(desButton->sizePolicy().hasHeightForWidth());
-        desButton->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(desButton->sizePolicy().hasHeightForWidth());
+        desButton->setSizePolicy(sizePolicy1);
         desButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 24pt \"Counter-Strike\";"));
 
@@ -293,8 +454,8 @@ public:
 
         entButton = new QPushButton(groupBox_2);
         entButton->setObjectName(QStringLiteral("entButton"));
-        sizePolicy3.setHeightForWidth(entButton->sizePolicy().hasHeightForWidth());
-        entButton->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(entButton->sizePolicy().hasHeightForWidth());
+        entButton->setSizePolicy(sizePolicy1);
         entButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 24pt \"Counter-Strike\";"));
 
@@ -302,9 +463,6 @@ public:
 
         appIcon = new QLabel(groupBox_2);
         appIcon->setObjectName(QStringLiteral("appIcon"));
-        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
         sizePolicy4.setHeightForWidth(appIcon->sizePolicy().hasHeightForWidth());
         appIcon->setSizePolicy(sizePolicy4);
         appIcon->setMinimumSize(QSize(100, 100));
@@ -314,8 +472,8 @@ public:
 
         driButton = new QPushButton(groupBox_2);
         driButton->setObjectName(QStringLiteral("driButton"));
-        sizePolicy3.setHeightForWidth(driButton->sizePolicy().hasHeightForWidth());
-        driButton->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(driButton->sizePolicy().hasHeightForWidth());
+        driButton->setSizePolicy(sizePolicy1);
         driButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 24pt \"Counter-Strike\";"));
 
@@ -323,8 +481,8 @@ public:
 
         sidButton = new QPushButton(groupBox_2);
         sidButton->setObjectName(QStringLiteral("sidButton"));
-        sizePolicy3.setHeightForWidth(sidButton->sizePolicy().hasHeightForWidth());
-        sidButton->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(sidButton->sizePolicy().hasHeightForWidth());
+        sidButton->setSizePolicy(sizePolicy1);
         sidButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 24pt \"Counter-Strike\";"));
 
@@ -369,8 +527,8 @@ public:
 
         kidButton = new QPushButton(groupBox_2);
         kidButton->setObjectName(QStringLiteral("kidButton"));
-        sizePolicy2.setHeightForWidth(kidButton->sizePolicy().hasHeightForWidth());
-        kidButton->setSizePolicy(sizePolicy2);
+        sizePolicy.setHeightForWidth(kidButton->sizePolicy().hasHeightForWidth());
+        kidButton->setSizePolicy(sizePolicy);
         kidButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 24pt \"Counter-Strike\";"));
 
@@ -421,8 +579,8 @@ public:
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
         orderRemoveButton = new QPushButton(frame_5);
         orderRemoveButton->setObjectName(QStringLiteral("orderRemoveButton"));
-        sizePolicy3.setHeightForWidth(orderRemoveButton->sizePolicy().hasHeightForWidth());
-        orderRemoveButton->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(orderRemoveButton->sizePolicy().hasHeightForWidth());
+        orderRemoveButton->setSizePolicy(sizePolicy1);
         orderRemoveButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
 
@@ -430,8 +588,8 @@ public:
 
         placeOrderButton = new QPushButton(frame_5);
         placeOrderButton->setObjectName(QStringLiteral("placeOrderButton"));
-        sizePolicy3.setHeightForWidth(placeOrderButton->sizePolicy().hasHeightForWidth());
-        placeOrderButton->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(placeOrderButton->sizePolicy().hasHeightForWidth());
+        placeOrderButton->setSizePolicy(sizePolicy1);
         placeOrderButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
 
@@ -473,8 +631,8 @@ public:
 
         drinkButton1 = new QPushButton(frame_11);
         drinkButton1->setObjectName(QStringLiteral("drinkButton1"));
-        sizePolicy3.setHeightForWidth(drinkButton1->sizePolicy().hasHeightForWidth());
-        drinkButton1->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(drinkButton1->sizePolicy().hasHeightForWidth());
+        drinkButton1->setSizePolicy(sizePolicy1);
         drinkButton1->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 32pt \"Counter-Strike\";"));
 
@@ -482,8 +640,8 @@ public:
 
         drinkButton2 = new QPushButton(frame_11);
         drinkButton2->setObjectName(QStringLiteral("drinkButton2"));
-        sizePolicy3.setHeightForWidth(drinkButton2->sizePolicy().hasHeightForWidth());
-        drinkButton2->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(drinkButton2->sizePolicy().hasHeightForWidth());
+        drinkButton2->setSizePolicy(sizePolicy1);
         drinkButton2->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 32pt \"Counter-Strike\";"));
 
@@ -491,8 +649,8 @@ public:
 
         drinkButton3 = new QPushButton(frame_11);
         drinkButton3->setObjectName(QStringLiteral("drinkButton3"));
-        sizePolicy3.setHeightForWidth(drinkButton3->sizePolicy().hasHeightForWidth());
-        drinkButton3->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(drinkButton3->sizePolicy().hasHeightForWidth());
+        drinkButton3->setSizePolicy(sizePolicy1);
         drinkButton3->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 32pt \"Counter-Strike\";"));
 
@@ -500,8 +658,8 @@ public:
 
         drinkButton4 = new QPushButton(frame_11);
         drinkButton4->setObjectName(QStringLiteral("drinkButton4"));
-        sizePolicy3.setHeightForWidth(drinkButton4->sizePolicy().hasHeightForWidth());
-        drinkButton4->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(drinkButton4->sizePolicy().hasHeightForWidth());
+        drinkButton4->setSizePolicy(sizePolicy1);
         drinkButton4->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 32pt \"Counter-Strike\";"));
 
@@ -512,8 +670,8 @@ public:
 
         groupBox_3 = new QGroupBox(refillsTab);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
-        sizePolicy.setHeightForWidth(groupBox_3->sizePolicy().hasHeightForWidth());
-        groupBox_3->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(groupBox_3->sizePolicy().hasHeightForWidth());
+        groupBox_3->setSizePolicy(sizePolicy2);
         groupBox_3->setMaximumSize(QSize(500, 16777215));
         verticalLayout_9 = new QVBoxLayout(groupBox_3);
         verticalLayout_9->setSpacing(6);
@@ -547,8 +705,8 @@ public:
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         removeFromRefillButton = new QPushButton(frame);
         removeFromRefillButton->setObjectName(QStringLiteral("removeFromRefillButton"));
-        sizePolicy3.setHeightForWidth(removeFromRefillButton->sizePolicy().hasHeightForWidth());
-        removeFromRefillButton->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(removeFromRefillButton->sizePolicy().hasHeightForWidth());
+        removeFromRefillButton->setSizePolicy(sizePolicy1);
         removeFromRefillButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
 
@@ -556,8 +714,8 @@ public:
 
         orderRefillButton = new QPushButton(frame);
         orderRefillButton->setObjectName(QStringLiteral("orderRefillButton"));
-        sizePolicy3.setHeightForWidth(orderRefillButton->sizePolicy().hasHeightForWidth());
-        orderRefillButton->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(orderRefillButton->sizePolicy().hasHeightForWidth());
+        orderRefillButton->setSizePolicy(sizePolicy1);
         orderRefillButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
 
@@ -837,8 +995,8 @@ public:
         horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
         menuRemoveButton = new QPushButton(frame_6);
         menuRemoveButton->setObjectName(QStringLiteral("menuRemoveButton"));
-        sizePolicy3.setHeightForWidth(menuRemoveButton->sizePolicy().hasHeightForWidth());
-        menuRemoveButton->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(menuRemoveButton->sizePolicy().hasHeightForWidth());
+        menuRemoveButton->setSizePolicy(sizePolicy1);
         menuRemoveButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
 
@@ -846,8 +1004,8 @@ public:
 
         menuBackButton = new QPushButton(frame_6);
         menuBackButton->setObjectName(QStringLiteral("menuBackButton"));
-        sizePolicy3.setHeightForWidth(menuBackButton->sizePolicy().hasHeightForWidth());
-        menuBackButton->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(menuBackButton->sizePolicy().hasHeightForWidth());
+        menuBackButton->setSizePolicy(sizePolicy1);
         menuBackButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
 
@@ -965,30 +1123,30 @@ public:
         passwordBox = new QTextBrowser(groupBox_4);
         passwordBox->setObjectName(QStringLiteral("passwordBox"));
         passwordBox->setGeometry(QRect(25, 40, 311, 131));
-        QPalette palette;
-        QBrush brush(QColor(198, 198, 198, 255));
-        brush.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush1(QColor(46, 47, 48, 255));
+        QPalette palette6;
+        QBrush brush1(QColor(198, 198, 198, 255));
         brush1.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Button, brush1);
-        palette.setBrush(QPalette::Active, QPalette::Text, brush);
-        palette.setBrush(QPalette::Active, QPalette::ButtonText, brush);
-        palette.setBrush(QPalette::Active, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
-        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
-        palette.setBrush(QPalette::Inactive, QPalette::Text, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
-        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
-        palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
-        palette.setBrush(QPalette::Disabled, QPalette::Text, brush);
-        palette.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
-        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
-        passwordBox->setPalette(palette);
+        palette6.setBrush(QPalette::Active, QPalette::WindowText, brush1);
+        QBrush brush2(QColor(46, 47, 48, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette6.setBrush(QPalette::Active, QPalette::Button, brush2);
+        palette6.setBrush(QPalette::Active, QPalette::Text, brush1);
+        palette6.setBrush(QPalette::Active, QPalette::ButtonText, brush1);
+        palette6.setBrush(QPalette::Active, QPalette::Base, brush2);
+        palette6.setBrush(QPalette::Active, QPalette::Window, brush2);
+        palette6.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush2);
+        palette6.setBrush(QPalette::Inactive, QPalette::Text, brush1);
+        palette6.setBrush(QPalette::Inactive, QPalette::ButtonText, brush1);
+        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush2);
+        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush2);
+        palette6.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush2);
+        palette6.setBrush(QPalette::Disabled, QPalette::Text, brush1);
+        palette6.setBrush(QPalette::Disabled, QPalette::ButtonText, brush1);
+        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush2);
+        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush2);
+        passwordBox->setPalette(palette6);
         passwordBox->setStyleSheet(QLatin1String("font: 57 32pt \"Counter-Strike\";\n"
 "color: rgb(198, 198, 198);"));
         passwordBox->setFrameShape(QFrame::Box);
@@ -1050,8 +1208,8 @@ public:
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
         groupBox_8 = new QGroupBox(Table);
         groupBox_8->setObjectName(QStringLiteral("groupBox_8"));
-        sizePolicy.setHeightForWidth(groupBox_8->sizePolicy().hasHeightForWidth());
-        groupBox_8->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(groupBox_8->sizePolicy().hasHeightForWidth());
+        groupBox_8->setSizePolicy(sizePolicy2);
         verticalLayout_5 = new QVBoxLayout(groupBox_8);
         verticalLayout_5->setSpacing(6);
         verticalLayout_5->setContentsMargins(11, 11, 11, 11);
@@ -1086,8 +1244,8 @@ public:
 
         label_2 = new QLabel(frame_7);
         label_2->setObjectName(QStringLiteral("label_2"));
-        sizePolicy3.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
-        label_2->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy1);
         label_2->setStyleSheet(QStringLiteral("font: 57 20pt \"Counter-Strike\";"));
 
         verticalLayout_6->addWidget(label_2);
@@ -1116,8 +1274,8 @@ public:
 
         groupBox_7 = new QGroupBox(Table);
         groupBox_7->setObjectName(QStringLiteral("groupBox_7"));
-        sizePolicy.setHeightForWidth(groupBox_7->sizePolicy().hasHeightForWidth());
-        groupBox_7->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(groupBox_7->sizePolicy().hasHeightForWidth());
+        groupBox_7->setSizePolicy(sizePolicy2);
         verticalLayout_10 = new QVBoxLayout(groupBox_7);
         verticalLayout_10->setSpacing(6);
         verticalLayout_10->setContentsMargins(11, 11, 11, 11);
@@ -1126,8 +1284,8 @@ public:
         new QListWidgetItem(tableList);
         new QListWidgetItem(tableList);
         tableList->setObjectName(QStringLiteral("tableList"));
-        sizePolicy.setHeightForWidth(tableList->sizePolicy().hasHeightForWidth());
-        tableList->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(tableList->sizePolicy().hasHeightForWidth());
+        tableList->setSizePolicy(sizePolicy2);
         tableList->setStyleSheet(QLatin1String("font: 57 28pt \"Counter-Strike\";\n"
 "color: rgb(238, 238, 236);"));
 
@@ -1152,8 +1310,8 @@ public:
         horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
         frame_10 = new QFrame(payment);
         frame_10->setObjectName(QStringLiteral("frame_10"));
-        sizePolicy.setHeightForWidth(frame_10->sizePolicy().hasHeightForWidth());
-        frame_10->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(frame_10->sizePolicy().hasHeightForWidth());
+        frame_10->setSizePolicy(sizePolicy2);
         frame_10->setFrameShape(QFrame::StyledPanel);
         frame_10->setFrameShadow(QFrame::Raised);
         verticalLayout_111 = new QVBoxLayout(frame_10);
@@ -1187,8 +1345,8 @@ public:
         verticalLayout_121->setObjectName(QStringLiteral("verticalLayout_121"));
         addToPaymentButton = new QPushButton(frame_9);
         addToPaymentButton->setObjectName(QStringLiteral("addToPaymentButton"));
-        sizePolicy.setHeightForWidth(addToPaymentButton->sizePolicy().hasHeightForWidth());
-        addToPaymentButton->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(addToPaymentButton->sizePolicy().hasHeightForWidth());
+        addToPaymentButton->setSizePolicy(sizePolicy2);
         addToPaymentButton->setMinimumSize(QSize(200, 0));
         addToPaymentButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
@@ -1197,8 +1355,8 @@ public:
 
         removeFromPaymentButton = new QPushButton(frame_9);
         removeFromPaymentButton->setObjectName(QStringLiteral("removeFromPaymentButton"));
-        sizePolicy.setHeightForWidth(removeFromPaymentButton->sizePolicy().hasHeightForWidth());
-        removeFromPaymentButton->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(removeFromPaymentButton->sizePolicy().hasHeightForWidth());
+        removeFromPaymentButton->setSizePolicy(sizePolicy2);
         removeFromPaymentButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
 
@@ -1231,8 +1389,8 @@ public:
 
         payForOrderButton = new QPushButton(frame_8);
         payForOrderButton->setObjectName(QStringLiteral("payForOrderButton"));
-        sizePolicy3.setHeightForWidth(payForOrderButton->sizePolicy().hasHeightForWidth());
-        payForOrderButton->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(payForOrderButton->sizePolicy().hasHeightForWidth());
+        payForOrderButton->setSizePolicy(sizePolicy1);
         payForOrderButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
 
@@ -1242,144 +1400,64 @@ public:
         horizontalLayout_8->addWidget(frame_8);
 
         tabWidget->addTab(payment, QString());
+        Survey = new QWidget();
+        Survey->setObjectName(QStringLiteral("Survey"));
+        label_4 = new QLabel(Survey);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setGeometry(QRect(10, 10, 271, 31));
+        label_4->setStyleSheet(QLatin1String("background-color: rgb(46, 47, 48);\n"
+"font: 57 12pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+        radioButton = new QRadioButton(Survey);
+        radioButton->setObjectName(QStringLiteral("radioButton"));
+        radioButton->setGeometry(QRect(10, 50, 82, 17));
+        radioButton->setStyleSheet(QLatin1String("\n"
+"font: 57 12pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+        radioButton_2 = new QRadioButton(Survey);
+        radioButton_2->setObjectName(QStringLiteral("radioButton_2"));
+        radioButton_2->setGeometry(QRect(10, 70, 82, 17));
+        radioButton_2->setStyleSheet(QLatin1String("\n"
+"font: 57 12pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+        radioButton_3 = new QRadioButton(Survey);
+        radioButton_3->setObjectName(QStringLiteral("radioButton_3"));
+        radioButton_3->setGeometry(QRect(10, 90, 82, 17));
+        radioButton_3->setStyleSheet(QLatin1String("\n"
+"font: 57 12pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+        radioButton_4 = new QRadioButton(Survey);
+        radioButton_4->setObjectName(QStringLiteral("radioButton_4"));
+        radioButton_4->setGeometry(QRect(10, 110, 82, 17));
+        radioButton_4->setStyleSheet(QLatin1String("\n"
+"font: 57 12pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+        radioButton_5 = new QRadioButton(Survey);
+        radioButton_5->setObjectName(QStringLiteral("radioButton_5"));
+        radioButton_5->setGeometry(QRect(10, 130, 82, 17));
+        radioButton_5->setStyleSheet(QLatin1String("\n"
+"font: 57 12pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+        label_7 = new QLabel(Survey);
+        label_7->setObjectName(QStringLiteral("label_7"));
+        label_7->setGeometry(QRect(0, 190, 321, 41));
+        label_7->setStyleSheet(QLatin1String("\n"
+"font: 57 12pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+        textEdit = new QTextEdit(Survey);
+        textEdit->setObjectName(QStringLiteral("textEdit"));
+        textEdit->setGeometry(QRect(3, 250, 511, 241));
+        textEdit->setStyleSheet(QLatin1String("\n"
+"font: 57 12pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+        surveySubmitButton = new QPushButton(Survey);
+        surveySubmitButton->setObjectName(QStringLiteral("surveySubmitButton"));
+        surveySubmitButton->setGeometry(QRect(150, 520, 101, 41));
+        surveySubmitButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+        tabWidget->addTab(Survey, QString());
 
         gridLayout_2->addWidget(tabWidget, 0, 0, 1, 1);
-
-        groupBox = new QGroupBox(centralWidget);
-        groupBox->setObjectName(QStringLiteral("groupBox"));
-        sizePolicy2.setHeightForWidth(groupBox->sizePolicy().hasHeightForWidth());
-        groupBox->setSizePolicy(sizePolicy2);
-        groupBox->setMinimumSize(QSize(0, 150));
-        groupBox->setAutoFillBackground(false);
-        groupBox->setStyleSheet(QStringLiteral("background-color: rgb(46, 47, 48);"));
-        horizontalLayout_2 = new QHBoxLayout(groupBox);
-        horizontalLayout_2->setSpacing(6);
-        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        backButton = new QPushButton(groupBox);
-        backButton->setObjectName(QStringLiteral("backButton"));
-        sizePolicy3.setHeightForWidth(backButton->sizePolicy().hasHeightForWidth());
-        backButton->setSizePolicy(sizePolicy3);
-        QPalette palette1;
-        QBrush brush2(QColor(188, 188, 188, 255));
-        brush2.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Button, brush2);
-        palette1.setBrush(QPalette::Active, QPalette::Base, brush2);
-        palette1.setBrush(QPalette::Active, QPalette::Window, brush2);
-        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush2);
-        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush2);
-        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush2);
-        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush2);
-        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush2);
-        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush2);
-        backButton->setPalette(palette1);
-        backButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
-"font: 57 20pt \"Counter-Strike\";"));
-
-        horizontalLayout_2->addWidget(backButton);
-
-        drinkButton = new QPushButton(groupBox);
-        drinkButton->setObjectName(QStringLiteral("drinkButton"));
-        sizePolicy3.setHeightForWidth(drinkButton->sizePolicy().hasHeightForWidth());
-        drinkButton->setSizePolicy(sizePolicy3);
-        QPalette palette2;
-        palette2.setBrush(QPalette::Active, QPalette::Button, brush2);
-        palette2.setBrush(QPalette::Active, QPalette::Base, brush2);
-        palette2.setBrush(QPalette::Active, QPalette::Window, brush2);
-        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush2);
-        palette2.setBrush(QPalette::Inactive, QPalette::Base, brush2);
-        palette2.setBrush(QPalette::Inactive, QPalette::Window, brush2);
-        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush2);
-        palette2.setBrush(QPalette::Disabled, QPalette::Base, brush2);
-        palette2.setBrush(QPalette::Disabled, QPalette::Window, brush2);
-        drinkButton->setPalette(palette2);
-        drinkButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
-"font: 57 20pt \"Counter-Strike\";"));
-
-        horizontalLayout_2->addWidget(drinkButton);
-
-        ticketButton = new QPushButton(groupBox);
-        ticketButton->setObjectName(QStringLiteral("ticketButton"));
-        sizePolicy3.setHeightForWidth(ticketButton->sizePolicy().hasHeightForWidth());
-        ticketButton->setSizePolicy(sizePolicy3);
-        QPalette palette3;
-        palette3.setBrush(QPalette::Active, QPalette::Button, brush2);
-        palette3.setBrush(QPalette::Active, QPalette::Base, brush2);
-        palette3.setBrush(QPalette::Active, QPalette::Window, brush2);
-        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush2);
-        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush2);
-        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush2);
-        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush2);
-        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush2);
-        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush2);
-        ticketButton->setPalette(palette3);
-        ticketButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
-"font: 57 20pt \"Counter-Strike\";"));
-
-        horizontalLayout_2->addWidget(ticketButton);
-
-        gameButton = new QPushButton(groupBox);
-        gameButton->setObjectName(QStringLiteral("gameButton"));
-        sizePolicy3.setHeightForWidth(gameButton->sizePolicy().hasHeightForWidth());
-        gameButton->setSizePolicy(sizePolicy3);
-        QPalette palette4;
-        palette4.setBrush(QPalette::Active, QPalette::Button, brush2);
-        palette4.setBrush(QPalette::Active, QPalette::Base, brush2);
-        palette4.setBrush(QPalette::Active, QPalette::Window, brush2);
-        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush2);
-        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush2);
-        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush2);
-        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush2);
-        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush2);
-        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush2);
-        gameButton->setPalette(palette4);
-        gameButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
-"font: 57 20pt \"Counter-Strike\";"));
-
-        horizontalLayout_2->addWidget(gameButton);
-
-        assistButton = new QPushButton(groupBox);
-        assistButton->setObjectName(QStringLiteral("assistButton"));
-        sizePolicy3.setHeightForWidth(assistButton->sizePolicy().hasHeightForWidth());
-        assistButton->setSizePolicy(sizePolicy3);
-        QPalette palette5;
-        palette5.setBrush(QPalette::Active, QPalette::Button, brush2);
-        palette5.setBrush(QPalette::Active, QPalette::Base, brush2);
-        palette5.setBrush(QPalette::Active, QPalette::Window, brush2);
-        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush2);
-        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush2);
-        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush2);
-        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush2);
-        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush2);
-        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush2);
-        assistButton->setPalette(palette5);
-        assistButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
-"font: 57 20pt \"Counter-Strike\";"));
-
-        horizontalLayout_2->addWidget(assistButton);
-
-        helpButton = new QPushButton(groupBox);
-        helpButton->setObjectName(QStringLiteral("helpButton"));
-        sizePolicy3.setHeightForWidth(helpButton->sizePolicy().hasHeightForWidth());
-        helpButton->setSizePolicy(sizePolicy3);
-        QPalette palette6;
-        palette6.setBrush(QPalette::Active, QPalette::Button, brush2);
-        palette6.setBrush(QPalette::Active, QPalette::Base, brush2);
-        palette6.setBrush(QPalette::Active, QPalette::Window, brush2);
-        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush2);
-        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush2);
-        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush2);
-        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush2);
-        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush2);
-        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush2);
-        helpButton->setPalette(palette6);
-        helpButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
-"font: 57 20pt \"Counter-Strike\";"));
-
-        horizontalLayout_2->addWidget(helpButton);
-
-
-        gridLayout_2->addWidget(groupBox, 1, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);
@@ -1388,7 +1466,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(11);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1397,8 +1475,15 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        backButton->setText(QApplication::translate("MainWindow", "Back", nullptr));
+        drinkButton->setText(QApplication::translate("MainWindow", "Refills", nullptr));
+        ticketButton->setText(QApplication::translate("MainWindow", "My Ticket", nullptr));
+        gameButton->setText(QApplication::translate("MainWindow", "Games", nullptr));
+        assistButton->setText(QApplication::translate("MainWindow", "Request Assistance", nullptr));
+        helpButton->setText(QApplication::translate("MainWindow", "Help", nullptr));
         spaceLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         startOrderButton->setText(QApplication::translate("MainWindow", "Begin Order", nullptr));
+        surveyButton->setText(QApplication::translate("MainWindow", "Feedback", nullptr));
         loginButton->setText(QApplication::translate("MainWindow", "Employee Login", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(homeTab), QApplication::translate("MainWindow", "Home", nullptr));
         label_6->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" color:#c6c6c6;\">Category</span></p></body></html>", nullptr));
@@ -1500,12 +1585,15 @@ public:
         totalToPayLabel->setText(QApplication::translate("MainWindow", "Total:", nullptr));
         payForOrderButton->setText(QApplication::translate("MainWindow", "Pay and Place Order", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(payment), QApplication::translate("MainWindow", "Payment", nullptr));
-        backButton->setText(QApplication::translate("MainWindow", "Back", nullptr));
-        drinkButton->setText(QApplication::translate("MainWindow", "Refills", nullptr));
-        ticketButton->setText(QApplication::translate("MainWindow", "My Ticket", nullptr));
-        gameButton->setText(QApplication::translate("MainWindow", "Games", nullptr));
-        assistButton->setText(QApplication::translate("MainWindow", "Request Assistance", nullptr));
-        helpButton->setText(QApplication::translate("MainWindow", "Help", nullptr));
+        label_4->setText(QApplication::translate("MainWindow", "Rate Us! We appreciate your feedback.", nullptr));
+        radioButton->setText(QApplication::translate("MainWindow", "1", nullptr));
+        radioButton_2->setText(QApplication::translate("MainWindow", "2", nullptr));
+        radioButton_3->setText(QApplication::translate("MainWindow", "3", nullptr));
+        radioButton_4->setText(QApplication::translate("MainWindow", "4", nullptr));
+        radioButton_5->setText(QApplication::translate("MainWindow", "5", nullptr));
+        label_7->setText(QApplication::translate("MainWindow", "Additional Information/Explanation of Rating", nullptr));
+        surveySubmitButton->setText(QApplication::translate("MainWindow", "Submit", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(Survey), QApplication::translate("MainWindow", "Survey", nullptr));
     } // retranslateUi
 
 };

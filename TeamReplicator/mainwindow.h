@@ -115,6 +115,10 @@ private slots:
 
     void on_orderRefillButton_clicked();
 
+    void on_surveyButton_clicked();
+
+    void on_surveySubmitButton_clicked();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons
