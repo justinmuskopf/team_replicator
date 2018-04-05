@@ -382,7 +382,7 @@ void MainWindow::addToOrderList(int num)
 /* Game buttons                                                             */
 /****************************************************************************/
 void MainWindow::on_gameButton1_clicked() {
-    system("\"C:\\Users\\User\\Documents\\College\\UNT\\6. Spring 18\\CSCE 4444\\TeamReplicator-customer_interface\\build-TeamReplicator-Desktop_Qt_5_10_1_MinGW_32bit-Debug\\games\\Drawing\\Drawing.exe\"");
+    system("\"C:\\Users\\User\\Documents\\GitHub\\TeamReplicator\\build-TeamReplicator-Desktop_Qt_5_10_1_MinGW_32bit-Debug\\games\\Drawing\\Drawing.exe\"");
     //QProcess *process = new QProcess(this);
     //QString game1 = "\"C:\\Users\\User\\Documents\\College\\UNT\\6. Spring 18\\CSCE 4444\\TeamReplicator-customer_interface\\build-TeamReplicator-Desktop_Qt_5_10_1_MinGW_32bit-Debug/games/klondike.exe\"";
     //QDir dir = QCoreApplication::applicationDirPath();
@@ -394,7 +394,7 @@ void MainWindow::on_gameButton1_clicked() {
 
 } // on_gameButton1_clicked
 void MainWindow::on_gameButton2_clicked() {
-    system("\"C:\\Users\\User\\Documents\\College\\UNT\\6. Spring 18\\CSCE 4444\\TeamReplicator-customer_interface\\build-TeamReplicator-Desktop_Qt_5_10_1_MinGW_32bit-Debug\\games\\klondike.exe\"");
+    system("\"C:\\Users\\User\\Documents\\GitHub\\TeamReplicator\\build-TeamReplicator-Desktop_Qt_5_10_1_MinGW_32bit-Debug\\games\\klondike.exe\"");
     /* NEED TO CHANGE TO REFLECT LOCATION ON TEST MACHING*/
 } // on_gameButton2_clicked
 /****************************************************************************/

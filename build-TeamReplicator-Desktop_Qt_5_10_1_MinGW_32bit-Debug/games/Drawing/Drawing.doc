@@ -1,0 +1,673 @@
+{\rtf1\ansi\ansicpg1252\uc1\deff36\stshfdbch0\stshfloch0\stshfhich0\stshfbi0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f10\fnil\fcharset2\fprq2{\*\panose 05000000000000000000}Wingdings;}
+{\f36\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}MS Sans Serif;}{\f144\froman\fcharset238\fprq2 Times New Roman CE;}{\f145\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f147\froman\fcharset161\fprq2 Times New Roman Greek;}
+{\f148\froman\fcharset162\fprq2 Times New Roman Tur;}{\f149\froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\f150\froman\fcharset178\fprq2 Times New Roman (Arabic);}{\f151\froman\fcharset186\fprq2 Times New Roman Baltic;}
+{\f152\froman\fcharset163\fprq2 Times New Roman (Vietnamese);}{\f154\fswiss\fcharset238\fprq2 Arial CE;}{\f155\fswiss\fcharset204\fprq2 Arial Cyr;}{\f157\fswiss\fcharset161\fprq2 Arial Greek;}{\f158\fswiss\fcharset162\fprq2 Arial Tur;}
+{\f159\fswiss\fcharset177\fprq2 Arial (Hebrew);}{\f160\fswiss\fcharset178\fprq2 Arial (Arabic);}{\f161\fswiss\fcharset186\fprq2 Arial Baltic;}{\f162\fswiss\fcharset163\fprq2 Arial (Vietnamese);}{\f164\fmodern\fcharset238\fprq1 Courier New CE;}
+{\f165\fmodern\fcharset204\fprq1 Courier New Cyr;}{\f167\fmodern\fcharset161\fprq1 Courier New Greek;}{\f168\fmodern\fcharset162\fprq1 Courier New Tur;}{\f169\fmodern\fcharset177\fprq1 Courier New (Hebrew);}
+{\f170\fmodern\fcharset178\fprq1 Courier New (Arabic);}{\f171\fmodern\fcharset186\fprq1 Courier New Baltic;}{\f172\fmodern\fcharset163\fprq1 Courier New (Vietnamese);}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;
+\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 \snext0 Normal;}{
+\s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 \sbasedon0 \snext0 heading 1;}{
+\s2\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel1\adjustright\rin0\lin0\itap0 \b\i\f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 \sbasedon0 \snext0 heading 2;}{
+\s3\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel2\adjustright\rin0\lin0\itap0 \f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 \sbasedon0 \snext0 heading 3;}{\*\cs10 \additive \ssemihidden Default Paragraph Font;}{\*
+\ts11\tsrowd\trftsWidthB3\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\trcbpat1\trcfpat1\tblind0\tblindtype3\tscellwidthfts0\tsvertalt\tsbrdrt\tsbrdrl\tsbrdrb\tsbrdrr\tsbrdrdgl\tsbrdrdgr\tsbrdrh\tsbrdrv 
+\ql \li0\ri0\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang1024\langfe1024\cgrid\langnp1024\langfenp1024 \snext11 \ssemihidden Normal Table;}{\*\cs15 \additive \ul\cf2 \sbasedon10 Hyperlink;}{\*\cs16 \additive 
+\ul\cf12 \sbasedon10 FollowedHyperlink;}{\s17\ql \li0\ri0\widctlpar\tqc\tx4536\tqr\tx9072\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 \sbasedon0 \snext17 header;}{\s18\ql \li0\ri0\widctlpar
+\tqc\tx4536\tqr\tx9072\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 \sbasedon0 \snext18 footer;}}{\*\listtable{\list\listtemplateid-836605282\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0\hres0\chhres0 \fi-360\li720\jclisttab\tx720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0\hres0\chhres0 \fi-360\li1440\jclisttab\tx1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0\hres0\chhres0 \fi-360\li2160\jclisttab\tx2160\lin2160 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0\hres0\chhres0 \fi-360\li2880\jclisttab\tx2880\lin2880 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0\hres0\chhres0 \fi-360\li3600\jclisttab\tx3600\lin3600 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0\hres0\chhres0 \fi-360\li4320\jclisttab\tx4320\lin4320 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0\hres0\chhres0 \fi-360\li5040\jclisttab\tx5040\lin5040 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0\hres0\chhres0 \fi-360\li5760\jclisttab\tx5760\lin5760 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698693
+\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0\hres0\chhres0 \fi-360\li6480\jclisttab\tx6480\lin6480 }{\listname ;}\listid59838563}{\list\listtemplateid1928467674\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat0
+\levelspace0\levelindent0{\leveltext\leveltemplateid-1824867218\'01\'00;}{\levelnumbers\'01;}\fbias0\hres0\chhres0 \fi-360\li1080\jclisttab\tx1080\lin1080 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698713\'02\'01.;}{\levelnumbers\'01;}\hres0\chhres0 \fi-360\li1800\jclisttab\tx1800\lin1800 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\leveltemplateid67698715\'02\'02.;}{\levelnumbers\'01;}\hres0\chhres0 \fi-180\li2520\jclisttab\tx2520\lin2520 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698703
+\'02\'03.;}{\levelnumbers\'01;}\hres0\chhres0 \fi-360\li3240\jclisttab\tx3240\lin3240 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698713\'02\'04.;}{\levelnumbers
+\'01;}\hres0\chhres0 \fi-360\li3960\jclisttab\tx3960\lin3960 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698715\'02\'05.;}{\levelnumbers\'01;}\hres0\chhres0 
+\fi-180\li4680\jclisttab\tx4680\lin4680 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698703\'02\'06.;}{\levelnumbers\'01;}\hres0\chhres0 \fi-360\li5400
+\jclisttab\tx5400\lin5400 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698713\'02\'07.;}{\levelnumbers\'01;}\hres0\chhres0 \fi-360\li6120\jclisttab\tx6120\lin6120 }
+{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698715\'02\'08.;}{\levelnumbers\'01;}\hres0\chhres0 \fi-180\li6840\jclisttab\tx6840\lin6840 }{\listname ;}\listid110974889}
+{\list\listtemplateid-1811524142\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0\hres0\chhres0 \fi-360\li720
+\jclisttab\tx720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0\hres0\chhres0 \fi-360\li1440\jclisttab\tx1440\lin1440 
+}{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0\hres0\chhres0 \fi-360\li2160\jclisttab\tx2160\lin2160 }{\listlevel
+\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0\hres0\chhres0 \fi-360\li2880\jclisttab\tx2880\lin2880 }{\listlevel\levelnfc23
+\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0\hres0\chhres0 \fi-360\li3600\jclisttab\tx3600\lin3600 }{\listlevel\levelnfc23\levelnfcn23\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0\hres0\chhres0 \fi-360\li4320\jclisttab\tx4320\lin4320 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0
+\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0\hres0\chhres0 \fi-360\li5040\jclisttab\tx5040\lin5040 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0
+\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0\hres0\chhres0 \fi-360\li5760\jclisttab\tx5760\lin5760 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1
+\levelspace360\levelindent0{\leveltext\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0\hres0\chhres0 \fi-360\li6480\jclisttab\tx6480\lin6480 }{\listname ;}\listid772285970}{\list\listtemplateid162982256\listhybrid{\listlevel\levelnfc23
+\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0\hres0\chhres0 \fi-360\li720\jclisttab\tx720\lin720 }{\listlevel\levelnfc23\levelnfcn23
+\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0\hres0\chhres0 \fi-360\li1440\jclisttab\tx1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0
+\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0\hres0\chhres0 \fi-360\li2160\jclisttab\tx2160\lin2160 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0
+\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0\hres0\chhres0 \fi-360\li2880\jclisttab\tx2880\lin2880 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1
+\levelspace360\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0\hres0\chhres0 \fi-360\li3600\jclisttab\tx3600\lin3600 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360
+\levelindent0{\leveltext\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0\hres0\chhres0 \fi-360\li4320\jclisttab\tx4320\lin4320 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0
+{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0\hres0\chhres0 \fi-360\li5040\jclisttab\tx5040\lin5040 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext
+\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0\hres0\chhres0 \fi-360\li5760\jclisttab\tx5760\lin5760 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698693
+\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0\hres0\chhres0 \fi-360\li6480\jclisttab\tx6480\lin6480 }{\listname ;}\listid1360083888}}{\*\listoverridetable{\listoverride\listid1360083888\listoverridecount0\ls1}{\listoverride\listid110974889
+\listoverridecount0\ls2}{\listoverride\listid59838563\listoverridecount0\ls3}{\listoverride\listid772285970\listoverridecount0\ls4}}{\*\rsidtbl \rsid6429091\rsid9532059\rsid10753701\rsid15075466}{\*\generator Microsoft Word 10.0.6835;}{\info
+{\title Drawing for Children}{\author Dhr. Overmars}{\operator Mark Overmars}{\creatim\yr1996\mo6\dy29\hr21\min22}{\revtim\yr2007\mo12\dy26\hr14\min49}{\version34}{\edmins216}{\nofpages7}{\nofwords2917}{\nofchars16631}{\*\company  }{\nofcharsws19509}
+{\vern16393}{\*\password 00000000}}{\*\xmlnstbl {\xmlns1 urn:schemas-microsoft-com:office:smarttags}}\paperw12240\paperh15840\margl1417\margr1417\margt1417\margb1417\gutter0 
+\widowctrl\ftnbj\aendnotes\hyphhotz0\grfdocevents0\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\lytprtmet\hyphcaps0\horzdoc\dghspace120\dgvspace120\dghorigin1701\dgvorigin1984\dghshow0\dgvshow3
+\jcompress\viewkind1\viewscale100\pgbrdrhead\pgbrdrfoot\nolnhtadjtbl\rsidroot9532059 \fet0{\*\wgrffmtfilter 013f}\sectd \linex0\headery709\footery709\colsx709\endnhere\sectdefaultcl\sftnbj {\footerr \pard\plain \s18\ql \li0\ri0\widctlpar
+\tqc\tx4536\tqr\tx9072\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\insrsid15075466 \tab - }{\field{\*\fldinst {\insrsid15075466  PAGE }}{\fldrslt {\lang1024\langfe1024\noproof\insrsid15075466 1}
+}}\sectd \linex0\endnhere\sectdefaultcl\sftnbj {\insrsid15075466  -
+\par }}{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang {\pntxta )}}
+{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl8
+\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}\pard\plain \s1\qc \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 
+\b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs48\lang1033\langfe1033\langnp1033\insrsid15075466 Drawing }{\f0\fs36\lang1033\langfe1033\langnp1033\insrsid15075466 for}{\f0\fs48\lang1033\langfe1033\langnp1033\insrsid15075466 
+ Children}{\f0\fs36\lang1033\langfe1033\langnp1033\insrsid15075466 
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+\par }\pard\plain \s1\qc \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\b0\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Mark Overmars
+
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+\par }\pard \qc \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 {\f0\lang1033\langfe1033\langnp1033\insrsid10753701 Version 2.2}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+\par }{\f0\lang1033\langfe1033\langnp1033\insrsid10753701 {\*\xmlopen\xmlns1{\factoidname date}{\xmlattr\xmlattrns0{\xmlattrname Month}{\xmlattrvalue 12}}{\xmlattr\xmlattrns0{\xmlattrname Day}{\xmlattrvalue 26}}{\xmlattr\xmlattrns0{\xmlattrname Year}
+{\xmlattrvalue 2007}}}December 26}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 , 200}{\f0\lang1033\langfe1033\langnp1033\insrsid10753701 7}{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 {\*\xmlclose}
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\b0\f0\fs20\lang1033\langfe1033\kerning0\langnp1033\insrsid9532059 
+{\*\shppict{\pict{\*\picprop\shplid1025{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fillColor}{\sv 268435473}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0
+\picw845\pich841\picwgoal479\pichgoal477\pngblip\bliptag634037032{\*\blipuid 25caa3281b43eb870b3a5e3d18a3ba7c}89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c70000000467414d410000b1889598f4a600000030504c544500000080000000
+8000808000000080800080008080808080c0c0c0ff000000ff00ffff000000ffff00ff00ffffffffff7b1fb1c4000000097048597300000ecb00000edd01ff7d
+15d60000014349444154789c5dd1314bc3401407f037088e2738752b192a3854d1b1830e011d0af90a0ed2ae392cbe0b04ee9cee844256835b46073f805d3b38
+e473642a12119a88c379b94b6cf04120f9e59fc7e53dd0ff0a9acb15e900942b411c940a2bcd11918916243d3cf346b757d802c0c3b9379af9be6b0365f87870
+3a1cde5ceea97d2d1a102c5d1d8f3ff25c11b010cac12a1b17f9541165a164e9c4bb2fa6ef8aa005948349b6ed41a2063f199fc51d6822a3bbac2ae2eb0ea0a6
+5f1e379010d642c44d62c112a8893d3aa13ce3f35895508305a1d1c3796c6e5181fd397083482a64e6b4ba64d4ce2774536a12113fe1b814e6bd7289481f55b8
+08b946c6da04e7287b09aa2bd3afd783ba0408006101db84210b4aba4453cbc0ee4532536103eba0b7b92778d9ac35fc2d357d7e7bcdfd1d7c9be78d1fece0f3c2d341a07b9fb4f50bd38e2fa7f432c2460000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley101\piccropl0\piccropr0\piccropt0\piccropb0\picw845\pich841\picwgoal479\pichgoal477\wmetafile8\bliptag634037032\blipupi96{\*\blipuid 25caa3281b43eb870b3a5e3d18a3ba7c}
+0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe00bfbfbf007f7f7f0000007f00007f7f00007f00007f7f00007f0000000000fe0000fefe0000fe0000fefe0000fe000000000000002222
+22222222222222222222222222222222222222222222256277229292222222222222222222222aabbccdde999222222222222222222222aaabbccdee99222222
+2200000000000000a300ccdee9222222003334434343434030303030e99222203334424242443430303030303e92222034442224244443400030003030022220
+3445424242443430003000003002222043452224244443400000000000022220344a4242424434304443333333022220434a2274244449404222444343022220
+344a427242443e30444333333302222043450000000000400000000000022220340022222222220032244443330222203022447744844e220022443300222220
+024542c742844e332000230022222200234a42c724d8494332002302222222002345267742d84e933202433022222202344a46c724d84e933302443022222032
+335a2bc742884ee33302443022222044345a6bc728d89ee3330244302222202043aa6b7748d89ee33302443022222040345abbc77dd8ee9e3302333022222030
+43aabb7c7dddeeee33020030222220403a5060707080900933042230222222000035667778889999000000022222222034455667777889944430222222222220
+3344242242444444433022222222222200333333333333333002222222222222220000000000000002222222222222222222222222222222222222222222040000002701ffff030000000000}}}{\b0\f0\fs20\lang1033\langfe1033\kerning0\langnp1033\insrsid15075466  }{
+\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Introduction
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 The program }{
+\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Drawing for Children}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  is a drawing program that is especially suited for small children. Children don\rquote 
+t need to be able to read to use the program. Also, rather than asking the user to set all sorts of options it simply gives a large number of different ways of drawing. The bes
+t way to learn what the program can do is to simply play with all the buttons. There are normal drawing commands, for drawing lines, circles, etc. but also many weird ones to draw railroads, pipes, bubbles, grass, etc. Just try experimenting to make the w
+e
+irdest pictures. There are many different pens, stamps, cliparts, backgrounds, and special effects. One thing is important to remember when experimenting: in most cases the left mouse button does something else than the right mouse button. Also most of th
+e time holding the <Shift> key on the keyboard increases the size of the things you draw. When holding the <Ctrl> key again different things happen. So don\rquote 
+t forget to try these possibilities (and all combinations) as well. Finally, holding the <Alt> key always snaps positions to a grid. This is useful for positioning things you draw.
+\par 
+\par }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Drawing for Children}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  requires a modern PC running Windows 95}{\f0\lang1033\langfe1033\langnp1033\insrsid10753701  }{
+\f0\lang1033\langfe1033\langnp1033\insrsid15075466 or later.}{\f0\lang1033\langfe1033\langnp1033\insrsid10753701  The program should be {\*\xmlopen\xmlns1{\factoidname place}}Vista{\*\xmlclose} compatible.}{
+\f0\lang1033\langfe1033\langnp1033\insrsid15075466  The program requires a screen resolution of at least 800x600. 
+\par }{\f0\lang1033\langfe1033\langnp1033\insrsid10753701 
+\par }{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Even though this documentation is not necessary to use and understand the program I stil
+l give an overview of the options. When starting the program you see a window with the following parts: At the top there are the most important buttons. Their function will be described below. (If you leave the mouse pointer on a button a short message ap
+pears describing its function.) For most buttons there are various possibilities. They will appear on the left of the drawing area. With the two arrow buttons you can scroll through the options.
+\par 
+\par Below you find an overview of the different buttons on the top row and what they do. I will only give brief descriptions. To find out the details, just try them out.
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1026{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fillColor}{\sv 268435473}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw845\pich841\picwgoal479\pichgoal477\pngblip\bliptag1660959781{\*\blipuid 63003c25e3ceab61e6529db1067209b5}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c70000000467414d410000b1889598f4a600000030504c544500000080000000
+8000808000000080800080008080808080c0c0c0ff000000ff00ffff000000ffff00ff00ffffffffff7b1fb1c4000000097048597300000ecb00000edd01ff7d
+15d6000000db49444154789c75d1a10e83301006e073138866af4078912575085e65025189c4cdcc102caa0a5143eea5ce4166babbb64047b23f90902f3fd716
+c04b0862f8112260c8acae40192cc380b357278c7ccd9e0e58f88d6506503fc0f77f08337650fb2a0988088ab8111c0564ed008ea730f0ee286eb5a905f614e8
+3ed3c8c0e7595763fa021b6bebbce13ed64e0c74eb9e5dd7013eeeb62c6b8697d98c31805adb4a27d804d0d94a367634f07dc27685d058dcb591cf68b5246bb436a4924f181b09e447c5461972409aa1f5d1e0557c0a90e92527f8787a75c2255fa5b2445df680a6f30000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley101\piccropl0\piccropr0\piccropt0\piccropb0\picw845\pich841\picwgoal479\pichgoal477\wmetafile8\bliptag1660959781\blipupi96{\*\blipuid 63003c25e3ceab61e6529db1067209b5}
+0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe0000fefe000000fe007f00000000fe00007f7f7f00bfbfbf0000007f00007f000000000000000000000000000000000000000000002222
+22222222222222222222222222222200000000000002222222222222222220788888888888002222222222222222208278282878780022222222222222222082
+7828787555555555555555222222208278282875aaaaaaaaaaaaa5222222208278287875666666666666a5222222208278282875666666666666a50000022082
+78287875555555555566a5333302208278282878780033333566a5333302208278287878780033343566a5333302208278282878780033334566a53333022082
+78287878780033334566a5333302208278282878780033333566a5333302208278287878780033555566a5555302200780708080800033599966aaaa53020000
+00000000000003352666666533020222222727787888033352666653330200000000000000000333352665433302222022222022203333333352533433022222
+02220022033333333335333433022222202020000333333333333333430222222202222033333444443333333302222222222220333343333343333333022222
+22222220333433333334333333022222222222203334333333343333330222222222222033343333333430000002222222222220333343333343302220222222
+2222222033333444443330220222222222222220333333333333302022222222222222203333333333333002222222222222222000000000000000222222040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Undo the last action
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+By pressing this button you undo the last action. For example, if you filled a couple of regions and then press the undo button, all fills will be removed! You can also use <Ctrl>Z for undoing the last action.
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1027{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fillColor}{\sv 268435473}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw845\pich841\picwgoal479\pichgoal477\pngblip\bliptag1581207550{\*\blipuid 5e3f4ffe20603033fa6bed4caa64d748}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c70000000467414d410000b1889598f4a600000030504c544500000080000000
+8000808000000080800080008080808080c0c0c0ff000000ff00ffff000000ffff00ff00ffffffffff7b1fb1c4000000097048597300000ecb00000edd01ff7d
+15d60000010149444154789cbd91bf6ac33010876faba183b2662a184ac0932083870c75dfc04ba62c7d82e27689b61a3c48d041640c7d8980878ca6bbd7ec99
+ba56e0c1a2cbf5acb3fbef01fa1bc48f8f0fa4d30172964bc905c229f0a629b805e00157957ca7d68de03018676a2983e747b1aae59dc06ecb208e818c7b81a9
+6390c4f9652ddf324c61021bd1146dd639e06b93eb6359c936bb3af03b7cb258e764dcbe080636599cf25ab6f31d03ef07d014affb9962e0d898efc0ff341ef6
+b30bc7c07e10a848c09281b2fd292701cd089e940da31b0523e8bd19a2cbc9a06c29ca7c197d4f449bdf8656ff6ce83f06467632c62f74916603a665bb280c07dfdb773024d44f05ed5628bb6586d50000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley101\piccropl0\piccropr0\piccropt0\piccropb0\picw845\pich841\picwgoal479\pichgoal477\wmetafile8\bliptag1581207550\blipupi96{\*\blipuid 5e3f4ffe20603033fa6bed4caa64d748}
+0100090000034604000000002104000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040021040000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010008000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe00007f7f0000fefe007f7f7f00bfbfbf00fefe0000007f00007f7f000000fe00007f007f007f000000fe00000000007f000000fe00fe00
+fe000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000202
+02020202020202020200000000000000000000000202020202020202020202020202020202020200000606060606060606060606000002020202020202020202
+02020202020000060605020505020505050506050606000002020202020202020202020200060602050205020505050506050506050606060002020202020202
+02020206060502050205020505020505050506050606060006000202020202020202020605020502050205020505050506050506050606060000020202020202
+02020206050202050205020505020505050506050606060006000202020202020202020605020502050205020505050506050506050606060000020202020202
+02020206050202050205020505020505050506050606060006000202020202020202020605020502050205020505050506050506050606060000020202020202
+02020206050202050205020505020505050506050606060006000202020202020202020605020502050205020505050506050506050606060000020202020202
+02020206050202050205020505020505050506050606060006000202020202020202020605020502050205020505050505050505050606060000020202020202
+02020206050202050206060606060606060606060605060006000202020202020202020605020506060202020202020202020202060605060000020202020202
+02020206050606020205100b0b00050e0f0f0e00020206060600020202020202020202060602020a0805100b0b0006030e0f0f0e000002020600020202020202
+020202060206080a0805100b0b000402050e0f0f0e0000050200020202020202020202060200080a0805100b0b00040303000e0f0f0e00000206020202020202
+020202060206080a0805100b0b00040205000d0e0f0f0e000506020202020202020202020602080a0805100b0b00040303000d0d0e0f0f0e0002020202020202
+020202020206080a08050b0b0b00040205000d0d0c0e0f040002020202020202020202020202080a080b04050600060303000d0d0c000e020400020202020202
+020202020202080a08080b040002040205000d0d0c0002030200000002020202020202020202080a08080b0000040403030007090c0002020305000000020202
+02020202020208080808000003020402050009070002020203050200000202020202020202020604050800020304040303000900000202020203050500020202
+02020202020202060400020203020402050007000202020202020305000202020202020202020206000002020304060303000702020202020202020300020202
+0202020202020202000202020302040205000202020202020202020200020202020202020202020202020202030303030300020202020202020202020202040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Sketching
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+This button gives a large number of ways of sketching. There are pens of different thickness, pens t
+hat draw multiple colors, pens that draw shapes like stars, squares, etc., pens that draw roads, and so on. You can also fill areas, create grass and bubbles, and even make drawings that are mirrored in 2, 4 or 16 directions (by using the right mouse and/
+o
+r holding the <Ctrl> key). The only way to find out all the possibilities is to try. It is important to remember that in many cases the left mouse button does something else than the right mouse button and that holding the <Shift> and/or <Ctrl> key when s
+tarting to draw has further different effects. 
+\par Using the pair of scissors, you can copy a rectangular piece to the clipboard. (By using the right mouse button you cut it out of the picture.) Now you can select the clipboard button below it and place it som
+ewhere in the picture. Using the right mouse button mirrors it. The <Shift> key enlarges it and the <Ctrl> key draws it transparently on the picture. You can also paste the picture into other programs, like Word, or paste pictures from another program int
+o your drawing.
+\par 
+\par The roads (and railroads, tubes, etc.) might require a little explanation. They are automatically connected to one another as long as you don\rquote t press a button at the left of the screen. You can erase parts of the road network you are drawin
+g by using the right mouse button. The <Shift> keys scales the roads, but only if you hold it when you start the road network. Holding the <Ctrl> key colors the roads in the current color.
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1028{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn pibFlags}{\sv 2}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\pngblip\bliptag-805554492{\*\blipuid cffc36c4bbe054f5be830598580290ca}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c700000001735247420240c07dc500000030504c544500000080000000800080
+8000000080800080008080c0c0c0808080ff000000ff00ffff000000ffff00ff00ffffffffff4f132649000000097048597300000ec200000ec20115284a8000
+0000994944415428cf9dd1310ec3200c05506fa865c87119b942d76ecc99b2fb526c1da9fded40205287fe05fd275b22819a87363fbdd7bd6c0bb89cf0dc5dae
+00a1bee1022022eb210388d936424a59a0b201ba4e44e6a377011d1028842e10b1512287dc0648e76057c786763ef280c8e431903cdec8eb06f91fc03d7e435dc146ae5057d03f36c347be618296529aa1dd002f8174d035cd80335f609655c029be930b0000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\wmetafile8\bliptag-805554492\blipupi95{\*\blipuid cffc36c4bbe054f5be830598580290ca}
+0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe0000fe0000c0c0c00000fefe000000fe000000000000000000000000000000000000000000000000000000000000000000000000002222
+22222222222222222222222222222222222222222222444444444444444222222222222222000000000000000042222222222244440666666666666660422222
+22224444440666666666666660422222222400000006666666666666604222222200555555066666666666666042222220555555550666666666666660422222
+05555555550666666666666660422220555555555506666666666666604222055555555555066666666666666042220555555555550666666666666660422055
+55555555550666666666666660422055555555555506666666666666604220555555555555066666666666666042205555555555550666666666666660422055
+55555555550666666666666660222055555550055500000000000000002220555555503005555555504222222222220555555503300555550422222222222205
+55555503333005550442222222222220555555503333300044444222222222220555555033333330044444422222222220555555033333333004444442222222
+22005555033333333330044444422222222200000033333333333004422222222222222220333333333333300222222222222222220333333333300222222222
+2222222222033333333002222222222222222222222033333002222222222222222222222220333002222222222222222222222222220002222222222222040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Drawing symbols
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+Here you can draw simple symbols like lines, arrows, circles, rectangles, etc. To draw something, choose the symbol, click on the place where it should start and drag the mouse. Release it when you are satisfied. With the left mouse button the symbols ar
+e filled. With the right mouse button they are not. Holding the <Shift> key when starting to draw makes the boundary thicker. Holding the <Ctrl> key when starting to draw makes the symbols equal width and height (so you get squares and circles and horizon
+tal or diagonal lines). Remember to hold the <Alt> key to align your symbols to a grid.
+\par 
+\par You can also draw arbitrary polygons here. Click at the place where the first vertex should come. Now drag the mouse towards the place for the second vertex. Release th
+e mouse, press it again and move to the next position, etc. To finish the polygon, release the mouse close to the starting vertex, or press any key on the keyboard. To delete the last vertex, press the <Backspace> key on the keyboard.
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1029{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn pibFlags}{\sv 2}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\pngblip\bliptag-1545552208{\*\blipuid a3e0beb063ab8f7a44aef4559e9ce719}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c700000001735247420240c07dc500000030504c544500000080000000800080
+8000000080800080008080c0c0c0808080ff000000ff00ffff000000ffff00ff00ffffffffff4f132649000000097048597300000ec200000ec20115284a8000
+0000db4944415428cf95d0316ac5300c06e01c4e603a65a9c7f22ef14064d23182a65cea7534b9848be850dc5f9693b4af533d24f843d62f34b5a7338d7ffd3f
+90fd814fd5ed824a0cd05fd094757d82659503c8c196957f8000b6032a5102e805c901290790dd3bac17547f72a6d4996b623556af40434a8c41d4246046681a
+6032c598a8022c0370812c48d93a54b4b03bbdf4391c884c5c85717a4a62f92aa503e640aa31eee5c1b142a21905ef393f9204cc78586eadbe12c792cd61ac648074f0e6e792cbdeda1e25016f48d9a324e00370f36ee7d673cef83a7c03147b867f093697f50000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\wmetafile8\bliptag-1545552208\blipupi95{\*\blipuid a3e0beb063ab8f7a44aef4559e9ce719}
+0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe0080000000c0c0c0000000fe00fe00fe008000800000000000000000000000000000000000000000000000000000000000000000002222
+22222222777777222222444442222222222222276666667222244444422222222222227666666662233334442222222222222266622222623333444222222224
+44422266222222233334442222222224444422662222223333444222222233324444226672222373334422222222333332444226677777633442222222222333
+33244426666666634422222222222223333444422666663442444444422222223333244222233334424444444422222223333444244333355555552244422222
+22333344443333455555555224422222222333443333334455244555244222233222333334233344552442552442222333333334442333445524425544222222
+22222332442334445524445544222222222222332423344255244554422222222222223324433442555555544422222222222223343334425555552244222222
+22222223333334425524555244222222222222223333444255244552442222222222222233334422552445544422222222222222233344225544455442222222
+22222222233344225544555422222222222222222333442555555522222222222222222222332425555552222222222222222222223324222222222222222222
+2222222222232222222222222222222222222222222322222222222222222222222222222223222222222222222222222222222222222222222222222222040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Text
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+After pressing this button you can enter texts. At the left you can choose style of the text (e.g. normal, underlined, embossed). Next, indicate the start position in the picture with the mouse and type in the text on the 
+keyboard. End the text with <Esc>. As long as you did not end the text you can change its position in the picture by clicking the mouse somewhere. You can even hold the mouse and drag the text to the correct position. If you use the right mouse button the
+ text will be made }{\i\f0\lang1033\langfe1033\langnp1033\insrsid15075466 italic}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 . Holding the <Shift> key makes the text larger. Holding the <Ctrl> key makes it }{
+\b\i\f0\lang1033\langfe1033\langnp1033\insrsid15075466 bold}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 .
+\par 
+\par It is also possible to use rotated text. To this end, click with the right mouse button on the text action button. A form pops u
+p in which you can set the direction using one of the 8 buttons, by typing the angle, or by using the arrow buttons. Now click somewhere in the image and start typing. You can also press <Ctrl>L or <Ctrl>R during typing to rotate left or right. Rotated te
+xt is only available when the setting }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Enable rotated text}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  is checked in the settings (see below).
+\par 
+\par You can change the font and style by clicking on the box labeled }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 font}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  on the top let of the screen. (This only works when the setting }{
+\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Enable font selection}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  is checked.)
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1030{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fillColor}{\sv 268435473}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw845\pich841\picwgoal479\pichgoal477\pngblip\bliptag-898571331{\*\blipuid ca70e3bd80c17755aea51c591890abdb}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c70000000467414d410000b1889598f4a600000030504c544500000080000000
+8000808000000080800080008080808080c0c0c0ff000000ff00ffff000000ffff00ff00ffffffffff7b1fb1c4000000097048597300000ecb00000edd01ff7d
+15d60000007f49444154789cbdd1210ec3300c85618382801e2ac0a02074528f64962b0d18fa0abbc140c85825b74a246b6fd28aaafec4d207125926ff89fe01
+1142334d00f3db7205b0f21400d50c305941688513c0f1adc0a36e2a7e3f6ca60b6eabfcb52d3367a2e918035a89d2008b52ed40d180cf235a3bf82b92012ed1c9a12e851dc326b1fa321c74b30000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley101\piccropl0\piccropr0\piccropt0\piccropb0\picw845\pich841\picwgoal479\pichgoal477\wmetafile8\bliptag-898571331\blipupi96{\*\blipuid ca70e3bd80c17755aea51c591890abdb}
+0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe00fe0000007f000000bfbfbf00fefe00007f007f00fe00fe00000000000000000000000000000000000000000000000000000000002222
+22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+22222222222222222222222222222222222222222222222222222222222222222222555555555555555555552222222222888888888888888888885552222222
+27777777777777777777777552222222200000000000000000000005522222222033333333333333333333055222222220434343434343434343430522222222
+22444444400000044444442222222222222222220334444052222222222222222222222223333445222222222222222222222222223334552222222222222222
+22222222223334552222222222222222222222222233345522222222222222222222222222333455222222222222222222222222223334552222222222222222
+22222222223334552222222222222222222222222233345522222222222222222222222222000055522222222222222222222222204344055522222222222222
+22222222043343405522222222222222222222220334344055222222222222222222222203334330552222222222222222222222036333405222222222222222
+2222222220333405222222222222222222222222220000222222222222222222222222222222222222222222222222222222222222222222222222222222040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Stamps
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+Here you can add a huge number of different small images to your picture. There are animals, flowers, planets, etc. If you click on the stamps button you first have to pick the collection of stamps you are
+ interested in. Next choose the stamp you want to add at the left of the window. Now press the mouse button in your picture at the place you want. To make it easy to place the stamp at the correct place, simply hold the mouse button and drag it to the rig
+h
+t position. The stamp is only places when you release the mouse button. Pressing the right mouse button will mirror the stamp. Holding the <Shift> key will enlarge the stamp. Finally, holding the <Ctrl> key will color the stamp in the current draw color. 
+(You can also use any combination of the above.)
+\par 
+\par Please note that the stamps are not part of the program. The creators have been so kind to give me permission to distribute them with the program but they own the copyright. It is not allowed to distribute t
+he stamps independent of this program. For more information, see the document copyright.txt in the }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Stamps}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+ folder. You can add your own stamps to the program (see below).
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1031{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn pibFlags}{\sv 2}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex75\picscaley75\piccropl0\piccropr0\piccropt0\piccropb0\picw1129\pich1164\picwgoal640\pichgoal660\pngblip\bliptag-1844079738{\*\blipuid 921593868b2e3d0c69e6166298527868}
+89504e470d0a1a0a0000000d49484452000000200000002104030000004a08b46200000001735247420240c07dc500000030504c544500000080000000800080
+8000000080800080008080c0c0c0808080ff000000ff00ffff000000ffff00ff00ffffffffff4f132649000000097048597300000b1200000b1301cbc64fbd00
+0000b54944415428cf85d0c10d83300c05d07f6b11a8598a817a4b37c0b772cd16bde7c2001c5800291344dd803a3610a045fd17cc932db061250fa2462be8e3
+7eb1760b44579a7b40b494698e1ad4b44b8d7ae2e8cb93ab19724e01c00ee05f0e26c3db33b8d6ac507a5f389605b841c09919ca055a85d4e00b40be242075e4
+04a3d0f77d17251970806ebcfd85e127842983ccec609009fdf52a01b78475398121e6f5ab0423360742ead85c4cf633a7573fe41bec211f849a56645ad12d500000000049454e44ae426082}}{\nonshppict{\pict\picscalex75\picscaley75\piccropl0\piccropr0\piccropt0\piccropb0
+\picw1129\pich1164\picwgoal640\pichgoal660\wmetafile8\bliptag-1844079738\blipupi71{\*\blipuid 921593868b2e3d0c69e6166298527868}0100090000036e01000000004901000000000400000003010800050000000b0200000000050000000c022d002c00030000001e00040000000701040049010000
+410b2000cc0021002000000000002c002b0000000000280000002000000021000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00c0c0c0008080800080000000fefefe0000fefe000000fe00fefe0000fe000000fe00fe0000000000000000000000000000000000000000002222
+22222222222222222222222222224444444444444444444444444444444444444444444444444444444444444444445555555555555555555555555555444455
+5555555000000005555555555544445555555000aaaaaaa0055555555544445555550990aaaaaaaa005555555544445555509990aaaaaaa08805555555444455
+55099990aaaaaa08888055555544445550999990aaaaa088888805555544445550999990aaaa0888888880555544445550999990aaa088888888805555444455
+50999990aaa08888888888055544445550999990aa088888888888055544445550999990aa088888888888055544445550999999008888888888880555444455
+50999999908888888888880555444455500000000000888888888005554444555066666666070000000000555544445555066666660777777777705555444455
+55506666660777777777055555444455555506666607777777705555554444555555506666607777700555555544445555555500666077000555555555444455
+55555555000000555555555555444455555555555555555555555555554444555555555555555555555555555544445555555533333333333335555555444433
+333333333333333333333333334433333333333222222222222333333332222222222233330333333332222222222222222222222002222222222222222222222222222223333332222222222222040000002701ffff030000000000}}}{\f0\fs20\lang1033\langfe1033\langnp1033\insrsid15075466  }{
+\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Cliparts
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Cliparts are images that
+ can be scaled and keep perfect shape. A number of public domain cliparts are provided with the program and you can add your own. If you click on the clipart button you first have to select the collection of cliparts you want. Next pick the clipart you wo
+u
+ld like to add to your picture and drag it in the picture (so hold down your mouse and move it to the bottom right). When the clipart has the required size, release the mouse button. You can also drag the mouse up or right to flip or mirror the clipart. I
+f
+ you hold the <Shift> key when clicking with the mouse the clipart will fill the entire picture (useful for e.g. borders). When holding the <Ctrl> key the proportions of the clipart are kept correct. For adding your own collections of cliparts, see below.
+
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1032{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn pibFlags}{\sv 2}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\pngblip\bliptag892452836{\*\blipuid 3531bfe475b0f534ea7ae3bf6938047a}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c700000001735247420240c07dc500000030504c544500000080000000800080
+8000000080800080008080c0c0c0808080ff000000ff00ffff000000ffff00ff00ffffffffff4f132649000000097048597300000ec200000ec20115284a8000
+00004e4944415428cf63604005ff19b8776ff80f011fc0185da09c4c01b80dc82a3ecc9c39816201a8c108017477502400713292003f98414000394cc1026760801faa622004d04039c3ff72548021000021a66247b01a89b60000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\wmetafile8\bliptag892452836\blipupi95{\*\blipuid 3531bfe475b0f534ea7ae3bf6938047a}
+0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe0000fefe00c0c0c0000000fe00fe0000000000000000000000000000000000000000000000000000000000000000000000000000002244
+44444444444444444444444444442244444444444444444444444444444400000000000000000000000000000044022220666666666666666666022220440222
+20666666666666666666022220440222206666666666666666660222204402222066666666666666666602222044022220666666666666666666022220440222
+20666666666666666666022220440222206666666666666666660222204402222066666666666666666602222044022220000000000000000000000000440222
+20222222222022222022222220440222202222222220222220222222204400000022222222202222202222222044033330222222222022222022222220440333
+30222222222022222022222220440333302222222220222220222222204403333022222222202222202222222044033330222222222022222022222220440333
+30222222222000000000000000440333302222222220555550222222204403333022222222205555502222222044033330222222222055555022222220440333
+30222222222055555022222220440333300000000000000000222222204403333022222222222222202222222044033330222222222222222022222220440333
+3022222222222222202222222044033330222222222222222022222220440333302222222222222220222222202200000000000000000000000000000022040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Backgrounds
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+Here you find a number of ways of creating different backgrounds (erasing the drawing). For most backgrounds, when you click on the button using the right mouse button, the 
+background is colored in the current color. In this way you can create great effects (e.g. red clouds). Also try the <Ctrl> and <Shift> key for slight changes in the way the background is drawn.
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1033{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fillColor}{\sv 268435473}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw845\pich841\picwgoal479\pichgoal477\pngblip\bliptag-1934138355{\*\blipuid 8cb7640db2b9f9b1d6be958eaaca160c}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c70000000467414d410000b1889598f4a600000030504c544500000080000000
+8000808000000080800080008080808080c0c0c0ff000000ff00ffff000000ffff00ff00ffffffffff7b1fb1c4000000097048597300000ecb00000edd01ff7d
+15d6000000b249444154789c4dd2410e43210804d0d9b2e2ea6cbd2537e033cc276ad2581f0a548b9ae1b50377f217cc2b5fc8e3b41782f60308c72e187c7644
+af5ce100730410bb3f18c23982eae30e64077c81517e7e00bff35c4c15a6b201077730550ab20b15b8f00566521b0b7d8cede5c041863a5df052598b05b5de2b
+28e97406f610021b486874018674639da57e77c1e1afd5952db0f60bb04e19175811177a33afd82e4cbb33fda0b79c79df765ff681fd3b7cec1f501622480e2b0000000049454e44ae426082}}{\nonshppict{\pict\picscalex100\picscaley101\piccropl0\piccropr0\piccropt0\piccropb0
+\picw845\pich841\picwgoal479\pichgoal477\wmetafile8\bliptag-1934138355\blipupi96{\*\blipuid 8cb7640db2b9f9b1d6be958eaaca160c}0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe000000fe000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002222
+22222222222022222222222222222222222222222220022222222222222222222220222222030222222022222222222222200022220330222000222222222222
+22203302203330220330222222222222222203300033330033302222222222222222033300033003333022222222222222220333022002203302222222222222
+22220333020000203302222222222222222203302022000000000000000220000000000000003330020333333022220333333003333333333003333302222220
+33330003333333333000333302222222033020333333333333020030222222222002203333333333330222022222222200022033333333333300203002222220
+33300033333333333020033330022003333302033333333330200333330000333330200333333333302003300022220000302203333333333002000222222222
+22000000333333333000302222222222220333000033330000333302222222222203330202000020203333022222222220333330000222000033333022222222
+20333000330222033000003022222222030002203330203330222200022222220022222033330333022222222222222222222220333020330222222222222222
+2222222033022203022222222222222222222222030222200222222222222222222222220022222202222222222222222222222202222222222222222222040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Special shapes
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 After pressin
+g this button you can draw a number of special shapes, like stars, houses, spirals, etc., by clicking with the mouse somewhere in your drawing. (Again try left and right mouse button and hold the <Shift> and/or <Ctrl> key.)
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1034{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fillColor}{\sv 268435473}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw845\pich841\picwgoal479\pichgoal477\pngblip\bliptag969828617{\*\blipuid 39ce6909aa05e9c2097a768168eb00d3}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c70000000467414d410000b1889598f4a600000030504c544500000080000000
+8000808000000080800080008080808080c0c0c0ff000000ff00ffff000000ffff00ff00ffffffffff7b1fb1c4000000097048597300000ecb00000edd01ff7d
+15d60000012a49444154789c55923b6ec330104455b815742517ac62e6a2a4c02a15d70152b0a207847a471710044237706649e73785603c3c2cb8b31e1e2d03
+f3fca59f6330cc307d8363fc54b02ed3138cf7c488bc2f1d1c7781b51721991a184552428e5164514021c2c233d64c04a37807c0b99983ce0dc438236f01b086
+e0b878ef6694b003299969386c8cdb8e52a14603deb9d001d438d108156547f6c22104705bddcb5eaaf3a2c020875acb5eebe644d4b01cd0e2bc970f1a092485
+1f359666301c0a3e5f811a802ac8cd30b609aa24358e3e63d7979dd90881cd415fc665d24dc19deb73995c67d80b415b3f705de7d8c7d20bd286b2f3dc766915
+c678055e62d43a7e4a4e37efaf2cac9fc13234de4c3fc3e3a477e35954e8a724b122eb79fa73ecd775fd3df6bfbfc317f80f5f3186ad9f760000000049454e44ae426082}}{\nonshppict{\pict\picscalex100\picscaley101\piccropl0\piccropr0\piccropt0\piccropb0
+\picw845\pich841\picwgoal479\pichgoal477\wmetafile8\bliptag969828617\blipupi96{\*\blipuid 39ce6909aa05e9c2097a768168eb00d3}0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe007f000000fe00fe00fe00000000fefe0000fe0000fefe0000000000000000000000000000000000000000000000000000000000002222
+22222222000000002222222222222222222220003334444400022222222222222220033333356666443002222222222222033333333366666633302222222222
+20463535353537676763330222222222046666535353567676653330222222204667676555553767675353330222220466767677555557777655353340222204
+66676778755558777753535340222046667677878555578875553536640220333557787888555878855553566402203353555558888558885555306664020333
+35555555588558855555537666400333535555555588585555555766664003353555555555588555555576766640033353555558885855555887776666400335
+35555888888888888877767666500333555778888858858888877766663003355577878885588558887776663330033567677888555885555776663533302035
+76777778555888555555555333022035676787855558885555553533330220367676777555587885555553533302220466676775555787785555353330222204
+66767755555577777553535330222220466667553555767676763533022222220466665353555767676666402222222220466655353536666666640222222222
+2204465353535366666440222222222222200445333333334440022222222222222220003333333300022222222222222222222200000000222222222222040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Effects
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+With this button you can apply all sorts of effects to your picture. First of all there are effects that color the image, make it lighter or darker, or blur it. Also, you can mirror it horizontal and vertical, slant it, copy it multiple times, cre
+ate a tunnel, and reduce or enlarge part of the picture. Don\rquote t forget clicking on the button with the right mouse or while holding the <Shift> or <Ctrl> key. Sometimes something different happens.
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1035{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fillColor}{\sv 268435473}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw845\pich841\picwgoal479\pichgoal477\pngblip\bliptag-2139858273{\*\blipuid 80745a9f44084e9c326f1419825da91e}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c70000000467414d410000b1889598f4a600000030504c544500000080000000
+8000808000000080800080008080808080c0c0c0ff000000ff00ffff000000ffff00ff00ffffffffff7b1fb1c4000000097048597300000ecb00000edd01ff7d
+15d6000000b149444154789cbd91b10ec3200c44bdc51bbf9acd748a37bcd14ff516367a84902651b3f62484781c870d546fa23f02a7ae2f58b6693e00777b38
+40a88a453980e7aa30f91eea2d8c3114b101f314196eca954522800bce7bd6b012093660a0a169b1402e27158070aedb1a383baee0f5be01a9eb15ccf4c3a115
+6054d14209604e3189c9a24944d588592c4593d25a6336f2511337876572eb5243065b1dbdf40e2de381f63b78f3b5172bfb99fcf0511ff51f4ff216891cba0000000049454e44ae426082}}{\nonshppict{\pict\picscalex100\picscaley101\piccropl0\piccropr0\piccropt0\piccropb0
+\picw845\pich841\picwgoal479\pichgoal477\wmetafile8\bliptag-2139858273\blipupi96{\*\blipuid 80745a9f44084e9c326f1419825da91e}0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe007f7f7f00bfbfbf000000fe00000000000000000000000000000000000000000000000000000000000000000000000000000000002222
+22222222222222222222222222222224444444444444444222222222222222000000000000000444444444442222203333333333333400000000004442222044
+44444444444440443333330444222022222222222222440443333340444204043344433444332440000000040444023043344333443332404333334040440233
+00000000000000003333334400220233333333333333333333222344402202333333333333333333300033444402023333333333333333333322234444020233
+33333333333333333550334444020233333333333333333333333344440202222222222222222222222222444402203333333333333333333333332444022203
+34000000000000000000033244022220334002222042400223000033240222220334042224020042220433333402222220000022220400222240000000022222
+22222042224004222220222222222222222222022240022222240222222222222222220422222222222202222222222222222220322222222222302222222222
+22222220000000000000002222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Printing the picture
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 When 
+pressing this button a small window appears. Here you can indicate whether the picture is printed normal size or larger, such that it fills the whole page. After you press the correct format the picture will be printed on the default printer. Note that, b
+ecause this is a large image, the printing takes long!!
+\par 
+\par If you select the option }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Advanced print dialog}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+ in the settings form you have more control over size and position. Also you are shown the select printer dialog that allows you to select a different printer and to set printer options.
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1036{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn pibFlags}{\sv 2}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\pngblip\bliptag214797800{\*\blipuid 0ccd8de887b299b028340dd020edff48}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c700000001735247420240c07dc500000030504c544500000080000000800080
+8000000080800080008080c0c0c0808080ff000000ff00ffff000000ffff00ff00ffffffffff4f132649000000097048597300000ec200000ec20115284a8000
+0000384944415428cf63f88f0618b0087c608002b80054ee033fbac0077481fffce8021fd0041818f85104806054805a020c70c08f3d6e090800003807d1a659e241650000000049454e44ae426082}}{\nonshppict{\pict\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0
+\picw847\pich847\picwgoal480\pichgoal480\wmetafile8\bliptag214797800\blipupi95{\*\blipuid 0ccd8de887b299b028340dd020edff48}0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002222
+22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222220000000000000000000000222222222
+20222222222222222222220222222222202222222222222222222202222222222022222222222222222222022222222220222222222222222222220222222222
+20222222222222222222220222222222202222222222222222222202222222222022222222222222222222022222222220222222222222222222220222222222
+20222222222222222222220222222222202222222222222222222202222222222022222222222222222222022222222220222222222222222222220222222222
+20222222222222222222220222222222202222222222222222222202222222222022222222222222222222022222222220222222222222222222220222222222
+20222222222222222222220222222222202222222222222222222202222222222022222222222222222222022222222220222222222222222222220222222222
+20222222222222222000000222222222202222222222222220222022222222222022222222222222202202222222222220222222222222222020222222222222
+2022222222222222200222222222222220000000000000000022222222222222222222222222222222222222222222222222222222222222222222222222040000002701ffff030000000000}}}{\f0\fs20\lang1033\langfe1033\langnp1033\insrsid15075466  }{
+\f0\lang1033\langfe1033\langnp1033\insrsid15075466 New picture
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+This button does exactly what you expect it to do: it throws away the current picture and creates a new empty one. 
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1037{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn pibFlags}{\sv 2}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\pngblip\bliptag1479686182{\*\blipuid 58323826a521a7667d134d7e0c81542f}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c700000001735247420240c07dc500000030504c544500000080000000800080
+8000000080800080008080c0c0c0808080ff000000ff00ffff000000ffff00ff00ffffffffff4f132649000000097048597300000ec200000ec20115284a8000
+00009b4944415428cf7d91310a84301045a7db050baf12d88bd919b0b153b0c855ec62e795ec36b045f69b4132332bfb8a148f976448281be84ea4194811f2b5
+b0489f01f82a422c844b7080642e4741bcb9d84bd0d68271b560dc6f91a65e8022c8b98fc5d12237f887a3491eb935a6189ea68810491523842a465b74b65831ba1e8428eb41c814bd2d2284bee67c0f559ce22581c824696ffff6bff802b0d959e27fe0354a0000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\wmetafile8\bliptag1479686182\blipupi95{\*\blipuid 58323826a521a7667d134d7e0c81542f}
+0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe008080800000fefe00c0c0c000008080000000000000000000000000000000000000000000000000000000000000000000000000002222
+22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222200000000000000000000000000022223
+66666666666666666666666666602223454545454545454545454545456022235454545454545454545454545460223545454545454545454545454545002234
+54545454545454545454545455002235454545454545454545454545430022345454545454545454545454545300234545454545454545454545454540602354
+54545454545454545454545450602345454545454545454545454545306023545454545454545454545454543060354545454545454545454545454503603454
+54545454545454545454545403603545454545454545454545454543046034545454545454545454545454530560322222222222222222222222222034602335
+55555555555555555555555545602223245454545454545454545454546022232545454545454545454545454560222324545454545454545454545454602223
+25454545454545422222222222022223245454545454545333333333332222223245454545454532222222222222222223245454545453222222222222222222
+2232222222223222222222222222222222233333333322222222222222222222222222222222222222222222222222222222222222222222222222222222040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Load a picture
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+Here you can load a picture you stored earlier. You are shown a set of small images of the existing pictures. Use the arrow 
+buttons at the left or right to scroll through the images. Click on the picture you want to load. If you press the Cancel button no picture will be loaded. If you made a mistake (for example you wanted to save your picture rather than load it) you can alw
+ays press the Undo button described above.
+\par 
+\par If you want to load different pictures, open the settings form (see below) and click on }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Use dialogs for loading and saving}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+. Now, when loading a picture, you will be shown a normal dialog box in which you can select a picture.
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1038{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn pibFlags}{\sv 2}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\pngblip\bliptag-1045453798{\*\blipuid c1afa41a8c1358dd94eed5b1c76fe4f8}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c700000001735247420240c07dc500000030504c544500000080000000800080
+8000000080800080008080c0c0c0808080ff000000ff00ffff000000ffff00ff00ffffffffff4f132649000000097048597300000ec200000ec20115284a8000
+0000614944415428cf63f88f0618fe7f71614000177f86ff2e2e9c336160828b0ba6c077872fe80225fc70133f800558d0045c5c86b080033c7c58200228804881722828810ab803d177b008ed04ca5ddc61d68205fe7f2f41f8052cf0bf1c09d4ff070074db1aa57543f9d00000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\wmetafile8\bliptag-1045453798\blipupi95{\*\blipuid c1afa41a8c1358dd94eed5b1c76fe4f8}
+0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe00800000000000fe00c0c0c000000000000000000000000000000000000000000000000000000000000000000000000000000000002222
+55555555555555555555555552222225533000000000000000000033333325553335555555555555555555333333253333353333352555555555553333332533
+33353333352555555555553333332533333533333525555555555533333325333335333335255555555555333333253333353333352555555555553333332533
+33353333352555555555553333332533333355555555555555555333333325333333333333333333333333333333253333333333333333333333333333332533
+33333333333333333333333333332533333000000000000000000003333325333302222222222222222222203333253333022222222222222222222033332533
+33022222222222222222222033332533330222222222222222222220333325333302222222222222222222203333253333022222222222222222222033332533
+33022222222222222222222033332533330222222222222222222220333325333302222222222222222222203333253333022222222222222222222033332533
+33022222222222222222222033332530030222222222222222222220333325305302222222222222222222203333253023044444444444444444444033332233
+3304444444444444444444403333223333044444444444444444444033332223330000000000000000000000333222222222222222222222222222222222040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Save the picture
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+Pressing this button you can save the picture for later use. You will again be shown the existing pictures. You can either overwrite one
+ of them by clicking on it or save the picture in a free slot by clicking on an empty image. (If there are no empty images in the current screen, use the button with the arrow to the right until you find one.)
+\par 
+\par If you want to save your picture at a different place (e.g. to place it in a document or edit it further), open the settings form (see below) and click on }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Use dialogs for loading and saving}{
+\f0\lang1033\langfe1033\langnp1033\insrsid15075466 . Now, when saving a picture, you will be shown a normal dialog box in which you can select a place and name for the picture.
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0\pararsid10753701 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {
+\f0\fs20\lang1033\langfe1033\langnp1033\insrsid10753701\charrsid10753701 {\pict{\*\picprop\shplid1046{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn pibFlags}{\sv 2}}{\sp{\sn pictureTransparent}{\sv 16711935}}
+{\sp{\sn fFilled}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}}\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0
+\picw847\pich847\picwgoal480\pichgoal480\wmetafile8\bliptag335487608\blipupi96{\*\blipuid 13ff2278ab59e02ef6b393164b6e23f4}0100090000034604000000002104000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040021040000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010008000000000000000000000000000000000000000000000000000000
+0000ffffff00ff00ff00a5a8a000afb3ad00a9a99b00aaa38700b9a57600cda96e00d9a65d00e9a24900ed953200867562009c9b9400b6af9300beab8200ceb0
+7d00e1b37200e5aa5d00e07a1400e1750f00d8670000d258000098948100ffcb7b00e7842800c8560000c2490000bb420000b33d0000b3490000ba521100816e
+5a00a69c8900bc480000b3430000b6591e00c0714000cb8d6600d9ab9000ead1c300f3e1dc00cf75270078563500de7f2b00ba642c00c37e5300d09c7f00debe
+ad00ecded800f4f3f400d4772e00aba29600d8721f00bb6f4700fffcf300bfdee100e7efe900fffcec00d06f290074523000aba59d00bd6d3f00fff7f000d2e4
+e1000094cb00add8de00754a2600b1aca600d9742100fdf4ec00fffae4005ab8d5001fa1cc00fff3dc00dd803c0077431d00b0aeaa00eeece0009dcbd100fffb
+dc00fff4e300d77934006a442700b8afa900264cc3001057e1009d9fd300d6782600b556180093c9d2000799cc00f5e6d100fff3d500d47f480063362200f2d2
+b500f0b87e00d2b69200d0d9e000637ae4000137c8007578be00b5500f002fa8cf005bb4cd00fff1ce00ffdebb00cc742c00bd6b1f00e9bb8900ffebd000f5c1
+8800b3915f008d8d90009392b900c5702800b54b0800fdebe100edfbf9007cc3d900ebeade00dadfd400b9d3cb00e6c8a500de9c5c00f5d0a700ffeccb00f6be
+8400dc8c3d00d1935b00f9e2d100149bcc002aa4cd0034687300d8a76b00ffe4b500f2b16a00d88b4200cda78800ba6e2900e8e7d9001e9dcb003ca8cc0069bc
+cf00ffeac300725a3d0033728700b2996e00e46f100080390300e8cab600e8e3d0000088cd00bfd2c500ffc16400ffbb5500df8c54006a230100b1692700e3c1
+ab0020a1ca00ecdabe00ffd29800ffa92800ffd58000eb9f6700742a0200ac662600ad340000e0b8a000ffe5cc00ffe4c400ddd5bf00fedbb600ffc16a00ffd9
+7c00ed9d5900a1602200b0350000dbac8e00ffe2be00ffd69700e6813e00822b0000975d2600d7a48200ffd2a800f2af7d00de874e00bf5e25009d3f0d007d30
+08006a554b0095643100d7a27e00f5bc9200df915e00c6662d00a4410d005f2304009592930096693d00b83e0000c4643500d5825200af4b13008d2b0000633d
+2a007c736f00a9aaab008a5f33007b2400006129120072625900938c8600b4b5b600000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000202
+02020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202020202020202020202020202020202020202020202d7d80202020202020202020202020202020202020202020202020202
+020202d323d4d5d60d0202020202020202020202020202020202020202020202020202cacbcccdcecf9ed0d1d202020202020202020202020202020202020202
+020202c2a9c33ab5c4c5c6c7b8c8c1c902020202020202020202020202020202020202b9a9ba476f6a6a91bbbcbdbebfc0c10202020202020202020202020202
+020202b2b3b447abb5b5b59191acb618b7b80202020202020202020202020202020202a8a9aa3aabacacadaeaeaeafb0b1a70202020202020202020202020202
+0202029f1da0376f7f7ba1a291a3a4a5a6a702020202020202020202020202020202028c1d97375d9884999a6a9b9c7f9d9e0202020202020202020202020202
+0202028c2328018d8e8f68909192939495960202020202020202020202020202020202741e837784854a5a846a05868788898a8b020202020202020202020202
+020202747576777879507a417b477c7d7e507f808182020202020202020202020202022a6746013a47514a68696a5d6b6c6d6e6f5d7071727302020202020202
+020202585901013f4651475a5b5c5d475e5f026061626364656602020202020202024d45240101373f46474e414f505152530202020254555657020202020202
+020244452d0101013f3f464748494a474b4c020202020202020202020202020202023d353e01010101373f3a4041423a33430202020202020202020202020202
+0202343536010101010101013738393a3b3c02020202020202020202020202020202212c1e2d2e2f3031320101010101332b0202020202020202020202020202
+020221191c221c231d1e2425262728292a2b020202020202020202020202020202021718191315151a1a1b1c1c1d1e1f1a200202020202020202020202020202
+0202020d0e0f1011120a0b1314151616160c02020202020202020202020202020202020202020202020405060708090a0b0c0202020202020202020202020202
+02020202020202020202020202020202030202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202
+02020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202
+0202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202040000002701ffff030000000000}}{\f0\lang1033\langfe1033\langnp1033\insrsid10753701  Settings
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0\pararsid10753701 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid10753701 Pressing this button 
+to change the settings (see below). If the button is not visible you can still use <Ctrl>+<Shift>+<Alt>+S to show the settings form.
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0\pararsid10753701 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {
+\f0\fs20\lang1033\langfe1033\langnp1033\insrsid10753701 {\*\shppict{\pict{\*\picprop\shplid1044{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fillColor}{\sv 268435473}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0
+\picw845\pich841\picwgoal479\pichgoal477\pngblip\bliptag935997484{\*\blipuid 37ca302c290bf5073febf831484c8200}89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c70000000467414d410000b1889598f4a600000030504c544500000080000000
+8000808000000080800080008080808080c0c0c0ff000000ff00ffff000000ffff00ff00ffffffffff7b1fb1c4000000097048597300000ecb00000edd01ff7d
+15d6000000d749444154789c5dd1310a83401085e1d708761e26a4f21203b220e412e9b64c154c97c348aabd948da4dccccc1b0d9a26ece7ef8eeca29e7e88ff
+554e30261c607da6106c410ac11e84e01f50b0057db9ba20825b29c51b4450e64bf92808180cfad8a1438c18d414c480237adfa355e037e85aa7c8a4e0c15066
+9bdae60ef19183ad655210f81bb6d6c0e065e223d3943320d9a4e70ef92e90c7d71bdf2137facaa38678500d280c2ad2f8a630a8589a10067a1e9b30b003a254067e6214063c42170671ea260cb68b5261b0dfedd2c8f1b2ebc2a0fe00cb8739daa8fc1b580000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley101\piccropl0\piccropr0\piccropt0\piccropb0\picw845\pich841\picwgoal479\pichgoal477\wmetafile8\bliptag935997484\blipupi96{\*\blipuid 37ca302c290bf5073febf831484c8200}
+0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00fefefe007f007f00bfbfbf00007f7f0000fefe007f7f7f0000000000000000000000000000000000000000000000000000000000000000002222
+22222222222220022222222222222222222222222220033022222222222222222222222220033403022222222222222222222220033442703022222222222222
+22222003344222770302222222222222222003344222227770302222222222222003344222222277770302222222222003344222222744777770302222222003
+34422222274400477777030222223334422222274400330477777030222230722222274400333330477777030222307222274400333333330477777030223072
+27440033333333333047777703023077440033335653333333047777703030440033333366633333333347777700300033333333565333333333047777022343
+33333333333553333333304777022234333333333566655333333304770222234333333333566666533333304702222234333333333356666633333304022222
+23433333333533356663333330022222223433333566333366633333330222222223433333666555666333333330222222223433333666666633333333002222
+22222343333356665333333300222222222222343333333333333300222222222222222343333333333300222222222222222222343333333300222222222222
+2222222223433333002222222222222222222222223433002222222222222222222222222223302222222222222222222222222222222222222222222222040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid10753701  Help
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0\pararsid10753701 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid10753701 
+Pressing this button you get some information about the version of the program and the fact that it can be used for free. Moreover there is a little help here. 
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\fs20\lang1033\langfe1033\langnp1033\insrsid9532059 {\*\shppict
+{\pict{\*\picprop\shplid1040{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn pibFlags}{\sv 2}}{\sp{\sn pictureTransparent}{\sv 8421504}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}
+{\sp{\sn fLayoutInCell}{\sv 1}}}\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\pngblip\bliptag978218254{\*\blipuid 3a4e6d0e073b6b9d23162c48930f2f44}
+89504e470d0a1a0a0000000d4948445200000020000000200403000000815467c700000001735247420240c07dc500000030504c544500000080000000800080
+8000000080800080008080808080c0c0c0ff000000ff00ffff000000ffff00ff00ffffffffff7b1fb1c4000000097048597300000ec200000ec20115284a8000
+0000874944415428cf8591410ec520084467c7919bdea2bb8615e764453fa8d54edafcd1a87979310ad828c865d7cc398145c631c0ee65d8211d98b694825be8
+0aa6d0144ca129588452b008a5bc01738b310b8469e4b0dfa901fd0b9c804507e3521dc0f50338034b272ff0f7a7d36f85ea01ae98504dc15517ea0bb873f2ecaddeadcc2d230b98b900b36b2f127361f2c60000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw847\pich847\picwgoal480\pichgoal480\wmetafile8\bliptag978218254\blipupi95{\*\blipuid 3a4e6d0e073b6b9d23162c48930f2f44}
+0100090000036601000000004101000000000400000003010800050000000b0200000000050000000c0221002100030000001e00040000000701040041010000
+410b2000cc0020002000000000002000200000000000280000002000000020000000010004000000000000000000000000000000000000000000000000000000
+0000ffffff00808080000000fe00fefefe0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002222
+22222222222222222222222222222222222222220000000000022222222222222222233333333333330022222222222222223444444444444300022222222222
+22234333333333333430002222222222223433333333333333430002222222222343333333333333333430002222222234333333333333333333430002222223
+43333333333333333333343000222234333333333333333333333343000223433333333333333333333333343002234334433344333444433443333430022343
+43443344334433443443333430022343334433443344334434433334300223433344334433443344344333343002234334443344334433443444433430022343
+44433344334433443443443430022343443333443344334434434434300223434433334433443344344344343002234344343344334433443443443430022343
+34433444433444433444433430022343333333333333333333333334300223433333333333333333333333343002223433333333333333333333334300222223
+43333333333333333333343002222222343333333333333333334300222222222343333333333333333430022222222222343333333333333343002222222222
+2223433333333333343002222222222222223444444444444300222222222222222223333333333332222222222222222222222222222222222222222222040000002701ffff030000000000}}}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Stop
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0\pararsid10753701 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 By pressing this button you stop the program.}{
+\f0\lang1033\langfe1033\langnp1033\insrsid10753701\charrsid10753701  }{\f0\lang1033\langfe1033\langnp1033\insrsid10753701 If the button is not visible you can still use <Ctrl>+<Shift>+<Alt>+Q to stop the program.
+\par }\pard \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Color and font
+
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 At the left top of the window you can ch
+oose the color and font. You see the font in its current color and style, and you see a little colored rectangle with the current fill and border color. You can change the font by clicking on the box. You can change the fill color by clicking with the lef
+t mouse button on the colored rectangle and you can change the border color by clicking with the right mouse button. For quickly changing colors click (again with left or right mouse) on the 12 predefined colors.
+\par 
+\par You can also change the drawing style. To this end, click on the colored box while holding the <Ctrl> or <Shift> key. A form appears in which you can select the draw style, the border style (works only for border width 1) and the border width. Click }{
+\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 OK}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  when you are done.
+\par 
+\par For small children, the color, style, and font dialogs can be confusing. You can disable them by deselecting the options }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Enable color selection}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 , }{
+\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Enable draw style selection}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  and }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Enable font selection}{
+\f0\lang1033\langfe1033\langnp1033\insrsid15075466  in the settings form (see below).
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Changing Settings
+
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 There are a number of settings 
+you can change. To this end, open the help form and click on the button }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Settings}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 . A form appears in which you can change the following settings:
+
+\par }\pard\plain \s3\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel2\adjustright\rin0\lin0\itap0\pararsid10753701 \f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\lang1033\langfe1033\langnp1033\insrsid10753701 General
+\par {\listtext\pard\plain\f3\fs20 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard\plain \ql \fi-360\li720\ri0\widctlpar\jclisttab\tx720\wrapdefault\faauto\ls1\adjustright\rin0\lin720\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {
+\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Use a window for display.}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  By setting this, the program is shown in a normal window rather than full-screen.
+\par {\listtext\pard\plain\f3\fs20\insrsid10753701 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \ql \fi-360\li720\ri0\widctlpar\jclisttab\tx720\wrapdefault\faauto\ls1\adjustright\rin0\lin720\itap0\pararsid10753701 {
+\b\f0\lang1033\langfe1033\langnp1033\insrsid10753701 Save picture when stopping.}{\f0\lang1033\langfe1033\langnp1033\insrsid10753701  When checked the pictures is saved when stopping. The next time the program is started the picture is loaded again.
+
+\par {\listtext\pard\plain\f3\fs20\insrsid10753701 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}{\b\f0\lang1033\langfe1033\langnp1033\insrsid10753701 Use small snapping distance.}{\f0\lang1033\langfe1033\langnp1033\insrsid10753701 
+ When holding the <Alt> key while drawing, positions are rounded to a grid for easier positioning. Normally the grid line distance is 16. When checking this setting it is reduced to 8, which gives more control but is harder for young children.
+\par }\pard\plain \s3\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel2\adjustright\rin0\lin0\itap0\pararsid10753701 \f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\lang1033\langfe1033\langnp1033\insrsid10753701 Visible buttons
+
+\par {\listtext\pard\plain\f3\fs20 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard\plain \ql \fi-360\li720\ri0\widctlpar\jclisttab\tx720\wrapdefault\faauto\ls1\adjustright\rin0\lin720\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {
+\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Show stop button.}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Deselect this to make it impossible to stop the program. (You can always stop it using the key combination <Ctrl><Alt><Shift>Q.)
+
+\par {\listtext\pard\plain\f3\fs20 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Show print button.}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Deselect this to make it impossible to print pictures.
+\par {\listtext\pard\plain\f3\fs20 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Show save button.}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Deselect this to make it impossible to save pictures.
+\par {\listtext\pard\plain\f3\fs20\insrsid10753701 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \ql \fi-360\li720\ri0\widctlpar\jclisttab\tx720\wrapdefault\faauto\ls1\adjustright\rin0\lin720\itap0\pararsid10753701 {
+\b\f0\lang1033\langfe1033\langnp1033\insrsid10753701 Show help button.}{\f0\lang1033\langfe1033\langnp1033\insrsid10753701  Deselect to not show the help button.
+\par {\listtext\pard\plain\f3\fs20\insrsid10753701 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}{\b\f0\lang1033\langfe1033\langnp1033\insrsid10753701 Show settings button.}{\f0\lang1033\langfe1033\langnp1033\insrsid10753701  Deselect to not show the settings button
+ (You can always show the settings form by pressing the key combination <Ctrl><Alt><Shift>S.)
+\par }\pard\plain \s3\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel2\adjustright\rin0\lin0\itap0\pararsid10753701 \f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\lang1033\langfe1033\langnp1033\insrsid10753701 Dialogs}{
+\lang1033\langfe1033\langnp1033\insrsid10753701\charrsid10753701 
+\par {\listtext\pard\plain\f3\fs20\insrsid10753701 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard\plain \ql \fi-360\li720\ri0\widctlpar\jclisttab\tx720\wrapdefault\faauto\ls1\adjustright\rin0\lin720\itap0\pararsid10753701 
+\f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\b\f0\lang1033\langfe1033\langnp1033\insrsid10753701 Use dialogs for loading and saving.}{\f0\lang1033\langfe1033\langnp1033\insrsid10753701  When checked normal dialog boxes are
+ shown when loading or saving a picture.
+\par {\listtext\pard\plain\f3\fs20\insrsid10753701 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \ql \fi-360\li720\ri0\widctlpar\jclisttab\tx720\wrapdefault\faauto\ls1\adjustright\rin0\lin720\itap0 {\b\f0\lang1033\langfe1033\langnp1033\insrsid10753701 
+Use advanced print}{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466  dialog.}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  Use a more advanced printing dialog with more control over size and in which you can select the printer.
+\par }\pard\plain \s3\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel2\adjustright\rin0\lin0\itap0\pararsid6429091 \f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\lang1033\langfe1033\langnp1033\insrsid6429091 Enabled features}{
+\lang1033\langfe1033\langnp1033\insrsid6429091\charrsid10753701 
+\par {\listtext\pard\plain\f3\fs20\insrsid6429091 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard\plain \ql \fi-360\li720\ri0\widctlpar\jclisttab\tx720\wrapdefault\faauto\ls1\adjustright\rin0\lin720\itap0\pararsid6429091 
+\f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\b\f0\lang1033\langfe1033\langnp1033\insrsid6429091 Enable color selection.}{\f0\lang1033\langfe1033\langnp1033\insrsid6429091 
+ When checked, a color selection form is shown when you press the color box at the top left of the screen.
+\par {\listtext\pard\plain\f3\fs20\insrsid6429091 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}{\b\f0\lang1033\langfe1033\langnp1033\insrsid6429091 Enable draw style selection.}{\f0\lang1033\langfe1033\langnp1033\insrsid6429091 
+ When checked, a draw style selection form is shown when you press the color box at the top left of the screen while holding the <Ctrl> or <Shift> key.
+\par {\listtext\pard\plain\f3\fs20\insrsid6429091 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}{\b\f0\lang1033\langfe1033\langnp1033\insrsid6429091 Enable font selection.}{\f0\lang1033\langfe1033\langnp1033\insrsid6429091 
+ When checked, you can select a font by clicking on the font indicator.
+\par {\listtext\pard\plain\f3\fs20\insrsid6429091 \loch\af3\dbch\af0\hich\f3 \'b7\tab}}{\b\f0\lang1033\langfe1033\langnp1033\insrsid6429091 Enable rotated text.}{\f0\lang1033\langfe1033\langnp1033\insrsid6429091 
+ Allows you to created rotated text (by right-clicking the text actions or by using <Ctrl>L or <Ctrl>R while typing).
+\par }\pard\plain \s3\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel2\adjustright\rin0\lin0\itap0\pararsid6429091 \f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\lang1033\langfe1033\langnp1033\insrsid6429091 
+Default new picture size
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0\pararsid6429091 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\lang1033\langfe1033\langnp1033\insrsid6429091 
+Here you can indicate what the size of a new picture should be when the user presses the New picture button. }{\lang1033\langfe1033\langnp1033\insrsid6429091\charrsid6429091 
+\par }\pard \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+\par To make the most childproof setting, deselect all options, except }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Save picture when stopping}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+. To have full control, select all of them. There are three predefined }{\f0\lang1033\langfe1033\langnp1033\insrsid6429091 default }{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 settings. You get them by pressing the buttons labeled }{
+\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Child proof}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 , }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 {\*\xmlopen\xmlns1{\factoidname City}}{\*\xmlopen\xmlns1{\factoidname City}}
+Normal}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 {\*\xmlclose}{\*\xmlclose}, }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Advanced}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 , with the obvious meaning.
+\par }\pard\plain \s1\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\f1\fs28\lang19\langfe1033\kerning28\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+Adding features to the program
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+It is easy to add your own stamps, cliparts, symbols, etc. to the program. They can be found everywhere on the web.}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  }{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+Here we outline how new data can be added.
+\par }\pard\plain \s2\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel1\adjustright\rin0\lin0\itap0 \b\i\f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Cliparts
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+Cliparts are so-called windows metafiles (*.wmf) and windows enhanced metafiles (*.emf). They can be found everywhere on the web. Huge collections of public domain cliparts are available. Also very cheap CD\rquote 
+s with thousands of cliparts can be bought.
+\par 
+\par Cliparts are stored in the folder }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Cliparts}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  in the program folder. There can be multiple collections of cliparts. The folder }{
+\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Cliparts}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+ contains a number of subfolders, one for each collection. To add cliparts to an existing collection, simply put them in the corresponding subfolder. The next time you start the program they will be available. You can also add your own collections 
+(there is a maximum of 24 collections). To this end make a new subfolder in the }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Cliparts}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+ folder and place your cliparts there. (Make sure the subfolder is not empty!) You can determine the image of the collection by placing a 32x33 bitmap file XXX.bmp in the }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Cliparts}{
+\f0\lang1033\langfe1033\langnp1033\insrsid15075466  folder, where XXX is the name of your subfolder. If you don\rquote t an image is automatically generated.
+\par 
+\par Note that for each clipart XXX.wmf, the program creates a file XXX_small.bmp, which contains the image of the clipart used on the buttons. You can also create these yourself if you require a different picture but better don\rquote 
+t (they must have size 32x33).
+\par }\pard\plain \s2\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel1\adjustright\rin0\lin0\itap0 \b\i\f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Stamps
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+Stamps are icon files (.ico) of which there are huge collections available on the Internet. In the folder in which the program is stored there is a folder called }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Stamps}{
+\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+. In this folder there are again a number of subfolders, one for each collection of stamps. Simply add your icon files to one of the collections or make a new subfolder with your own stamps. If you created a folder XXX you can
+ also place an icon with name XXX.ico in the }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Stamps}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+ folder. This icon is used as the image representing the collection. If there is no such icon, one is taken from the collection. 
+\par }\pard\plain \s2\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel1\adjustright\rin0\lin0\itap0 \b\i\f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Backgrounds
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Backgrounds are bitmap files (*.bmp) that are created such that
+ they nicely fill the plane when copies are placed next to each other. They are stored in the folder }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Backgrounds}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+ in the program folder. To add your own, simply place them in this folder. (They can be found everywhere on the web.)
+\par 
+\par Note that for each background XXX.bmp, the program creates a file XXX_small.bmp, which contains the image of the background used on the buttons. You can also create these yourself if you require a different picture but better don\rquote 
+t (they must have size 32x33).
+\par }\pard\plain \s2\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel1\adjustright\rin0\lin0\itap0 \b\i\f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Pens
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 I
+n the sketch menu there are a number of shapes that you can use as a pen while drawing (e.g. the flower, balloon, etc.) These are simple icon files (*.ico), placed in the folder }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Pens}{
+\f0\lang1033\langfe1033\langnp1033\insrsid15075466  in the program folder. You can add your own pens here by simply placing the corresponding icons in this folder.
+\par }\pard\plain \s2\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel1\adjustright\rin0\lin0\itap0 \b\i\f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Symbols
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Most of the symbols are described by little text files in the }{
+\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Symbols}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  folder in the program folder. Their syntax is as follows: A symbol consists of 1 or more closed polygons. The first number describes the nu
+mber of such polygons. Next, for each polygon, you find the number of vertices, followed by the coordinates of the points (each time the x and y coordinate on the same line). So e.g. a rectangle will look as follows:
+\par 
+\par }\pard \ql \li720\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin720\itap0 {\f2\lang1033\langfe1033\langnp1033\insrsid15075466 1
+\par 4
+\par 0  0
+\par 1  0
+\par 1  1
+\par 0  1
+\par }\pard \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+\par Note that this is a rectangle and not a square, because the actual proportions are determined while drawing the shape. The size of your shape does not matter; it is automatically scaled.
+\par }\pard\plain \s2\ql \li0\ri0\sb240\sa60\keepn\widctlpar\wrapdefault\faauto\outlinelevel1\adjustright\rin0\lin0\itap0 \b\i\f1\fs24\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Roads
+\par }\pard\plain \ql \li0\ri0\widctlpar\wrapdefault\faauto\adjustright\rin0\lin0\itap0 \f36\fs20\lang19\langfe1033\cgrid\langnp19\langfenp1033 {\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+You can also add roads to the program but this is a bit complicated. Each road consists of a set of 16 icons, stored in a subfolder of the }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Roads}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+ folder in the program folder. The 16 icons correspond to the different directions in which there can be a connection. If you give up the number 1, right the number 2, down the number 4, a
+nd left the number 8, you can create all connections by adding up the corresponding numbers. So e.g. road13.ico is the icon for a position with connections up, down, and to the left. 
+\par 
+\par To design your own road, you need to design the correct 16 icons and place them in a folder XXX in the }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Roads}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466 
+ folder. Next create an icon XXX.ico in the }{\b\f0\lang1033\langfe1033\langnp1033\insrsid15075466 Roads}{\f0\lang1033\langfe1033\langnp1033\insrsid15075466  folder that will represent the road on the button.
+\par 
+\par 
+\par 
+\par }}
