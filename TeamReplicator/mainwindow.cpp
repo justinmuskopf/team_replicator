@@ -245,6 +245,11 @@ void MainWindow::on_enterButton_clicked()
         goToTab(MANAGER_TAB);
     }
 
+    else
+    {
+        ui->kitchenWelcomeLabel -> setText("Invalid Id");
+    }
+
 }
 
 //Disable all main buttons

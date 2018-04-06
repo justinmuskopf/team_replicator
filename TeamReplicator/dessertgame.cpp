@@ -15,21 +15,21 @@ void dGame::evalChoice(int pick)
     srand(time(NULL));
     int winningNum = rand() % 5 + 1;
 
-    if(pick == winningNum)
+    if(pick == winningNum) // when customers win a game, steps for free dessert coupon
     {
         wonGame = true;
 
         QMessageBox winBox;
         winBox.setWindowTitle("The Replicator");
         winBox.setText("That's my number! You get a free dessert! Printing now...");
-        winBox.setStandardButtons(QMessageBox::Ok);
+        winBox.setStandardButtons(QMessageBox::Ok); 
         winBox.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
         winBox.exec();
         return;
     }
     else
     {
-        QMessageBox lostBox;
+        QMessageBox lostBox; // message when customer loses the dessert game
         lostBox.setWindowTitle("The Replicator");
         lostBox.setText("Better luck next time!");
         lostBox.setStandardButtons(QMessageBox::Ok);
