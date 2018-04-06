@@ -9,12 +9,12 @@
 #include <QSqlRecord>
 #include <QDesktopWidget>
 #include <QMovie>
-#include <QProcess>#include "dessertgame.h"//Tab Index ENUM
+#include <QProcess>
+#include "dessertgame.h"//Tab Index ENUM
 enum {
     HOME_TAB,
     ORDER_TAB,
     REFILLS_TAB,
-    GAMES_TAB,
     MENU_TAB,
     LOGIN_TAB,
     WAITSTAFF_TAB,
@@ -23,7 +23,8 @@ enum {
     TABLE_TAB,
     PAYMENT_TAB,
 	DGAME_TAB,
-	SURVEY_TAB
+    SURVEY_TAB,
+    GAMES_TAB
 };
 
 void MainWindow::goToTab(int idx)
@@ -662,7 +663,7 @@ void MainWindow::on_payForOrderButton_clicked()
     //Show the GIF and start it
     movieLabel -> show();
     movie -> start();
-*/
+
     QVector<Customer *> customers;
     for (int i = 0; i < ui -> paymentList -> count(); i++)
     {
