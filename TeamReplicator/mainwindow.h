@@ -15,6 +15,7 @@
 #include "restaurantdatabase.h"
 #include <QKeyEvent>
 #include "drinkbutton.h"
+#include "dessertgame.h"
 
 #define NUM_BUTTONS 2 //Number of buttons to include when enabling/disabling them
 #define MAX_CUSTOMERS 4
@@ -109,6 +110,16 @@ private slots:
 
     void on_orderRefillButton_clicked();
 
+    void on_gameButton_1_clicked();
+
+    void on_gameButton_2_clicked();
+
+    void on_gameButton_3_clicked();
+
+    void on_gameButton_4_clicked();
+
+    void on_gameButton_5_clicked();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons
@@ -118,6 +129,7 @@ private:
     Restaurant restaurant;                      //Restaurant object
     RestaurantDatabase db;                      //Database
     Table *thisTable;                           //Current table
+    dGame dessertGame;
     bool backPressed;                           //Back button pressed
     int lastPage;                               //Index of last page
     void beginSession();                        //Begin dining session
