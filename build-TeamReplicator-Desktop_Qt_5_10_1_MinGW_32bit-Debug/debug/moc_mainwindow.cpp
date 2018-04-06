@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[60];
-    char stringdata0[1357];
+    QByteArrayData data[58];
+    char stringdata0[1303];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -65,32 +65,30 @@ QT_MOC_LITERAL(30, 620, 21), // "on_addButton2_clicked"
 QT_MOC_LITERAL(31, 642, 21), // "on_addButton3_clicked"
 QT_MOC_LITERAL(32, 664, 21), // "on_addButton4_clicked"
 QT_MOC_LITERAL(33, 686, 21), // "on_addButton5_clicked"
-QT_MOC_LITERAL(34, 708, 22), // "on_gameButton1_clicked"
-QT_MOC_LITERAL(35, 731, 22), // "on_gameButton2_clicked"
-QT_MOC_LITERAL(36, 754, 25), // "on_menuBackButton_clicked"
-QT_MOC_LITERAL(37, 780, 27), // "on_menuRemoveButton_clicked"
-QT_MOC_LITERAL(38, 808, 27), // "on_startOrderButton_clicked"
-QT_MOC_LITERAL(39, 836, 27), // "on_addToTableButton_clicked"
-QT_MOC_LITERAL(40, 864, 27), // "on_beginOrderButton_clicked"
-QT_MOC_LITERAL(41, 892, 27), // "on_placeOrderButton_clicked"
-QT_MOC_LITERAL(42, 920, 23), // "on_menuList_itemClicked"
-QT_MOC_LITERAL(43, 944, 16), // "QListWidgetItem*"
-QT_MOC_LITERAL(44, 961, 4), // "item"
-QT_MOC_LITERAL(45, 966, 28), // "on_orderRemoveButton_clicked"
-QT_MOC_LITERAL(46, 995, 29), // "on_addToPaymentButton_clicked"
-QT_MOC_LITERAL(47, 1025, 34), // "on_removeFromPaymentButton_cl..."
-QT_MOC_LITERAL(48, 1060, 28), // "on_payForOrderButton_clicked"
-QT_MOC_LITERAL(49, 1089, 17), // "initPaymentScreen"
-QT_MOC_LITERAL(50, 1107, 16), // "initRefillScreen"
-QT_MOC_LITERAL(51, 1124, 19), // "updatePaymentTotals"
-QT_MOC_LITERAL(52, 1144, 23), // "on_drinkButton1_clicked"
-QT_MOC_LITERAL(53, 1168, 23), // "on_drinkButton2_clicked"
-QT_MOC_LITERAL(54, 1192, 23), // "on_drinkButton3_clicked"
-QT_MOC_LITERAL(55, 1216, 23), // "on_drinkButton4_clicked"
-QT_MOC_LITERAL(56, 1240, 33), // "on_removeFromRefillButton_cli..."
-QT_MOC_LITERAL(57, 1274, 28), // "on_orderRefillButton_clicked"
-QT_MOC_LITERAL(58, 1303, 23), // "on_surveyButton_clicked"
-QT_MOC_LITERAL(59, 1327, 29) // "on_surveySubmitButton_clicked"
+QT_MOC_LITERAL(34, 708, 25), // "on_menuBackButton_clicked"
+QT_MOC_LITERAL(35, 734, 27), // "on_menuRemoveButton_clicked"
+QT_MOC_LITERAL(36, 762, 27), // "on_startOrderButton_clicked"
+QT_MOC_LITERAL(37, 790, 27), // "on_addToTableButton_clicked"
+QT_MOC_LITERAL(38, 818, 27), // "on_beginOrderButton_clicked"
+QT_MOC_LITERAL(39, 846, 27), // "on_placeOrderButton_clicked"
+QT_MOC_LITERAL(40, 874, 23), // "on_menuList_itemClicked"
+QT_MOC_LITERAL(41, 898, 16), // "QListWidgetItem*"
+QT_MOC_LITERAL(42, 915, 4), // "item"
+QT_MOC_LITERAL(43, 920, 28), // "on_orderRemoveButton_clicked"
+QT_MOC_LITERAL(44, 949, 29), // "on_addToPaymentButton_clicked"
+QT_MOC_LITERAL(45, 979, 34), // "on_removeFromPaymentButton_cl..."
+QT_MOC_LITERAL(46, 1014, 28), // "on_payForOrderButton_clicked"
+QT_MOC_LITERAL(47, 1043, 17), // "initPaymentScreen"
+QT_MOC_LITERAL(48, 1061, 16), // "initRefillScreen"
+QT_MOC_LITERAL(49, 1078, 19), // "updatePaymentTotals"
+QT_MOC_LITERAL(50, 1098, 23), // "on_drinkButton1_clicked"
+QT_MOC_LITERAL(51, 1122, 23), // "on_drinkButton2_clicked"
+QT_MOC_LITERAL(52, 1146, 23), // "on_drinkButton3_clicked"
+QT_MOC_LITERAL(53, 1170, 23), // "on_drinkButton4_clicked"
+QT_MOC_LITERAL(54, 1194, 33), // "on_removeFromRefillButton_cli..."
+QT_MOC_LITERAL(55, 1228, 28), // "on_orderRefillButton_clicked"
+QT_MOC_LITERAL(56, 1257, 23), // "on_creditButton_clicked"
+QT_MOC_LITERAL(57, 1281, 21) // "on_cashButton_clicked"
 
     },
     "MainWindow\0on_backButton_clicked\0\0"
@@ -109,8 +107,7 @@ QT_MOC_LITERAL(59, 1327, 29) // "on_surveySubmitButton_clicked"
     "on_sidButton_clicked\0on_kidButton_clicked\0"
     "on_addButton1_clicked\0on_addButton2_clicked\0"
     "on_addButton3_clicked\0on_addButton4_clicked\0"
-    "on_addButton5_clicked\0on_gameButton1_clicked\0"
-    "on_gameButton2_clicked\0on_menuBackButton_clicked\0"
+    "on_addButton5_clicked\0on_menuBackButton_clicked\0"
     "on_menuRemoveButton_clicked\0"
     "on_startOrderButton_clicked\0"
     "on_addToTableButton_clicked\0"
@@ -127,8 +124,7 @@ QT_MOC_LITERAL(59, 1327, 29) // "on_surveySubmitButton_clicked"
     "on_drinkButton4_clicked\0"
     "on_removeFromRefillButton_clicked\0"
     "on_orderRefillButton_clicked\0"
-    "on_surveyButton_clicked\0"
-    "on_surveySubmitButton_clicked"
+    "on_creditButton_clicked\0on_cashButton_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -138,7 +134,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      55,   14, // methods
+      53,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -146,61 +142,59 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  289,    2, 0x08 /* Private */,
-       3,    0,  290,    2, 0x08 /* Private */,
-       4,    0,  291,    2, 0x08 /* Private */,
-       5,    0,  292,    2, 0x08 /* Private */,
-       6,    0,  293,    2, 0x08 /* Private */,
-       7,    0,  294,    2, 0x08 /* Private */,
-       8,    0,  295,    2, 0x08 /* Private */,
-       9,    0,  296,    2, 0x08 /* Private */,
-      10,    0,  297,    2, 0x08 /* Private */,
-      11,    0,  298,    2, 0x08 /* Private */,
-      12,    0,  299,    2, 0x08 /* Private */,
-      13,    0,  300,    2, 0x08 /* Private */,
-      14,    0,  301,    2, 0x08 /* Private */,
-      15,    0,  302,    2, 0x08 /* Private */,
-      16,    0,  303,    2, 0x08 /* Private */,
-      17,    0,  304,    2, 0x08 /* Private */,
-      18,    0,  305,    2, 0x08 /* Private */,
-      19,    0,  306,    2, 0x08 /* Private */,
-      20,    0,  307,    2, 0x08 /* Private */,
-      21,    1,  308,    2, 0x08 /* Private */,
-      23,    0,  311,    2, 0x08 /* Private */,
-      24,    0,  312,    2, 0x08 /* Private */,
-      25,    0,  313,    2, 0x08 /* Private */,
-      26,    0,  314,    2, 0x08 /* Private */,
-      27,    0,  315,    2, 0x08 /* Private */,
-      28,    0,  316,    2, 0x08 /* Private */,
-      29,    0,  317,    2, 0x08 /* Private */,
-      30,    0,  318,    2, 0x08 /* Private */,
-      31,    0,  319,    2, 0x08 /* Private */,
-      32,    0,  320,    2, 0x08 /* Private */,
-      33,    0,  321,    2, 0x08 /* Private */,
-      34,    0,  322,    2, 0x08 /* Private */,
-      35,    0,  323,    2, 0x08 /* Private */,
-      36,    0,  324,    2, 0x08 /* Private */,
-      37,    0,  325,    2, 0x08 /* Private */,
-      38,    0,  326,    2, 0x08 /* Private */,
-      39,    0,  327,    2, 0x08 /* Private */,
-      40,    0,  328,    2, 0x08 /* Private */,
-      41,    0,  329,    2, 0x08 /* Private */,
-      42,    1,  330,    2, 0x08 /* Private */,
-      45,    0,  333,    2, 0x08 /* Private */,
-      46,    0,  334,    2, 0x08 /* Private */,
-      47,    0,  335,    2, 0x08 /* Private */,
-      48,    0,  336,    2, 0x08 /* Private */,
-      49,    0,  337,    2, 0x08 /* Private */,
-      50,    0,  338,    2, 0x08 /* Private */,
-      51,    0,  339,    2, 0x08 /* Private */,
-      52,    0,  340,    2, 0x08 /* Private */,
-      53,    0,  341,    2, 0x08 /* Private */,
-      54,    0,  342,    2, 0x08 /* Private */,
-      55,    0,  343,    2, 0x08 /* Private */,
-      56,    0,  344,    2, 0x08 /* Private */,
-      57,    0,  345,    2, 0x08 /* Private */,
-      58,    0,  346,    2, 0x08 /* Private */,
-      59,    0,  347,    2, 0x08 /* Private */,
+       1,    0,  279,    2, 0x08 /* Private */,
+       3,    0,  280,    2, 0x08 /* Private */,
+       4,    0,  281,    2, 0x08 /* Private */,
+       5,    0,  282,    2, 0x08 /* Private */,
+       6,    0,  283,    2, 0x08 /* Private */,
+       7,    0,  284,    2, 0x08 /* Private */,
+       8,    0,  285,    2, 0x08 /* Private */,
+       9,    0,  286,    2, 0x08 /* Private */,
+      10,    0,  287,    2, 0x08 /* Private */,
+      11,    0,  288,    2, 0x08 /* Private */,
+      12,    0,  289,    2, 0x08 /* Private */,
+      13,    0,  290,    2, 0x08 /* Private */,
+      14,    0,  291,    2, 0x08 /* Private */,
+      15,    0,  292,    2, 0x08 /* Private */,
+      16,    0,  293,    2, 0x08 /* Private */,
+      17,    0,  294,    2, 0x08 /* Private */,
+      18,    0,  295,    2, 0x08 /* Private */,
+      19,    0,  296,    2, 0x08 /* Private */,
+      20,    0,  297,    2, 0x08 /* Private */,
+      21,    1,  298,    2, 0x08 /* Private */,
+      23,    0,  301,    2, 0x08 /* Private */,
+      24,    0,  302,    2, 0x08 /* Private */,
+      25,    0,  303,    2, 0x08 /* Private */,
+      26,    0,  304,    2, 0x08 /* Private */,
+      27,    0,  305,    2, 0x08 /* Private */,
+      28,    0,  306,    2, 0x08 /* Private */,
+      29,    0,  307,    2, 0x08 /* Private */,
+      30,    0,  308,    2, 0x08 /* Private */,
+      31,    0,  309,    2, 0x08 /* Private */,
+      32,    0,  310,    2, 0x08 /* Private */,
+      33,    0,  311,    2, 0x08 /* Private */,
+      34,    0,  312,    2, 0x08 /* Private */,
+      35,    0,  313,    2, 0x08 /* Private */,
+      36,    0,  314,    2, 0x08 /* Private */,
+      37,    0,  315,    2, 0x08 /* Private */,
+      38,    0,  316,    2, 0x08 /* Private */,
+      39,    0,  317,    2, 0x08 /* Private */,
+      40,    1,  318,    2, 0x08 /* Private */,
+      43,    0,  321,    2, 0x08 /* Private */,
+      44,    0,  322,    2, 0x08 /* Private */,
+      45,    0,  323,    2, 0x08 /* Private */,
+      46,    0,  324,    2, 0x08 /* Private */,
+      47,    0,  325,    2, 0x08 /* Private */,
+      48,    0,  326,    2, 0x08 /* Private */,
+      49,    0,  327,    2, 0x08 /* Private */,
+      50,    0,  328,    2, 0x08 /* Private */,
+      51,    0,  329,    2, 0x08 /* Private */,
+      52,    0,  330,    2, 0x08 /* Private */,
+      53,    0,  331,    2, 0x08 /* Private */,
+      54,    0,  332,    2, 0x08 /* Private */,
+      55,    0,  333,    2, 0x08 /* Private */,
+      56,    0,  334,    2, 0x08 /* Private */,
+      57,    0,  335,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -240,9 +234,7 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 43,   44,
+    QMetaType::Void, 0x80000000 | 41,   42,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -299,30 +291,28 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 28: _t->on_addButton3_clicked(); break;
         case 29: _t->on_addButton4_clicked(); break;
         case 30: _t->on_addButton5_clicked(); break;
-        case 31: _t->on_gameButton1_clicked(); break;
-        case 32: _t->on_gameButton2_clicked(); break;
-        case 33: _t->on_menuBackButton_clicked(); break;
-        case 34: _t->on_menuRemoveButton_clicked(); break;
-        case 35: _t->on_startOrderButton_clicked(); break;
-        case 36: _t->on_addToTableButton_clicked(); break;
-        case 37: _t->on_beginOrderButton_clicked(); break;
-        case 38: _t->on_placeOrderButton_clicked(); break;
-        case 39: _t->on_menuList_itemClicked((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
-        case 40: _t->on_orderRemoveButton_clicked(); break;
-        case 41: _t->on_addToPaymentButton_clicked(); break;
-        case 42: _t->on_removeFromPaymentButton_clicked(); break;
-        case 43: _t->on_payForOrderButton_clicked(); break;
-        case 44: _t->initPaymentScreen(); break;
-        case 45: _t->initRefillScreen(); break;
-        case 46: _t->updatePaymentTotals(); break;
-        case 47: _t->on_drinkButton1_clicked(); break;
-        case 48: _t->on_drinkButton2_clicked(); break;
-        case 49: _t->on_drinkButton3_clicked(); break;
-        case 50: _t->on_drinkButton4_clicked(); break;
-        case 51: _t->on_removeFromRefillButton_clicked(); break;
-        case 52: _t->on_orderRefillButton_clicked(); break;
-        case 53: _t->on_surveyButton_clicked(); break;
-        case 54: _t->on_surveySubmitButton_clicked(); break;
+        case 31: _t->on_menuBackButton_clicked(); break;
+        case 32: _t->on_menuRemoveButton_clicked(); break;
+        case 33: _t->on_startOrderButton_clicked(); break;
+        case 34: _t->on_addToTableButton_clicked(); break;
+        case 35: _t->on_beginOrderButton_clicked(); break;
+        case 36: _t->on_placeOrderButton_clicked(); break;
+        case 37: _t->on_menuList_itemClicked((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
+        case 38: _t->on_orderRemoveButton_clicked(); break;
+        case 39: _t->on_addToPaymentButton_clicked(); break;
+        case 40: _t->on_removeFromPaymentButton_clicked(); break;
+        case 41: _t->on_payForOrderButton_clicked(); break;
+        case 42: _t->initPaymentScreen(); break;
+        case 43: _t->initRefillScreen(); break;
+        case 44: _t->updatePaymentTotals(); break;
+        case 45: _t->on_drinkButton1_clicked(); break;
+        case 46: _t->on_drinkButton2_clicked(); break;
+        case 47: _t->on_drinkButton3_clicked(); break;
+        case 48: _t->on_drinkButton4_clicked(); break;
+        case 49: _t->on_removeFromRefillButton_clicked(); break;
+        case 50: _t->on_orderRefillButton_clicked(); break;
+        case 51: _t->on_creditButton_clicked(); break;
+        case 52: _t->on_cashButton_clicked(); break;
         default: ;
         }
     }
@@ -353,13 +343,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 55)
+        if (_id < 53)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 55;
+        _id -= 53;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 55)
+        if (_id < 53)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 55;
+        _id -= 53;
     }
     return _id;
 }

@@ -16,7 +16,6 @@ enum {
     HOME_TAB,
     ORDER_TAB,
     REFILLS_TAB,
-    GAMES_TAB,
     MENU_TAB,
     LOGIN_TAB,
     WAITSTAFF_TAB,
@@ -24,7 +23,8 @@ enum {
     MANAGER_TAB,
     TABLE_TAB,
     PAYMENT_TAB,
-    SURVEY_TAB
+    PAYTYPE_TAB,
+    RECEIPT_TAB
 };
 
 void MainWindow::goToTab(int idx)
@@ -120,7 +120,6 @@ void MainWindow::beginSession()
     //Disable the gameButton and drink button until order is placed
     ui -> gameButton -> setEnabled(false);
     ui -> drinkButton -> setEnabled(false);
-    ui -> surveyButton -> setEnabled(false);
 
     //Clear all lists in the Application by finding them recursively
     foreach (QListWidget *list, findChildren<QListWidget *>())
@@ -159,8 +158,7 @@ void MainWindow::on_ticketButton_clicked()
 //Games button clicked
 void MainWindow::on_gameButton_clicked()
 {
-    // Set current tab to the games tab
-    goToTab(GAMES_TAB);
+
 }
 
 //Assitance button clicked
@@ -381,20 +379,6 @@ void MainWindow::addToOrderList(int num)
 }
 /****************************************************************************/
 
-/* Game buttons                                                             */
-/****************************************************************************/
-void MainWindow::on_gameButton1_clicked() {
-    system("\"C:\\Users\\User\\Documents\\GitHub\\TeamReplicator\\build-TeamReplicator-Desktop_Qt_5_10_1_MinGW_32bit-Debug\\games\\Drawing\\Drawing.exe\"");
-    // NEED TO CHANGE TO REFLECT LOCATION ON TEST MACHINE
-
-} // on_gameButton1_clicked
-void MainWindow::on_gameButton2_clicked() {
-    system("\"C:\\Users\\User\\Documents\\GitHub\\TeamReplicator\\build-TeamReplicator-Desktop_Qt_5_10_1_MinGW_32bit-Debug\\games\\klondike.exe\"");
-    // NEED TO CHANGE TO REFLECT LOCATION ON TEST MACHINE
-
-} // on_gameButton2_clicked
-/****************************************************************************/
-
 //Start Order button clicked
 void MainWindow::on_startOrderButton_clicked()
 {
@@ -548,8 +532,12 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         goToTab(MANAGER_TAB);
     else if (text == "9")
         goToTab(TABLE_TAB);
-    else if (text == "0")
+    else if (text == "10")
         goToTab(PAYMENT_TAB);
+    else if (text == "11")
+        goToTab(PAYTYPE_TAB);
+    else if (text == "12")
+        goToTab(RECEIPT_TAB);
 }
 //Initialize the payment tab
 void MainWindow::initPaymentScreen()
@@ -634,7 +622,7 @@ void MainWindow::updatePaymentTotals()
 //Paying for oder
 void MainWindow::on_payForOrderButton_clicked()
 {
-/*    //Process payment window, set to delete itself and children on close
+ /*   //Process payment window, set to delete itself and children on close
     QDialog *processDlg = new QDialog(this);//, Qt::FramelessWindowHint | Qt::WindowTitleHint);
     processDlg -> setAttribute(Qt::WA_DeleteOnClose, true);
 
@@ -666,6 +654,7 @@ void MainWindow::on_payForOrderButton_clicked()
     movieLabel -> show();
     movie -> start();
 */
+     goToTab(PAYTYPE_TAB);
     QVector<Customer *> customers;
     for (int i = 0; i < ui -> paymentList -> count(); i++)
     {
@@ -684,8 +673,8 @@ void MainWindow::on_payForOrderButton_clicked()
     }
 
     updatePaymentTotals();
+
     //resetSession();
-    ui->surveyButton->setEnabled(true);         // Enable the feedback button after payment
 }
 
 //End the current dining session
@@ -783,12 +772,28 @@ void MainWindow::disableRefillButtons()
     }
 }
 
-void MainWindow::on_surveyButton_clicked()
+void MainWindow::on_creditButton_clicked()
 {
-    goToTab(SURVEY_TAB);
+    goToTab(RECEIPT_TAB);
 }
 
-void MainWindow::on_surveySubmitButton_clicked()
+void MainWindow::on_cashButton_clicked()
 {
-    goToTab(HOME_TAB);
+    goToTab(RECEIPT_TAB);
+}
+
+
+void MainWindow::on_receiptSubmit_clicked()
+{
+
+}
+
+void MainWindow::on_receiptInfo_itemEntered(QTableWidgetItem *item)
+{
+
+}
+
+void MainWindow::on_receiptOrderInfo_itemEntered(QTableWidgetItem *item)
+{
+
 }

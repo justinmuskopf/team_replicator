@@ -81,12 +81,6 @@ private slots:
     void on_addButton5_clicked();
     /****************************/
 
-    /*       Game buttons       */
-    /****************************/
-    void on_gameButton1_clicked();
-    void on_gameButton2_clicked();
-    /****************************/
-
     void on_menuBackButton_clicked();           //Back to Menu button clicked
     void on_menuRemoveButton_clicked();         //Menu remove button clicked
     void on_startOrderButton_clicked();         //Start Order button clicked
@@ -115,9 +109,19 @@ private slots:
 
     void on_orderRefillButton_clicked();
 
-    void on_surveyButton_clicked();
+    void on_creditButton_clicked();
 
-    void on_surveySubmitButton_clicked();
+    void on_cashButton_clicked();
+
+    void on_tableWidget_itemEntered(QTableWidgetItem *item);
+
+    void on_tableWidget_2_entered(const QModelIndex &index);
+
+    void on_receiptSubmit_clicked();
+
+    void on_receiptInfo_itemEntered(QTableWidgetItem *item);
+
+    void on_receiptOrderInfo_itemEntered(QTableWidgetItem *item);
 
 private:
     Ui::MainWindow *ui;                         //Ui reference
