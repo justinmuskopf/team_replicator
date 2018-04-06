@@ -126,7 +126,13 @@ private slots:
 
     void on_gameButton_5_clicked();    void on_surveyButton_clicked();
 
-    void on_surveySubmitButton_clicked();private:
+    void on_surveySubmitButton_clicked();void on_cashButton_clicked();
+
+    void on_creditButton_clicked();
+
+    void initReceiptTab();
+
+private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons
     DrinkButton refillButtons[MAX_CUSTOMERS];  //Array of refill buttons

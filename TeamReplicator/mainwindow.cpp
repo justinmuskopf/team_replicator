@@ -24,7 +24,8 @@ enum {
     PAYMENT_TAB,
 	DGAME_TAB,
     SURVEY_TAB,
-    GAMES_TAB
+    GAMES_TAB,
+    RECEIPT_TAB
 };
 
 void MainWindow::goToTab(int idx)
@@ -418,6 +419,9 @@ void MainWindow::on_startOrderButton_clicked()
 //Add To Table button clicked
 void MainWindow::on_addToTableButton_clicked()
 {
+    if (ui -> nameInput -> toPlainText() == "")
+        return;
+
     //Get name, allergies, and create a new customer with data
     QString name = ui -> nameInput -> toPlainText().trimmed();
     QString allergies = ui -> allergyInput -> toPlainText().trimmed();
@@ -633,36 +637,7 @@ void MainWindow::updatePaymentTotals()
 void MainWindow::on_payForOrderButton_clicked()
 {
     if (ui -> paymentList -> count() == 0)
-        return;    QDialog *processDlg = new QDialog(this);//, Qt::FramelessWindowHint | Qt::WindowTitleHint);
-    processDlg -> setAttribute(Qt::WA_DeleteOnClose, true);
-
-    //Set the location of the processDlg
-    QRect screenGeometry = QApplication::desktop()->screenGeometry();
-    int x = (screenGeometry.width() - processDlg->width()) / 2;
-    int y = (screenGeometry.height() - processDlg->height()) / 2;
-    processDlg->move(x, y);
-
-    //Create children of process window
-    QLabel *movieLabel = new QLabel(processDlg);//GIF holding label
-    QLabel *textLabel = new QLabel(processDlg); //textLabel to display
-    QMovie *movie = new QMovie(LOADING_GIF);    //GIF object
-    QGridLayout *layout = new QGridLayout;      //Layout of processDlg
-
-    //Set the movie label's movie to GIF
-    movieLabel -> setMovie(movie);
-
-    //Add the movieLabel to the processDlg
-    layout -> addWidget(movieLabel, 0, 0, 1, 1, Qt::AlignCenter);
-
-    //Set processDlg's layout to Grid
-    processDlg -> setLayout(layout);
-
-    //Show the processDlg
-    processDlg -> show();
-
-    //Show the GIF and start it
-    movieLabel -> show();
-    movie -> start();
+        return;
 
     QVector<Customer *> customers;
     for (int i = 0; i < ui -> paymentList -> count(); i++)
@@ -674,35 +649,26 @@ void MainWindow::on_payForOrderButton_clicked()
     }
 
     ui -> paymentList -> clear();
+    ui -> receiptList -> clear();
+
+    ui -> subTotalLabel -> setText("Subtotal: $" + ui -> totalToPayLabel -> text().split("$")[1]);
 
     //For every customer in current payment, add their order to DB
     foreach (Customer *customer, customers)
     {
+        MenuVector order = customer -> getOrder() -> getOrder();
         db.addOrderToDb(customer -> getOrder(), db.getOrderNumber());
+        ui -> receiptList -> addItem(customer -> getName());
+        for (int i = 0; i < order.size(); i++)
+        {
+            ui -> receiptList -> addItem("...." + order[i].name + " $" + QString::number(order[i].price));
+        }
     }
 
+    initReceiptTab();
+    goToTab(RECEIPT_TAB);
     updatePaymentTotals();
-    // After paying, message box pops up asking if customer wants to play game to win a free dessert
-    QMessageBox msgBox2;
-    msgBox2.setWindowTitle("The Replicator");
-    msgBox2.setText("Thank you for dining with us! Would you like to play a game for a chance to win a free dessert?");
-    msgBox2.setStandardButtons(QMessageBox::Yes);
-    msgBox2.addButton(QMessageBox::No);
-    msgBox2.setDefaultButton(QMessageBox::No);
-    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
 
-    if(msgBox2.exec() == QMessageBox::Yes)
-    {
-        // if yes, go to the game
-        goToTab(DGAME_TAB);
-    }
-    else
-    {
-        // if no, reset the session
-        resetSession();
-    }
-
-    ui->surveyButton->setEnabled(true);         // Enable the feedback button after payment
 }
 
 //End the current dining session
@@ -837,4 +803,101 @@ void MainWindow::on_gameButton_5_clicked()
 {
     dessertGame.evalChoice(5);
     resetSession();
+}
+
+void MainWindow::on_cashButton_clicked()
+{
+    // After paying, message box pops up asking if customer wants to play game to win a free dessert
+    QMessageBox msgBox2;
+    msgBox2.setWindowTitle("The Replicator");
+    msgBox2.setText("Thank you for dining with us! Would you like to play a game for a chance to win a free dessert?");
+    msgBox2.setStandardButtons(QMessageBox::Yes);
+    msgBox2.addButton(QMessageBox::No);
+    msgBox2.setDefaultButton(QMessageBox::No);
+    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+
+    if(msgBox2.exec() == QMessageBox::Yes)
+    {
+        // if yes, go to the game
+        goToTab(DGAME_TAB);
+    }
+    else
+    {
+        // if no, reset the session
+        resetSession();
+    }
+
+    ui->surveyButton->setEnabled(true);         // Enable the feedback button after payment
+}
+
+void MainWindow::on_creditButton_clicked()
+{
+
+    QDialog *processDlg = new QDialog(this);//, Qt::FramelessWindowHint | Qt::WindowTitleHint);
+    processDlg -> setAttribute(Qt::WA_DeleteOnClose, true);
+
+    //Set the location of the processDlg
+    QRect screenGeometry = QApplication::desktop()->screenGeometry();
+    int x = (screenGeometry.width() - processDlg->width()) / 2;
+    int y = (screenGeometry.height() - processDlg->height()) / 2;
+    processDlg->move(x, y);
+
+    //Create children of process window
+    QLabel *movieLabel = new QLabel(processDlg);//GIF holding label
+    QLabel *textLabel = new QLabel(processDlg); //textLabel to display
+    QMovie *movie = new QMovie(LOADING_GIF);    //GIF object
+    QGridLayout *layout = new QGridLayout;      //Layout of processDlg
+
+    //Set the movie label's movie to GIF
+    movieLabel -> setMovie(movie);
+
+    //Add the movieLabel to the processDlg
+    layout -> addWidget(movieLabel, 0, 0, 1, 1, Qt::AlignCenter);
+
+    //Set processDlg's layout to Grid
+    processDlg -> setLayout(layout);
+
+    //Show the processDlg
+    processDlg -> show();
+
+    //Show the GIF and start it
+    movieLabel -> show();
+    movie -> start();
+
+
+    // After paying, message box pops up asking if customer wants to play game to win a free dessert
+    QMessageBox msgBox2;
+    msgBox2.setWindowTitle("The Replicator");
+    msgBox2.setText("Thank you for dining with us! Would you like to play a game for a chance to win a free dessert?");
+    msgBox2.setStandardButtons(QMessageBox::Yes);
+    msgBox2.addButton(QMessageBox::No);
+    msgBox2.setDefaultButton(QMessageBox::No);
+    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+
+    if(msgBox2.exec() == QMessageBox::Yes)
+    {
+        // if yes, go to the game
+        goToTab(DGAME_TAB);
+    }
+    else
+    {
+        // if no, reset the session
+        resetSession();
+    }
+
+    ui->surveyButton->setEnabled(true);         // Enable the feedback button after payment
+}
+
+void MainWindow::initReceiptTab()
+{
+    float subtotal = (ui -> subTotalLabel -> text().split("$")[1]).toFloat();
+    float tax = subtotal * 0.0825;
+    float tip = subtotal * 0.2;
+    float total = subtotal + tax + tip;
+
+    ui -> salesTaxLabel -> setText("Sales Tax (8.25\%): $" + QString::number(tax, 'f', 2));
+   // ui -> salesTaxLabel -> setStyleSheet("font: 57 20pt "Counter-Strike";");
+    ui -> tipTotalLabel -> setText("Tip (20%): " + QString::number(tip, 'f', 2));
+    ui -> finalTotalLabel -> setText("Total: $" + QString::number(total, 'f', 2));
+
 }
