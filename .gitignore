@@ -1,5 +1,5 @@
 #Ignore .pro.user files
-*.pro.user
+*.pro.user*
 
 #Ignore GCC build dir
 *build*GCC*

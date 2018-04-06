@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QColumnView>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
@@ -22,6 +23,8 @@
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
+#include <QtWidgets/QScrollBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextBrowser>
@@ -136,8 +139,40 @@ public:
     QVBoxLayout *verticalLayout_11;
     QLabel *waitstaffWelcomeLabel;
     QWidget *kitchenTab;
-    QVBoxLayout *verticalLayout_12;
     QLabel *kitchenWelcomeLabel;
+    QLabel *label_OrderPlacedQueue;
+    QColumnView *columnView_OrderPlaced;
+    QScrollArea *scrollArea_OP_OrderA;
+    QWidget *scrollAreaWidgetContents;
+    QTextBrowser *textBrowser_OP_OrderA;
+    QPushButton *pushButton_OP_OrderA_Assign;
+    QPushButton *pushButton_OP_OrderA_Call;
+    QScrollBar *verticalScrollBar_OP;
+    QScrollArea *scrollArea_OP_OrderB;
+    QWidget *scrollAreaWidgetContents_2;
+    QTextBrowser *textBrowser_OP_OrderB;
+    QPushButton *pushButton_OP_OrderB_Assign;
+    QPushButton *pushButton_OP_OrderB_Call;
+    QScrollArea *scrollArea_OP_OrderC;
+    QWidget *scrollAreaWidgetContents_3;
+    QTextBrowser *textBrowser_OP_OrderC;
+    QPushButton *pushButton_OP_OrderC_Assign;
+    QPushButton *pushButton_OP_OrderC_Call;
+    QLabel *label_PreparingOrderQueue;
+    QColumnView *columnView_PreparingOrder;
+    QScrollArea *scrollArea_PO_OrderA;
+    QWidget *scrollAreaWidgetContents_4;
+    QTextBrowser *textBrowser_PO_OrderA;
+    QPushButton *pushButton_PO_OrderA_Done;
+    QPushButton *pushButton_PO_OrderA_Call;
+    QLabel *label_PreparingOrderQueue_2;
+    QScrollBar *verticalScrollBar_PO;
+    QColumnView *columnView_ReadyDelivered;
+    QScrollBar *verticalScrollBar_RD;
+    QScrollArea *scrollArea_RD_OrderA;
+    QWidget *scrollAreaWidgetContents_5;
+    QTextBrowser *textBrowser_RD_OrderA;
+    QPushButton *pushButton_RD_OrderA_Call;
     QWidget *managerTab;
     QVBoxLayout *verticalLayout_13;
     QLabel *managerWelcomeLabel;
@@ -163,7 +198,7 @@ public:
     QListWidget *yetToPayList;
     QLabel *totalRemainingLabel;
     QFrame *frame_9;
-    QVBoxLayout *verticalLayout_121;
+    QVBoxLayout *verticalLayout_12;
     QPushButton *addToPaymentButton;
     QPushButton *removeFromPaymentButton;
     QFrame *frame_8;
@@ -1001,18 +1036,145 @@ public:
         tabWidget->addTab(waitstaffTab, QString());
         kitchenTab = new QWidget();
         kitchenTab->setObjectName(QStringLiteral("kitchenTab"));
-        verticalLayout_12 = new QVBoxLayout(kitchenTab);
-        verticalLayout_12->setSpacing(6);
-        verticalLayout_12->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_12->setObjectName(QStringLiteral("verticalLayout_12"));
         kitchenWelcomeLabel = new QLabel(kitchenTab);
         kitchenWelcomeLabel->setObjectName(QStringLiteral("kitchenWelcomeLabel"));
+        kitchenWelcomeLabel->setGeometry(QRect(10, 20, 461, 52));
         kitchenWelcomeLabel->setStyleSheet(QLatin1String("font: 57 32pt \"Counter-Strike\";\n"
 "color: rgb(208, 208, 208);"));
-
-        verticalLayout_12->addWidget(kitchenWelcomeLabel);
-
+        label_OrderPlacedQueue = new QLabel(kitchenTab);
+        label_OrderPlacedQueue->setObjectName(QStringLiteral("label_OrderPlacedQueue"));
+        label_OrderPlacedQueue->setGeometry(QRect(220, 80, 211, 20));
+        label_OrderPlacedQueue->setStyleSheet(QLatin1String("font: 57 16pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+        columnView_OrderPlaced = new QColumnView(kitchenTab);
+        columnView_OrderPlaced->setObjectName(QStringLiteral("columnView_OrderPlaced"));
+        columnView_OrderPlaced->setGeometry(QRect(60, 110, 541, 451));
+        scrollArea_OP_OrderA = new QScrollArea(kitchenTab);
+        scrollArea_OP_OrderA->setObjectName(QStringLiteral("scrollArea_OP_OrderA"));
+        scrollArea_OP_OrderA->setGeometry(QRect(70, 120, 491, 131));
+        scrollArea_OP_OrderA->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 489, 129));
+        textBrowser_OP_OrderA = new QTextBrowser(scrollAreaWidgetContents);
+        textBrowser_OP_OrderA->setObjectName(QStringLiteral("textBrowser_OP_OrderA"));
+        textBrowser_OP_OrderA->setGeometry(QRect(10, 10, 471, 81));
+        pushButton_OP_OrderA_Assign = new QPushButton(scrollAreaWidgetContents);
+        pushButton_OP_OrderA_Assign->setObjectName(QStringLiteral("pushButton_OP_OrderA_Assign"));
+        pushButton_OP_OrderA_Assign->setGeometry(QRect(10, 100, 131, 23));
+        pushButton_OP_OrderA_Call = new QPushButton(scrollAreaWidgetContents);
+        pushButton_OP_OrderA_Call->setObjectName(QStringLiteral("pushButton_OP_OrderA_Call"));
+        pushButton_OP_OrderA_Call->setGeometry(QRect(344, 100, 141, 23));
+        scrollArea_OP_OrderA->setWidget(scrollAreaWidgetContents);
+        verticalScrollBar_OP = new QScrollBar(kitchenTab);
+        verticalScrollBar_OP->setObjectName(QStringLiteral("verticalScrollBar_OP"));
+        verticalScrollBar_OP->setGeometry(QRect(570, 120, 16, 431));
+        verticalScrollBar_OP->setOrientation(Qt::Vertical);
+        scrollArea_OP_OrderB = new QScrollArea(kitchenTab);
+        scrollArea_OP_OrderB->setObjectName(QStringLiteral("scrollArea_OP_OrderB"));
+        scrollArea_OP_OrderB->setGeometry(QRect(70, 270, 491, 131));
+        scrollArea_OP_OrderB->setWidgetResizable(true);
+        scrollAreaWidgetContents_2 = new QWidget();
+        scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 489, 129));
+        textBrowser_OP_OrderB = new QTextBrowser(scrollAreaWidgetContents_2);
+        textBrowser_OP_OrderB->setObjectName(QStringLiteral("textBrowser_OP_OrderB"));
+        textBrowser_OP_OrderB->setGeometry(QRect(10, 10, 471, 81));
+        pushButton_OP_OrderB_Assign = new QPushButton(scrollAreaWidgetContents_2);
+        pushButton_OP_OrderB_Assign->setObjectName(QStringLiteral("pushButton_OP_OrderB_Assign"));
+        pushButton_OP_OrderB_Assign->setGeometry(QRect(10, 100, 131, 23));
+        pushButton_OP_OrderB_Call = new QPushButton(scrollAreaWidgetContents_2);
+        pushButton_OP_OrderB_Call->setObjectName(QStringLiteral("pushButton_OP_OrderB_Call"));
+        pushButton_OP_OrderB_Call->setGeometry(QRect(344, 100, 141, 23));
+        scrollArea_OP_OrderB->setWidget(scrollAreaWidgetContents_2);
+        scrollArea_OP_OrderC = new QScrollArea(kitchenTab);
+        scrollArea_OP_OrderC->setObjectName(QStringLiteral("scrollArea_OP_OrderC"));
+        scrollArea_OP_OrderC->setGeometry(QRect(70, 420, 491, 131));
+        scrollArea_OP_OrderC->setWidgetResizable(true);
+        scrollAreaWidgetContents_3 = new QWidget();
+        scrollAreaWidgetContents_3->setObjectName(QStringLiteral("scrollAreaWidgetContents_3"));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 489, 129));
+        textBrowser_OP_OrderC = new QTextBrowser(scrollAreaWidgetContents_3);
+        textBrowser_OP_OrderC->setObjectName(QStringLiteral("textBrowser_OP_OrderC"));
+        textBrowser_OP_OrderC->setGeometry(QRect(10, 10, 471, 81));
+        pushButton_OP_OrderC_Assign = new QPushButton(scrollAreaWidgetContents_3);
+        pushButton_OP_OrderC_Assign->setObjectName(QStringLiteral("pushButton_OP_OrderC_Assign"));
+        pushButton_OP_OrderC_Assign->setGeometry(QRect(10, 100, 131, 23));
+        pushButton_OP_OrderC_Call = new QPushButton(scrollAreaWidgetContents_3);
+        pushButton_OP_OrderC_Call->setObjectName(QStringLiteral("pushButton_OP_OrderC_Call"));
+        pushButton_OP_OrderC_Call->setGeometry(QRect(344, 100, 141, 23));
+        scrollArea_OP_OrderC->setWidget(scrollAreaWidgetContents_3);
+        label_PreparingOrderQueue = new QLabel(kitchenTab);
+        label_PreparingOrderQueue->setObjectName(QStringLiteral("label_PreparingOrderQueue"));
+        label_PreparingOrderQueue->setGeometry(QRect(860, 80, 231, 20));
+        label_PreparingOrderQueue->setStyleSheet(QLatin1String("font: 57 16pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+        columnView_PreparingOrder = new QColumnView(kitchenTab);
+        columnView_PreparingOrder->setObjectName(QStringLiteral("columnView_PreparingOrder"));
+        columnView_PreparingOrder->setGeometry(QRect(740, 110, 531, 451));
+        scrollArea_PO_OrderA = new QScrollArea(kitchenTab);
+        scrollArea_PO_OrderA->setObjectName(QStringLiteral("scrollArea_PO_OrderA"));
+        scrollArea_PO_OrderA->setGeometry(QRect(750, 120, 481, 131));
+        scrollArea_PO_OrderA->setWidgetResizable(true);
+        scrollAreaWidgetContents_4 = new QWidget();
+        scrollAreaWidgetContents_4->setObjectName(QStringLiteral("scrollAreaWidgetContents_4"));
+        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 479, 129));
+        textBrowser_PO_OrderA = new QTextBrowser(scrollAreaWidgetContents_4);
+        textBrowser_PO_OrderA->setObjectName(QStringLiteral("textBrowser_PO_OrderA"));
+        textBrowser_PO_OrderA->setGeometry(QRect(10, 10, 461, 81));
+        pushButton_PO_OrderA_Done = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_PO_OrderA_Done->setObjectName(QStringLiteral("pushButton_PO_OrderA_Done"));
+        pushButton_PO_OrderA_Done->setGeometry(QRect(10, 100, 131, 23));
+        pushButton_PO_OrderA_Call = new QPushButton(scrollAreaWidgetContents_4);
+        pushButton_PO_OrderA_Call->setObjectName(QStringLiteral("pushButton_PO_OrderA_Call"));
+        pushButton_PO_OrderA_Call->setGeometry(QRect(340, 100, 131, 23));
+        scrollArea_PO_OrderA->setWidget(scrollAreaWidgetContents_4);
+        label_PreparingOrderQueue_2 = new QLabel(kitchenTab);
+        label_PreparingOrderQueue_2->setObjectName(QStringLiteral("label_PreparingOrderQueue_2"));
+        label_PreparingOrderQueue_2->setGeometry(QRect(1490, 70, 281, 20));
+        label_PreparingOrderQueue_2->setStyleSheet(QLatin1String("font: 57 16pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
+        verticalScrollBar_PO = new QScrollBar(kitchenTab);
+        verticalScrollBar_PO->setObjectName(QStringLiteral("verticalScrollBar_PO"));
+        verticalScrollBar_PO->setGeometry(QRect(1240, 120, 16, 431));
+        verticalScrollBar_PO->setOrientation(Qt::Vertical);
+        columnView_ReadyDelivered = new QColumnView(kitchenTab);
+        columnView_ReadyDelivered->setObjectName(QStringLiteral("columnView_ReadyDelivered"));
+        columnView_ReadyDelivered->setGeometry(QRect(1370, 110, 521, 451));
+        verticalScrollBar_RD = new QScrollBar(kitchenTab);
+        verticalScrollBar_RD->setObjectName(QStringLiteral("verticalScrollBar_RD"));
+        verticalScrollBar_RD->setGeometry(QRect(1870, 120, 16, 431));
+        verticalScrollBar_RD->setOrientation(Qt::Vertical);
+        scrollArea_RD_OrderA = new QScrollArea(kitchenTab);
+        scrollArea_RD_OrderA->setObjectName(QStringLiteral("scrollArea_RD_OrderA"));
+        scrollArea_RD_OrderA->setGeometry(QRect(1380, 120, 481, 131));
+        scrollArea_RD_OrderA->setWidgetResizable(true);
+        scrollAreaWidgetContents_5 = new QWidget();
+        scrollAreaWidgetContents_5->setObjectName(QStringLiteral("scrollAreaWidgetContents_5"));
+        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 479, 129));
+        textBrowser_RD_OrderA = new QTextBrowser(scrollAreaWidgetContents_5);
+        textBrowser_RD_OrderA->setObjectName(QStringLiteral("textBrowser_RD_OrderA"));
+        textBrowser_RD_OrderA->setGeometry(QRect(10, 10, 461, 81));
+        pushButton_RD_OrderA_Call = new QPushButton(scrollAreaWidgetContents_5);
+        pushButton_RD_OrderA_Call->setObjectName(QStringLiteral("pushButton_RD_OrderA_Call"));
+        pushButton_RD_OrderA_Call->setGeometry(QRect(330, 100, 141, 23));
+        scrollArea_RD_OrderA->setWidget(scrollAreaWidgetContents_5);
         tabWidget->addTab(kitchenTab, QString());
+        columnView_OrderPlaced->raise();
+        kitchenWelcomeLabel->raise();
+        label_OrderPlacedQueue->raise();
+        scrollArea_OP_OrderA->raise();
+        verticalScrollBar_OP->raise();
+        scrollArea_OP_OrderB->raise();
+        scrollArea_OP_OrderC->raise();
+        label_PreparingOrderQueue->raise();
+        columnView_PreparingOrder->raise();
+        scrollArea_PO_OrderA->raise();
+        label_PreparingOrderQueue_2->raise();
+        verticalScrollBar_PO->raise();
+        columnView_ReadyDelivered->raise();
+        verticalScrollBar_RD->raise();
+        scrollArea_RD_OrderA->raise();
         managerTab = new QWidget();
         managerTab->setObjectName(QStringLiteral("managerTab"));
         verticalLayout_13 = new QVBoxLayout(managerTab);
@@ -1166,10 +1328,10 @@ public:
         frame_9->setObjectName(QStringLiteral("frame_9"));
         frame_9->setFrameShape(QFrame::StyledPanel);
         frame_9->setFrameShadow(QFrame::Raised);
-        verticalLayout_121 = new QVBoxLayout(frame_9);
-        verticalLayout_121->setSpacing(6);
-        verticalLayout_121->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_121->setObjectName(QStringLiteral("verticalLayout_121"));
+        verticalLayout_12 = new QVBoxLayout(frame_9);
+        verticalLayout_12->setSpacing(6);
+        verticalLayout_12->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_12->setObjectName(QStringLiteral("verticalLayout_12"));
         addToPaymentButton = new QPushButton(frame_9);
         addToPaymentButton->setObjectName(QStringLiteral("addToPaymentButton"));
         sizePolicy.setHeightForWidth(addToPaymentButton->sizePolicy().hasHeightForWidth());
@@ -1178,7 +1340,7 @@ public:
         addToPaymentButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
 
-        verticalLayout_121->addWidget(addToPaymentButton);
+        verticalLayout_12->addWidget(addToPaymentButton);
 
         removeFromPaymentButton = new QPushButton(frame_9);
         removeFromPaymentButton->setObjectName(QStringLiteral("removeFromPaymentButton"));
@@ -1187,7 +1349,7 @@ public:
         removeFromPaymentButton->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
 "font: 57 20pt \"Counter-Strike\";"));
 
-        verticalLayout_121->addWidget(removeFromPaymentButton);
+        verticalLayout_12->addWidget(removeFromPaymentButton);
 
 
         horizontalLayout_8->addWidget(frame_9);
@@ -1284,8 +1446,10 @@ public:
 
         label_4 = new QLabel(dessertGame);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(800, 40, 321, 91));
+        label_4->setGeometry(QRect(510, 40, 611, 91));
         label_4->setLayoutDirection(Qt::LeftToRight);
+        label_4->setStyleSheet(QLatin1String("font: 57 32pt \"Counter-Strike\";\n"
+"color: rgb(208, 208, 208);"));
         label_4->setTextFormat(Qt::PlainText);
         tabWidget->addTab(dessertGame, QString());
 
@@ -1434,7 +1598,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(10);
+        tabWidget->setCurrentIndex(6);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1513,7 +1677,199 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(loginTab), QApplication::translate("MainWindow", "Login", nullptr));
         waitstaffWelcomeLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(waitstaffTab), QApplication::translate("MainWindow", "Waitstaff", nullptr));
-        kitchenWelcomeLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        kitchenWelcomeLabel->setText(QApplication::translate("MainWindow", "Welcome to the Kitchen", nullptr));
+        label_OrderPlacedQueue->setText(QApplication::translate("MainWindow", "Order Placed Queue", nullptr));
+        textBrowser_OP_OrderA->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; text-decoration: underline; color:#b3b3b3;\">Table No.: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Order No.: [ ]	Waiter: [ ] 	Preparer: &lt;blank&gt;</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-l"
+                        "eft:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 1: [ ]		 Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+""
+                        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 2: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-lef"
+                        "t:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-le"
+                        "ft:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 3: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p"
+                        " style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 4: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-rig"
+                        "ht:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p></body></html>", nullptr));
+        pushButton_OP_OrderA_Assign->setText(QApplication::translate("MainWindow", "Assign Order", nullptr));
+        pushButton_OP_OrderA_Call->setText(QApplication::translate("MainWindow", "Call Server", nullptr));
+        textBrowser_OP_OrderB->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; text-decoration: underline; color:#b3b3b3;\">Table No.: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Order No.: [ ]	Waiter: [ ] 	Preparer: &lt;blank&gt;</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-l"
+                        "eft:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 1: [ ]		 Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+""
+                        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 2: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-lef"
+                        "t:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-le"
+                        "ft:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 3: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p"
+                        " style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 4: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-rig"
+                        "ht:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p></body></html>", nullptr));
+        pushButton_OP_OrderB_Assign->setText(QApplication::translate("MainWindow", "Assign Order", nullptr));
+        pushButton_OP_OrderB_Call->setText(QApplication::translate("MainWindow", "Call Server", nullptr));
+        textBrowser_OP_OrderC->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; text-decoration: underline; color:#b3b3b3;\">Table No.: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Order No.: [ ]	Waiter: [ ] 	Preparer: &lt;blank&gt;</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-l"
+                        "eft:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 1: [ ]		 Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+""
+                        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 2: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-lef"
+                        "t:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-le"
+                        "ft:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 3: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p"
+                        " style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 4: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-rig"
+                        "ht:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p></body></html>", nullptr));
+        pushButton_OP_OrderC_Assign->setText(QApplication::translate("MainWindow", "Assign Order", nullptr));
+        pushButton_OP_OrderC_Call->setText(QApplication::translate("MainWindow", "Call Server", nullptr));
+        label_PreparingOrderQueue->setText(QApplication::translate("MainWindow", "Preparing Order Queue", nullptr));
+        textBrowser_PO_OrderA->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; text-decoration: underline; color:#b3b3b3;\">Table No.: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Order No.: [ ]	Waiter: [ ] 	Preparer: [ ]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; m"
+                        "argin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 1: [ ]		 Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\""
+                        " margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 2: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; marg"
+                        "in-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; mar"
+                        "gin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 3: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" m"
+                        "argin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 4: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt"
+                        "-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p></body></html>", nullptr));
+        pushButton_PO_OrderA_Done->setText(QApplication::translate("MainWindow", "Order Done", nullptr));
+        pushButton_PO_OrderA_Call->setText(QApplication::translate("MainWindow", "Call Server", nullptr));
+        label_PreparingOrderQueue_2->setText(QApplication::translate("MainWindow", "Ready to be Delivered Queue", nullptr));
+        textBrowser_RD_OrderA->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; text-decoration: underline; color:#b3b3b3;\">Table No.: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Order No.: [ ]	Waiter: [ ] 	Preparer: [ ]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; m"
+                        "argin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 1: [ ]		 Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\""
+                        " margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 2: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; marg"
+                        "in-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; mar"
+                        "gin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 3: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" m"
+                        "argin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Customer 4: [ ]		Allergy: [ ]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 1</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt"
+                        "-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 2</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 3</span><span style=\" color:#b3b3b3;\">:[Description; Picture; Calories; Ingredients; Recipe ()]</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#b3b3b3;\">Item 4:</span><span style=\" color:#b3b3b3;\"> [Description; Picture; Calories; Ingredients; Recipe ()]</span></p></body></html>", nullptr));
+        pushButton_RD_OrderA_Call->setText(QApplication::translate("MainWindow", "Call Server", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(kitchenTab), QApplication::translate("MainWindow", "Kitchen", nullptr));
         managerWelcomeLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(managerTab), QApplication::translate("MainWindow", "Manager", nullptr));
