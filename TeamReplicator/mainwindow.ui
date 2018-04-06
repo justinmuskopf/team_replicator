@@ -2770,7 +2770,170 @@ color: rgb(208, 208, 208);</string>
         </property>
        </widget>
       </widget>
-     </widget>
+	  <widget class="QWidget" name="Survey">
+       <attribute name="title">
+        <string>Survey</string>
+       </attribute>
+       <widget class="QLabel" name="rateLabel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>271</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(46, 47, 48);
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>Rate Us! We appreciate your feedback.</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="commentLabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>190</y>
+          <width>321</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>Additional Information/Explanation of Rating</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="rateCommentBox">
+        <property name="geometry">
+         <rect>
+          <x>3</x>
+          <y>250</y>
+          <width>511</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="surveySubmitButton">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>520</y>
+          <width>101</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Submit</string>
+        </property>
+       </widget>
+      </widget>
+	 </widget>
     </item>
     <item>
      <widget class="QGroupBox" name="groupBox">
