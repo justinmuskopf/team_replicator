@@ -166,17 +166,39 @@ void MainWindow::on_gameButton_clicked()
 //Assitance button clicked
 void MainWindow::on_assistButton_clicked()
 {
+    // Load window to indicate manager has been requested
+    QMessageBox msgBox(QMessageBox::Information,
+                       "Request Manager",
+                       "The manager has been notified, and will be with you shortly.",
+                       QMessageBox::Ok, this);
+    msgBox.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+    msgBox.exec();
+
+    // notify Manager
+    QByteArray toSend = "C " + QByteArray::number(tableNum) + " 3";
+    server -> abort();
+    server -> connectToHost(SERVER_HOST, SERVER_PORT);
+    server -> waitForConnected(1000);
+    server -> write(toSend);
+}
+
+//Help button clicked
+void MainWindow::on_helpButton_clicked()
+{
+    // Load window to indicate assistance has been requested
     QMessageBox msgBox(QMessageBox::Information,
                        "Assistance",
                        "Your Server has been notified, and will be with you shortly.",
                        QMessageBox::Ok, this);
     msgBox.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
     msgBox.exec();
-}
 
-//Help button clicked
-void MainWindow::on_helpButton_clicked()
-{
+    // notify Server
+    QByteArray toSend = "C " + QByteArray::number(tableNum) + " 1";
+    server -> abort();
+    server -> connectToHost(SERVER_HOST, SERVER_PORT);
+    server -> waitForConnected(1000);
+    server -> write(toSend);
 }
 
 //Go to home page
@@ -698,7 +720,18 @@ void MainWindow::on_payForOrderButton_clicked()
     }
     else
     {
-        // if no, reset the session
+        // if no, print receipt and reset the session
+        // print receipt notification
+        QMessageBox winBox;
+        winBox.setWindowTitle("The Replicator");
+        winBox.setText("Your receipt is printing now...");
+        winBox.setStandardButtons(QMessageBox::Ok);
+        winBox.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+        winBox.exec();
+
+        // print receipt code would go here...
+
+        // reset
         resetSession();
     }
 

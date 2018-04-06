@@ -31,7 +31,7 @@ void dGame::evalChoice(int pick)
     {
         QMessageBox lostBox;
         lostBox.setWindowTitle("The Replicator");
-        lostBox.setText("Better luck next time!");
+        lostBox.setText("Better luck next time! Printing receipt...");
         lostBox.setStandardButtons(QMessageBox::Ok);
         lostBox.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
 

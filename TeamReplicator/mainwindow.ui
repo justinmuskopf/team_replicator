@@ -3562,7 +3562,7 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
 font: 57 20pt &quot;Counter-Strike&quot;;</string>
          </property>
          <property name="text">
-          <string>Request Assistance</string>
+          <string>Request Manager</string>
          </property>
         </widget>
        </item>
