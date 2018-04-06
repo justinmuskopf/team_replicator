@@ -33,7 +33,7 @@
        <string notr="true">background-color: rgb(46, 47, 48);</string>
       </property>
       <property name="currentIndex">
-       <number>6</number>
+       <number>10</number>
       </property>
       <widget class="QWidget" name="homeTab">
        <attribute name="title">
@@ -2746,7 +2746,7 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="gameLabel">
         <property name="geometry">
          <rect>
           <x>510</x>
