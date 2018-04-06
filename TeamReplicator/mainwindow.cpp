@@ -9,8 +9,7 @@
 #include <QSqlRecord>
 #include <QDesktopWidget>
 #include <QMovie>
-
-
+#include <QProcess>
 //Tab Index ENUM
 enum {
     HOME_TAB,
@@ -383,16 +382,16 @@ void MainWindow::addToOrderList(int num)
 
 /* Game buttons                                                             */
 /****************************************************************************/
-void MainWindow::on_gameButton1_clicked() {
-    system("\"C:\\Users\\User\\Documents\\GitHub\\TeamReplicator\\build-TeamReplicator-Desktop_Qt_5_10_1_MinGW_32bit-Debug\\games\\Drawing\\Drawing.exe\"");
-    // NEED TO CHANGE TO REFLECT LOCATION ON TEST MACHINE
-
-} // on_gameButton1_clicked
-void MainWindow::on_gameButton2_clicked() {
-    system("\"C:\\Users\\User\\Documents\\GitHub\\TeamReplicator\\build-TeamReplicator-Desktop_Qt_5_10_1_MinGW_32bit-Debug\\games\\klondike.exe\"");
-    // NEED TO CHANGE TO REFLECT LOCATION ON TEST MACHINE
-
-} // on_gameButton2_clicked
+void MainWindow::on_gameButton1_clicked()
+{
+    QProcess *game = new QProcess(this);
+    game -> start(QDir::currentPath() + "/games/Drawing/Drawing.exe");
+}
+void MainWindow::on_gameButton2_clicked()
+{
+    QProcess *game = new QProcess(this);
+    game -> start(QDir::currentPath() + "/games/klondike.exe");
+}
 /****************************************************************************/
 
 //Start Order button clicked
