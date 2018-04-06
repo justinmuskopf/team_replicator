@@ -9,6 +9,7 @@
 #include <QSqlRecord>
 #include <QDesktopWidget>
 #include <QMovie>
+#include "dessertgame.h"
 
 
 //Tab Index ENUM
@@ -22,7 +23,8 @@ enum {
     KITCHEN_TAB,
     MANAGER_TAB,
     TABLE_TAB,
-    PAYMENT_TAB
+    PAYMENT_TAB,
+    DGAME_TAB
 };
 
 void MainWindow::goToTab(int idx)
@@ -594,18 +596,16 @@ void MainWindow::updatePaymentTotals()
     for (int i = 0; i < payList -> count(); i++)
     {
         //Get the total from each line in list
-        QStringList splitStr = payList -> item(i) -> text().split(".");
-        int len = splitStr.size();
-        paymentTotal += (splitStr[len - 2] + "." + splitStr[len - 1]).toFloat();
+        QStringList splitStr = payList -> item(i) -> text().split("$");
+        paymentTotal += (splitStr[1]).toFloat();
     }
 
     //For each item in yetToPay list
     for (int i = 0; i < remainList -> count(); i++)
     {
         //Get the total from each line in list
-        QStringList splitStr = remainList -> item(i) -> text().split(".");
-        int len = splitStr.size();
-        remainingTotal += (splitStr[len - 2] + "." + splitStr[len - 1]).toFloat();
+        QStringList splitStr = remainList -> item(i) -> text().split("$");
+        remainingTotal += (splitStr[1]).toFloat();
     }
 
     //Set total labels
@@ -616,6 +616,10 @@ void MainWindow::updatePaymentTotals()
 //Paying for oder
 void MainWindow::on_payForOrderButton_clicked()
 {
+
+    if (ui -> paymentList -> count() == 0)
+        return;
+
  /*   //Process payment window, set to delete itself and children on close
     QDialog *processDlg = new QDialog(this);//, Qt::FramelessWindowHint | Qt::WindowTitleHint);
     processDlg -> setAttribute(Qt::WA_DeleteOnClose, true);
@@ -667,7 +671,26 @@ void MainWindow::on_payForOrderButton_clicked()
 
     updatePaymentTotals();
 
-    //resetSession();
+    // After paying, message box pops up asking if customer wants to play game to win a free dessert
+    QMessageBox msgBox2;
+    msgBox2.setWindowTitle("The Replicator");
+    msgBox2.setText("Thank you for dining with us! Would you like to play a game for a chance to win a free dessert?");
+    msgBox2.setStandardButtons(QMessageBox::Yes);
+    msgBox2.addButton(QMessageBox::No);
+    msgBox2.setDefaultButton(QMessageBox::No);
+    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+
+    if(msgBox2.exec() == QMessageBox::Yes)
+    {
+        // if yes, go to the game
+        goToTab(DGAME_TAB);
+    }
+    else
+    {
+        // if no, reset the session
+        resetSession();
+    }
+
 }
 
 //End the current dining session
@@ -763,4 +786,34 @@ void MainWindow::disableRefillButtons()
     {
         refillButtons[i].setEnabled(false);
     }
+}
+
+void MainWindow::on_gameButton_1_clicked()
+{
+    dessertGame.evalChoice(1);
+    resetSession();
+}
+
+void MainWindow::on_gameButton_2_clicked()
+{
+    dessertGame.evalChoice(2);
+    resetSession();
+}
+
+void MainWindow::on_gameButton_3_clicked()
+{
+    dessertGame.evalChoice(3);
+    resetSession();
+}
+
+void MainWindow::on_gameButton_4_clicked()
+{
+    dessertGame.evalChoice(4);
+    resetSession();
+}
+
+void MainWindow::on_gameButton_5_clicked()
+{
+    dessertGame.evalChoice(5);
+    resetSession();
 }

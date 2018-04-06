@@ -171,6 +171,15 @@ public:
     QListWidget *paymentList;
     QLabel *totalToPayLabel;
     QPushButton *payForOrderButton;
+    QWidget *dessertGame;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout_9;
+    QPushButton *gameButton_1;
+    QPushButton *gameButton_2;
+    QPushButton *gameButton_3;
+    QPushButton *gameButton_4;
+    QPushButton *gameButton_5;
+    QLabel *label_4;
     QGroupBox *groupBox;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *backButton;
@@ -185,7 +194,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1968, 791);
+        MainWindow->resize(1968, 810);
         MainWindow->setStyleSheet(QStringLiteral("background-color: rgb(46, 47, 48);"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
@@ -1218,6 +1227,67 @@ public:
         horizontalLayout_8->addWidget(frame_8);
 
         tabWidget->addTab(payment, QString());
+        dessertGame = new QWidget();
+        dessertGame->setObjectName(QStringLiteral("dessertGame"));
+        horizontalLayoutWidget = new QWidget(dessertGame);
+        horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
+        horizontalLayoutWidget->setGeometry(QRect(10, 190, 1911, 231));
+        horizontalLayout_9 = new QHBoxLayout(horizontalLayoutWidget);
+        horizontalLayout_9->setSpacing(6);
+        horizontalLayout_9->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
+        horizontalLayout_9->setContentsMargins(0, 0, 0, 0);
+        gameButton_1 = new QPushButton(horizontalLayoutWidget);
+        gameButton_1->setObjectName(QStringLiteral("gameButton_1"));
+        sizePolicy3.setHeightForWidth(gameButton_1->sizePolicy().hasHeightForWidth());
+        gameButton_1->setSizePolicy(sizePolicy3);
+        gameButton_1->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        horizontalLayout_9->addWidget(gameButton_1);
+
+        gameButton_2 = new QPushButton(horizontalLayoutWidget);
+        gameButton_2->setObjectName(QStringLiteral("gameButton_2"));
+        sizePolicy3.setHeightForWidth(gameButton_2->sizePolicy().hasHeightForWidth());
+        gameButton_2->setSizePolicy(sizePolicy3);
+        gameButton_2->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        horizontalLayout_9->addWidget(gameButton_2);
+
+        gameButton_3 = new QPushButton(horizontalLayoutWidget);
+        gameButton_3->setObjectName(QStringLiteral("gameButton_3"));
+        sizePolicy3.setHeightForWidth(gameButton_3->sizePolicy().hasHeightForWidth());
+        gameButton_3->setSizePolicy(sizePolicy3);
+        gameButton_3->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        horizontalLayout_9->addWidget(gameButton_3);
+
+        gameButton_4 = new QPushButton(horizontalLayoutWidget);
+        gameButton_4->setObjectName(QStringLiteral("gameButton_4"));
+        sizePolicy3.setHeightForWidth(gameButton_4->sizePolicy().hasHeightForWidth());
+        gameButton_4->setSizePolicy(sizePolicy3);
+        gameButton_4->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        horizontalLayout_9->addWidget(gameButton_4);
+
+        gameButton_5 = new QPushButton(horizontalLayoutWidget);
+        gameButton_5->setObjectName(QStringLiteral("gameButton_5"));
+        sizePolicy3.setHeightForWidth(gameButton_5->sizePolicy().hasHeightForWidth());
+        gameButton_5->setSizePolicy(sizePolicy3);
+        gameButton_5->setStyleSheet(QLatin1String("background-color: rgb(188, 188, 188);\n"
+"font: 57 20pt \"Counter-Strike\";"));
+
+        horizontalLayout_9->addWidget(gameButton_5);
+
+        label_4 = new QLabel(dessertGame);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setGeometry(QRect(800, 40, 321, 91));
+        label_4->setLayoutDirection(Qt::LeftToRight);
+        label_4->setTextFormat(Qt::PlainText);
+        tabWidget->addTab(dessertGame, QString());
 
         verticalLayout_7->addWidget(tabWidget);
 
@@ -1364,7 +1434,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(10);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1471,6 +1541,13 @@ public:
         totalToPayLabel->setText(QApplication::translate("MainWindow", "Total:", nullptr));
         payForOrderButton->setText(QApplication::translate("MainWindow", "Pay and Place Order", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(payment), QApplication::translate("MainWindow", "Payment", nullptr));
+        gameButton_1->setText(QApplication::translate("MainWindow", "1", nullptr));
+        gameButton_2->setText(QApplication::translate("MainWindow", "2", nullptr));
+        gameButton_3->setText(QApplication::translate("MainWindow", "3", nullptr));
+        gameButton_4->setText(QApplication::translate("MainWindow", "4", nullptr));
+        gameButton_5->setText(QApplication::translate("MainWindow", "5", nullptr));
+        label_4->setText(QApplication::translate("MainWindow", "I'm thinking of a number between 1 and 5, what is it?", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(dessertGame), QApplication::translate("MainWindow", "dessertGame", nullptr));
         backButton->setText(QApplication::translate("MainWindow", "Back", nullptr));
         drinkButton->setText(QApplication::translate("MainWindow", "Refills", nullptr));
         ticketButton->setText(QApplication::translate("MainWindow", "My Ticket", nullptr));
