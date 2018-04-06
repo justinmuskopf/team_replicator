@@ -9,14 +9,12 @@
 #include <QSqlRecord>
 #include <QDesktopWidget>
 #include <QMovie>
-#include "dessertgame.h"
-
-
-//Tab Index ENUM
+#include <QProcess>#include "dessertgame.h"//Tab Index ENUM
 enum {
     HOME_TAB,
     ORDER_TAB,
     REFILLS_TAB,
+    GAMES_TAB,
     MENU_TAB,
     LOGIN_TAB,
     WAITSTAFF_TAB,
@@ -24,7 +22,8 @@ enum {
     MANAGER_TAB,
     TABLE_TAB,
     PAYMENT_TAB,
-    DGAME_TAB
+	DGAME_TAB,
+	SURVEY_TAB
 };
 
 void MainWindow::goToTab(int idx)
@@ -120,6 +119,7 @@ void MainWindow::beginSession()
     //Disable the gameButton and drink button until order is placed
     ui -> gameButton -> setEnabled(false);
     ui -> drinkButton -> setEnabled(false);
+    ui -> surveyButton -> setEnabled(false);
 
     //Clear all lists in the Application by finding them recursively
     foreach (QListWidget *list, findChildren<QListWidget *>())
@@ -158,7 +158,8 @@ void MainWindow::on_ticketButton_clicked()
 //Games button clicked
 void MainWindow::on_gameButton_clicked()
 {
-
+    // Set current tab to the games tab
+    goToTab(GAMES_TAB);
 }
 
 //Assitance button clicked
@@ -376,6 +377,20 @@ void MainWindow::addToOrderList(int num)
     updateOrderList();
 
 
+}
+/****************************************************************************/
+
+/* Game buttons                                                             */
+/****************************************************************************/
+void MainWindow::on_gameButton1_clicked()
+{
+    QProcess *game = new QProcess(this);
+    game -> start(QDir::currentPath() + "/games/Drawing/Drawing.exe");
+}
+void MainWindow::on_gameButton2_clicked()
+{
+    QProcess *game = new QProcess(this);
+    game -> start(QDir::currentPath() + "/games/klondike.exe");
 }
 /****************************************************************************/
 
@@ -616,12 +631,8 @@ void MainWindow::updatePaymentTotals()
 //Paying for oder
 void MainWindow::on_payForOrderButton_clicked()
 {
-
     if (ui -> paymentList -> count() == 0)
-        return;
-
- /*   //Process payment window, set to delete itself and children on close
-    QDialog *processDlg = new QDialog(this);//, Qt::FramelessWindowHint | Qt::WindowTitleHint);
+        return;    QDialog *processDlg = new QDialog(this);//, Qt::FramelessWindowHint | Qt::WindowTitleHint);
     processDlg -> setAttribute(Qt::WA_DeleteOnClose, true);
 
     //Set the location of the processDlg
@@ -670,7 +681,6 @@ void MainWindow::on_payForOrderButton_clicked()
     }
 
     updatePaymentTotals();
-
     // After paying, message box pops up asking if customer wants to play game to win a free dessert
     QMessageBox msgBox2;
     msgBox2.setWindowTitle("The Replicator");
@@ -691,6 +701,7 @@ void MainWindow::on_payForOrderButton_clicked()
         resetSession();
     }
 
+    ui->surveyButton->setEnabled(true);         // Enable the feedback button after payment
 }
 
 //End the current dining session
@@ -786,6 +797,15 @@ void MainWindow::disableRefillButtons()
     {
         refillButtons[i].setEnabled(false);
     }
+}
+void MainWindow::on_surveyButton_clicked()
+{
+    goToTab(SURVEY_TAB);
+}
+
+void MainWindow::on_surveySubmitButton_clicked()
+{
+    goToTab(HOME_TAB);
 }
 
 void MainWindow::on_gameButton_1_clicked()
