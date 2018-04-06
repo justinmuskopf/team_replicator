@@ -596,18 +596,16 @@ void MainWindow::updatePaymentTotals()
     for (int i = 0; i < payList -> count(); i++)
     {
         //Get the total from each line in list
-        QStringList splitStr = payList -> item(i) -> text().split(".");
-        int len = splitStr.size();
-        paymentTotal += (splitStr[len - 2] + "." + splitStr[len - 1]).toFloat();
+        QStringList splitStr = payList -> item(i) -> text().split("$");
+        paymentTotal += (splitStr[1]).toFloat();
     }
 
     //For each item in yetToPay list
     for (int i = 0; i < remainList -> count(); i++)
     {
         //Get the total from each line in list
-        QStringList splitStr = remainList -> item(i) -> text().split(".");
-        int len = splitStr.size();
-        remainingTotal += (splitStr[len - 2] + "." + splitStr[len - 1]).toFloat();
+        QStringList splitStr = remainList -> item(i) -> text().split("$");
+        remainingTotal += (splitStr[1]).toFloat();
     }
 
     //Set total labels
@@ -618,6 +616,10 @@ void MainWindow::updatePaymentTotals()
 //Paying for oder
 void MainWindow::on_payForOrderButton_clicked()
 {
+
+    if (ui -> paymentList -> count() == 0)
+        return;
+
  /*   //Process payment window, set to delete itself and children on close
     QDialog *processDlg = new QDialog(this);//, Qt::FramelessWindowHint | Qt::WindowTitleHint);
     processDlg -> setAttribute(Qt::WA_DeleteOnClose, true);
@@ -678,16 +680,15 @@ void MainWindow::on_payForOrderButton_clicked()
     msgBox2.setDefaultButton(QMessageBox::No);
     msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
 
-    //dGame dessertGame;
-
-    if(msgBox2.exec() == QMessageBox::Yes)   // if yes, go to the game
+    if(msgBox2.exec() == QMessageBox::Yes)
     {
-        int pick;
+        // if yes, go to the game
         goToTab(DGAME_TAB);
     }
     else
     {
-        resetSession();                             // if no, reset the session
+        // if no, reset the session
+        resetSession();
     }
 
 }
@@ -789,35 +790,30 @@ void MainWindow::disableRefillButtons()
 
 void MainWindow::on_gameButton_1_clicked()
 {
-    int userPick = 1;
-    dessertGame.evalChoice(userPick);
+    dessertGame.evalChoice(1);
     resetSession();
 }
 
 void MainWindow::on_gameButton_2_clicked()
 {
-    int userPick = 2;
-    dessertGame.evalChoice(userPick);
+    dessertGame.evalChoice(2);
     resetSession();
 }
 
 void MainWindow::on_gameButton_3_clicked()
 {
-    int userPick = 3;
-    dessertGame.evalChoice(userPick);
+    dessertGame.evalChoice(3);
     resetSession();
 }
 
 void MainWindow::on_gameButton_4_clicked()
 {
-    int userPick = 4;
-    dessertGame.evalChoice(userPick);
+    dessertGame.evalChoice(4);
     resetSession();
 }
 
 void MainWindow::on_gameButton_5_clicked()
 {
-    int userPick = 5;
-    dessertGame.evalChoice(userPick);
+    dessertGame.evalChoice(5);
     resetSession();
 }

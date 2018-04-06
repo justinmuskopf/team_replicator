@@ -8,7 +8,6 @@
 dGame::dGame()
 {
     wonGame = false;
-    int pick;
 }
 
 void dGame::evalChoice(int pick)
