@@ -15,6 +15,7 @@
 #include "restaurantdatabase.h"
 #include <QKeyEvent>
 #include "drinkbutton.h"
+#include <QTableWidgetItem>
 
 #define NUM_BUTTONS 2 //Number of buttons to include when enabling/disabling them
 #define MAX_CUSTOMERS 4
@@ -113,15 +114,9 @@ private slots:
 
     void on_cashButton_clicked();
 
-    void on_tableWidget_itemEntered(QTableWidgetItem *item);
-
-    void on_tableWidget_2_entered(const QModelIndex &index);
-
-    void on_receiptSubmit_clicked();
-
     void on_receiptInfo_itemEntered(QTableWidgetItem *item);
 
-    void on_receiptOrderInfo_itemEntered(QTableWidgetItem *item);
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;                         //Ui reference

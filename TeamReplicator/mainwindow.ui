@@ -2685,7 +2685,7 @@ color: rgb(238, 238, 236);</string>
        <attribute name="title">
         <string>Receipt</string>
        </attribute>
-       <widget class="QLabel" name="waitstaffWelcomeLabel_3">
+       <widget class="QLabel" name="receiptSubmit">
         <property name="geometry">
          <rect>
           <x>-30</x>
@@ -2701,6 +2701,9 @@ color: rgb(208, 208, 208);</string>
         <property name="text">
          <string/>
         </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
        </widget>
        <widget class="QTableView" name="tableView">
         <property name="geometry">
@@ -2711,93 +2714,6 @@ color: rgb(208, 208, 208);</string>
           <height>311</height>
          </rect>
         </property>
-       </widget>
-       <widget class="QTableWidget" name="receiptInfo">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>130</y>
-          <width>501</width>
-          <height>81</height>
-         </rect>
-        </property>
-        <column>
-         <property name="text">
-          <string>Table Number</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Order Number</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Payment Method</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Waiter Name</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Manager Name</string>
-         </property>
-        </column>
-       </widget>
-       <widget class="QTableWidget" name="receiptOrderInfo">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>260</y>
-          <width>601</width>
-          <height>81</height>
-         </rect>
-        </property>
-        <property name="autoScroll">
-         <bool>true</bool>
-        </property>
-        <property name="tabKeyNavigation">
-         <bool>false</bool>
-        </property>
-        <property name="showDropIndicator" stdset="0">
-         <bool>false</bool>
-        </property>
-        <property name="dragDropOverwriteMode">
-         <bool>true</bool>
-        </property>
-        <column>
-         <property name="text">
-          <string notr="true">Qty</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Category</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Description</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Unit Price</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Discount</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Total</string>
-         </property>
-        </column>
        </widget>
        <widget class="QLabel" name="label_4">
         <property name="geometry">
@@ -2821,13 +2737,13 @@ color: rgb(208, 208, 208);</string>
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Receipt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="receiptCustomerName">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>70</y>
-          <width>392</width>
-          <height>33</height>
+          <y>42</y>
+          <width>391</width>
+          <height>51</height>
          </rect>
         </property>
         <property name="sizePolicy">
@@ -2842,36 +2758,6 @@ color: rgb(208, 208, 208);</string>
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#eeeeec;&quot;&gt;Customer:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
-       </widget>
-       <widget class="QTableWidget" name="receiptTotal">
-        <property name="geometry">
-         <rect>
-          <x>820</x>
-          <y>330</y>
-          <width>251</width>
-          <height>121</height>
-         </rect>
-        </property>
-        <row>
-         <property name="text">
-          <string>Subtotal:</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>Sales Tax (8.25%):</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>Tip:</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>Total:</string>
-         </property>
-        </row>
        </widget>
        <widget class="QCheckBox" name="checkBox">
         <property name="geometry">
@@ -2896,130 +2782,130 @@ color: rgb(208, 208, 208);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QPushButton" name="receiptSubmit">
+       <widget class="QListWidget" name="receiptInfo">
         <property name="geometry">
          <rect>
-          <x>830</x>
-          <y>490</y>
-          <width>131</width>
-          <height>81</height>
+          <x>30</x>
+          <y>100</y>
+          <width>661</width>
+          <height>431</height>
          </rect>
         </property>
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="palette">
-         <palette>
-          <active>
-           <colorrole role="Button">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>188</red>
-              <green>188</green>
-              <blue>188</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Base">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>188</red>
-              <green>188</green>
-              <blue>188</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Window">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>188</red>
-              <green>188</green>
-              <blue>188</blue>
-             </color>
-            </brush>
-           </colorrole>
-          </active>
-          <inactive>
-           <colorrole role="Button">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>188</red>
-              <green>188</green>
-              <blue>188</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Base">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>188</red>
-              <green>188</green>
-              <blue>188</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Window">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>188</red>
-              <green>188</green>
-              <blue>188</blue>
-             </color>
-            </brush>
-           </colorrole>
-          </inactive>
-          <disabled>
-           <colorrole role="Button">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>188</red>
-              <green>188</green>
-              <blue>188</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Base">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>188</red>
-              <green>188</green>
-              <blue>188</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Window">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>188</red>
-              <green>188</green>
-              <blue>188</blue>
-             </color>
-            </brush>
-           </colorrole>
-          </disabled>
-         </palette>
+        <property name="styleSheet">
+         <string notr="true">font: 57 16pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="receiptTotal">
+        <property name="geometry">
+         <rect>
+          <x>757</x>
+          <y>412</y>
+          <width>271</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(188, 188, 188);
-font: 57 20pt &quot;Counter-Strike&quot;;</string>
+         <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
         </property>
         <property name="text">
-         <string>Submit</string>
+         <string>Total: </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="receiptTip">
+        <property name="geometry">
+         <rect>
+          <x>760</x>
+          <y>350</y>
+          <width>251</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+        </property>
+        <property name="text">
+         <string>Tip:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="receiptSalesTax">
+        <property name="geometry">
+         <rect>
+          <x>750</x>
+          <y>290</y>
+          <width>361</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+        </property>
+        <property name="text">
+         <string>Sales Tax ( 8.25%):</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="receiptTipInput">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>350</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>730</x>
+          <y>530</y>
+          <width>171</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>SUBMIT</string>
         </property>
        </widget>
        <zorder>tableView</zorder>
-       <zorder>waitstaffWelcomeLabel_3</zorder>
-       <zorder>receiptInfo</zorder>
-       <zorder>receiptOrderInfo</zorder>
+       <zorder>receiptSubmit</zorder>
        <zorder>label_4</zorder>
-       <zorder>label_5</zorder>
-       <zorder>receiptTotal</zorder>
+       <zorder>receiptCustomerName</zorder>
        <zorder>checkBox</zorder>
        <zorder>plainTextEdit</zorder>
-       <zorder>receiptSubmit</zorder>
+       <zorder>receiptInfo</zorder>
+       <zorder>receiptTotal</zorder>
+       <zorder>receiptTip</zorder>
+       <zorder>receiptSalesTax</zorder>
+       <zorder>receiptTipInput</zorder>
+       <zorder>pushButton</zorder>
       </widget>
      </widget>
     </item>

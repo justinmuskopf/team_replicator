@@ -4,12 +4,15 @@ Order::Order()
 {
     //Menu menu;
     //drink = menu.getItem(DRINKS, "Water");
+
 }
 
 MenuVector Order::getOrder()
 {
     return order;
 }
+
+
 
 void Order::addToOrder(MenuItem item)
 {

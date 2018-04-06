@@ -20,6 +20,7 @@ public:
     void subtractFromTotal(float sub);  //Subtract from order subtotal
     void resetOrder();                  //Reset the current order
     MenuItem getDrink();                 //Returns the drink on an order
+
 private:
     MenuVector order;                   //Vector of MenuItems representing an order
     MenuItem drink;                     //What the Customer is drinking

@@ -368,6 +368,7 @@ void MainWindow::addToOrderList(int num)
 
     //Add menu item to list and current order
     ui -> menuList -> addItem(formatForList(item));
+    ui -> receiptInfo -> addItem(formatForList(item));
     currentOrder -> addToOrder(item);
 
     ui -> menuTotalLabel -> setText("Total: $" + QString::number(thisTable -> getTotal()));
@@ -415,6 +416,7 @@ void MainWindow::on_addToTableButton_clicked()
 
     //Add customer to list
     ui -> tableList -> addItem(QString::number(count) + ". Name: " + name + "..... " + allergies + "\n");
+    ui -> receiptCustomerName->setText("Name: " + name);
 
     //Reset input boxes
     ui -> allergyInput -> setText("N/A");
@@ -446,10 +448,16 @@ void MainWindow::on_placeOrderButton_clicked()
     //Place the order for the current customer
     thisTable -> getCurrentCustomer() -> placeOrder();
     float total = thisTable -> getCurrentCustomer() -> getOrder() -> getTotal();
+    float tax = 0.0825 * total;
+    float tip = 0.0;
+    //ui -> receiptTipInput -> setText(textFmt.arg(typeMenu[0].name).arg(typeMenu[0].description));
     ui -> menuList -> addItem("   Total: $" + QString::number(total));
+    ui -> receiptTotal->setText("Total: $" + QString::number(total + tax + tip));
+    ui -> receiptSalesTax->setText("Sales Tax(8.25%): $" + QString::number(tax));
 
     //Get next customer and add name to the lists
     Customer *nextCustomer = thisTable -> getNextCustomer();
+
     if (nextCustomer != NULL)
     {
         ui -> menuList -> addItem(nextCustomer -> getName());
@@ -476,7 +484,7 @@ void MainWindow::updateOrderList()
     for (int i = 0; i < ui -> menuList -> count(); i++)
     {
         ui -> orderList -> addItem(ui -> menuList -> item(i) -> text());
-    }
+           }
 
     ui -> orderTotalLabel -> setText(ui -> menuTotalLabel -> text());
 }
@@ -775,25 +783,38 @@ void MainWindow::disableRefillButtons()
 void MainWindow::on_creditButton_clicked()
 {
     goToTab(RECEIPT_TAB);
+
 }
 
 void MainWindow::on_cashButton_clicked()
 {
     goToTab(RECEIPT_TAB);
+
+   // ui->receiptInfo->setModel();
+    //ui->receiptInfo->setA
+    //db.getAllOrderItems(); // return all orders
+
+    /*
+    ui ->receiptInfo->setRowCount(3);
+    ui ->receiptInfo->setItem(0,0,new QTableWidgetItem());
+    for (int i = 0; i < ui -> orderList -> count(); i++)
+    {
+        ui -> receiptInfo -> setRowCount(i);
+        for ( int j = 0; j < ui-> receiptInfo->columnCount(); j++)
+        {
+           qDebug() << ui -> menuList -> item(i) -> text() << endl;
+            ui ->receiptInfo->setItem(i,j,new QTableWidgetItem(""));
+        }
+
+    }
+
+    */
 }
 
 
-void MainWindow::on_receiptSubmit_clicked()
+
+
+void MainWindow::on_pushButton_clicked()
 {
-
-}
-
-void MainWindow::on_receiptInfo_itemEntered(QTableWidgetItem *item)
-{
-
-}
-
-void MainWindow::on_receiptOrderInfo_itemEntered(QTableWidgetItem *item)
-{
-
+    goToTab(MENU_TAB);
 }

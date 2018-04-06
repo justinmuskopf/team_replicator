@@ -4,11 +4,14 @@
 #include <QMainWindow>
 #include <QObject>
 #include <QWidget>
-#include "order.h"
+#include "customer.h"
+#include "employee.h"
+
 class receipt
 {
 public:
     receipt();
+
 };
 
 #endif // RECEIPT_H

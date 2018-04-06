@@ -115,3 +115,16 @@ int RestaurantDatabase::getOrderNumber()
 
     return (orderNum != 0) ? orderNum + 1 : -1;
 }
+
+void RestaurantDatabase::getAllOrderItems()
+{
+    QString queryStr = "SELECT * FROM ORDER_ITEMS";
+    QSqlQuery query(queryStr, db);
+
+    query.exec();
+    query.next();
+    qDebug() << query.value(0).toString();
+
+
+  //  return (orderNum != 0) ? orderNum + 1 : -1;
+}
