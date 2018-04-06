@@ -2816,7 +2816,7 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
        <attribute name="title">
         <string>Survey</string>
        </attribute>
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="rateLabel">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -2924,7 +2924,7 @@ color: rgb(208, 208, 208);</string>
          <string>5</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_7">
+       <widget class="QLabel" name="commentLabel">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -2942,7 +2942,7 @@ color: rgb(208, 208, 208);</string>
          <string>Additional Information/Explanation of Rating</string>
         </property>
        </widget>
-       <widget class="QTextEdit" name="textEdit">
+       <widget class="QTextEdit" name="rateCommentBox">
         <property name="geometry">
          <rect>
           <x>3</x>
