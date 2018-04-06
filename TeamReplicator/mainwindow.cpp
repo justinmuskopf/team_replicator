@@ -9,6 +9,7 @@
 #include <QSqlRecord>
 #include <QDesktopWidget>
 #include <QMovie>
+#include "dessertgame.h"
 
 
 //Tab Index ENUM
@@ -22,7 +23,8 @@ enum {
     KITCHEN_TAB,
     MANAGER_TAB,
     TABLE_TAB,
-    PAYMENT_TAB
+    PAYMENT_TAB,
+    DGAME_TAB
 };
 
 void MainWindow::goToTab(int idx)
@@ -667,7 +669,27 @@ void MainWindow::on_payForOrderButton_clicked()
 
     updatePaymentTotals();
 
-    //resetSession();
+    // After paying, message box pops up asking if customer wants to play game to win a free dessert
+    QMessageBox msgBox2;
+    msgBox2.setWindowTitle("The Replicator");
+    msgBox2.setText("Thank you for dining with us! Would you like to play a game for a chance to win a free dessert?");
+    msgBox2.setStandardButtons(QMessageBox::Yes);
+    msgBox2.addButton(QMessageBox::No);
+    msgBox2.setDefaultButton(QMessageBox::No);
+    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+
+    //dGame dessertGame;
+
+    if(msgBox2.exec() == QMessageBox::Yes)   // if yes, go to the game
+    {
+        int pick;
+        goToTab(DGAME_TAB);
+    }
+    else
+    {
+        resetSession();                             // if no, reset the session
+    }
+
 }
 
 //End the current dining session
@@ -763,4 +785,39 @@ void MainWindow::disableRefillButtons()
     {
         refillButtons[i].setEnabled(false);
     }
+}
+
+void MainWindow::on_gameButton_1_clicked()
+{
+    int userPick = 1;
+    dessertGame.evalChoice(userPick);
+    resetSession();
+}
+
+void MainWindow::on_gameButton_2_clicked()
+{
+    int userPick = 2;
+    dessertGame.evalChoice(userPick);
+    resetSession();
+}
+
+void MainWindow::on_gameButton_3_clicked()
+{
+    int userPick = 3;
+    dessertGame.evalChoice(userPick);
+    resetSession();
+}
+
+void MainWindow::on_gameButton_4_clicked()
+{
+    int userPick = 4;
+    dessertGame.evalChoice(userPick);
+    resetSession();
+}
+
+void MainWindow::on_gameButton_5_clicked()
+{
+    int userPick = 5;
+    dessertGame.evalChoice(userPick);
+    resetSession();
 }
