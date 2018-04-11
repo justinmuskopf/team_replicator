@@ -14,6 +14,15 @@
 #define SERVER_HOST "se1.cse.unt.edu"
 #define SERVER_PORT 9292
 
+enum {
+    NOT_PLACED,
+    PLACED,
+    PREPARING,
+    READY,
+    ON_THE_WAY,
+    DELIVERED
+};
+
 class Table
 {
 public:
@@ -32,9 +41,12 @@ public:
     void clearTable();                          //Clear the Table of Customers
     void readFromServer();
     void sendRefillsToServer();
+    void setOrderStatus(int);
+    int getOrderStatus();
 private:
     unsigned int tableNum;                      //The table number
     int orderNum;                               //Current Order number
+    int orderStatus;
     Customer *currentCustomer;                  //Current Customer in focus
     QVector<Customer*> customers;               //All Customers at table
     Employee *waitstaff;                        //WaitStaff attending table

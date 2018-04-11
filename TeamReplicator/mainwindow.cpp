@@ -7,6 +7,7 @@
 #include "icons.h"
 #include <QSqlQuery>
 #include <QSqlRecord>
+#include <QTimer>
 #include <QDesktopWidget>
 #include <QMovie>
 #include <QProcess>
@@ -27,6 +28,8 @@ enum {
     GAMES_TAB,
     RECEIPT_TAB
 };
+
+
 
 void MainWindow::goToTab(int idx)
 {
@@ -484,6 +487,7 @@ void MainWindow::on_placeOrderButton_clicked()
         ui -> startOrderButton -> setEnabled(true);
         ui -> gameButton -> setEnabled(true);
         ui -> drinkButton -> setEnabled(true);
+        updateOrderStatus();
         initRefillScreen();
     }
 }
@@ -900,4 +904,38 @@ void MainWindow::initReceiptTab()
     ui -> tipTotalLabel -> setText("Tip (20%): " + QString::number(tip, 'f', 2));
     ui -> finalTotalLabel -> setText("Total: $" + QString::number(total, 'f', 2));
 
+}
+
+void MainWindow::updateOrderStatus()
+{
+    QString statusStr = "Order Status: ";
+    int status = thisTable -> getOrderStatus();
+    switch(status)
+    {
+    case NOT_PLACED:
+        statusStr.append("Not Placed");
+        break;
+    case PLACED:
+        statusStr.append("Placed");
+        break;
+    case PREPARING:
+        statusStr.append("Preparing");
+        break;
+    case READY:
+        statusStr.append("Ready");
+        break;
+    case ON_THE_WAY:
+        statusStr.append("On The Way");
+        break;
+    case DELIVERED:
+        statusStr.append("Delivered");
+    }
+
+    ui -> orderStatusLabel -> setText(statusStr);
+
+    if (status != DELIVERED)
+    {
+        thisTable -> setOrderStatus(status + 1);
+        //QTimer::singleShot(5000, this, SLOT(updateOrderStatus()));
+    }
 }

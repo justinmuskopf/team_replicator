@@ -132,6 +132,8 @@ private slots:
 
     void initReceiptTab();
 
+    void updateOrderStatus();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons
