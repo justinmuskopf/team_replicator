@@ -484,6 +484,7 @@ void MainWindow::on_placeOrderButton_clicked()
     else
     {
         goToTab(HOME_TAB);
+        ui -> surveyButton -> setEnabled(true);
         ui -> startOrderButton -> setEnabled(true);
         ui -> gameButton -> setEnabled(true);
         ui -> drinkButton -> setEnabled(true);
@@ -782,31 +783,26 @@ void MainWindow::on_surveySubmitButton_clicked()
 void MainWindow::on_gameButton_1_clicked()
 {
     dessertGame.evalChoice(1);
-    resetSession();
 }
 
 void MainWindow::on_gameButton_2_clicked()
 {
     dessertGame.evalChoice(2);
-    resetSession();
 }
 
 void MainWindow::on_gameButton_3_clicked()
 {
     dessertGame.evalChoice(3);
-    resetSession();
 }
 
 void MainWindow::on_gameButton_4_clicked()
 {
     dessertGame.evalChoice(4);
-    resetSession();
 }
 
 void MainWindow::on_gameButton_5_clicked()
 {
     dessertGame.evalChoice(5);
-    resetSession();
 }
 
 void MainWindow::on_cashButton_clicked()
@@ -829,9 +825,7 @@ void MainWindow::on_cashButton_clicked()
     {
         // if no, reset the session
         resetSession();
-    }
-
-    ui->surveyButton->setEnabled(true);         // Enable the feedback button after payment
+    }  
 }
 
 void MainWindow::on_creditButton_clicked()
@@ -888,8 +882,6 @@ void MainWindow::on_creditButton_clicked()
         // if no, reset the session
         resetSession();
     }
-
-    ui->surveyButton->setEnabled(true);         // Enable the feedback button after payment
 }
 
 void MainWindow::initReceiptTab()
@@ -936,6 +928,6 @@ void MainWindow::updateOrderStatus()
     if (status != DELIVERED)
     {
         thisTable -> setOrderStatus(status + 1);
-        //QTimer::singleShot(5000, this, SLOT(updateOrderStatus()));
+        QTimer::singleShot(5000, this, SLOT(updateOrderStatus()));
     }
 }
