@@ -47,6 +47,7 @@ private:
     unsigned int tableNum;                      //The table number
     int orderNum;                               //Current Order number
     int orderStatus;
+    int numEntrees;
     Customer *currentCustomer;                  //Current Customer in focus
     QVector<Customer*> customers;               //All Customers at table
     Employee *waitstaff;                        //WaitStaff attending table

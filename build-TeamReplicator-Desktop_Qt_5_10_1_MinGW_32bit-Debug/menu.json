@@ -184,5 +184,36 @@
 			"description": "NEED A DESCRIPTION AARON",
 			"price": 7.99
 		}
+	],
+	"merchandise": [{
+			"name": "Small Replicator Shirt",
+			"filename": "menu/merchandise/replicatorShirt.jpg",
+			"description": "Nazir got his hands on a spraypaint can... Please help us sell these.",
+			"price": 9.99
+		},
+		{
+			"name": "Medium Replicator Shirt",
+			"filename": "menu/merchandise/replicatorShirt.jpg",
+			"description": "Nazir got his hands on a spraypaint can... Please help us sell these.",
+			"price": 9.99
+		},
+		{
+			"name": "Large Replicator Shirt",
+			"filename": "menu/merchandise/replicatorShirt.jpg",
+			"description": "Nazir got his hands on a spraypaint can... Please help us sell these.",
+			"price": 9.99
+		},
+		{
+			"name": "XL Replicator Shirt",
+			"filename": "menu/merchandise/replicatorShirt.jpg",
+			"description": "Nazir got his hands on a spraypaint can... Please help us sell these.",
+			"price": 9.99
+		},
+		{
+			"name": "XXL Replicator Shirt",
+			"filename": "menu/merchandise/replicatorShirt.jpg",
+			"description": "Nazir got his hands on a spraypaint can... Please help us sell these.",
+			"price": 9.99
+		}
 	]	
 }

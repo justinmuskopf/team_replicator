@@ -4,6 +4,8 @@ Order::Order()
 {
     //Menu menu;
     //drink = menu.getItem(DRINKS, "Water");
+    numShirts = 0;
+    numEntrees = 0;
 }
 
 MenuVector Order::getOrder()
@@ -15,6 +17,16 @@ void Order::addToOrder(MenuItem item)
 {
     if (item.category == "drinks")
         drink = item;
+    if (item.category == "entrees")
+        numEntrees++;
+    if (item.category == "merchandise")
+    {
+        if (numEntrees)
+            item.price = 0.99;
+        numEntrees = (numEntrees - 1 >= 0) ? numEntrees - 1 : 0;
+        numShirts++;
+    }
+
     addToTotal(item.price);
     order.push_back(item);
 }

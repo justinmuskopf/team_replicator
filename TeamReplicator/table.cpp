@@ -6,7 +6,7 @@ Table::Table()
     currentCustomer = nullptr;
     server = new QTcpSocket;
 
-    //waitstaff = new Employee;
+    numEntrees = 0;
 
     orderStatus = NOT_PLACED;
 }
@@ -110,7 +110,7 @@ void Table::clearTable()
         delete customer;
     }
     customers.clear();
-
+    orderStatus = NOT_PLACED;
     orderNum = -1;
 }
 

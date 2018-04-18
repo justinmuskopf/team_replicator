@@ -134,6 +134,8 @@ private slots:
 
     void updateOrderStatus();
 
+    void on_merButton_clicked();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons

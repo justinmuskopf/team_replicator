@@ -24,6 +24,8 @@ private:
     MenuVector order;                   //Vector of MenuItems representing an order
     MenuItem drink;                     //What the Customer is drinking
     float total;                        //Subtotal of all items
+    int numShirts;
+    int numEntrees;
 };
 
 #endif // ORDER_H
