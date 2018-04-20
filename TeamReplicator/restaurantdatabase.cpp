@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <QVariant>
 #include <QDate>
+
 const QString RestaurantDatabase::getEmployeeFmt = "SELECT * FROM `employees` WHERE %1=%2";
 const QString RestaurantDatabase::addEmployeeFmt = "INSERT INTO `employees` (Emp_Id, Name, Lvl, Pin) VALUES (%1, %2, %3, %4)";
 const QString RestaurantDatabase::addOrderFmt = "INSERT INTO `sales` (Emp_Id, Sale_Date, Total) VALUES (%1, %2, %3)";
@@ -114,4 +115,26 @@ int RestaurantDatabase::getOrderNumber()
     int orderNum = query.value("Id").toInt();
 
     return (orderNum != 0) ? orderNum + 1 : -1;
+}
+
+QSqlQueryModel *RestaurantDatabase::getAllSales()
+{
+    QString queryStr = "SELECT * FROM `sales`" ;
+    QSqlQuery query(queryStr, db);
+    QSqlQueryModel *view = new QSqlQueryModel();
+    query.exec();
+    view->setQuery(query);
+    return view;
+
+}
+
+QSqlQueryModel *RestaurantDatabase::getAllAlerts()
+{
+    QString queryStr = "SELECT * FROM `table_messages`" ;
+    QSqlQuery query(queryStr, db);
+    QSqlQueryModel *view = new QSqlQueryModel();
+    query.exec();
+    view->setQuery(query);
+    return view;
+
 }

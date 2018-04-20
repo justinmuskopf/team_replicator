@@ -79,8 +79,41 @@ MainWindow::MainWindow(QWidget *parent) :
     ui -> entIcon -> setPixmap(QPixmap(ENTREE_ICON).scaled(iconSize, Qt::KeepAspectRatio));
     ui -> driIcon -> setPixmap(QPixmap(DRINK_ICON).scaled(iconSize, Qt::KeepAspectRatio));
     ui -> kidIcon -> setPixmap(QPixmap(KIDS_ICON).scaled(iconSize, Qt::KeepAspectRatio));
-    ui -> tableIcon -> setPixmap(QPixmap(TABLE_ICON).scaled(iconSize, Qt::KeepAspectRatio));
 
+    // Setup Tables Icons for Waiter
+
+    ui -> tableButton_1 -> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_1 -> setIconSize(QSize(100,100));
+    ui -> tableButton_2 -> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_2 -> setIconSize(QSize(100,100));
+    ui -> tableButton_3 -> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_3 -> setIconSize(QSize(100,100));
+    ui -> tableButton_4 -> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_4 -> setIconSize(QSize(100,100));
+    ui -> tableButton_5 -> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_5 -> setIconSize(QSize(100,100));
+    ui -> tableButton_6 -> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_6 -> setIconSize(QSize(100,100));
+    ui -> tableButton_7 -> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_7 -> setIconSize(QSize(100,100));
+    ui -> tableButton_8 -> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_8 -> setIconSize(QSize(100,100));
+    ui -> tableButton_9 -> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_9 -> setIconSize(QSize(100,100));
+    ui -> tableButton_10 -> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_10-> setIconSize(QSize(100,100));
+    ui -> tableButton_11-> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_11-> setIconSize(QSize(100,100));
+    ui -> tableButton_12-> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_12-> setIconSize(QSize(100,100));
+    ui -> tableButton_13-> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_13-> setIconSize(QSize(100,100));
+    ui -> tableButton_14 -> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_14-> setIconSize(QSize(100,100));
+    ui -> tableButton_15-> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_15-> setIconSize(QSize(100,100));
+    ui -> tableButton_16-> setIcon(QIcon(TABLE_ICON));
+    ui -> tableButton_16-> setIconSize(QSize(100,100));
     //Hide tabs at top of window
     ui -> tabWidget -> findChild<QTabBar *>() -> hide();
 
@@ -225,15 +258,21 @@ void MainWindow::on_enterButton_clicked()
     Employee *employee = db.getEmployeeByPin(pin);
     if (employee == nullptr)
     {
+       ui -> loginLabel -> setText("INVALID LOGIN!");
        qDebug() << "No employee returned...";
        return;
     }
+    ui -> loginLabel -> setText("");
 
     QString level = employee -> getLevel();
     if (level == "waitstaff")
     {
         ui -> waitstaffWelcomeLabel -> setText("Welcome " + employee -> getName());
         goToTab(WAITSTAFF_TAB);
+        ui ->waiterOrderView->setModel(db.getAllSales()); // only checks database on initial login needs to constantly poll while logged in
+        ui ->waiterAlertsView->setModel(db.getAllAlerts());
+       // ui -> waiterOrderList -> addItem(ui -> menuList -> item(i) -> text());
+      //  ui -> waiterAlertList ->
     }
     else if (level == "kitchen")
     {
@@ -546,7 +585,12 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     else if (text == "5")
         goToTab(LOGIN_TAB);
     else if (text == "6")
+    {
         goToTab(WAITSTAFF_TAB);
+       // db.getAllSales();
+        ui ->waiterOrderView->setModel(db.getAllSales());
+        ui ->waiterAlertsView->setModel(db.getAllAlerts());
+    }
     else if (text == "7")
         goToTab(KITCHEN_TAB);
     else if (text == "8")
@@ -961,3 +1005,8 @@ void MainWindow::on_couponButton_clicked() // When user inputs coupon and to app
     ui -> couponInput -> setPlainText(""); // reset coupon input
  }
 
+
+void MainWindow::on_waiterLogout_clicked()
+{
+    goHome();
+}

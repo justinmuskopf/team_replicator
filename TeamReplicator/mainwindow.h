@@ -134,6 +134,8 @@ private slots:
 
     void on_couponButton_clicked();
 
+    void on_waiterLogout_clicked();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons

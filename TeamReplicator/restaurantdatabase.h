@@ -7,6 +7,8 @@
 #include <QSqlDatabase>
 #include "employee.h"
 #include "order.h"
+#include <QSqlQueryModel>
+
 
 #define DB_USER "repuser"           //DB Username
 #define DB_PASS "pass"           //DB Password
@@ -32,6 +34,9 @@ public:
     void     addEmployeeToDb(Employee *employee);           //Add an Employee to the DB
     void     addOrderToDb(Order *order, int orderNum = -1); //Add an Order to the DB
     int      getOrderNumber();                              //Returns the current order number
+    QSqlQueryModel *getAllSales();                          //Returns table of all sales
+    QSqlQueryModel *getAllAlerts();                         //Returns table of all alerts
+
 private:
     QSqlDatabase db;                                        //Database
     Employee *getEmployeeFromDb(QString key, QString value);//Internal function to get Employee from DB
