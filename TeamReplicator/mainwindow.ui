@@ -33,7 +33,7 @@
        <string notr="true">background-color: rgb(46, 47, 48);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="homeTab">
        <attribute name="title">
@@ -1791,6 +1791,10 @@ color: rgb(198, 198, 198);</string>
        <layout class="QVBoxLayout" name="verticalLayout_11">
         <item>
          <widget class="QGroupBox" name="groupBox_10">
+          <property name="styleSheet">
+           <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
+          </property>
           <property name="title">
            <string>GroupBox</string>
           </property>
@@ -1883,6 +1887,10 @@ color: rgb(198, 198, 198);</string>
              <height>100</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
+           </property>
            <property name="text">
             <string>2</string>
            </property>
@@ -1895,6 +1903,10 @@ color: rgb(198, 198, 198);</string>
              <width>100</width>
              <height>100</height>
             </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
            </property>
            <property name="text">
             <string>3</string>
@@ -1909,6 +1921,10 @@ color: rgb(198, 198, 198);</string>
              <height>100</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
+           </property>
            <property name="text">
             <string>4</string>
            </property>
@@ -1921,6 +1937,10 @@ color: rgb(198, 198, 198);</string>
              <width>100</width>
              <height>100</height>
             </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
            </property>
            <property name="text">
             <string>7</string>
@@ -1935,6 +1955,10 @@ color: rgb(198, 198, 198);</string>
              <height>100</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
+           </property>
            <property name="text">
             <string>8</string>
            </property>
@@ -1947,6 +1971,10 @@ color: rgb(198, 198, 198);</string>
              <width>100</width>
              <height>100</height>
             </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
            </property>
            <property name="text">
             <string>6</string>
@@ -1961,6 +1989,10 @@ color: rgb(198, 198, 198);</string>
              <height>100</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
+           </property>
            <property name="text">
             <string>5</string>
            </property>
@@ -1973,6 +2005,10 @@ color: rgb(198, 198, 198);</string>
              <width>100</width>
              <height>100</height>
             </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
            </property>
            <property name="text">
             <string>11</string>
@@ -1987,6 +2023,10 @@ color: rgb(198, 198, 198);</string>
              <height>100</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
+           </property>
            <property name="text">
             <string>12</string>
            </property>
@@ -1999,6 +2039,10 @@ color: rgb(198, 198, 198);</string>
              <width>100</width>
              <height>100</height>
             </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
            </property>
            <property name="text">
             <string>10</string>
@@ -2013,6 +2057,10 @@ color: rgb(198, 198, 198);</string>
              <height>100</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
+           </property>
            <property name="text">
             <string>9</string>
            </property>
@@ -2025,6 +2073,10 @@ color: rgb(198, 198, 198);</string>
              <width>100</width>
              <height>100</height>
             </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
            </property>
            <property name="text">
             <string>15</string>
@@ -2039,6 +2091,10 @@ color: rgb(198, 198, 198);</string>
              <height>100</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
+           </property>
            <property name="text">
             <string>16</string>
            </property>
@@ -2052,6 +2108,10 @@ color: rgb(198, 198, 198);</string>
              <height>100</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
+           </property>
            <property name="text">
             <string>14</string>
            </property>
@@ -2064,6 +2124,10 @@ color: rgb(198, 198, 198);</string>
              <width>100</width>
              <height>100</height>
             </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
            </property>
            <property name="text">
             <string>13</string>
@@ -2079,8 +2143,8 @@ color: rgb(198, 198, 198);</string>
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(188, 188, 188);
-font: 57 10pt &quot;Counter-Strike&quot;;</string>
+            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
            </property>
            <property name="text">
             <string>Logout</string>

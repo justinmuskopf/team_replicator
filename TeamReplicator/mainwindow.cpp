@@ -87,38 +87,39 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Setup Tables Icons for Waiter
 
+    QSize tableSize(70, 70);
     ui -> tableButton_1 -> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_1 -> setIconSize(QSize(100,100));
+    ui -> tableButton_1 -> setIconSize(QSize(tableSize));
     ui -> tableButton_2 -> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_2 -> setIconSize(QSize(100,100));
+    ui -> tableButton_2 -> setIconSize(QSize(tableSize));
     ui -> tableButton_3 -> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_3 -> setIconSize(QSize(100,100));
+    ui -> tableButton_3 -> setIconSize(QSize(tableSize));
     ui -> tableButton_4 -> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_4 -> setIconSize(QSize(100,100));
+    ui -> tableButton_4 -> setIconSize(QSize(tableSize));
     ui -> tableButton_5 -> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_5 -> setIconSize(QSize(100,100));
+    ui -> tableButton_5 -> setIconSize(QSize(tableSize));
     ui -> tableButton_6 -> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_6 -> setIconSize(QSize(100,100));
+    ui -> tableButton_6 -> setIconSize(QSize(tableSize));
     ui -> tableButton_7 -> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_7 -> setIconSize(QSize(100,100));
+    ui -> tableButton_7 -> setIconSize(QSize(tableSize));
     ui -> tableButton_8 -> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_8 -> setIconSize(QSize(100,100));
+    ui -> tableButton_8 -> setIconSize(QSize(tableSize));
     ui -> tableButton_9 -> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_9 -> setIconSize(QSize(100,100));
+    ui -> tableButton_9 -> setIconSize(QSize(tableSize));
     ui -> tableButton_10 -> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_10-> setIconSize(QSize(100,100));
+    ui -> tableButton_10-> setIconSize(QSize(tableSize));
     ui -> tableButton_11-> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_11-> setIconSize(QSize(100,100));
+    ui -> tableButton_11-> setIconSize(QSize(tableSize));
     ui -> tableButton_12-> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_12-> setIconSize(QSize(100,100));
+    ui -> tableButton_12-> setIconSize(QSize(tableSize));
     ui -> tableButton_13-> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_13-> setIconSize(QSize(100,100));
+    ui -> tableButton_13-> setIconSize(QSize(tableSize));
     ui -> tableButton_14 -> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_14-> setIconSize(QSize(100,100));
+    ui -> tableButton_14-> setIconSize(QSize(tableSize));
     ui -> tableButton_15-> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_15-> setIconSize(QSize(100,100));
+    ui -> tableButton_15-> setIconSize(QSize(tableSize));
     ui -> tableButton_16-> setIcon(QIcon(TABLE_ICON));
-    ui -> tableButton_16-> setIconSize(QSize(100,100));
+    ui -> tableButton_16-> setIconSize(QSize(tableSize));
     //Hide tabs at top of window
     ui -> tabWidget -> findChild<QTabBar *>() -> hide();
 
