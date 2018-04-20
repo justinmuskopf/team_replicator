@@ -79,6 +79,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui -> entIcon -> setPixmap(QPixmap(ENTREE_ICON).scaled(iconSize, Qt::KeepAspectRatio));
     ui -> driIcon -> setPixmap(QPixmap(DRINK_ICON).scaled(iconSize, Qt::KeepAspectRatio));
     ui -> kidIcon -> setPixmap(QPixmap(KIDS_ICON).scaled(iconSize, Qt::KeepAspectRatio));
+    ui -> tableIcon -> setPixmap(QPixmap(TABLE_ICON).scaled(iconSize, Qt::KeepAspectRatio));
 
     //Hide tabs at top of window
     ui -> tabWidget -> findChild<QTabBar *>() -> hide();
@@ -650,7 +651,7 @@ void MainWindow::on_payForOrderButton_clicked()
 
     ui -> paymentList -> clear();
     ui -> receiptList -> clear();
-
+    ui -> couponInput -> setPlainText(""); // reset coupon input
     ui -> subTotalLabel -> setText("Subtotal: $" + ui -> totalToPayLabel -> text().split("$")[1]);
 
     //For every customer in current payment, add their order to DB
@@ -828,6 +829,8 @@ void MainWindow::on_cashButton_clicked()
     }
 
     ui->surveyButton->setEnabled(true);         // Enable the feedback button after payment
+    ui -> couponLabelStatus -> setText("");
+
 }
 
 void MainWindow::on_creditButton_clicked()
@@ -886,6 +889,7 @@ void MainWindow::on_creditButton_clicked()
     }
 
     ui->surveyButton->setEnabled(true);         // Enable the feedback button after payment
+    ui -> couponLabelStatus -> setText("");
 }
 
 void MainWindow::initReceiptTab()
@@ -901,3 +905,59 @@ void MainWindow::initReceiptTab()
     ui -> finalTotalLabel -> setText("Total: $" + QString::number(total, 'f', 2));
 
 }
+
+void MainWindow::on_couponButton_clicked() // When user inputs coupon and to apply the discount code
+{
+    if (ui -> couponInput -> toPlainText() == "")
+        return;
+
+    else if ( ui -> couponInput -> toPlainText() == "FREEFOOD") //check for buy one get one free entree promo code
+    {
+        int entree_count = 0, entree_max_value = 0, entree_idx = 0;
+        QString name = ui -> couponInput -> toPlainText().trimmed();
+        ui -> couponLabelStatus -> setText("Valid Coupon Entered!");
+        Order *currentOrder= thisTable -> getCurrentCustomer() -> getOrder();
+        MenuVector order = thisTable -> getCurrentCustomer()->getOrder()->getOrder();
+        if ( currentOrder -> getCoupon()== NULL ) // check if coupon already been used for order
+        {
+            for (int i = 0; i < order.size(); i++)
+            {
+                if( order[i].category == "entrees") // check for entree category
+                {
+
+                    entree_count+=1;
+                    if(order[i].price > entree_max_value) // keep track of highest entree price for coupon
+                    {
+                        entree_max_value = order[i].price;
+                        entree_idx = i; // save highest id location
+                    }
+
+                }
+            }
+            if(entree_count >= 2)
+            {
+                ui -> receiptList -> addItem("COUPON REDEEMED:...." + order[entree_idx].name + " $" + QString::number(0-(order[entree_idx].price)));
+                currentOrder->setCoupon(1); // so coupon cannot be redeemed again on same order
+                currentOrder->addToTotal(0-order[entree_idx].price);
+                ui -> subTotalLabel -> setText("Subtotal: $" + QString::number(currentOrder -> getTotal()));
+                initReceiptTab();
+                qDebug() << currentOrder->getTotal();
+                //  ui -> subTotalLabel -> setText("Subtotal: $" + ui -> totalToPayLabel -> text().split("$")[1]);
+                updatePaymentTotals();
+            }
+        }
+        else
+        {
+            ui -> couponLabelStatus -> setText("Coupon Already Redeemed!");
+        }
+
+        //currentOrder->printOrder();
+    }
+
+    else
+    {
+        ui -> couponLabelStatus -> setText("Invalid Coupon Entered!");
+    }
+    ui -> couponInput -> setPlainText(""); // reset coupon input
+ }
+

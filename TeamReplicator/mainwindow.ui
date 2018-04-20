@@ -33,7 +33,7 @@
        <string notr="true">background-color: rgb(46, 47, 48);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>13</number>
       </property>
       <widget class="QWidget" name="homeTab">
        <attribute name="title">
@@ -1732,14 +1732,566 @@ color: rgb(198, 198, 198);</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_11">
         <item>
-         <widget class="QLabel" name="waitstaffWelcomeLabel">
-          <property name="styleSheet">
-           <string notr="true">font: 57 32pt &quot;Counter-Strike&quot;;
+         <widget class="QGroupBox" name="groupBox_10">
+          <property name="title">
+           <string>GroupBox</string>
+          </property>
+          <widget class="QListWidget" name="orderList_2">
+           <property name="geometry">
+            <rect>
+             <x>610</x>
+             <y>70</y>
+             <width>881</width>
+             <height>401</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 16pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="orderNumLabel_3">
+           <property name="geometry">
+            <rect>
+             <x>710</x>
+             <y>40</y>
+             <width>940</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#c6c6c6;&quot;&gt;Alerts&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="waitstaffWelcomeLabel">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>10</y>
+             <width>511</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 57 32pt &quot;Counter-Strike&quot;;
 color: rgb(208, 208, 208);</string>
-          </property>
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
+           </property>
+           <property name="text">
+            <string>Welcome to the Waitstaff</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>110</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_2">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>110</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_3">
+           <property name="geometry">
+            <rect>
+             <x>340</x>
+             <y>110</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_4">
+           <property name="geometry">
+            <rect>
+             <x>500</x>
+             <y>110</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_5">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>230</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_6">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>230</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_7">
+           <property name="geometry">
+            <rect>
+             <x>500</x>
+             <y>230</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_8">
+           <property name="geometry">
+            <rect>
+             <x>340</x>
+             <y>230</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_9">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>360</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_10">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>360</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_11">
+           <property name="geometry">
+            <rect>
+             <x>500</x>
+             <y>360</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_12">
+           <property name="geometry">
+            <rect>
+             <x>340</x>
+             <y>360</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_13">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>460</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_14">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>460</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_15">
+           <property name="geometry">
+            <rect>
+             <x>500</x>
+             <y>460</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tableIcon_16">
+           <property name="geometry">
+            <rect>
+             <x>340</x>
+             <y>460</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
          </widget>
         </item>
        </layout>
@@ -2857,6 +3409,33 @@ color: rgb(208, 208, 208);</string>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_6">
               <item>
+               <widget class="QLabel" name="tableNameLabel">
+                <property name="font">
+                 <font>
+                  <family>Counter-Strike</family>
+                  <pointsize>20</pointsize>
+                  <weight>7</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Table Name (Optional):&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="tableNameInput">
+                <property name="styleSheet">
+                 <string notr="true">font: 57 28pt &quot;Counter-Strike&quot;;
+color: rgb(238, 238, 236);</string>
+                </property>
+               </widget>
+              </item>
+              <item>
                <widget class="QLabel" name="label">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
@@ -2868,7 +3447,7 @@ color: rgb(208, 208, 208);</string>
                  <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;</string>
                 </property>
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Customer Name:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -3539,8 +4118,8 @@ color: rgb(188, 188, 188);</string>
              <widget class="QPlainTextEdit" name="emailInput">
               <property name="geometry">
                <rect>
-                <x>380</x>
-                <y>226</y>
+                <x>210</x>
+                <y>240</y>
                 <width>256</width>
                 <height>25</height>
                </rect>
@@ -3551,12 +4130,19 @@ color: rgb(188, 188, 188);</string>
                 <height>25</height>
                </size>
               </property>
+              <property name="styleSheet">
+               <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(238, 238, 236);</string>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
              </widget>
              <widget class="QCheckBox" name="checkBox">
               <property name="geometry">
                <rect>
-                <x>176</x>
-                <y>224</y>
+                <x>10</x>
+                <y>230</y>
                 <width>200</width>
                 <height>30</height>
                </rect>
@@ -3580,12 +4166,99 @@ color: rgb(188, 188, 188);</string>
                </size>
               </property>
               <property name="styleSheet">
-               <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;</string>
+               <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
               </property>
               <property name="text">
                <string>Email Receipt</string>
               </property>
              </widget>
+             <widget class="QPlainTextEdit" name="couponInput">
+              <property name="geometry">
+               <rect>
+                <x>130</x>
+                <y>0</y>
+                <width>256</width>
+                <height>25</height>
+               </rect>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(238, 238, 236);</string>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QLabel" name="couponLabel">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>-10</y>
+                <width>880</width>
+                <height>42</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#d0d0d0;&quot;&gt;Coupon:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="couponButton">
+              <property name="geometry">
+               <rect>
+                <x>430</x>
+                <y>-10</y>
+                <width>121</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+              </property>
+              <property name="text">
+               <string>Apply</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="couponLabelStatus">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>50</y>
+                <width>381</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <zorder>couponLabel</zorder>
+             <zorder>emailInput</zorder>
+             <zorder>checkBox</zorder>
+             <zorder>couponInput</zorder>
+             <zorder>couponButton</zorder>
+             <zorder>couponLabelStatus</zorder>
             </widget>
            </item>
            <item>

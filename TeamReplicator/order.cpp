@@ -4,6 +4,7 @@ Order::Order()
 {
     //Menu menu;
     //drink = menu.getItem(DRINKS, "Water");
+    coupon = "";
 }
 
 MenuVector Order::getOrder()
@@ -56,6 +57,8 @@ void Order::printOrder()
     }
 }
 
+
+
 void Order::addToTotal(float add) {total += add;}
 float Order::getTotal() {return total;}
 void Order::subtractFromTotal(float sub) {total -= sub;}
@@ -70,3 +73,14 @@ MenuItem Order::getDrink()
 {
     return drink;
 }
+
+void Order::setCoupon(int coup)
+{
+    coupon=coup;
+}
+
+QString Order::getCoupon()
+{
+    return coupon;
+}
+

@@ -5,11 +5,12 @@
 #define ORDER_H
 
 #include "menu.h"
+#include <QString>
 
 class Order
 {
 public:
-    Order();                            //Default Constructor
+    Order();   //Default Constructor
     MenuVector getOrder();              //Return the MenuVector of Items
     void addToOrder(MenuItem item);     //Add item to order
     void removeFromOrder(QString name); //Remove from order by name
@@ -19,11 +20,15 @@ public:
     float getTotal();                   //Return order subtotal
     void subtractFromTotal(float sub);  //Subtract from order subtotal
     void resetOrder();                  //Reset the current order
-    MenuItem getDrink();                 //Returns the drink on an order
+    MenuItem getDrink();                //Returns the drink on an order
+    void setCoupon(int coup);
+    QString getCoupon();
+
 private:
     MenuVector order;                   //Vector of MenuItems representing an order
-    MenuItem drink;                     //What the Customer is drinking
+    MenuItem drink;                     //What the Customer is drinking 
     float total;                        //Subtotal of all items
+    QString coupon;
 };
 
 #endif // ORDER_H
