@@ -18,3 +18,6 @@
 *ui_mainwindow.h
 #debug folder
 *32bit-Debug/debug/*
+
+#release folder
+*32bit-Release/*
