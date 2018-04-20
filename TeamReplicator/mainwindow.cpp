@@ -221,6 +221,13 @@ void MainWindow::on_assistButton_clicked()
 //Help button clicked
 void MainWindow::on_helpButton_clicked()
 {
+    QMessageBox msgBox2;
+    msgBox2.setWindowTitle("The Replicator");
+    msgBox2.setText("The manager has been notified, and will be with you shortly.");
+    msgBox2.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+
+    msgBox2.exec();
 }
 
 //Go to home page
@@ -777,6 +784,7 @@ void MainWindow::endSession()
     ui -> menuTotalLabel -> setText("Total: $0.00");
     ui -> orderStatusLabel -> setText("Order Status: Not Placed");
     thisTable -> setOrderStatus(NOT_PLACED);
+    ui -> surveyButton -> setEnabled(false);
     //updateOrderStatus();
 }
 
@@ -921,7 +929,6 @@ void MainWindow::on_cashButton_clicked()
     }
     else
         resetSession();
-    }
 
     ui->surveyButton->setEnabled(true);         // Enable the feedback button after payment
     ui -> couponLabelStatus -> setText("");
@@ -990,7 +997,6 @@ void MainWindow::on_creditButton_clicked()
 
     ui->surveyButton->setEnabled(true);         // Enable the feedback button after payment
     ui -> couponLabelStatus -> setText("");
->>>>>>> requirements_fix
 }
 
 void MainWindow::initReceiptTab()

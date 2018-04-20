@@ -33,8 +33,7 @@
        <string notr="true">background-color: rgb(46, 47, 48);</string>
       </property>
       <property name="currentIndex">
-       <number>5</number>
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="homeTab">
        <attribute name="title">
@@ -109,11 +108,10 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">font: 57 28pt &quot;Counter-Strike&quot;;
-color: rgb(188, 188, 188);</string>
+           <string notr="true">font: 57 28pt &quot;Counter-Strike&quot;;</string>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Order Status: Not Placed&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>Order Status: Not Placed</string>
           </property>
          </widget>
         </item>
@@ -164,7 +162,7 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
          </widget>
         </item>
         <item row="2" column="0" rowspan="2">
-         <widget class="QGroupBox" name="merchButton">
+         <widget class="QGroupBox" name="groupBox_2">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
             <horstretch>0</horstretch>
@@ -178,10 +176,10 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
            <string/>
           </property>
           <layout class="QGridLayout" name="gridLayout_8">
-           <item row="0" column="1">
-            <widget class="QPushButton" name="appButton">
+           <item row="5" column="1">
+            <widget class="QPushButton" name="kidButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -191,14 +189,52 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
 font: 57 24pt &quot;Counter-Strike&quot;;</string>
              </property>
              <property name="text">
-              <string>Appetizers</string>
+              <string>Kids' Menu</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="kidIcon">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="appIcon">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>TextLabel</string>
              </property>
             </widget>
            </item>
            <item row="3" column="1">
             <widget class="QPushButton" name="desButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -215,7 +251,7 @@ font: 57 24pt &quot;Counter-Strike&quot;;</string>
            <item row="1" column="1">
             <widget class="QPushButton" name="entButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -229,35 +265,27 @@ font: 57 24pt &quot;Counter-Strike&quot;;</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="appIcon">
+           <item row="0" column="1">
+            <widget class="QPushButton" name="appButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 24pt &quot;Counter-Strike&quot;;</string>
              </property>
              <property name="text">
-              <string>TextLabel</string>
+              <string>Appetizers</string>
              </property>
             </widget>
            </item>
            <item row="2" column="1">
             <widget class="QPushButton" name="driButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -271,35 +299,10 @@ font: 57 24pt &quot;Counter-Strike&quot;;</string>
              </property>
             </widget>
            </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="driIcon">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>TextLabel</string>
-             </property>
-            </widget>
-           </item>
            <item row="4" column="1">
             <widget class="QPushButton" name="sidButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -313,19 +316,13 @@ font: 57 24pt &quot;Counter-Strike&quot;;</string>
              </property>
             </widget>
            </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="desIcon">
+           <item row="2" column="0">
+            <widget class="QLabel" name="driIcon">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
              </property>
              <property name="maximumSize">
               <size>
@@ -338,19 +335,13 @@ font: 57 24pt &quot;Counter-Strike&quot;;</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="entIcon">
+           <item row="3" column="0">
+            <widget class="QLabel" name="desIcon">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
              </property>
              <property name="maximumSize">
               <size>
@@ -366,16 +357,10 @@ font: 57 24pt &quot;Counter-Strike&quot;;</string>
            <item row="4" column="0">
             <widget class="QLabel" name="sidIcon">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
              </property>
              <property name="maximumSize">
               <size>
@@ -388,19 +373,13 @@ font: 57 24pt &quot;Counter-Strike&quot;;</string>
              </property>
             </widget>
            </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="kidIcon">
+           <item row="1" column="0">
+            <widget class="QLabel" name="entIcon">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
              </property>
              <property name="maximumSize">
               <size>
@@ -413,62 +392,21 @@ font: 57 24pt &quot;Counter-Strike&quot;;</string>
              </property>
             </widget>
            </item>
-           <item row="5" column="1">
-            <widget class="QPushButton" name="kidButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(188, 188, 188);
-font: 57 24pt &quot;Counter-Strike&quot;;</string>
-             </property>
+           <item row="6" column="0">
+            <widget class="QLabel" name="merIcon">
              <property name="text">
-              <string>Kids' Menu</string>
+              <string>TextLabel</string>
              </property>
             </widget>
            </item>
            <item row="6" column="1">
             <widget class="QPushButton" name="merButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
              <property name="styleSheet">
               <string notr="true">background-color: rgb(188, 188, 188);
 font: 57 24pt &quot;Counter-Strike&quot;;</string>
              </property>
              <property name="text">
               <string>Merchandise</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="merIcon">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>TextLabel</string>
              </property>
             </widget>
            </item>
@@ -3632,33 +3570,8 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
         <string>dessertGame</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_18">
-        <item>
-         <spacer name="verticalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
         <item alignment="Qt::AlignHCenter">
          <widget class="QLabel" name="gameLabel">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>300</height>
-           </size>
-          </property>
           <property name="layoutDirection">
            <enum>Qt::LeftToRight</enum>
           </property>
@@ -3675,6 +3588,22 @@ color: rgb(208, 208, 208);</string>
          </widget>
         </item>
         <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <layout class="QHBoxLayout" name="horizontalLayout_9">
           <item>
            <widget class="QPushButton" name="gameButton_1">
@@ -3683,12 +3612,6 @@ color: rgb(208, 208, 208);</string>
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>200</height>
-             </size>
             </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(188, 188, 188);
@@ -3707,12 +3630,6 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>200</height>
-             </size>
-            </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(188, 188, 188);
 font: 57 20pt &quot;Counter-Strike&quot;;</string>
@@ -3729,12 +3646,6 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>200</height>
-             </size>
             </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(188, 188, 188);
@@ -3753,12 +3664,6 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>200</height>
-             </size>
-            </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(188, 188, 188);
 font: 57 20pt &quot;Counter-Strike&quot;;</string>
@@ -3775,12 +3680,6 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>200</height>
-             </size>
             </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(188, 188, 188);
@@ -3799,7 +3698,7 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
            <enum>Qt::Vertical</enum>
           </property>
           <property name="sizeType">
-           <enum>QSizePolicy::MinimumExpanding</enum>
+           <enum>QSizePolicy::Preferred</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -4143,11 +4042,7 @@ color: rgb(238, 238, 236);</string>
               </property>
               <property name="styleSheet">
                <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
-<<<<<<< HEAD
 color: rgb(188, 188, 188);</string>
-=======
-color: rgb(255, 255, 255);</string>
->>>>>>> requirements_fix
               </property>
               <property name="text">
                <string>Email Receipt</string>

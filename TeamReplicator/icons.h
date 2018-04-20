@@ -25,6 +25,5 @@ const QString LOADING_GIF = IMG_DIR + "loading.gif";                        //Lo
 const QString MERCH_ICON = IMG_DIR + CATEGORIES[MERCHANDISE] + ".ico";      //Merchandise Icon
 const QString APPROVED_ICON = IMG_DIR + "approved.png";
 const QString TABLE_ICON = IMG_DIR + "table.png";                           //Table icons
-const QString MERCH_ICON = IMG_DIR + CATEGORIES[MERCHANDISE] + ".ico";      //Merchandise Icon
-const QString APPROVED_ICON = IMG_DIR + "approved.png";
+
 #endif // ICONS_H
