@@ -28,6 +28,7 @@ struct MenuItem
     QString description;//Description of the item
     QPixmap image;      //Image of the item
     QString category;   //Category of the menu item
+    QString comment;
     float price;        //Price of the item
     void print();       //Print menuItem info
 };

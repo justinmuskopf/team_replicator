@@ -4,6 +4,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QTextEdit>
 #include <QMainWindow>
 #include <QLabel>
 #include <QPixmap>
@@ -140,6 +141,8 @@ private slots:
 
     void on_merButton_clicked();
 
+    void submitComment();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons
@@ -150,6 +153,9 @@ private:
     RestaurantDatabase db;                      //Database
     Table *thisTable;                           //Current table
     dGame dessertGame;
+    QDialog *commentDlg;
+    QTextEdit *commentBox;
+
     bool backPressed;                           //Back button pressed
     int lastPage;                               //Index of last page
     void beginSession();                        //Begin dining session

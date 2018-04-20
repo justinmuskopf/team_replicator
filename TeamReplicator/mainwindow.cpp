@@ -436,6 +436,32 @@ void MainWindow::addToOrderList(int num)
     Order *currentOrder = currentCustomer -> getOrder();
     MenuItem item = restaurant.getMenu(restaurant.getMenuCategory())[num];
 
+    QMessageBox msgBox2;
+    msgBox2.setWindowTitle("The Replicator");
+    msgBox2.setText("Would you like to add a custom request to this item?");
+    msgBox2.setStandardButtons(QMessageBox::No | QMessageBox::Yes);
+    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+
+    if (msgBox2.exec() == QMessageBox::Yes)
+    {
+        commentDlg = new QDialog(this);
+        commentBox = new QTextEdit(commentDlg);
+        commentBox -> setStyleSheet("\nfont: 57 20pt \"Counter-Strike\";\ncolor: rgb(208, 208, 208);");
+        QGridLayout *layout = new QGridLayout;
+        QPushButton *submitButton = new QPushButton("Submit");
+        submitButton -> setStyleSheet("\nfont: 57 20pt \"Counter-Strike\";\ncolor: rgb(208, 208, 208);");
+        QLabel *label = new QLabel("Enter Comment:");
+        label -> setStyleSheet("\nfont: 57 14pt \"Counter-Strike\";\ncolor: rgb(208, 208, 208);");
+        layout -> addWidget(label, 0, 0, 1, 1, Qt::AlignCenter);
+        layout -> addWidget(commentBox, 1, 0, 1, 1, Qt::AlignCenter);
+        layout -> addWidget(submitButton, 2, 0, 1, 1, Qt::AlignCenter);
+        commentDlg -> setLayout(layout);
+        commentDlg -> show();
+        connect(submitButton, SIGNAL(clicked(bool)), commentDlg, SLOT(close()));
+        //connect(commentDlg, SIGNAL(finished(int)), this, SLOT(submitComment(currentOrder)));
+    }
+
+
     //Add menu item to list and current order
     ui -> menuList -> addItem(formatForList(item));
     currentOrder -> addToOrder(item);
@@ -1128,4 +1154,9 @@ void MainWindow::updateOrderStatus()
         thisTable -> setOrderStatus(status + 1);
         QTimer::singleShot(5000, this, SLOT(updateOrderStatus()));
     }
+}
+
+void MainWindow::submitComment()
+{
+    qDebug() << "Worked!";
 }
