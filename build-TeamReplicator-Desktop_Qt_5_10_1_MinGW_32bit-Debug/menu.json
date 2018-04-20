@@ -157,31 +157,31 @@
 	"kids": [{
 			"name": "Chicken Tendies",
 			"filename": "menu/kids/tendies.jpg",
-			"description": "NEED A DESCRIPTION AARON",
+			"description": "Made from REAL CHICKEN!",
 			"price": 4.99
 		},
 		{
 			"name": "Kid's Quesadilla",
 			"filename": "menu/kids/quesadilla.jpg",
-			"description": "NEED A DESCRIPTION AARON",
+			"description": "Made from REAL KIDS!",
 			"price": 4.99
 		},
 		{
 			"name": "Grilled Cheese",
 			"filename": "menu/entrees/grilled_cheese.jpg",
-			"description": "NEED A DESCRIPTION AARON",
+			"description": "Cheddar cheese, expertly grilled",
 			"price": 4.99
 		},
 		{
 			"name": "Mac N' Cheese",
 			"filename": "menu/kids/mac_n_cheese.jpg",
-			"description": "NEED A DESCRIPTION AARON",
+			"description": "Macaroni noodles, swimming in creamy cheddar and monterrey cheese!",
 			"price": 7.99
 		},
 		{
 			"name": "Corn Dog",
 			"filename": "menu/kids/corndog.jpg",
-			"description": "NEED A DESCRIPTION AARON",
+			"description": "Made from REAL DOG!",
 			"price": 7.99
 		}
 	]	

@@ -19,11 +19,21 @@ public:
     float getTotal();                   //Return order subtotal
     void subtractFromTotal(float sub);  //Subtract from order subtotal
     void resetOrder();                  //Reset the current order
-    MenuItem getDrink();                 //Returns the drink on an order
+    MenuItem getDrink();                //Returns the drink on an order
+    void updatePromoState(int state);  //Updates promotion tracker to next state
+    int getPromoState();                //Returns promotion tracker's state
+    void addToCombo(float val);                  //Holds value of drink/dessert combo items
+    float getComboTotal();              //Get total value for promotion application
+    void resetCombo();                  //Resets Promotion value
+
 private:
     MenuVector order;                   //Vector of MenuItems representing an order
     MenuItem drink;                     //What the Customer is drinking
     float total;                        //Subtotal of all items
+    int promoState;                     //Tracks promotion progression
+                                        //-1: inactive, 0: active, 1: drink added
+                                        //2: dessert added
+    float comboTotal;
 };
 
 #endif // ORDER_H
