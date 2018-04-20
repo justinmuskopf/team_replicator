@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1968</width>
-    <height>791</height>
+    <height>810</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -33,7 +33,7 @@
        <string notr="true">background-color: rgb(46, 47, 48);</string>
       </property>
       <property name="currentIndex">
-       <number>6</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="homeTab">
        <attribute name="title">
@@ -79,6 +79,23 @@ font: 57 32pt &quot;Counter-Strike&quot;;</string>
           </property>
           <property name="text">
            <string>Begin Order</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignRight">
+         <widget class="QPushButton" name="surveyButton">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Survey</string>
           </property>
          </widget>
         </item>
@@ -1751,7 +1768,7 @@ color: rgb(208, 208, 208);</string>
        <widget class="QLabel" name="label_OrderPlacedQueue">
         <property name="geometry">
          <rect>
-          <x>110</x>
+          <x>120</x>
           <y>80</y>
           <width>211</width>
           <height>20</height>
@@ -1768,10 +1785,10 @@ color: rgb(208, 208, 208);</string>
        <widget class="QColumnView" name="columnView_OrderPlaced">
         <property name="geometry">
          <rect>
-          <x>10</x>
+          <x>12</x>
           <y>110</y>
-          <width>391</width>
-          <height>401</height>
+          <width>421</width>
+          <height>451</height>
          </rect>
         </property>
        </widget>
@@ -1780,8 +1797,8 @@ color: rgb(208, 208, 208);</string>
          <rect>
           <x>20</x>
           <y>120</y>
-          <width>341</width>
-          <height>121</height>
+          <width>381</width>
+          <height>131</height>
          </rect>
         </property>
         <property name="widgetResizable">
@@ -1792,8 +1809,8 @@ color: rgb(208, 208, 208);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>339</width>
-           <height>119</height>
+           <width>379</width>
+           <height>129</height>
           </rect>
          </property>
          <widget class="QTextBrowser" name="textBrowser_OP_OrderA">
@@ -1801,8 +1818,8 @@ color: rgb(208, 208, 208);</string>
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>321</width>
-            <height>71</height>
+            <width>351</width>
+            <height>81</height>
            </rect>
           </property>
           <property name="html">
@@ -1810,46 +1827,46 @@ color: rgb(208, 208, 208);</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#b3b3b3;&quot;&gt;Table No.: [ ]		Order No.: [ ]           &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Waiter: [ ] 		Preparer: &amp;lt;blank&amp;gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#b3b3b3;&quot;&gt;Table Name.: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Order No.: [ ]	Waiter: [ ] 	Preparer: &amp;lt;blank&amp;gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 1: [ ]	 Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 1: [ ]		 Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 2: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 3: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 4: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 2: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 3: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 4: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
          <widget class="QPushButton" name="pushButton_OP_OrderA_Assign">
           <property name="geometry">
            <rect>
             <x>10</x>
-            <y>90</y>
+            <y>100</y>
             <width>131</width>
             <height>23</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(188, 188, 188);
-font: 16 pt &quot;Counter-Strike&quot;;</string>
+font: 57 10pt &quot;Counter-Strike&quot;;</string>
           </property>
           <property name="text">
            <string>Assign Order</string>
@@ -1858,15 +1875,15 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
          <widget class="QPushButton" name="pushButton_OP_OrderA_Call">
           <property name="geometry">
            <rect>
-            <x>190</x>
-            <y>90</y>
+            <x>220</x>
+            <y>100</y>
             <width>141</width>
             <height>23</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(188, 188, 188);
-font: 16 pt &quot;Counter-Strike&quot;;</string>
+font: 57 10pt &quot;Counter-Strike&quot;;</string>
           </property>
           <property name="text">
            <string>Call Server</string>
@@ -1877,10 +1894,10 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
        <widget class="QScrollBar" name="verticalScrollBar_OP">
         <property name="geometry">
          <rect>
-          <x>370</x>
+          <x>410</x>
           <y>120</y>
           <width>16</width>
-          <height>381</height>
+          <height>431</height>
          </rect>
         </property>
         <property name="orientation">
@@ -1890,10 +1907,10 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
        <widget class="QScrollArea" name="scrollArea_OP_OrderB">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>250</y>
-          <width>341</width>
-          <height>121</height>
+          <x>22</x>
+          <y>270</y>
+          <width>381</width>
+          <height>131</height>
          </rect>
         </property>
         <property name="widgetResizable">
@@ -1904,8 +1921,8 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>339</width>
-           <height>119</height>
+           <width>379</width>
+           <height>129</height>
           </rect>
          </property>
          <widget class="QTextBrowser" name="textBrowser_OP_OrderB">
@@ -1913,8 +1930,8 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>321</width>
-            <height>71</height>
+            <width>361</width>
+            <height>81</height>
            </rect>
           </property>
           <property name="html">
@@ -1922,46 +1939,46 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#b3b3b3;&quot;&gt;Table No.: [ ]		Order No.: [ ]           &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Waiter: [ ] 		Preparer: &amp;lt;blank&amp;gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#b3b3b3;&quot;&gt;Table Name.: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Order No.: [ ]	Waiter: [ ] 	Preparer: &amp;lt;blank&amp;gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 1: [ ]	 Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 1: [ ]		 Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 2: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 3: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 4: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 2: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 3: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 4: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
          <widget class="QPushButton" name="pushButton_OP_OrderB_Assign">
           <property name="geometry">
            <rect>
             <x>10</x>
-            <y>90</y>
+            <y>100</y>
             <width>131</width>
             <height>23</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(188, 188, 188);
-font: 16 pt &quot;Counter-Strike&quot;;</string>
+font: 57 10pt &quot;Counter-Strike&quot;;</string>
           </property>
           <property name="text">
            <string>Assign Order</string>
@@ -1970,15 +1987,15 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
          <widget class="QPushButton" name="pushButton_OP_OrderB_Call">
           <property name="geometry">
            <rect>
-            <x>190</x>
-            <y>90</y>
+            <x>230</x>
+            <y>100</y>
             <width>141</width>
             <height>23</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(188, 188, 188);
-font: 16 pt &quot;Counter-Strike&quot;;</string>
+font: 57 10pt &quot;Counter-Strike&quot;;</string>
           </property>
           <property name="text">
            <string>Call Server</string>
@@ -1989,10 +2006,10 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
        <widget class="QScrollArea" name="scrollArea_OP_OrderC">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>380</y>
-          <width>351</width>
-          <height>121</height>
+          <x>22</x>
+          <y>420</y>
+          <width>381</width>
+          <height>131</height>
          </rect>
         </property>
         <property name="widgetResizable">
@@ -2003,8 +2020,8 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>349</width>
-           <height>119</height>
+           <width>379</width>
+           <height>129</height>
           </rect>
          </property>
          <widget class="QTextBrowser" name="textBrowser_OP_OrderC">
@@ -2012,8 +2029,8 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>321</width>
-            <height>71</height>
+            <width>361</width>
+            <height>81</height>
            </rect>
           </property>
           <property name="html">
@@ -2021,46 +2038,46 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#b3b3b3;&quot;&gt;Table No.: [ ]		Order No.: [ ]           &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Waiter: [ ] 		Preparer: &amp;lt;blank&amp;gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#b3b3b3;&quot;&gt;Table Name.: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Order No.: [ ]	Waiter: [ ] 	Preparer: &amp;lt;blank&amp;gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 1: [ ]	 Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 1: [ ]		 Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 2: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 3: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 4: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 2: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 3: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 4: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
          <widget class="QPushButton" name="pushButton_OP_OrderC_Assign">
           <property name="geometry">
            <rect>
             <x>10</x>
-            <y>90</y>
+            <y>100</y>
             <width>131</width>
             <height>23</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(188, 188, 188);
-font: 16 pt &quot;Counter-Strike&quot;;</string>
+font: 57 10pt &quot;Counter-Strike&quot;;</string>
           </property>
           <property name="text">
            <string>Assign Order</string>
@@ -2069,15 +2086,15 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
          <widget class="QPushButton" name="pushButton_OP_OrderC_Call">
           <property name="geometry">
            <rect>
-            <x>190</x>
-            <y>90</y>
+            <x>230</x>
+            <y>100</y>
             <width>141</width>
             <height>23</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(188, 188, 188);
-font: 16 pt &quot;Counter-Strike&quot;;</string>
+font: 57 10pt &quot;Counter-Strike&quot;;</string>
           </property>
           <property name="text">
            <string>Call Server</string>
@@ -2088,7 +2105,7 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
        <widget class="QLabel" name="label_PreparingOrderQueue">
         <property name="geometry">
          <rect>
-          <x>510</x>
+          <x>540</x>
           <y>80</y>
           <width>231</width>
           <height>20</height>
@@ -2105,10 +2122,10 @@ color: rgb(208, 208, 208);</string>
        <widget class="QColumnView" name="columnView_PreparingOrder">
         <property name="geometry">
          <rect>
-          <x>420</x>
+          <x>440</x>
           <y>110</y>
-          <width>391</width>
-          <height>401</height>
+          <width>411</width>
+          <height>451</height>
          </rect>
         </property>
        </widget>
@@ -2117,8 +2134,8 @@ color: rgb(208, 208, 208);</string>
          <rect>
           <x>450</x>
           <y>120</y>
-          <width>341</width>
-          <height>121</height>
+          <width>371</width>
+          <height>131</height>
          </rect>
         </property>
         <property name="widgetResizable">
@@ -2129,17 +2146,17 @@ color: rgb(208, 208, 208);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>339</width>
-           <height>119</height>
+           <width>369</width>
+           <height>129</height>
           </rect>
          </property>
          <widget class="QTextBrowser" name="textBrowser_PO_OrderA">
           <property name="geometry">
            <rect>
-            <x>-10</x>
+            <x>10</x>
             <y>10</y>
-            <width>311</width>
-            <height>71</height>
+            <width>341</width>
+            <height>81</height>
            </rect>
           </property>
           <property name="html">
@@ -2147,46 +2164,46 @@ color: rgb(208, 208, 208);</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#b3b3b3;&quot;&gt;Table No.: [ ]		Order No.: [ ]           &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Waiter: [ ] 		Preparer: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#b3b3b3;&quot;&gt;Table Name.: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Order No.: [ ]	Waiter: [ ] 	Preparer: [ ]&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 1: [ ]	 Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 1: [ ]		 Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 2: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 3: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 4: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 2: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 3: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 4: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
          <widget class="QPushButton" name="pushButton_PO_OrderA_Done">
           <property name="geometry">
            <rect>
-            <x>-10</x>
-            <y>90</y>
+            <x>10</x>
+            <y>100</y>
             <width>131</width>
             <height>23</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(188, 188, 188);
-font: 16 pt &quot;Counter-Strike&quot;;</string>
+font: 57 10pt &quot;Counter-Strike&quot;;</string>
           </property>
           <property name="text">
            <string>Order Done</string>
@@ -2195,15 +2212,15 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
          <widget class="QPushButton" name="pushButton_PO_OrderA_Call">
           <property name="geometry">
            <rect>
-            <x>170</x>
-            <y>90</y>
+            <x>220</x>
+            <y>100</y>
             <width>131</width>
             <height>23</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(188, 188, 188);
-font: 16 pt &quot;Counter-Strike&quot;;</string>
+font: 57 10pt &quot;Counter-Strike&quot;;</string>
           </property>
           <property name="text">
            <string>Call Server</string>
@@ -2214,7 +2231,7 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
        <widget class="QLabel" name="label_PreparingOrderQueue_2">
         <property name="geometry">
          <rect>
-          <x>880</x>
+          <x>920</x>
           <y>80</y>
           <width>281</width>
           <height>20</height>
@@ -2231,10 +2248,10 @@ color: rgb(208, 208, 208);</string>
        <widget class="QScrollBar" name="verticalScrollBar_PO">
         <property name="geometry">
          <rect>
-          <x>780</x>
+          <x>830</x>
           <y>120</y>
           <width>16</width>
-          <height>381</height>
+          <height>431</height>
          </rect>
         </property>
         <property name="orientation">
@@ -2244,20 +2261,20 @@ color: rgb(208, 208, 208);</string>
        <widget class="QColumnView" name="columnView_ReadyDelivered">
         <property name="geometry">
          <rect>
-          <x>830</x>
+          <x>860</x>
           <y>110</y>
-          <width>391</width>
-          <height>401</height>
+          <width>401</width>
+          <height>451</height>
          </rect>
         </property>
        </widget>
        <widget class="QScrollBar" name="verticalScrollBar_RD">
         <property name="geometry">
          <rect>
-          <x>1190</x>
+          <x>1240</x>
           <y>120</y>
           <width>16</width>
-          <height>381</height>
+          <height>431</height>
          </rect>
         </property>
         <property name="orientation">
@@ -2267,10 +2284,10 @@ color: rgb(208, 208, 208);</string>
        <widget class="QScrollArea" name="scrollArea_RD_OrderA">
         <property name="geometry">
          <rect>
-          <x>840</x>
+          <x>870</x>
           <y>120</y>
-          <width>341</width>
-          <height>121</height>
+          <width>361</width>
+          <height>131</height>
          </rect>
         </property>
         <property name="widgetResizable">
@@ -2281,8 +2298,8 @@ color: rgb(208, 208, 208);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>339</width>
-           <height>119</height>
+           <width>359</width>
+           <height>129</height>
           </rect>
          </property>
          <widget class="QTextBrowser" name="textBrowser_RD_OrderA">
@@ -2290,8 +2307,8 @@ color: rgb(208, 208, 208);</string>
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>311</width>
-            <height>71</height>
+            <width>331</width>
+            <height>81</height>
            </rect>
           </property>
           <property name="html">
@@ -2299,46 +2316,46 @@ color: rgb(208, 208, 208);</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#b3b3b3;&quot;&gt;Table No.: [ ]		Order No.: [ ]           &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Waiter: [ ] 		Preparer: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#b3b3b3;&quot;&gt;Table Name.: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Order No.: [ ]	Waiter: [ ] 	Preparer: [ ]&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 1: [ ]	 Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 1: [ ]		 Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 2: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 3: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#b3b3b3;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 4: [ ]	Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Desc; Pic.; Cal.; Ing.; Recipe ()]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 2: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 3: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Customer 4: [ ]		Allergy: [ ]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 1&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 2&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 3&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt;:[Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#b3b3b3;&quot;&gt;Item 4:&lt;/span&gt;&lt;span style=&quot; color:#b3b3b3;&quot;&gt; [Description; Picture; Calories; Ingredients; Recipe ()]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
          <widget class="QPushButton" name="pushButton_RD_OrderA_Call">
           <property name="geometry">
            <rect>
-            <x>180</x>
-            <y>90</y>
+            <x>200</x>
+            <y>100</y>
             <width>141</width>
             <height>23</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(188, 188, 188);
-font: 16 pt &quot;Counter-Strike&quot;;</string>
+font: 57 10pt &quot;Counter-Strike&quot;;</string>
           </property>
           <property name="text">
            <string>Call Server</string>
@@ -2346,24 +2363,508 @@ font: 16 pt &quot;Counter-Strike&quot;;</string>
          </widget>
         </widget>
        </widget>
+       <zorder>columnView_OrderPlaced</zorder>
+       <zorder>kitchenWelcomeLabel</zorder>
+       <zorder>label_OrderPlacedQueue</zorder>
+       <zorder>scrollArea_OP_OrderA</zorder>
+       <zorder>verticalScrollBar_OP</zorder>
+       <zorder>scrollArea_OP_OrderB</zorder>
+       <zorder>scrollArea_OP_OrderC</zorder>
+       <zorder>label_PreparingOrderQueue</zorder>
+       <zorder>columnView_PreparingOrder</zorder>
+       <zorder>scrollArea_PO_OrderA</zorder>
+       <zorder>label_PreparingOrderQueue_2</zorder>
+       <zorder>verticalScrollBar_PO</zorder>
+       <zorder>columnView_ReadyDelivered</zorder>
+       <zorder>verticalScrollBar_RD</zorder>
+       <zorder>scrollArea_RD_OrderA</zorder>
       </widget>
       <widget class="QWidget" name="managerTab">
        <attribute name="title">
         <string>Manager</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_13">
-        <item>
-         <widget class="QLabel" name="managerWelcomeLabel">
-          <property name="styleSheet">
-           <string notr="true">font: 57 32pt &quot;Counter-Strike&quot;;
+       <widget class="QLabel" name="managerWelcomeLabel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>609</width>
+          <height>52</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 57 32pt &quot;Counter-Strike&quot;;
 color: rgb(208, 208, 208);</string>
-          </property>
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
-         </widget>
+        </property>
+        <property name="text">
+         <string>Welcome to the Manager's View</string>
+        </property>
+       </widget>
+       <widget class="QColumnView" name="columnView">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>71</y>
+          <width>191</width>
+          <height>331</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>93</y>
+          <width>47</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>From:</string>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEdit_from">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>90</y>
+          <width>110</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEdit_thru">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>117</y>
+          <width>110</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>120</y>
+          <width>47</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>Thru:</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_9">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>150</y>
+          <width>161</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="title">
+         <string>Select Report</string>
+        </property>
+        <widget class="QRadioButton" name="radioButton_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>71</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+         </property>
+         <property name="text">
+          <string>Sales</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+         </property>
+         <property name="text">
+          <string>Best Seller / Inventory</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_8">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>100</y>
+           <width>82</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+         </property>
+         <property name="text">
+          <string>Tips</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_9">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>130</y>
+           <width>82</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+         </property>
+         <property name="text">
+          <string>Coupon</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_10">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>160</y>
+           <width>131</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+         </property>
+         <property name="text">
+          <string>Comp Meals</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QTableView" name="tableView">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>70</y>
+          <width>861</width>
+          <height>331</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 16 pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>110</y>
+          <width>831</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+         <bool>true</bool>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>9</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>10</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>Transaction ID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Table No.</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Order / Check No.</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Date / Time</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Amount</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Cash / Credit</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Waiter</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Preparer</string>
+         </property>
+        </column>
+        <item row="0" column="0">
+         <property name="text">
+          <string>159</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignTrailing|AlignVCenter</set>
+         </property>
+         <property name="foreground">
+          <brush brushstyle="NoBrush">
+           <color alpha="255">
+            <red>212</red>
+            <green>212</green>
+            <blue>212</blue>
+           </color>
+          </brush>
+         </property>
         </item>
-       </layout>
+        <item row="0" column="1">
+         <property name="text">
+          <string>16</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignTrailing|AlignVCenter</set>
+         </property>
+         <property name="foreground">
+          <brush brushstyle="NoBrush">
+           <color alpha="255">
+            <red>212</red>
+            <green>212</green>
+            <blue>212</blue>
+           </color>
+          </brush>
+         </property>
+        </item>
+        <item row="0" column="2">
+         <property name="text">
+          <string>1234-Single</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+         <property name="foreground">
+          <brush brushstyle="NoBrush">
+           <color alpha="255">
+            <red>212</red>
+            <green>212</green>
+            <blue>212</blue>
+           </color>
+          </brush>
+         </property>
+        </item>
+        <item row="0" column="3">
+         <property name="text">
+          <string>Sun, 03/18/18 1:18 PM</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+         <property name="foreground">
+          <brush brushstyle="NoBrush">
+           <color alpha="255">
+            <red>212</red>
+            <green>212</green>
+            <blue>212</blue>
+           </color>
+          </brush>
+         </property>
+        </item>
+        <item row="0" column="4">
+         <property name="text">
+          <string>$15.53</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignTrailing|AlignVCenter</set>
+         </property>
+         <property name="foreground">
+          <brush brushstyle="NoBrush">
+           <color alpha="255">
+            <red>212</red>
+            <green>212</green>
+            <blue>212</blue>
+           </color>
+          </brush>
+         </property>
+        </item>
+        <item row="0" column="5">
+         <property name="text">
+          <string>Credit</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+         <property name="foreground">
+          <brush brushstyle="NoBrush">
+           <color alpha="255">
+            <red>212</red>
+            <green>212</green>
+            <blue>212</blue>
+           </color>
+          </brush>
+         </property>
+        </item>
+        <item row="0" column="6">
+         <property name="text">
+          <string>Mike</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+         <property name="foreground">
+          <brush brushstyle="NoBrush">
+           <color alpha="255">
+            <red>212</red>
+            <green>212</green>
+            <blue>212</blue>
+           </color>
+          </brush>
+         </property>
+        </item>
+        <item row="0" column="7">
+         <property name="text">
+          <string>Munoz</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+         <property name="foreground">
+          <brush brushstyle="NoBrush">
+           <color alpha="255">
+            <red>212</red>
+            <green>212</green>
+            <blue>212</blue>
+           </color>
+          </brush>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>80</y>
+          <width>301</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>Sales Report for 03/18/18 thru 03/18/18</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>610</x>
+          <y>380</y>
+          <width>151</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>Total:            $15.53</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="Table">
        <attribute name="title">
@@ -2502,6 +3003,64 @@ color: rgb(238, 238, 236);</string>
                <string>================================</string>
               </property>
              </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_TableName">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>65</height>
+              </size>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <widget class="QLabel" name="label_TableNameInput">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>231</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>300</width>
+                <height>56</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: 57 16pt &quot;Counter-Strike&quot;;</string>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Table Name: (optional)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="lineEdit_TableName">
+              <property name="geometry">
+               <rect>
+                <x>240</x>
+                <y>10</y>
+                <width>300</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="toolTip">
+               <string extracomment="50 characters maximum"/>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: 57 16pt &quot;Counter-Strike&quot;;
+color: rgb(238, 238, 236);</string>
+              </property>
+              <property name="text">
+               <string>50 characters maximum</string>
+              </property>
+              <property name="clearButtonEnabled">
+               <bool>true</bool>
+              </property>
+             </widget>
             </widget>
            </item>
            <item>
@@ -2659,6 +3218,570 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
              <property name="text">
               <string>Pay and Place Order</string>
              </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="dessertGame">
+       <attribute name="title">
+        <string>dessertGame</string>
+       </attribute>
+       <widget class="QWidget" name="horizontalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>190</y>
+          <width>1911</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QPushButton" name="gameButton_1">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+           </property>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="gameButton_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+           </property>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="gameButton_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+           </property>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="gameButton_4">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+           </property>
+           <property name="text">
+            <string>4</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="gameButton_5">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+           </property>
+           <property name="text">
+            <string>5</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="gameLabel">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>40</y>
+          <width>611</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 57 32pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>I'm thinking of a number between 1 and 5, what is it?</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::PlainText</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Survey">
+       <attribute name="title">
+        <string>Survey</string>
+       </attribute>
+       <widget class="QLabel" name="rateLabel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>271</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(46, 47, 48);
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>Rate Us! We appreciate your feedback.</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="commentLabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>190</y>
+          <width>321</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+        <property name="text">
+         <string>Additional Information/Explanation of Rating</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="rateCommentBox">
+        <property name="geometry">
+         <rect>
+          <x>3</x>
+          <y>250</y>
+          <width>511</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 57 12pt &quot;Counter-Strike&quot;;
+color: rgb(208, 208, 208);</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="surveySubmitButton">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>520</y>
+          <width>101</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Submit</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="gamesTab">
+       <attribute name="title">
+        <string>Games</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="QPushButton" name="gameButton1">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>300</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 24pt &quot;Counter-Strike&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Drawing</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="gameButton2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>300</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 24pt &quot;Counter-Strike&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Solitaire</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="receiptTab">
+       <attribute name="title">
+        <string>receipt</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QFrame" name="frame_13">
+          <property name="maximumSize">
+           <size>
+            <width>1000</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <item>
+            <widget class="QLabel" name="label_9">
+             <property name="styleSheet">
+              <string notr="true">font: 57 28pt &quot;Counter-Strike&quot;;</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#d0d0d0;&quot;&gt;Order Items: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListWidget" name="receiptList">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 57 16pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_12">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_16">
+           <item>
+            <widget class="QFrame" name="frame_14">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QPlainTextEdit" name="emailInput">
+              <property name="geometry">
+               <rect>
+                <x>380</x>
+                <y>226</y>
+                <width>256</width>
+                <height>25</height>
+               </rect>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>25</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QCheckBox" name="checkBox">
+              <property name="geometry">
+               <rect>
+                <x>176</x>
+                <y>224</y>
+                <width>200</width>
+                <height>30</height>
+               </rect>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;</string>
+              </property>
+              <property name="text">
+               <string>Email Receipt</string>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_15">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_17">
+              <item>
+               <widget class="QLabel" name="subTotalLabel">
+                <property name="styleSheet">
+                 <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#d0d0d0;&quot;&gt;Subtotal: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="salesTaxLabel">
+                <property name="styleSheet">
+                 <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#d0d0d0;&quot;&gt;Sales Tax (8.25%): &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="tipTotalLabel">
+                <property name="styleSheet">
+                 <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#d0d0d0;&quot;&gt;Tip:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="finalTotalLabel">
+                <property name="styleSheet">
+                 <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+color: rgb(188, 188, 188);</string>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#d0d0d0;&quot;&gt;Total: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_16">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_11">
+                 <item>
+                  <widget class="QPushButton" name="cashButton">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Cash</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="creditButton">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Credit/Debit</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
@@ -3333,7 +4456,7 @@ font: 57 20pt &quot;Counter-Strike&quot;;</string>
 font: 57 20pt &quot;Counter-Strike&quot;;</string>
          </property>
          <property name="text">
-          <string>Help</string>
+          <string>Request Manager</string>
          </property>
         </widget>
        </item>
