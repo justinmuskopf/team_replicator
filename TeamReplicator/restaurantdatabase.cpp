@@ -6,13 +6,14 @@
 #include <QVariant>
 #include <QDate>
 
-const QString RestaurantDatabase::getEmployeeFmt = "SELECT * FROM `employees` WHERE %1=%2";
-const QString RestaurantDatabase::addEmployeeFmt = "INSERT INTO `employees` (Emp_Id, Name, Lvl, Pin) VALUES (%1, %2, %3, %4)";
-const QString RestaurantDatabase::addOrderFmt = "INSERT INTO `sales` (Emp_Id, Sale_Date, Total) VALUES (%1, %2, %3)";
-const QString RestaurantDatabase::addItemFmt = "INSERT INTO `order_items` (Order_Id, Name, Price) VALUES (%1, %2, %3)";
-const QString RestaurantDatabase::addOrderTblNameFmt = "INSERT INTO `sales` (Emp_Id, Sale_Date, Total, Table_Name) VALUES (%1, %2, %3, %4)";
-const QString RestaurantDatabase::addEmployeeLoginFmt = "INSERT INTO `employee_logins` (Emp_Id, Name) VALUES (%1, %2)";
-
+const QString RestaurantDatabase::getEmployeeFmt         = "SELECT * FROM `employees` WHERE %1=%2";
+const QString RestaurantDatabase::addEmployeeFmt         = "INSERT INTO `employees` (Emp_Id, Name, Lvl, Pin) VALUES (%1, %2, %3, %4)";
+const QString RestaurantDatabase::addOrderFmt            = "INSERT INTO `sales` (Emp_Id, Sale_Date, Total) VALUES (%1, %2, %3)";
+const QString RestaurantDatabase::addItemFmt             = "INSERT INTO `order_items` (Order_Id, Name, Price) VALUES (%1, %2, %3)";
+const QString RestaurantDatabase::addOrderTblNameFmt     = "INSERT INTO `sales` (Emp_Id, Sale_Date, Total, Table_Name) VALUES (%1, %2, %3, %4)";
+const QString RestaurantDatabase::addEmployeeLoginFmt    = "INSERT INTO `employee_logins` (Emp_Id, Name) VALUES (%1, %2)";
+const QString RestaurantDatabase::addSurveyFmt           = "INSERT INTO `surveys` (Rating, Comment) VALUES (%1, %2)";
+const QString RestaurantDatabase::addSurveyNoCommentFmt  = "INSERT INTO `surveys` (Rating) VALUES (%1)";
 //
 RestaurantDatabase::RestaurantDatabase()
 {
@@ -152,4 +153,20 @@ QSqlQueryModel *RestaurantDatabase::getAllAlerts()
     view->setQuery(query);
     return view;
 
+}
+
+void RestaurantDatabase::addSurveyToDb(int rating, QString comment)
+{
+    QString queryStr;
+    if (comment.length())
+        queryStr = addSurveyFmt.arg(QString::number(rating), "'" + comment + "'");
+    else
+        queryStr = addSurveyNoCommentFmt.arg(QString::number(rating));
+
+    QSqlQuery query(queryStr, db);
+
+    query.record();
+
+   // if (!query.isValid())
+   //     qDebug() << "addSurveyToDb: Failed to insert survey to DB!";
 }

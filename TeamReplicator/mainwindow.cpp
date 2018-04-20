@@ -281,6 +281,11 @@ void MainWindow::on_enterButton_clicked()
     }
     ui -> loginLabel -> setText("");
 
+    ui -> backButton -> setEnabled(true);
+    ui -> gameButton -> setEnabled(false);
+    ui -> ticketButton -> setEnabled(false);
+    ui -> drinkButton -> setEnabled(false);
+
     QString level = employee -> getLevel();
     if (level == "waitstaff")
     {
@@ -879,6 +884,22 @@ void MainWindow::on_surveyButton_clicked()
 
 void MainWindow::on_surveySubmitButton_clicked()
 {
+    int rating;
+    if (ui -> radioButton -> isChecked())
+        rating = 1;
+    if (ui -> radioButton_2 -> isChecked())
+        rating = 2;
+    if (ui -> radioButton_3 -> isChecked())
+        rating = 3;
+    if (ui -> radioButton_4 -> isChecked())
+        rating = 4;
+    if (ui -> radioButton_5 -> isChecked())
+        rating = 5;
+
+    QString comment = ui -> rateCommentBox -> toPlainText();
+
+    db.addSurveyToDb(rating, comment);
+
     goToTab(HOME_TAB);
 }
 

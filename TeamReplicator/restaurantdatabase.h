@@ -36,6 +36,7 @@ public:
     int      getOrderNumber();                              //Returns the current order number
     QSqlQueryModel *getAllSales();                          //Returns table of all sales
     QSqlQueryModel *getAllAlerts();                         //Returns table of all alerts
+    void addSurveyToDb(int rating, QString comment);
 
 private:
     QSqlDatabase db;                                        //Database
@@ -46,6 +47,8 @@ private:
     static const QString addOrderTblNameFmt;                //Format of add Order to DB (w/Table_Num) query
     static const QString addItemFmt;                        //Format of Add Item to DB query
     static const QString addEmployeeLoginFmt;               //Adds employee login time to DB
+    static const QString addSurveyFmt;
+    static const QString addSurveyNoCommentFmt;
 };
 
 #endif // RESTAURANTDATABASE_H
