@@ -10,7 +10,7 @@
 #include <QSqlQueryModel>
 
 
-#define DB_USER "repuser"           //DB Username
+#define DB_USER "repuser"        //DB Username
 #define DB_PASS "pass"           //DB Password
 #define DB_HOST "se1.cse.unt.edu"//DB Host
 #define DB_NAME "replicator"     //DB Name
