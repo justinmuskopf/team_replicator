@@ -32,6 +32,8 @@ private:
     float total;                        //Subtotal of all items
     QString coupon;
     QString tableName;
+    int numShirts;
+    int numEntrees;
 };
 
 #endif // ORDER_H

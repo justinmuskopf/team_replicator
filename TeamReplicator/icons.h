@@ -22,5 +22,9 @@ const QString APPETIZER_ICON = IMG_DIR + CATEGORIES[APPETIZERS] + ".ico";   //Ap
 const QString NOT_AVAILABLE_ICON = IMG_DIR + "not_available.jpg";           //"Image Not Available" icon
 const QString KIDS_ICON = IMG_DIR + CATEGORIES[KIDS] + ".ico";              //Kid's menu Icon
 const QString LOADING_GIF = IMG_DIR + "loading.gif";                        //Loading GIF for payments
+const QString MERCH_ICON = IMG_DIR + CATEGORIES[MERCHANDISE] + ".ico";      //Merchandise Icon
+const QString APPROVED_ICON = IMG_DIR + "approved.png";
 const QString TABLE_ICON = IMG_DIR + "table.png";                           //Table icons
+const QString MERCH_ICON = IMG_DIR + CATEGORIES[MERCHANDISE] + ".ico";      //Merchandise Icon
+const QString APPROVED_ICON = IMG_DIR + "approved.png";
 #endif // ICONS_H

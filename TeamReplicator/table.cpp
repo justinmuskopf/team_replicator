@@ -6,7 +6,9 @@ Table::Table()
     currentCustomer = nullptr;
     server = new QTcpSocket;
 
-    waitstaff = new Employee;
+    numEntrees = 0;
+
+    orderStatus = NOT_PLACED;
 }
 
 Table::Table(int num) : Table()
@@ -108,7 +110,7 @@ void Table::clearTable()
         delete customer;
     }
     customers.clear();
-
+    orderStatus = NOT_PLACED;
     orderNum = -1;
 }
 
@@ -144,4 +146,14 @@ void Table::sendRefillsToServer()
     server -> connectToHost(SERVER_HOST, SERVER_PORT);
     server -> waitForConnected(1000);
     server -> write(toSend);
+}
+
+void Table::setOrderStatus(int status)
+{
+    orderStatus = status;
+}
+
+int Table::getOrderStatus()
+{
+    return orderStatus;
 }

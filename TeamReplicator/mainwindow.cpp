@@ -7,8 +7,10 @@
 #include "icons.h"
 #include <QSqlQuery>
 #include <QSqlRecord>
+#include <QTimer>
 #include <QDesktopWidget>
 #include <QMovie>
+#include <windows.h>
 #include <QProcess>
 #include "dessertgame.h"//Tab Index ENUM
 enum {
@@ -27,6 +29,8 @@ enum {
     GAMES_TAB,
     RECEIPT_TAB
 };
+
+
 
 void MainWindow::goToTab(int idx)
 {
@@ -79,6 +83,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui -> entIcon -> setPixmap(QPixmap(ENTREE_ICON).scaled(iconSize, Qt::KeepAspectRatio));
     ui -> driIcon -> setPixmap(QPixmap(DRINK_ICON).scaled(iconSize, Qt::KeepAspectRatio));
     ui -> kidIcon -> setPixmap(QPixmap(KIDS_ICON).scaled(iconSize, Qt::KeepAspectRatio));
+    ui -> merIcon -> setPixmap(QPixmap(MERCH_ICON).scaled(iconSize, Qt::KeepAspectRatio));
 
     // Setup Tables Icons for Waiter
 
@@ -157,6 +162,9 @@ void MainWindow::beginSession()
     ui -> drinkButton -> setEnabled(false);
     ui -> surveyButton -> setEnabled(false);
 
+    ui -> menuTotalLabel -> setText("Total: $0.00");
+    updateOrderList();
+
     //Clear all lists in the Application by finding them recursively
     foreach (QListWidget *list, findChildren<QListWidget *>())
     {
@@ -201,12 +209,13 @@ void MainWindow::on_gameButton_clicked()
 //Assitance button clicked
 void MainWindow::on_assistButton_clicked()
 {
-    QMessageBox msgBox(QMessageBox::Information,
-                       "Assistance",
-                       "Your Server has been notified, and will be with you shortly.",
-                       QMessageBox::Ok, this);
-    msgBox.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
-    msgBox.exec();
+    QMessageBox msgBox2;
+    msgBox2.setWindowTitle("The Replicator");
+    msgBox2.setText("Your Server has been notified, and will be with you shortly.");
+    msgBox2.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+
+    msgBox2.exec();
 }
 
 //Help button clicked
@@ -313,8 +322,11 @@ void MainWindow::on_tabWidget_currentChanged(int index)
         backPressed = false;
     //Add last page to stack
     else
+    {
+        if (lastPage == TABLE_TAB)
+            return;
         backStack.push(lastPage);
-
+    }
     //Current page becomes last
     lastPage = index;
 }
@@ -327,6 +339,7 @@ void MainWindow::on_driButton_clicked() {loadMenu(DRINKS);}
 void MainWindow::on_desButton_clicked() {loadMenu(DESSERTS);}
 void MainWindow::on_sidButton_clicked() {loadMenu(SIDES);}
 void MainWindow::on_kidButton_clicked() {loadMenu(KIDS);}
+void MainWindow::on_merButton_clicked() {loadMenu(MERCHANDISE);}
 /*****************************************************************/
 
 //Load the requested menu onto the menu page
@@ -363,7 +376,8 @@ void MainWindow::on_menuBackButton_clicked()
         item -> setSelected(false);
 
     //Go back to the order page using stack
-    ui -> backButton -> click();
+    //ui -> backButton -> click();
+    goToTab(ORDER_TAB);
 }
 
 //"Remove from order" button clicked
@@ -452,6 +466,9 @@ void MainWindow::on_startOrderButton_clicked()
     if (buttonText == "Pay For Order")
     {
         initPaymentScreen();
+        ui -> backButton -> setEnabled(false);
+        ui -> drinkButton -> setEnabled(false);
+        ui -> ticketButton -> setEnabled(false);
         goToTab(PAYMENT_TAB);
     }
 }
@@ -507,6 +524,9 @@ void MainWindow::on_beginOrderButton_clicked()
 //Place Order/Next Order button clicked
 void MainWindow::on_placeOrderButton_clicked()
 {
+    if (thisTable -> getCurrentCustomer() -> getOrder() -> getOrder().isEmpty())
+        return;
+
     //Place the order for the current customer
     thisTable -> getCurrentCustomer() -> placeOrder();
     float total = thisTable -> getCurrentCustomer() -> getOrder() -> getTotal();
@@ -524,10 +544,35 @@ void MainWindow::on_placeOrderButton_clicked()
     }
     else
     {
-        goToTab(HOME_TAB);
+        ui -> surveyButton -> setEnabled(true);
         ui -> startOrderButton -> setEnabled(true);
         ui -> gameButton -> setEnabled(true);
         ui -> drinkButton -> setEnabled(true);
+        ui -> ticketButton -> setEnabled(false);
+
+
+        // After paying, message box pops up asking if customer wants to play game to win a free dessert
+        QMessageBox msgBox2;
+        msgBox2.setWindowTitle("The Replicator");
+        msgBox2.setText("Thank you for dining with us! Would you like to play a game for a chance to win a free dessert?");
+        msgBox2.setStandardButtons(QMessageBox::Yes);
+        msgBox2.addButton(QMessageBox::No);
+        msgBox2.setDefaultButton(QMessageBox::No);
+        msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+
+        if(msgBox2.exec() == QMessageBox::Yes)
+        {
+            // if yes, go to the game
+            goToTab(DGAME_TAB);
+        }
+        else
+        {
+            // if no, reset the session
+            goToTab(HOME_TAB);
+        }
+
+        thisTable -> setOrderStatus(PLACED);
+        updateOrderStatus();
         initRefillScreen();
     }
 }
@@ -712,6 +757,7 @@ void MainWindow::on_payForOrderButton_clicked()
         {
             ui -> receiptList -> addItem("...." + order[i].name + " $" + QString::number(order[i].price));
         }
+        //qDebug() << "Removed: " << thisTable -> getCustomers().removeAll(customer);
     }
 
     initReceiptTab();
@@ -729,6 +775,9 @@ void MainWindow::endSession()
     ui -> totalToPayLabel -> setText("Total: $0.00");
     ui -> orderTotalLabel -> setText("Total: $0.00");
     ui -> menuTotalLabel -> setText("Total: $0.00");
+    ui -> orderStatusLabel -> setText("Order Status: Not Placed");
+    thisTable -> setOrderStatus(NOT_PLACED);
+    //updateOrderStatus();
 }
 
 //Reset the Table's session
@@ -827,52 +876,50 @@ void MainWindow::on_surveySubmitButton_clicked()
 void MainWindow::on_gameButton_1_clicked()
 {
     dessertGame.evalChoice(1);
-    resetSession();
+    goToTab(HOME_TAB);
 }
 
 void MainWindow::on_gameButton_2_clicked()
 {
     dessertGame.evalChoice(2);
-    resetSession();
+    goToTab(HOME_TAB);
 }
 
 void MainWindow::on_gameButton_3_clicked()
 {
     dessertGame.evalChoice(3);
-    resetSession();
+    goToTab(HOME_TAB);
 }
 
 void MainWindow::on_gameButton_4_clicked()
 {
     dessertGame.evalChoice(4);
-    resetSession();
+    goToTab(HOME_TAB);
 }
 
 void MainWindow::on_gameButton_5_clicked()
 {
     dessertGame.evalChoice(5);
-    resetSession();
+    goToTab(HOME_TAB);
 }
 
 void MainWindow::on_cashButton_clicked()
 {
-    // After paying, message box pops up asking if customer wants to play game to win a free dessert
     QMessageBox msgBox2;
     msgBox2.setWindowTitle("The Replicator");
-    msgBox2.setText("Thank you for dining with us! Would you like to play a game for a chance to win a free dessert?");
-    msgBox2.setStandardButtons(QMessageBox::Yes);
-    msgBox2.addButton(QMessageBox::No);
-    msgBox2.setDefaultButton(QMessageBox::No);
+    msgBox2.setText("Your server will be with you shortly to collect your payment.");
+    msgBox2.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+    msgBox2.setDefaultButton(QMessageBox::Cancel);
     msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
 
-    if(msgBox2.exec() == QMessageBox::Yes)
+    if(msgBox2.exec() == QMessageBox::Cancel)
+        return;
+
+    if (ui -> yetToPayList -> count())
     {
-        // if yes, go to the game
-        goToTab(DGAME_TAB);
+        goToTab(PAYMENT_TAB);
     }
     else
-    {
-        // if no, reset the session
         resetSession();
     }
 
@@ -886,6 +933,7 @@ void MainWindow::on_creditButton_clicked()
 
     QDialog *processDlg = new QDialog(this);//, Qt::FramelessWindowHint | Qt::WindowTitleHint);
     processDlg -> setAttribute(Qt::WA_DeleteOnClose, true);
+    processDlg -> setMinimumSize(QSize(100, 300));
 
     //Set the location of the processDlg
     QRect screenGeometry = QApplication::desktop()->screenGeometry();
@@ -899,11 +947,27 @@ void MainWindow::on_creditButton_clicked()
     QMovie *movie = new QMovie(LOADING_GIF);    //GIF object
     QGridLayout *layout = new QGridLayout;      //Layout of processDlg
 
+    textLabel -> setText("Processing...");
+    textLabel -> setStyleSheet("font: 57 32pt \"Counter-Strike\";\ncolor: rgb(208, 208, 208);");
+
+    QMessageBox msgBox2;
+    msgBox2.setWindowTitle("The Replicator");
+    msgBox2.setText("Please Swipe Your Card...");
+    msgBox2.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+    msgBox2.setDefaultButton(QMessageBox::Cancel);
+    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+
+    if(msgBox2.exec() == QMessageBox::Cancel)
+        return;
+
+    layout -> addWidget(textLabel, 0, 0, 1, 1, Qt::AlignCenter);
+
+
     //Set the movie label's movie to GIF
     movieLabel -> setMovie(movie);
 
     //Add the movieLabel to the processDlg
-    layout -> addWidget(movieLabel, 0, 0, 1, 1, Qt::AlignCenter);
+    layout -> addWidget(movieLabel, 1, 0, 1, 1, Qt::AlignCenter);
 
     //Set processDlg's layout to Grid
     processDlg -> setLayout(layout);
@@ -915,29 +979,18 @@ void MainWindow::on_creditButton_clicked()
     movieLabel -> show();
     movie -> start();
 
+    QTimer::singleShot(4000, processDlg, SLOT(close()));
 
-    // After paying, message box pops up asking if customer wants to play game to win a free dessert
-    QMessageBox msgBox2;
-    msgBox2.setWindowTitle("The Replicator");
-    msgBox2.setText("Thank you for dining with us! Would you like to play a game for a chance to win a free dessert?");
-    msgBox2.setStandardButtons(QMessageBox::Yes);
-    msgBox2.addButton(QMessageBox::No);
-    msgBox2.setDefaultButton(QMessageBox::No);
-    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
-
-    if(msgBox2.exec() == QMessageBox::Yes)
+    if (ui -> yetToPayList -> count())
     {
-        // if yes, go to the game
-        goToTab(DGAME_TAB);
+        goToTab(PAYMENT_TAB);
     }
     else
-    {
-        // if no, reset the session
         resetSession();
-    }
 
     ui->surveyButton->setEnabled(true);         // Enable the feedback button after payment
     ui -> couponLabelStatus -> setText("");
+>>>>>>> requirements_fix
 }
 
 void MainWindow::initReceiptTab()
@@ -1013,4 +1066,38 @@ void MainWindow::on_couponButton_clicked() // When user inputs coupon and to app
 void MainWindow::on_waiterLogout_clicked()
 {
     goHome();
+}
+
+void MainWindow::updateOrderStatus()
+{
+    QString statusStr = "Order Status: ";
+    int status = thisTable -> getOrderStatus();
+    switch(status)
+    {
+    case NOT_PLACED:
+        statusStr.append("Not Placed");
+        break;
+    case PLACED:
+        statusStr.append("Placed");
+        break;
+    case PREPARING:
+        statusStr.append("Preparing");
+        break;
+    case READY:
+        statusStr.append("Ready");
+        break;
+    case ON_THE_WAY:
+        statusStr.append("On The Way");
+        break;
+    case DELIVERED:
+        statusStr.append("Delivered");
+    }
+
+    ui -> orderStatusLabel -> setText(statusStr);
+
+    if (status != DELIVERED)
+    {
+        thisTable -> setOrderStatus(status + 1);
+        QTimer::singleShot(5000, this, SLOT(updateOrderStatus()));
+    }
 }

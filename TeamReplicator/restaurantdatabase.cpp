@@ -11,6 +11,7 @@ const QString RestaurantDatabase::addEmployeeFmt = "INSERT INTO `employees` (Emp
 const QString RestaurantDatabase::addOrderFmt = "INSERT INTO `sales` (Emp_Id, Sale_Date, Total) VALUES (%1, %2, %3)";
 const QString RestaurantDatabase::addItemFmt = "INSERT INTO `order_items` (Order_Id, Name, Price) VALUES (%1, %2, %3)";
 const QString RestaurantDatabase::addOrderTblNameFmt = "INSERT INTO `sales` (Emp_Id, Sale_Date, Total, Table_Name) VALUES (%1, %2, %3, %4)";
+const QString RestaurantDatabase::addEmployeeLoginFmt = "INSERT INTO `employee_logins` (Emp_Id, Name) VALUES (%1, %2)";
 
 //
 RestaurantDatabase::RestaurantDatabase()
@@ -61,7 +62,17 @@ Employee *RestaurantDatabase::getEmployeeById(QString ID)
 
 Employee *RestaurantDatabase::getEmployeeByPin(QString pin)
 {
-    return getEmployeeFromDb("Pin", pin);
+    Employee *emp = getEmployeeFromDb("Pin", pin);
+    if (emp == nullptr)
+        return nullptr;
+    QString name = emp -> getName();
+    QString ID = emp -> getId();
+    QString queryStr = addEmployeeLoginFmt.arg(ID, "'" + name + "'");
+    QSqlQuery query(queryStr, db);
+
+    query.record();
+
+    return emp;
 }
 
 void RestaurantDatabase::addEmployeeToDb(Employee *employee)
