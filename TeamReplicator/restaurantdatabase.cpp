@@ -10,6 +10,7 @@ const QString RestaurantDatabase::getEmployeeFmt = "SELECT * FROM `employees` WH
 const QString RestaurantDatabase::addEmployeeFmt = "INSERT INTO `employees` (Emp_Id, Name, Lvl, Pin) VALUES (%1, %2, %3, %4)";
 const QString RestaurantDatabase::addOrderFmt = "INSERT INTO `sales` (Emp_Id, Sale_Date, Total) VALUES (%1, %2, %3)";
 const QString RestaurantDatabase::addItemFmt = "INSERT INTO `order_items` (Order_Id, Name, Price) VALUES (%1, %2, %3)";
+const QString RestaurantDatabase::addOrderTblNameFmt = "INSERT INTO `sales` (Emp_Id, Sale_Date, Total, Table_Name) VALUES (%1, %2, %3, %4)";
 
 //
 RestaurantDatabase::RestaurantDatabase()
@@ -86,7 +87,13 @@ void RestaurantDatabase::addOrderToDb(Order *order, int orderNum)
                       QString::number(date.month()) + "/" +
                       QString::number(date.day());
 
-    QString addOrderStr = addOrderFmt.arg("81117", "'" + dateStr + "'", QString::number(order -> getTotal()));
+    QString tableName;
+    QString addOrderStr;
+    if ((tableName = order -> getTableName()).length())
+        addOrderStr = addOrderTblNameFmt.arg("81117", "'" + dateStr + "'", QString::number(order -> getTotal()), "'" + tableName + "'");
+    else
+        addOrderStr = addOrderFmt.arg("81117", "'" + dateStr + "'", QString::number(order -> getTotal()));
+
     QSqlQuery query(addOrderStr, db);
     query.record();
 
@@ -96,10 +103,7 @@ void RestaurantDatabase::addOrderToDb(Order *order, int orderNum)
     foreach (MenuItem item, order -> getOrder())
     {
         QString addItemStr = addItemFmt.arg(QString::number(orderNum), "'" + item.name + "'", QString::number(item.price));
-        //qDebug() << addItemStr;
         QSqlQuery addQuery(addItemStr, db);
-        //query.prepare(addItemStr);
-        //addQuery.exec();
         addQuery.record();
     }
 }

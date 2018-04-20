@@ -467,6 +467,10 @@ void MainWindow::on_addToTableButton_clicked()
     QString allergies = ui -> allergyInput -> toPlainText().trimmed();
     Customer *customer = new Customer(name, allergies);
 
+    QString tableName;
+    if ((tableName = ui -> tableNameInput -> toPlainText()).length())
+        customer -> getOrder() -> setTableName(tableName);
+
     //Add customer to table
     thisTable -> addCustomerToTable(customer);
 

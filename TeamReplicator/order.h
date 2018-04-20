@@ -23,12 +23,15 @@ public:
     MenuItem getDrink();                //Returns the drink on an order
     void setCoupon(int coup);
     QString getCoupon();
+    void setTableName(QString);
+    QString getTableName();
 
 private:
     MenuVector order;                   //Vector of MenuItems representing an order
     MenuItem drink;                     //What the Customer is drinking 
     float total;                        //Subtotal of all items
     QString coupon;
+    QString tableName;
 };
 
 #endif // ORDER_H

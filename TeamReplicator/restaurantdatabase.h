@@ -43,6 +43,7 @@ private:
     static const QString getEmployeeFmt;                    //Format of get Employee from DB query
     static const QString addEmployeeFmt;                    //Format add Employee to DB query
     static const QString addOrderFmt;                       //Format of add Order to DB query
+    static const QString addOrderTblNameFmt;                //Format of add Order to DB (w/Table_Num) query
     static const QString addItemFmt;                        //Format of Add Item to DB query
 
 };

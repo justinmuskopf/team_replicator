@@ -84,3 +84,12 @@ QString Order::getCoupon()
     return coupon;
 }
 
+void Order::setTableName(QString name)
+{
+    tableName = name;
+}
+
+QString Order::getTableName()
+{
+    return tableName;
+}
