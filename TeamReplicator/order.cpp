@@ -22,7 +22,7 @@ void Order::addToOrder(MenuItem item)
     if (item.category == "merchandise")
     {
         if (numEntrees)
-            item.price = 0.99;
+            item.price = 0.25;
         numEntrees = (numEntrees - 1 >= 0) ? numEntrees - 1 : 0;
         numShirts++;
     }
