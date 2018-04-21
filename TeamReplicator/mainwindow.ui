@@ -2259,7 +2259,7 @@ color: rgb(208, 208, 208);</string>
          <string>Preparing Order Queue</string>
         </property>
        </widget>
-       <widget class="QColumnView" name="columnView_PreparingOrder">
+       <widget class="QColumnView" name="kitchenPrepareView">
         <property name="geometry">
          <rect>
           <x>530</x>
@@ -2289,7 +2289,7 @@ color: rgb(208, 208, 208);</string>
        <widget class="QPushButton" name="pushButton_OP_OrderA_Call">
         <property name="geometry">
          <rect>
-          <x>260</x>
+          <x>300</x>
           <y>380</y>
           <width>141</width>
           <height>31</height>
@@ -2323,7 +2323,7 @@ font: 57 14pt &quot;Counter-Strike&quot;;</string>
        <widget class="QPushButton" name="pushButton_OP_OrderA_Assign">
         <property name="geometry">
          <rect>
-          <x>50</x>
+          <x>30</x>
           <y>380</y>
           <width>141</width>
           <height>31</height>
@@ -2334,7 +2334,7 @@ font: 57 14pt &quot;Counter-Strike&quot;;</string>
 font: 57 14pt &quot;Counter-Strike&quot;;</string>
         </property>
         <property name="text">
-         <string>Assign Order</string>
+         <string>Assign Ticket</string>
         </property>
        </widget>
        <widget class="QColumnView" name="columnView_PreparingOrder_2">
@@ -2355,6 +2355,30 @@ font: 57 14pt &quot;Counter-Strike&quot;;</string>
           <width>441</width>
           <height>231</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 57 10pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="viewRecipeButton">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>460</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 14pt &quot;Counter-Strike&quot;;</string>
+        </property>
+        <property name="text">
+         <string>View Recipe</string>
         </property>
        </widget>
       </widget>

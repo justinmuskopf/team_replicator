@@ -1,6 +1,9 @@
 #Ignore .pro.user files
 *.pro.user*
 
+#Ignore autosave files
+*.autosave
+
 #Ignore GCC build dir
 *build*GCC*
 

@@ -1172,7 +1172,9 @@ void MainWindow::on_waiterOrderView_activated(const QModelIndex &index)
 {
     QString selected = ui->kitchenOrderView->model()->data(index).toString(); // convert what you selected to string
 
-  //  qDebug() << ui -> kitchenOrderView ->selectionModel();
+    //qDebug() << selected;
+
+
 }
 
 
@@ -1188,9 +1190,16 @@ void MainWindow::on_pushButton_OP_OrderA_Call_clicked()
 
 void MainWindow::on_pushButton_OP_OrderA_Assign_clicked()
 {
+    int row =  ui->kitchenOrderView->selectionModel()->currentIndex().row();
+    int col =  ui->kitchenOrderView->selectionModel()->currentIndex().column();
+    qDebug() << ui->kitchenOrderView->model()->index(row,col).data(); // get data at selection
+   // ui ->kitchenPrepareView->model()->insertRow(ui->kitchenPrepareView->model()->rowCount());
+}
+void MainWindow::on_viewRecipeButton_clicked()
+{
     QMessageBox msgBox2;
     msgBox2.setWindowTitle("The Replicator");
-    msgBox2.setText("Server has been notified");
+    msgBox2.setText("Entrees: Club Sandwhich - 2x Slice Toast, 1x Lettuce, 1x Tomato, 1 tsp mayonnaise ... Pizza - 1 teaspon Yeast, 2/3 cup Water, 2 cups Flour, Bake 400 20-30min ... Hamburger - 2x Wheat Buns, 1x Tomato, 1x Lettuce, 2 Meat Patties ... Hotdog - 1x White bun, 1 Jimmy Dean HotDog, Ketchup, Mustard .. Grilled Cheese 2x Wheat buns 1tsp butter 3 slices of cheese melted ");
     msgBox2.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
     msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
     msgBox2.exec();
