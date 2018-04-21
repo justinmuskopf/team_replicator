@@ -169,6 +169,8 @@ void MainWindow::beginSession()
     {
         list -> clear();
     }
+
+    ui -> salesReportButton -> setChecked(false);
 }
 
 //Back button was clicked
@@ -1202,4 +1204,19 @@ void MainWindow::comps_ready()
     delete compDialog;
 
     db.addCompToDb(orderNum, compedItems);
+}
+
+void MainWindow::on_salesReportButton_clicked()
+{
+    ui -> reportTable -> setModel(db.getAllSales());
+}
+
+void MainWindow::on_bestSellerButton_clicked()
+{
+    ui -> reportTable -> setModel(db.getBestSellers());
+}
+
+void MainWindow::on_compReportButton_clicked()
+{
+     ui -> reportTable -> setModel(db.getAllComps());
 }

@@ -148,6 +148,12 @@ private slots:
 
     void comps_ready();
 
+    void on_salesReportButton_clicked();
+
+    void on_bestSellerButton_clicked();
+
+    void on_compReportButton_clicked();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons

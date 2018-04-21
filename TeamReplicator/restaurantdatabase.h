@@ -38,6 +38,8 @@ public:
     void addSurveyToDb(int rating, QString comment);
     Order getOrderFromDb(int orderNum);
     void addCompToDb(int orderNum, Order order);
+    QSqlQueryModel *getBestSellers();
+    QSqlQueryModel *getAllComps();
 
 private:
     QSqlDatabase db;                                        //Database

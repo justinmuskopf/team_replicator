@@ -222,3 +222,23 @@ void RestaurantDatabase::addCompToDb(int orderNum, Order order)
         query.record();
     }
 }
+
+QSqlQueryModel *RestaurantDatabase::getBestSellers()
+{
+    QString queryStr = "SELECT Name, COUNT(*) AS Sold, ROUND(SUM(Price), 2) As Profit  FROM `order_items` GROUP BY Name ORDER BY COUNT(*) DESC";
+    QSqlQuery query(queryStr, db);
+    QSqlQueryModel *view = new QSqlQueryModel();
+    query.exec();
+    view->setQuery(query);
+    return view;
+}
+
+QSqlQueryModel *RestaurantDatabase::getAllComps()
+{
+    QString queryStr = "SELECT * FROM `comps`";
+    QSqlQuery query(queryStr, db);
+    QSqlQueryModel *view = new QSqlQueryModel();
+    query.exec();
+    view->setQuery(query);
+    return view;
+}
