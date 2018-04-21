@@ -155,6 +155,17 @@ QSqlQueryModel *RestaurantDatabase::getAllAlerts()
 
 }
 
+QSqlQueryModel *RestaurantDatabase::getAllOrders()
+{
+    QString queryStr = "SELECT * FROM `order_items`" ;
+    QSqlQuery query(queryStr, db);
+    QSqlQueryModel *view = new QSqlQueryModel();
+    query.exec();
+    view->setQuery(query);
+    return view;
+
+}
+
 void RestaurantDatabase::addSurveyToDb(int rating, QString comment)
 {
     QString queryStr;

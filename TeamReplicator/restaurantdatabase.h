@@ -36,6 +36,7 @@ public:
     int      getOrderNumber();                              //Returns the current order number
     QSqlQueryModel *getAllSales();                          //Returns table of all sales
     QSqlQueryModel *getAllAlerts();                         //Returns table of all alerts
+    QSqlQueryModel *getAllOrders();                          //Returns table of all orders
     void addSurveyToDb(int rating, QString comment);
 
 private:

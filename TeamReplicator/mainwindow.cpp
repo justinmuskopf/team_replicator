@@ -299,6 +299,7 @@ void MainWindow::on_enterButton_clicked()
     else if (level == "kitchen")
     {
         ui -> kitchenWelcomeLabel -> setText("Welcome " + employee -> getName());
+        ui -> kitchenOrderView ->setModel(db.getAllOrders());
         goToTab(KITCHEN_TAB);
     }
     else if (level == "manager")
@@ -1159,4 +1160,38 @@ void MainWindow::updateOrderStatus()
 void MainWindow::submitComment()
 {
     qDebug() << "Worked!";
+}
+
+void MainWindow::on_kitchenOrderView_activated(const QModelIndex &index)
+{
+    QString selected = ui->kitchenOrderView->model()->data(index).toString(); // convert what you selected to string
+
+}
+
+void MainWindow::on_waiterOrderView_activated(const QModelIndex &index)
+{
+    QString selected = ui->kitchenOrderView->model()->data(index).toString(); // convert what you selected to string
+
+  //  qDebug() << ui -> kitchenOrderView ->selectionModel();
+}
+
+
+void MainWindow::on_pushButton_OP_OrderA_Call_clicked()
+{
+    QMessageBox msgBox2;
+    msgBox2.setWindowTitle("The Replicator");
+    msgBox2.setText("Server has been notified");
+    msgBox2.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+    msgBox2.exec();
+}
+
+void MainWindow::on_pushButton_OP_OrderA_Assign_clicked()
+{
+    QMessageBox msgBox2;
+    msgBox2.setWindowTitle("The Replicator");
+    msgBox2.setText("Server has been notified");
+    msgBox2.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+    msgBox2.exec();
 }

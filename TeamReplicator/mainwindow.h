@@ -143,6 +143,18 @@ private slots:
 
     void submitComment();
 
+    void on_tableView_2_activated(const QModelIndex &index);
+
+    void on_kitchenOrderView_activated(const QModelIndex &index);
+
+    void on_waiterOrderView_activated(const QModelIndex &index);
+
+
+
+    void on_pushButton_OP_OrderA_Call_clicked();
+
+    void on_pushButton_OP_OrderA_Assign_clicked();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons
