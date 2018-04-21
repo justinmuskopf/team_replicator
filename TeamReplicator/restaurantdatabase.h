@@ -47,8 +47,9 @@ private:
     static const QString addOrderTblNameFmt;                //Format of add Order to DB (w/Table_Num) query
     static const QString addItemFmt;                        //Format of Add Item to DB query
     static const QString addEmployeeLoginFmt;               //Adds employee login time to DB
-    static const QString addSurveyFmt;
-    static const QString addSurveyNoCommentFmt;
+    static const QString addSurveyFmt;                      //Add survey rating and comment to DB
+    static const QString addSurveyNoCommentFmt;             //Add survey rating without comment to DB
+    static const QString addItemCommentFmt;                 //Add item to DB with comment
 };
 
 #endif // RESTAURANTDATABASE_H

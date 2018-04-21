@@ -30,6 +30,7 @@ public:
     void addToCombo(float val);                  //Holds value of drink/dessert combo items
     float getComboTotal();              //Get total value for promotion application
     void resetCombo();                  //Resets Promotion value
+    void setOrder(MenuVector);
 
 private:
     MenuVector order;                   //Vector of MenuItems representing an order

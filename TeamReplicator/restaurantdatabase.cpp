@@ -14,6 +14,7 @@ const QString RestaurantDatabase::addOrderTblNameFmt     = "INSERT INTO `sales` 
 const QString RestaurantDatabase::addEmployeeLoginFmt    = "INSERT INTO `employee_logins` (Emp_Id, Name) VALUES (%1, %2)";
 const QString RestaurantDatabase::addSurveyFmt           = "INSERT INTO `surveys` (Rating, Comment) VALUES (%1, %2)";
 const QString RestaurantDatabase::addSurveyNoCommentFmt  = "INSERT INTO `surveys` (Rating) VALUES (%1)";
+const QString RestaurantDatabase::addItemCommentFmt      = "INSERT INTO `order_items` (Order_Id, Name, Price, Comment) VALUES (%1, %2, %3, %4)";
 //
 RestaurantDatabase::RestaurantDatabase()
 {
@@ -114,7 +115,15 @@ void RestaurantDatabase::addOrderToDb(Order *order, int orderNum)
 
     foreach (MenuItem item, order -> getOrder())
     {
-        QString addItemStr = addItemFmt.arg(QString::number(orderNum), "'" + item.name + "'", QString::number(item.price));
+        QString addItemStr;
+        if (item.comment.length())
+        {
+            item.comment.truncate(254);
+            addItemStr = addItemCommentFmt.arg(QString::number(orderNum), "'" + item.name + "'", QString::number(item.price), "'" + item.comment + "'");
+        }
+        else
+            addItemStr = addItemFmt.arg(QString::number(orderNum), "'" + item.name + "'", QString::number(item.price));
+
         QSqlQuery addQuery(addItemStr, db);
         addQuery.record();
     }
@@ -166,7 +175,4 @@ void RestaurantDatabase::addSurveyToDb(int rating, QString comment)
     QSqlQuery query(queryStr, db);
 
     query.record();
-
-   // if (!query.isValid())
-   //     qDebug() << "addSurveyToDb: Failed to insert survey to DB!";
 }

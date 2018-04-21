@@ -81,6 +81,7 @@ void MenuItem::print()
     qDebug() << "..." << name;
     qDebug() << "..." << description;
     qDebug() << "..." << price;
+    qDebug() << "... Comment:" << (comment.length() ? comment : "N/A");
 }
 
 //Default destructor

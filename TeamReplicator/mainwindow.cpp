@@ -437,10 +437,13 @@ void MainWindow::addToOrderList(int num)
     MenuItem item = restaurant.getMenu(restaurant.getMenuCategory())[num];
 
     QMessageBox msgBox2;
-    msgBox2.setWindowTitle("The Replicator");
-    msgBox2.setText("Would you like to add a custom request to this item?");
-    msgBox2.setStandardButtons(QMessageBox::No | QMessageBox::Yes);
-    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+    if (item.category != "drinks")
+    {
+        msgBox2.setWindowTitle("The Replicator");
+        msgBox2.setText("Would you like to add a custom request to this item?");
+        msgBox2.setStandardButtons(QMessageBox::No | QMessageBox::Yes);
+        msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+    }
 
     if (msgBox2.exec() == QMessageBox::Yes)
     {
@@ -458,7 +461,7 @@ void MainWindow::addToOrderList(int num)
         commentDlg -> setLayout(layout);
         commentDlg -> show();
         connect(submitButton, SIGNAL(clicked(bool)), commentDlg, SLOT(close()));
-        //connect(commentDlg, SIGNAL(finished(int)), this, SLOT(submitComment(currentOrder)));
+        connect(commentDlg, SIGNAL(finished(int)), this, SLOT(submitComment()));
     }
 
 
@@ -1158,5 +1161,12 @@ void MainWindow::updateOrderStatus()
 
 void MainWindow::submitComment()
 {
-    qDebug() << "Worked!";
+    QString comment = commentBox -> toPlainText();
+
+    Order *custOrder = thisTable -> getCurrentCustomer() -> getOrder();
+    MenuVector order = custOrder -> getOrder();
+
+    order[order.size() - 1].comment = comment;
+
+    custOrder -> setOrder(order);
 }

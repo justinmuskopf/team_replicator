@@ -167,6 +167,12 @@ QString Order::getTableName()
     return tableName;
 }
 
+void Order::setOrder(MenuVector _order)
+{
+    order = _order;
+    printOrder();
+}
+
 void Order::updatePromoState(int state) {promoState = state;}
 int Order::getPromoState() {return promoState;}
 void Order::addToCombo(float val){comboTotal += val;}
