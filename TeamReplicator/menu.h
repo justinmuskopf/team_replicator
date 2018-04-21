@@ -31,6 +31,7 @@ struct MenuItem
     QString comment;
     float price;        //Price of the item
     void print();       //Print menuItem info
+    bool hasComment();
 };
 
 //A MenuVector is a Vector of MenuItems

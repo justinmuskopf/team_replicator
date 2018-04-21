@@ -100,3 +100,5 @@ MenuItem Menu::getItem(Category category, QString name)
 
     return MenuItem();
 }
+
+bool MenuItem::hasComment() {return (!comment.isEmpty());}
