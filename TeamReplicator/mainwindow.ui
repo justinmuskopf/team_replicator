@@ -33,7 +33,7 @@
        <string notr="true">background-color: rgb(46, 47, 48);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="homeTab">
        <attribute name="title">
@@ -1788,7 +1788,7 @@ color: rgb(198, 198, 198);</string>
        <attribute name="title">
         <string>Waitstaff</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_11">
+       <layout class="QHBoxLayout" name="horizontalLayout_13">
         <item>
          <widget class="QGroupBox" name="groupBox_10">
           <property name="styleSheet">
@@ -1796,410 +1796,608 @@ color: rgb(198, 198, 198);</string>
 color: rgb(198, 198, 198);</string>
           </property>
           <property name="title">
-           <string>GroupBox</string>
+           <string/>
           </property>
-          <widget class="QLabel" name="orderNumLabel_3">
-           <property name="geometry">
-            <rect>
-             <x>610</x>
-             <y>290</y>
-             <width>940</width>
-             <height>25</height>
-            </rect>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
-color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#c6c6c6;&quot;&gt;Alerts&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="waitstaffWelcomeLabel">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>10</y>
-             <width>511</width>
-             <height>51</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 32pt &quot;Counter-Strike&quot;;
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="waitstaffWelcomeLabel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 57 32pt &quot;Counter-Strike&quot;;
 color: rgb(208, 208, 208);</string>
-           </property>
-           <property name="text">
-            <string>Welcome to the Waitstaff</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="orderNumLabel_4">
-           <property name="geometry">
-            <rect>
-             <x>610</x>
-             <y>20</y>
-             <width>940</width>
-             <height>25</height>
-            </rect>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
+             </property>
+             <property name="text">
+              <string>Welcome to the Waitstaff</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_17">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="3" column="2">
+               <widget class="QPushButton" name="tableButton_9">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#c6c6c6;&quot;&gt;Orders&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_1">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>70</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>11</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QPushButton" name="tableButton_12">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>1</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_2">
-           <property name="geometry">
-            <rect>
-             <x>170</x>
-             <y>70</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>9</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QPushButton" name="tableButton_11">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>2</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_3">
-           <property name="geometry">
-            <rect>
-             <x>320</x>
-             <y>70</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>10</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QPushButton" name="tableButton_13">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>3</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_4">
-           <property name="geometry">
-            <rect>
-             <x>480</x>
-             <y>70</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>15</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="tableButton_1">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>4</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_5">
-           <property name="geometry">
-            <rect>
-             <x>320</x>
-             <y>200</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>1</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QPushButton" name="tableButton_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>7</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_6">
-           <property name="geometry">
-            <rect>
-             <x>480</x>
-             <y>200</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>3</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="3">
+               <widget class="QPushButton" name="tableButton_10">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>8</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_7">
-           <property name="geometry">
-            <rect>
-             <x>170</x>
-             <y>200</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>12</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QPushButton" name="tableButton_5">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>6</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_8">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>200</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>7</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QPushButton" name="tableButton_6">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>5</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_9">
-           <property name="geometry">
-            <rect>
-             <x>320</x>
-             <y>320</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>8</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="tableButton_8">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>11</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_10">
-           <property name="geometry">
-            <rect>
-             <x>480</x>
-             <y>320</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>5</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QPushButton" name="tableButton_16">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>12</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_11">
-           <property name="geometry">
-            <rect>
-             <x>170</x>
-             <y>320</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>13</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="tableButton_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>10</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_12">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>320</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>2</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QPushButton" name="tableButton_7">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>9</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_13">
-           <property name="geometry">
-            <rect>
-             <x>320</x>
-             <y>450</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>6</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QPushButton" name="tableButton_4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>15</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_14">
-           <property name="geometry">
-            <rect>
-             <x>480</x>
-             <y>450</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>4</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="3">
+               <widget class="QPushButton" name="tableButton_14">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>16</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_15">
-           <property name="geometry">
-            <rect>
-             <x>170</x>
-             <y>450</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>16</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QPushButton" name="tableButton_15">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>14</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="tableButton_16">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>450</y>
-             <width>100</width>
-             <height>100</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+                </property>
+                <property name="text">
+                 <string>14</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_11">
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_20">
+           <item>
+            <widget class="QLabel" name="orderNumLabel_4">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>13</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="waiterLogout">
-           <property name="geometry">
-            <rect>
-             <x>1440</x>
-             <y>50</y>
-             <width>81</width>
-             <height>71</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 15pt &quot;Counter-Strike&quot;;
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#c6c6c6;&quot;&gt;Orders&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTableView" name="waiterOrderView">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 57 10pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-           <property name="text">
-            <string>Logout</string>
-           </property>
-          </widget>
-          <widget class="QTableView" name="waiterOrderView">
-           <property name="geometry">
-            <rect>
-             <x>615</x>
-             <y>51</y>
-             <width>811</width>
-             <height>231</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 10pt &quot;Counter-Strike&quot;;
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="compButton">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+             </property>
+             <property name="text">
+              <string>COMP</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="orderNumLabel_3">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 57 20pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-          </widget>
-          <widget class="QTableView" name="waiterAlertsView">
-           <property name="geometry">
-            <rect>
-             <x>615</x>
-             <y>350</y>
-             <width>811</width>
-             <height>192</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 57 10pt &quot;Counter-Strike&quot;;
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#c6c6c6;&quot;&gt;Alerts&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTableView" name="waiterAlertsView">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 57 10pt &quot;Counter-Strike&quot;;
 color: rgb(198, 198, 198);</string>
-           </property>
-          </widget>
-          <zorder>orderNumLabel_3</zorder>
-          <zorder>waitstaffWelcomeLabel</zorder>
-          <zorder>orderNumLabel_4</zorder>
-          <zorder>tableButton_2</zorder>
-          <zorder>tableButton_3</zorder>
-          <zorder>tableButton_4</zorder>
-          <zorder>tableButton_5</zorder>
-          <zorder>tableButton_6</zorder>
-          <zorder>tableButton_7</zorder>
-          <zorder>tableButton_8</zorder>
-          <zorder>tableButton_9</zorder>
-          <zorder>tableButton_10</zorder>
-          <zorder>tableButton_11</zorder>
-          <zorder>tableButton_12</zorder>
-          <zorder>tableButton_13</zorder>
-          <zorder>tableButton_14</zorder>
-          <zorder>tableButton_15</zorder>
-          <zorder>tableButton_16</zorder>
-          <zorder>tableButton_1</zorder>
-          <zorder>waiterLogout</zorder>
-          <zorder>waiterOrderView</zorder>
-          <zorder>waiterAlertsView</zorder>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignRight">
+            <widget class="QPushButton" name="waiterLogout">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Logout</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>

@@ -17,6 +17,7 @@
 #include <QKeyEvent>
 #include "drinkbutton.h"
 #include "dessertgame.h"
+#include "compdialog.h"
 
 #define NUM_BUTTONS 2 //Number of buttons to include when enabling/disabling them
 #define MAX_CUSTOMERS 4
@@ -143,6 +144,10 @@ private slots:
 
     void submitComment();
 
+    void on_compButton_clicked();
+
+    void comps_ready();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons
@@ -155,6 +160,7 @@ private:
     dGame dessertGame;
     QDialog *commentDlg;
     QTextEdit *commentBox;
+    CompDialog *compDialog;
 
     bool backPressed;                           //Back button pressed
     int lastPage;                               //Index of last page

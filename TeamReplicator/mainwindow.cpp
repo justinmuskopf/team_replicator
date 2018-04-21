@@ -30,8 +30,6 @@ enum {
     RECEIPT_TAB
 };
 
-
-
 void MainWindow::goToTab(int idx)
 {
     ui -> tabWidget -> setCurrentIndex(idx);
@@ -1169,4 +1167,39 @@ void MainWindow::submitComment()
     order[order.size() - 1].comment = comment;
 
     custOrder -> setOrder(order);
+
+    foreach (QObject *obj, commentDlg -> children())
+    {
+        delete obj;
+    }
+    delete commentDlg;
+}
+
+void MainWindow::on_compButton_clicked()
+{
+    QModelIndexList selected = ui -> waiterOrderView -> selectionModel() -> selectedIndexes();
+    int orderNum;
+    if (selected.size())
+        orderNum = selected[0].row() + 1;
+    else
+        return;
+
+    Order order = db.getOrderFromDb(orderNum);
+
+    compDialog = new CompDialog(this);
+    compDialog -> setOrder(orderNum, order);
+    compDialog -> show();
+
+    connect(compDialog, SIGNAL(compsReady()), this, SLOT(comps_ready()));
+}
+
+void MainWindow::comps_ready()
+{
+    Order compedItems = compDialog -> getCompedItems();
+    qDebug() << "Retrieved comp size of:" << compedItems.getOrder().size();
+    int orderNum = compDialog -> getOrderNum();
+    qDebug() << "Retrieved order num:" << orderNum;
+    delete compDialog;
+
+    db.addCompToDb(orderNum, compedItems);
 }

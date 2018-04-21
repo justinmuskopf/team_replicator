@@ -9,7 +9,6 @@
 #include "order.h"
 #include <QSqlQueryModel>
 
-
 #define DB_USER "repuser"        //DB Username
 #define DB_PASS "pass"           //DB Password
 #define DB_HOST "se1.cse.unt.edu"//DB Host
@@ -37,6 +36,8 @@ public:
     QSqlQueryModel *getAllSales();                          //Returns table of all sales
     QSqlQueryModel *getAllAlerts();                         //Returns table of all alerts
     void addSurveyToDb(int rating, QString comment);
+    Order getOrderFromDb(int orderNum);
+    void addCompToDb(int orderNum, Order order);
 
 private:
     QSqlDatabase db;                                        //Database
@@ -50,6 +51,10 @@ private:
     static const QString addSurveyFmt;                      //Add survey rating and comment to DB
     static const QString addSurveyNoCommentFmt;             //Add survey rating without comment to DB
     static const QString addItemCommentFmt;                 //Add item to DB with comment
+    static const QString getOrderFmt;                       //Get order from DB
+    static const QString addCompItemFmt;                    //Add a comped item to db
+    static const QString removeItemFmt;
+    static const QString changeOrderTotalFmt;
 };
 
 #endif // RESTAURANTDATABASE_H

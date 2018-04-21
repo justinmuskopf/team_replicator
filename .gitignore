@@ -15,7 +15,7 @@
 
 #Object script
 *object_script*
-*ui_mainwindow.h
+*ui_*.h
 #debug folder
 *32bit-Debug/debug/*
 

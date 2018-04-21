@@ -34,7 +34,8 @@ SOURCES += \
     employee.cpp \
     restaurantdatabase.cpp \
     drinkbutton.cpp \
-    dessertgame.cpp
+    dessertgame.cpp \
+    compdialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -47,7 +48,9 @@ HEADERS += \
     employee.h \
     restaurantdatabase.h \
     drinkbutton.h \
-    dessertgame.h
+    dessertgame.h \
+    compdialog.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    compdialog.ui
