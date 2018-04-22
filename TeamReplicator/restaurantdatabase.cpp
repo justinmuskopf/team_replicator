@@ -242,3 +242,13 @@ QSqlQueryModel *RestaurantDatabase::getAllComps()
     view->setQuery(query);
     return view;
 }
+
+QSqlQueryModel *RestaurantDatabase::getKitchenOrders()
+{
+    QString queryStr = "select s.Sale_Date, s.Table_Name, s.Id, oi.Order_Id, oi.Name, oi.Price, s.Total from sales s, order_items oi where s.Id = oi.Order_Id and s.Id > 101" ;
+    QSqlQuery query(queryStr, db);
+    QSqlQueryModel *view = new QSqlQueryModel();
+    query.exec();
+    view->setQuery(query);
+    return view;
+}

@@ -299,6 +299,7 @@ void MainWindow::on_enterButton_clicked()
     else if (level == "kitchen")
     {
         ui -> kitchenWelcomeLabel -> setText("Welcome " + employee -> getName());
+        ui -> assignOrderTable -> setModel(db.getKitchenOrders());
         goToTab(KITCHEN_TAB);
     }
     else if (level == "manager")
@@ -1219,4 +1220,38 @@ void MainWindow::on_bestSellerButton_clicked()
 void MainWindow::on_compReportButton_clicked()
 {
      ui -> reportTable -> setModel(db.getAllComps());
+}
+
+void MainWindow::on_recipeButton_clicked()
+{
+    QMessageBox msgBox2;
+    msgBox2.setWindowTitle("The Replicator");
+    msgBox2.setText("Entrees:\n"
+                    " Club Sandwich\n "
+                    "  ...2x Slice Toast\n"
+                    "  ...1x Lettuce\n"
+                    "  ...1x Tomato\n"
+                    "  ...1 tsp mayonnaise\n"
+                    " Pizza\n"
+                    "  ...1 teaspon Yeast\n"
+                    "  ...2/3 cup Water\n"
+                    "  ...2 cups Flour\n"
+                    "  ...Bake 400 20-30min\n"
+                    " Hamburger\n"
+                    "  ...2x Wheat Buns\n"
+                    "  ...1x Tomato\n"
+                    "  ...1x Lettuce\n"
+                    "  ...2 Meat Patties\n"
+                    " Hotdog\n"
+                    "  ...1x White bun\n"
+                    "  ...1 Jimmy Dean HotDog\n"
+                    "  ...Ketchup\n"
+                    "  ...Mustard\n"
+                    " Grilled Cheese\n"
+                    "  ...Wheat buns\n"
+                    "  ...1tsp butter\n"
+                    "  ...3 slices of cheese melted");
+    msgBox2.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+    msgBox2.exec();
 }

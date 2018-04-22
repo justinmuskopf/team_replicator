@@ -2441,12 +2441,21 @@ color: rgb(208, 208, 208);</string>
               </widget>
              </item>
              <item>
-              <widget class="QTableView" name="assignOrderTable"/>
+              <widget class="QTableView" name="assignOrderTable">
+               <property name="styleSheet">
+                <string notr="true">font: 57 10pt &quot;Counter-Strike&quot;;
+color: rgb(198, 198, 198);</string>
+               </property>
+              </widget>
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_14">
                <item>
                 <widget class="QPushButton" name="assignOrderButton">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+                 </property>
                  <property name="text">
                   <string>Assign Order</string>
                  </property>
@@ -2484,6 +2493,10 @@ color: rgb(208, 208, 208);</string>
               <layout class="QHBoxLayout" name="horizontalLayout_15">
                <item>
                 <widget class="QPushButton" name="recipeButton">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+                 </property>
                  <property name="text">
                   <string>Recipes</string>
                  </property>
@@ -2491,6 +2504,10 @@ color: rgb(208, 208, 208);</string>
                </item>
                <item>
                 <widget class="QPushButton" name="completeOrderButton">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+                 </property>
                  <property name="text">
                   <string>Complete Order</string>
                  </property>
@@ -2526,6 +2543,10 @@ color: rgb(208, 208, 208);</string>
              </item>
              <item>
               <widget class="QPushButton" name="kitchenCallButton">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(188, 188, 188);
+font: 57 20pt &quot;Counter-Strike&quot;;</string>
+               </property>
                <property name="text">
                 <string>Call Server</string>
                </property>

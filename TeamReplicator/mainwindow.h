@@ -154,6 +154,8 @@ private slots:
 
     void on_compReportButton_clicked();
 
+    void on_recipeButton_clicked();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons

@@ -40,6 +40,7 @@ public:
     void addCompToDb(int orderNum, Order order);
     QSqlQueryModel *getBestSellers();
     QSqlQueryModel *getAllComps();
+    QSqlQueryModel *getKitchenOrders();
 
 private:
     QSqlDatabase db;                                        //Database
