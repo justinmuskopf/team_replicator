@@ -1255,3 +1255,13 @@ void MainWindow::on_recipeButton_clicked()
     msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
     msgBox2.exec();
 }
+
+void MainWindow::on_kitchenCallButton_clicked()
+{
+    QMessageBox msgBox2;
+    msgBox2.setWindowTitle("The Replicator");
+    msgBox2.setText("Server has been notified");
+    msgBox2.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+    msgBox2.setStyleSheet("background-color: rgb(188, 188, 188);\nfont: 57 20pt \"Counter-Strike\";");
+    msgBox2.exec();
+}

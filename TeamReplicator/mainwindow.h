@@ -156,6 +156,8 @@ private slots:
 
     void on_recipeButton_clicked();
 
+    void on_kitchenCallButton_clicked();
+
 private:
     Ui::MainWindow *ui;                         //Ui reference
     QPushButton *buttonArr[NUM_BUTTONS];        //Array of main buttons
